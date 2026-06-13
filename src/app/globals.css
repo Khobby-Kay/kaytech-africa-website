@@ -14,11 +14,28 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
+  overflow-x: hidden;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 1023px) {
+  input,
+  select,
+  textarea,
+  button {
+    font-size: 16px;
+  }
 }
 
 ::selection {

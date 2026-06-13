@@ -1,26 +1,28 @@
 export const mainNav = [
-  { href: "/features", label: "Features" },
-  { href: "/about", label: "About" },
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About Us" },
+  { href: "/features", label: "Services" },
   { href: "/academy", label: "Academy" },
-  { href: "/security", label: "Security" },
   { href: "/faq", label: "FAQ" },
-  { href: "/contact", label: "Contact" },
+  { href: "/contact", label: "Contact Us" },
 ] as const;
 
 export const footerNav = {
   product: [
-    { href: "/features", label: "Features" },
+    { href: "/features", label: "Web Development" },
+    { href: "/features", label: "Digital Marketing" },
+    { href: "/features", label: "SEO Services" },
+    { href: "/features", label: "E-Commerce" },
     { href: "/support", label: "Support" },
-    { href: "/security", label: "Security" },
-    { href: "/faq", label: "FAQ" },
   ],
   company: [
-    { href: "/about", label: "About" },
+    { href: "/about", label: "About Us" },
     { href: "/academy", label: "Academy" },
-    { href: "/contact", label: "Contact" },
+    { href: "/contact", label: "Contact Us" },
+    { href: "/faq", label: "FAQ" },
   ],
   legal: [
-    { href: "/privacy", label: "Privacy" },
-    { href: "/terms", label: "Terms" },
+    { href: "/privacy", label: "Privacy Policy" },
+    { href: "/terms", label: "Terms & Conditions" },
   ],
 } as const;

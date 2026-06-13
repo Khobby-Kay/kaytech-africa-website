@@ -2,12 +2,15 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/PageHero";
 import { FAQ } from "@/components/home/FAQ";
 import { pageImages } from "@/lib/page-images";
+import { createPageMetadata } from "@/lib/page-metadata";
 
-export const metadata: Metadata = {
-  title: "FAQ",
+export const metadata: Metadata = createPageMetadata({
+  title: "FAQ — Web Design, SEO & Academy Questions | KayTech Africa Ghana",
   description:
-    "Answers about KayTech services, academy programs, payments, project kickoff, and our Accra headquarters.",
-};
+    "Frequently asked questions about KayTech web design, SEO, MoMo payments, project kickoff, academy programs, and our Accra headquarters.",
+  path: "/faq",
+  keywords: ["web design FAQ Ghana", "SEO questions Accra", "KayTech academy FAQ"],
+});
 
 export default function FAQPage() {
   return (

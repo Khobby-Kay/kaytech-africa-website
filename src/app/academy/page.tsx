@@ -7,12 +7,19 @@ import { PageHero } from "@/components/ui/PageHero";
 import { FAQ } from "@/components/home/FAQ";
 import { academyCourses, siteConfig } from "@/lib/site";
 import { academyCourseImages, pageImages } from "@/lib/page-images";
+import { createPageMetadata } from "@/lib/page-metadata";
 
-export const metadata: Metadata = {
-  title: "Academy — Learn Web, Marketing & AI",
+export const metadata: Metadata = createPageMetadata({
+  title: "KayTech Academy — Web Design, Development & Digital Marketing Courses in Ghana",
   description:
-    "KayTech Academy trains the next generation in web design, web development, digital marketing, AI automation, and more — based in Accra, Ghana.",
-};
+    "Learn web design, web development, digital marketing, AI automation, and UI/UX at KayTech Academy in Accra. Practical cohorts for Ghana's next generation of digital talent.",
+  path: "/academy",
+  keywords: [
+    "web design course Ghana",
+    "coding academy Accra",
+    "digital marketing training Ghana",
+  ],
+});
 
 const benefits = [
   "Live sessions with working practitioners",

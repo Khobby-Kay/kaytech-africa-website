@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/PageHero";
 import { SecuritySection } from "@/components/home/SecuritySection";
 import { pageImages } from "@/lib/page-images";
+import { createPageMetadata } from "@/lib/page-metadata";
 
-export const metadata: Metadata = {
-  title: "Security & Delivery",
+export const metadata: Metadata = createPageMetadata({
+  title: "Security & Delivery Standards | KayTech Africa Web Development Ghana",
   description:
-    "MoMo-ready payment flows, 3G-optimised builds, and studio-grade delivery principles on every KayTech project.",
-};
+    "MoMo-ready payment flows, 3G-optimised builds, and studio-grade security on every KayTech web design and development project in Ghana.",
+  path: "/security",
+});
 
 export default function SecurityPage() {
   return (

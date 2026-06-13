@@ -2,12 +2,15 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/PageHero";
 import { ContactSection } from "@/components/contact/ContactSection";
 import { pageImages } from "@/lib/page-images";
+import { createPageMetadata } from "@/lib/page-metadata";
 
-export const metadata: Metadata = {
-  title: "Contact",
+export const metadata: Metadata = createPageMetadata({
+  title: "Contact KayTech Africa — Web Design & SEO in Accra, Ghana",
   description:
-    "Reach KayTech Africa on WhatsApp, phone, or email. Accra-based studio serving clients across Ghana and Africa.",
-};
+    "Call, WhatsApp, or email KayTech Africa for web design, SEO, and digital marketing quotes. Accra-based studio serving clients across Ghana and Africa.",
+  path: "/contact",
+  keywords: ["contact web designer Ghana", "web design quote Accra", "KayTech Africa phone"],
+});
 
 export default function ContactPage() {
   return (

@@ -1,34 +1,78 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { MobileStickyBar } from "@/components/layout/MobileStickyBar";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { siteConfig } from "@/lib/site";
+import {
+  defaultDescription,
+  defaultTitle,
+  ogImage,
+  seoKeywords,
+  siteName,
+} from "@/lib/seo";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  themeColor: "#1c3f69",
+  colorScheme: "light",
+};
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} · ${siteConfig.tagline}`,
-    template: `%s · ${siteConfig.name}`,
+    default: defaultTitle,
+    template: `%s · ${siteConfig.shortName}`,
   },
-  description: siteConfig.description,
-  keywords: [
-    "KayTech Africa",
-    "web development Ghana",
-    "AI automation Accra",
-    "tech academy Ghana",
-    "Web3 Africa",
-    "digital marketing Ghana",
-  ],
+  description: defaultDescription,
+  keywords: [...seoKeywords],
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
+  category: "technology",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: siteConfig.name,
-    description: siteConfig.description,
-    url: siteConfig.url,
-    siteName: siteConfig.name,
-    locale: "en_GH",
     type: "website",
+    locale: "en_GH",
+    url: siteConfig.url,
+    siteName,
+    title: defaultTitle,
+    description: defaultDescription,
+    images: [ogImage],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: defaultTitle,
+    description: defaultDescription,
+    images: [ogImage.url],
+    creator: "@kaytech_africa",
+    site: "@kaytech_africa",
   },
   icons: {
     icon: [{ url: "/logo.svg", type: "image/svg+xml" }],
     apple: [{ url: "/logo.svg", type: "image/svg+xml" }],
+  },
+  other: {
+    "geo.region": "GH-AA",
+    "geo.placename": "Accra",
+    "geo.position": `${siteConfig.location.coordinates.lat};${siteConfig.location.coordinates.lng}`,
+    ICBM: `${siteConfig.location.coordinates.lat}, ${siteConfig.location.coordinates.lng}`,
   },
 };
 
@@ -39,10 +83,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-GH">
-      <body className="min-h-screen bg-canvas font-sans text-ink antialiased">
+      <head>
+        <JsonLd />
+      </head>
+      <body className="min-h-screen bg-canvas pb-[calc(52px+env(safe-area-inset-bottom))] font-sans text-ink antialiased lg:pb-0">
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <MobileStickyBar />
       </body>
     </html>
   );

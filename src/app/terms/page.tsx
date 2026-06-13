@@ -3,11 +3,14 @@ import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/ui/PageHero";
 import { siteConfig } from "@/lib/site";
 import { pageImages } from "@/lib/page-images";
+import { createPageMetadata } from "@/lib/page-metadata";
 
-export const metadata: Metadata = {
-  title: "Terms of Service",
-  description: "Terms governing KayTech Africa studio services and academy programs.",
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "Terms & Conditions | KayTech Africa",
+  description:
+    "Terms governing KayTech Africa web design, digital marketing, and academy services for clients in Ghana and across Africa.",
+  path: "/terms",
+});
 
 export default function TermsPage() {
   return (

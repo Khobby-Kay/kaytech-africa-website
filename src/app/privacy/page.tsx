@@ -3,11 +3,14 @@ import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/ui/PageHero";
 import { siteConfig } from "@/lib/site";
 import { pageImages } from "@/lib/page-images";
+import { createPageMetadata } from "@/lib/page-metadata";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description: "How KayTech Africa collects, uses, and protects your information.",
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "Privacy Policy | KayTech Africa",
+  description:
+    "How KayTech Africa collects, uses, and protects your personal information when you use our website, studio services, and academy programs.",
+  path: "/privacy",
+});
 
 export default function PrivacyPage() {
   return (

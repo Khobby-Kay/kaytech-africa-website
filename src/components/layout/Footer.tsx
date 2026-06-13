@@ -1,83 +1,171 @@
-"use client";
-
 import Link from "next/link";
-import { MessageCircle } from "lucide-react";
+import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { LogoMark } from "@/components/ui/LogoMark";
 import { footerNav } from "@/lib/navigation";
+import { footerServices, workingHours } from "@/lib/home-content";
 import { siteConfig } from "@/lib/site";
-
-const groups = [
-  { title: "Product", links: footerNav.product },
-  { title: "Company", links: footerNav.company },
-  { title: "Legal", links: footerNav.legal },
-] as const;
 
 export function Footer() {
   return (
-    <footer className="mt-8 rounded-t-[2rem] bg-surface-dark text-on-dark sm:mt-12 sm:rounded-t-[2.5rem]">
-      <Container className="px-5 py-10 sm:py-14">
-        <div className="flex flex-col gap-6 rounded-3xl border border-white/10 bg-white/5 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
-          <div>
+    <footer className="mt-10 bg-surface-dark text-on-dark">
+      <Container className="px-5 py-12 sm:py-16">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8">
+          <div className="lg:col-span-4">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 font-display text-xl text-on-dark sm:text-[22px]"
+              className="inline-flex items-center gap-2 font-display text-xl text-on-dark"
             >
-              <LogoMark className="h-7 w-7" />
-              kaytech
+              <LogoMark className="h-8 w-8" />
+              {siteConfig.shortName}
             </Link>
-            <p className="mt-2 max-w-sm text-sm leading-relaxed text-on-dark/70">
-              {siteConfig.tagline}
+            <p className="mt-4 text-sm leading-relaxed text-on-dark/70">
+              {siteConfig.description}
+            </p>
+            <p className="mt-6 font-display text-lg font-semibold text-on-dark">
+              Contact with us
             </p>
           </div>
-          <a
-            href={siteConfig.contact.whatsapp}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-pill bg-semantic-up text-sm font-semibold text-surface-dark transition hover:brightness-110 sm:w-auto sm:px-6"
-          >
-            <MessageCircle className="h-4 w-4" />
-            Chat on WhatsApp
-          </a>
-        </div>
 
-        <div className="mt-8 grid gap-4 sm:mt-10 sm:grid-cols-3 sm:gap-5">
-          {groups.map((group) => (
-            <div
-              key={group.title}
-              className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 sm:rounded-3xl sm:p-5"
-            >
-              <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-on-dark/50">
-                {group.title}
-              </p>
-              <ul className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-1 sm:gap-1.5">
-                {group.links.map((item) => (
-                  <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      className="inline-flex min-h-9 w-full items-center rounded-xl px-2 text-sm text-on-dark/75 transition hover:bg-white/10 hover:text-on-dark sm:min-h-0 sm:rounded-lg sm:px-0 sm:py-1.5"
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+          <div className="space-y-5 sm:col-span-1 lg:col-span-3">
+            <div className="flex gap-3">
+              <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-semantic-up" />
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider text-on-dark/50">
+                  Address
+                </p>
+                <p className="mt-1 text-sm text-on-dark/85">
+                  {siteConfig.location.line1}, Ghana
+                </p>
+                <a
+                  href={siteConfig.location.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 inline-block text-sm text-semantic-up hover:underline"
+                >
+                  Receive directions
+                </a>
+              </div>
             </div>
-          ))}
-        </div>
 
-        <div className="mt-8 space-y-1 rounded-2xl border border-white/10 bg-white/[0.03] p-4 text-sm text-on-dark/65 sm:mt-10">
-          <p>{siteConfig.location.line1}, {siteConfig.location.line2}</p>
-          <p>{siteConfig.contact.phoneDisplay} · hello@kaytechafrica.com</p>
+            <div className="flex gap-3">
+              <Mail className="mt-0.5 h-5 w-5 shrink-0 text-semantic-up" />
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider text-on-dark/50">
+                  Email address
+                </p>
+                <a
+                  href={`mailto:${siteConfig.contact.email}`}
+                  className="mt-1 block text-sm text-on-dark/85 hover:text-on-dark"
+                >
+                  {siteConfig.contact.email}
+                </a>
+              </div>
+            </div>
+
+            <div className="flex gap-3">
+              <Clock className="mt-0.5 h-5 w-5 shrink-0 text-semantic-up" />
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider text-on-dark/50">
+                  Working time
+                </p>
+                <p className="mt-1 text-sm text-on-dark/85">
+                  {workingHours.days}: {workingHours.hours}
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-3">
+              <Phone className="mt-0.5 h-5 w-5 shrink-0 text-semantic-up" />
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider text-on-dark/50">
+                  Call us
+                </p>
+                <a
+                  href={`tel:${siteConfig.contact.phone}`}
+                  className="mt-1 block text-sm font-semibold text-on-dark hover:text-semantic-up"
+                >
+                  {siteConfig.contact.phoneDisplay}
+                </a>
+                <a
+                  href={siteConfig.contact.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1 block text-sm text-on-dark/75 hover:text-on-dark"
+                >
+                  WhatsApp: {siteConfig.contact.phoneDisplay}
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="lg:col-span-2">
+            <p className="text-sm font-semibold text-on-dark">Services links</p>
+            <ul className="mt-4 space-y-2.5">
+              {footerServices.map((item) => (
+                <li key={item.label}>
+                  <Link
+                    href={item.href}
+                    className="text-sm text-on-dark/70 transition hover:text-semantic-up"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="lg:col-span-3">
+            <p className="text-sm font-semibold text-on-dark">Company</p>
+            <ul className="mt-4 space-y-2.5">
+              {footerNav.company.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="text-sm text-on-dark/70 transition hover:text-semantic-up"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <p className="mt-8 text-sm font-semibold text-on-dark">
+              Subscribe newsletter
+            </p>
+            <p className="mt-2 text-sm text-on-dark/65">
+              Sign up for updates on web, SEO, and academy cohorts—we won&apos;t
+              spam your inbox.
+            </p>
+            <a
+              href={`mailto:${siteConfig.contact.email}?subject=Newsletter%20signup`}
+              className="mt-4 inline-flex h-10 items-center rounded-pill bg-semantic-up px-5 text-sm font-semibold text-surface-dark transition hover:brightness-110"
+            >
+              Subscribe via email
+            </a>
+          </div>
         </div>
       </Container>
 
       <div className="border-t border-white/10">
-        <Container className="flex flex-col items-center gap-2 px-5 py-5 text-center text-xs text-on-dark/50 sm:flex-row sm:justify-between sm:text-left">
+        <Container className="flex flex-col gap-4 px-5 py-6 text-xs text-on-dark/55 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+            {siteConfig.name} © {new Date().getFullYear()} — All rights reserved
           </p>
-          <p>Accra · kaytechafrica.com</p>
+          <div className="flex flex-wrap gap-x-4 gap-y-2">
+            {footerNav.legal.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="hover:text-on-dark"
+              >
+                {item.label}
+              </Link>
+            ))}
+            <Link href="/contact" className="hover:text-on-dark">
+              Sitemap
+            </Link>
+          </div>
         </Container>
       </div>
     </footer>

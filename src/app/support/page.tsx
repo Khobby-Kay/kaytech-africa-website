@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/PageHero";
 import { SupportSection } from "@/components/home/SupportSection";
 import { pageImages } from "@/lib/page-images";
+import { createPageMetadata } from "@/lib/page-metadata";
 
-export const metadata: Metadata = {
-  title: "Support",
+export const metadata: Metadata = createPageMetadata({
+  title: "Client Support — KayTech Africa Web Design & Academy Ghana",
   description:
-    "WhatsApp, phone, and email support for KayTech clients and academy learners — based in Accra, serving Africa.",
-};
+    "WhatsApp, phone, and email support for KayTech web design clients and academy learners — based in Accra, serving Ghana and Africa.",
+  path: "/support",
+});
 
 export default function SupportPage() {
   return (
