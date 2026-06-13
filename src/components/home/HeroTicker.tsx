@@ -1,7 +1,7 @@
 const items = [
   { label: "AI automation", live: true },
   { label: "Web development" },
-  { label: "MoMo-ready builds" },
+  { label: "E-commerce builds" },
   { label: "Accra-based studio" },
   { label: "250+ projects shipped" },
   { label: "Academy cohorts" },

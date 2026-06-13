@@ -147,7 +147,7 @@ export function Hero() {
 
           <div className="mt-6 hidden items-center gap-2 text-sm text-on-dark/70 sm:flex">
             <CircleCheck className="h-4 w-4 text-semantic-up" />
-            Free consultation · MoMo-ready builds · Accra-based since{" "}
+            Free consultation · Accra-based since{" "}
             {siteConfig.founded}.
           </div>
         </div>
