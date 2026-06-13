@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/PageHero";
 import { SupportSection } from "@/components/home/SupportSection";
+import { pageImages } from "@/lib/page-images";
 
 export const metadata: Metadata = {
   title: "Support",
@@ -20,6 +21,7 @@ export default function SupportPage() {
           href: "https://wa.me/233559921979",
           external: true,
         }}
+        image={pageImages.support}
       />
       <SupportSection />
     </>

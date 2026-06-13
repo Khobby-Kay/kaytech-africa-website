@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { PageHero } from "@/components/ui/PageHero";
 import { FAQ } from "@/components/home/FAQ";
 import { academyCourses, siteConfig } from "@/lib/site";
+import { pageImages } from "@/lib/page-images";
 
 export const metadata: Metadata = {
   title: "Academy — Learn Web, Marketing & AI",
@@ -23,36 +26,30 @@ const benefits = [
 export default function AcademyPage() {
   return (
     <>
-      <section className="border-b border-hairline bg-surface-soft px-5 pt-28 pb-16 lg:px-20 lg:pt-36 lg:pb-24">
-        <Container>
-          <div className="mx-auto max-w-3xl text-center">
-            <span className="inline-flex items-center gap-2 rounded-pill bg-surface-strong px-4 py-1.5 font-mono text-xs font-semibold uppercase tracking-[0.08em] text-ink">
-              KayTech Academy
-            </span>
-            <h1 className="mt-6 font-display text-4xl tracking-tight text-ink sm:text-5xl lg:text-6xl">
-              Skills that pay. Taught by builders.
-            </h1>
-            <p className="mt-5 text-base leading-relaxed text-muted sm:text-lg">
-              Practical programs in web design, development, digital marketing,
-              AI, and more — designed for Ghanaian and African learners who want
-              real income, not just certificates.
-            </p>
-            <a
-              href={siteConfig.contact.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-8 inline-flex h-11 items-center gap-2 rounded-pill bg-primary px-8 text-sm font-semibold text-on-primary transition hover:bg-primary-deep"
-            >
-              Enroll or ask about cohorts
-              <ArrowRight className="h-4 w-4" />
-            </a>
-          </div>
-        </Container>
-      </section>
+      <PageHero
+        eyebrow="KayTech Academy"
+        title="Skills that pay. Taught by builders."
+        description="Practical programs in web design, development, digital marketing, AI, and more — designed for Ghanaian and African learners who want real income, not just certificates."
+        cta={{
+          label: "Enroll on WhatsApp",
+          href: siteConfig.contact.whatsapp,
+          external: true,
+        }}
+        image={pageImages.academy}
+      />
 
       <section className="border-b border-hairline bg-canvas px-5 py-16 lg:px-20 lg:py-20">
         <Container>
-          <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+          <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-hairline shadow-card lg:aspect-auto lg:min-h-[360px]">
+              <Image
+                src="/images/pages/support.jpg"
+                alt="Academy learners in a KayTech cohort session"
+                fill
+                sizes="(max-width: 1024px) 100vw, 540px"
+                className="object-cover"
+              />
+            </div>
             <div>
               <span className="inline-flex items-center gap-2 rounded-pill bg-surface-strong px-4 py-1.5 font-mono text-xs font-semibold uppercase tracking-[0.08em] text-ink">
                 Why learn with us
@@ -97,11 +94,21 @@ export default function AcademyPage() {
           </div>
 
           <div className="mt-14 grid gap-5 md:grid-cols-2">
-            {academyCourses.map((course) => (
+            {academyCourses.map((course, i) => (
               <article
                 key={course.slug}
-                className="flex flex-col rounded-3xl border border-hairline bg-surface-soft p-6 sm:p-8"
+                className="flex flex-col overflow-hidden rounded-3xl border border-hairline bg-surface-soft"
               >
+                <div className="relative aspect-[16/9]">
+                  <Image
+                    src={`/images/hero/hero-${(i % 3) + 1}.jpg`}
+                    alt={course.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 480px"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="flex flex-1 flex-col p-6 sm:p-8">
                 <div className="flex flex-wrap items-center gap-3">
                   <span className="rounded-pill bg-canvas px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider text-primary ring-1 ring-hairline">
                     {course.level}
@@ -133,6 +140,7 @@ export default function AcademyPage() {
                   Request syllabus
                   <ArrowRight className="h-4 w-4" />
                 </a>
+                </div>
               </article>
             ))}
           </div>

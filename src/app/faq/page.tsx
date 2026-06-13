@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/PageHero";
 import { FAQ } from "@/components/home/FAQ";
+import { pageImages } from "@/lib/page-images";
 
 export const metadata: Metadata = {
   title: "FAQ",
@@ -16,6 +17,7 @@ export default function FAQPage() {
         title="Questions, answered"
         description="How projects start, who we work with, MoMo support, academy tracks, and where we're based."
         cta={{ label: "Still need help?", href: "/contact" }}
+        image={pageImages.faq}
       />
       <FAQ showHeading={false} />
     </>

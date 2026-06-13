@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/PageHero";
 import { SecuritySection } from "@/components/home/SecuritySection";
+import { pageImages } from "@/lib/page-images";
 
 export const metadata: Metadata = {
   title: "Security & Delivery",
@@ -15,6 +16,7 @@ export default function SecurityPage() {
         eyebrow="Trust"
         title="Studio-grade delivery for African markets"
         description="Every payment flow, page load, and launch is protected by principles we ship with on every project."
+        image={pageImages.security}
       />
       <SecuritySection />
     </>

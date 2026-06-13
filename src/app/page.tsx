@@ -1,12 +1,14 @@
 import { Hero } from "@/components/home/Hero";
-import { HomeOverview } from "@/components/home/HomeOverview";
+import { WhyKayTechHome } from "@/components/home/WhyKayTechHome";
+import { HomeServicesStrip } from "@/components/home/HomeServicesStrip";
 import { Testimonials } from "@/components/home/Testimonials";
 
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <HomeOverview />
+      <WhyKayTechHome />
+      <HomeServicesStrip />
       <Testimonials />
     </>
   );

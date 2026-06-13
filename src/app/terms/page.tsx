@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/ui/PageHero";
 import { siteConfig } from "@/lib/site";
+import { pageImages } from "@/lib/page-images";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
@@ -15,6 +16,7 @@ export default function TermsPage() {
         eyebrow="Legal"
         title="Terms of Service"
         description={`Last updated: June 2026. By using ${siteConfig.name} services or enrolling in our academy, you agree to these terms.`}
+        image={pageImages.terms}
       />
       <section className="bg-canvas px-5 py-16 lg:px-20 lg:py-20">
         <Container>

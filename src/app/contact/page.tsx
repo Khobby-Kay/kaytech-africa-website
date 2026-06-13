@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/PageHero";
 import { ContactSection } from "@/components/contact/ContactSection";
+import { pageImages } from "@/lib/page-images";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -15,6 +16,7 @@ export default function ContactPage() {
         eyebrow="Get in touch"
         title="Let's build your next chapter"
         description="Tell us about your project, academy interest, or partnership idea. We typically respond within one business day."
+        image={pageImages.contact}
       />
       <ContactSection />
     </>

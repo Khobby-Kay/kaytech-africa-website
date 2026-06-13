@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/PageHero";
 import { ServicesTabs } from "@/components/home/ServicesTabs";
 import { AppShowcase } from "@/components/home/AppShowcase";
+import { pageImages } from "@/lib/page-images";
 
 export const metadata: Metadata = {
   title: "Features & Services",
@@ -17,6 +18,7 @@ export default function FeaturesPage() {
         title="Everything we build for African growth"
         description="From intelligent automation to conversion-first websites — scoped for mobile networks, MoMo payments, and real market conditions."
         cta={{ label: "Start a project", href: "/contact" }}
+        image={pageImages.features}
       />
       <ServicesTabs />
       <AppShowcase />

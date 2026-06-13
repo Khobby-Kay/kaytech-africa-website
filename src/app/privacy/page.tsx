@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/ui/PageHero";
 import { siteConfig } from "@/lib/site";
+import { pageImages } from "@/lib/page-images";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -15,6 +16,7 @@ export default function PrivacyPage() {
         eyebrow="Legal"
         title="Privacy Policy"
         description={`Last updated: June 2026. This policy applies to ${siteConfig.name} websites, academy programs, and client services.`}
+        image={pageImages.privacy}
       />
       <section className="bg-canvas px-5 py-16 lg:px-20 lg:py-20">
         <Container>
