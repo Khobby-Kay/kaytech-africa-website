@@ -14,12 +14,12 @@ export const siteConfig = {
     coordinates: { lat: 5.6037, lng: -0.187 },
   },
   contact: {
-    phone: "+233559921979",
-    phoneDisplay: "055 992 1979",
-    phoneAlt: "+233248408154",
-    phoneAltDisplay: "024 840 8154",
+    phone: "+233248408154",
+    phoneDisplay: "024 840 8154",
+    phoneAlt: "+233559921979",
+    phoneAltDisplay: "055 992 1979",
     email: "hello@kaytechafrica.com",
-    whatsapp: "https://wa.me/233559921979",
+    whatsapp: "https://wa.me/233248408154",
   },
   socials: {
     linkedin: "https://www.linkedin.com/company/kaytech-africa",

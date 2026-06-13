@@ -10,9 +10,9 @@ Official website for **KayTech Africa** — AI automation, web development, Web3
 
 ## Contact (from public listings)
 
-- **Phone:** 055 992 1979 / 024 840 8154
+- **Phone:** 024 840 8154 / 055 992 1979
 - **Email:** hello@kaytechafrica.com
-- **WhatsApp:** [wa.me/233559921979](https://wa.me/233559921979)
+- **WhatsApp:** [wa.me/233248408154](https://wa.me/233248408154)
 - **Location:** Accra, Greater Accra Region, Ghana
 - **LinkedIn:** [linkedin.com/company/kaytech-africa](https://www.linkedin.com/company/kaytech-africa)
 - **Instagram:** [@kaytech_africa](https://www.instagram.com/kaytech_africa)
