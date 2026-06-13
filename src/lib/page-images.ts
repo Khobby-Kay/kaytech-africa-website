@@ -1,15 +1,15 @@
 export const pageImages = {
   features: {
-    src: "/images/hero/hero-2.jpg",
-    alt: "Black entrepreneur building digital products in a modern workspace",
+    src: "/images/sections/service-web.jpg",
+    alt: "Web development and product design for African businesses",
   },
   about: {
-    src: "/images/hero/hero-1.jpg",
-    alt: "Black woman professional leading a tech team in Accra",
+    src: "/images/sections/why-studio.jpg",
+    alt: "KayTech studio team planning digital infrastructure in Accra",
   },
   academy: {
-    src: "/images/hero/hero-3.jpg",
-    alt: "Black creatives collaborating on a digital project",
+    src: "/images/sections/academy-learning.jpg",
+    alt: "Academy learners building skills in a cohort session",
   },
   security: {
     src: "/images/pages/security.jpg",
@@ -24,33 +24,76 @@ export const pageImages = {
     alt: "KayTech team ready to connect from Accra",
   },
   faq: {
-    src: "/images/pages/faq.jpg",
-    alt: "Team answering questions in a bright Accra workspace",
+    src: "/images/sections/faq-help.jpg",
+    alt: "Team answering client questions in a bright workspace",
   },
   privacy: {
-    src: "/images/hero/hero-1.jpg",
-    alt: "Professional workspace representing trust and data care",
+    src: "/images/sections/privacy-trust.jpg",
+    alt: "Secure and trusted handling of client information",
   },
   terms: {
-    src: "/images/hero/hero-2.jpg",
-    alt: "Business agreement and partnership in African tech",
+    src: "/images/sections/terms-agreement.jpg",
+    alt: "Professional partnership and clear business terms",
   },
 } as const;
 
 export const whyHomeImages = [
   {
-    src: "/images/hero/hero-1.jpg",
-    alt: "Leadership and vision at KayTech Africa",
-    caption: "Leadership",
+    src: "/images/sections/why-studio.jpg",
+    alt: "KayTech studio session in Accra",
+    caption: "Studio",
   },
   {
-    src: "/images/hero/hero-3.jpg",
-    alt: "Collaborative studio culture in Accra",
-    caption: "Collaboration",
+    src: "/images/sections/why-payments.jpg",
+    alt: "Mobile money and payment flows built for Ghana",
+    caption: "MoMo-ready",
   },
   {
-    src: "/images/team/aikins-armstrong.jpg",
-    alt: "Aikins Armstrong, Founder & CEO of KayTech Africa",
-    caption: "Founder",
+    src: "/images/sections/why-mobile.jpg",
+    alt: "Mobile-first product design for African users",
+    caption: "Mobile-first",
   },
+] as const;
+
+export const principleImages = [
+  {
+    src: "/images/sections/principle-speed.jpg",
+    alt: "Fast-loading digital experiences on mobile networks",
+  },
+  {
+    src: "/images/sections/principle-momo.jpg",
+    alt: "Mobile money payment integration in Ghana",
+  },
+  {
+    src: "/images/sections/principle-convert.jpg",
+    alt: "Conversion-focused design and growth",
+  },
+  {
+    src: "/images/sections/principle-local.jpg",
+    alt: "Local context and African market expertise",
+  },
+] as const;
+
+export const servicePreviewImages = [
+  {
+    src: "/images/sections/service-ai.jpg",
+    alt: "AI automation for African businesses",
+  },
+  {
+    src: "/images/sections/service-web.jpg",
+    alt: "Web development and digital products",
+  },
+  {
+    src: "/images/sections/service-growth.jpg",
+    alt: "Digital marketing and growth systems",
+  },
+] as const;
+
+export const academyCourseImages = [
+  "/images/sections/course-design.jpg",
+  "/images/sections/course-dev.jpg",
+  "/images/sections/course-marketing.jpg",
+  "/images/sections/course-ai.jpg",
+  "/images/sections/course-ux.jpg",
+  "/images/sections/course-business.jpg",
 ] as const;

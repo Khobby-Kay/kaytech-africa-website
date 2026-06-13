@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { GraduationCap, MessageCircle } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { heroSlides } from "@/lib/hero-slides";
+import { servicePreviewImages } from "@/lib/page-images";
 import { siteConfig } from "@/lib/site";
 
 const cards = [
@@ -22,17 +22,17 @@ const cards = [
 
 export function AppShowcase() {
   return (
-    <section id="academy" className="border-y border-hairline bg-surface-soft px-5 py-16 lg:px-20 lg:py-32">
+    <section id="academy" className="border-y border-hairline bg-surface-soft px-5 py-12 sm:py-16 lg:px-20 lg:py-32">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="font-display text-3xl tracking-tight text-ink sm:text-4xl lg:text-5xl">
+          <h2 className="font-display text-2xl tracking-tight text-ink sm:text-4xl lg:text-5xl">
             Everything in one studio
           </h2>
-          <p className="mt-4 text-lg text-muted">
+          <p className="mt-3 text-sm text-muted sm:mt-4 sm:text-lg">
             A dev shop, a growth team, and an academy — all under one roof.
             Based in Accra, ready for Africa.
           </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-3 sm:mt-8">
             <a
               href={siteConfig.contact.whatsapp}
               target="_blank"
@@ -66,25 +66,29 @@ export function AppShowcase() {
           </div>
         </div>
 
-        <div className="mt-14 grid gap-5 md:grid-cols-3">
-          {heroSlides.map((slide, i) => (
+        <div className="mt-10 grid gap-4 sm:mt-14 sm:gap-5 md:grid-cols-3">
+          {cards.map((card, i) => (
             <div
-              key={slide.src}
+              key={card.title}
               className="overflow-hidden rounded-3xl border border-hairline bg-canvas shadow-card"
             >
               <div className="relative aspect-[4/5]">
                 <Image
-                  src={slide.src}
-                  alt={slide.alt}
+                  src={
+                    i === 2
+                      ? "/images/sections/academy-learning.jpg"
+                      : servicePreviewImages[i].src
+                  }
+                  alt={card.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
               </div>
-              <div className="p-5">
-                <p className="font-semibold text-ink">{cards[i].title}</p>
+              <div className="p-4 sm:p-5">
+                <p className="font-semibold text-ink">{card.title}</p>
                 <p className="mt-2 text-sm leading-relaxed text-muted">
-                  {cards[i].body}
+                  {card.body}
                 </p>
               </div>
             </div>

@@ -6,7 +6,7 @@ import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/ui/PageHero";
 import { FAQ } from "@/components/home/FAQ";
 import { academyCourses, siteConfig } from "@/lib/site";
-import { pageImages } from "@/lib/page-images";
+import { academyCourseImages, pageImages } from "@/lib/page-images";
 
 export const metadata: Metadata = {
   title: "Academy — Learn Web, Marketing & AI",
@@ -43,7 +43,7 @@ export default function AcademyPage() {
           <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center">
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-hairline shadow-card lg:aspect-auto lg:min-h-[360px]">
               <Image
-                src="/images/pages/support.jpg"
+                src="/images/sections/academy-learning.jpg"
                 alt="Academy learners in a KayTech cohort session"
                 fill
                 sizes="(max-width: 1024px) 100vw, 540px"
@@ -101,7 +101,7 @@ export default function AcademyPage() {
               >
                 <div className="relative aspect-[16/9]">
                   <Image
-                    src={`/images/hero/hero-${(i % 3) + 1}.jpg`}
+                    src={academyCourseImages[i]}
                     alt={course.title}
                     fill
                     sizes="(max-width: 768px) 100vw, 480px"
