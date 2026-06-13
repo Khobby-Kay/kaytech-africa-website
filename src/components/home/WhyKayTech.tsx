@@ -43,7 +43,7 @@ export function WhyKayTech() {
           </p>
           <dl className="mt-6 space-y-5">
             {[
-              ["Projects delivered", "50+"],
+              ["Projects delivered", "250+"],
               ["Founded", "Accra · 2020"],
               ["Academy tracks", "6+"],
               ["Build ethos", "100% Africa-first"],

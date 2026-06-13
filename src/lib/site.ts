@@ -185,7 +185,7 @@ export const faqs = [
 ] as const;
 
 export const stats = [
-  { value: "50+", label: "Projects delivered" },
+  { value: "250+", label: "Projects delivered" },
   { value: "2020", label: "Founded in Accra" },
   { value: "6+", label: "Academy tracks" },
   { value: "100%", label: "Afrocentric build ethos" },

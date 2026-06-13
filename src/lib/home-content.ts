@@ -72,3 +72,26 @@ export const workingHours = {
   days: "Mon – Sat",
   hours: "9:00am – 6:00pm",
 } as const;
+
+export const whyKayTechHighlights = [
+  {
+    icon: "Layers",
+    title: "One team, end to end",
+    body: "Strategy, design, development, and launch under one roof — no agency handoffs or lost context.",
+  },
+  {
+    icon: "Users",
+    title: "Built for real businesses",
+    body: "250+ projects for startups, SMEs, and growing brands across Ghana — from landing pages to full platforms.",
+  },
+  {
+    icon: "Headphones",
+    title: "Support you can reach",
+    body: "WhatsApp, phone, and email access to humans who know your project — before launch and long after.",
+  },
+  {
+    icon: "GraduationCap",
+    title: "Academy-backed talent",
+    body: "Our in-house Academy trains designers and developers who work on live client builds, not theory alone.",
+  },
+] as const;
