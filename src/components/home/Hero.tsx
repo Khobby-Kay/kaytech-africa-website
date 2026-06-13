@@ -103,11 +103,6 @@ export function Hero() {
 
       <Container className="relative pb-24 pt-32 sm:pb-28 sm:pt-24 lg:pb-32 lg:pt-40">
         <div className="max-w-3xl max-lg:mt-6">
-          <span className="mb-4 inline-flex items-center gap-2 rounded-pill bg-white/10 px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.08em] text-on-dark sm:mb-6 sm:px-4 sm:py-1.5 sm:text-xs">
-            <span className="size-1.5 rounded-full bg-semantic-up sm:size-2" />
-            Now building across Ghana
-          </span>
-
           <h1 className="font-display text-[2rem] leading-[1.02] tracking-tight text-on-dark sm:text-[36px] md:text-[44px] lg:text-[52px] xl:text-[64px] 2xl:text-[78px]">
             African digital infrastructure.
           </h1>
