@@ -93,7 +93,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="mt-1 block text-sm text-on-dark/75 hover:text-on-dark"
                 >
-                  WhatsApp: {siteConfig.contact.phoneDisplay}
+                  WhatsApp: {siteConfig.contact.whatsappDisplay}
                 </a>
               </div>
             </div>

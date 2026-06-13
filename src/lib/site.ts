@@ -16,10 +16,9 @@ export const siteConfig = {
   contact: {
     phone: "+233248408154",
     phoneDisplay: "024 840 8154",
-    phoneAlt: "+233559921979",
-    phoneAltDisplay: "055 992 1979",
+    whatsapp: "https://wa.me/233559921979",
+    whatsappDisplay: "055 992 1979",
     email: "hello@kaytechafrica.com",
-    whatsapp: "https://wa.me/233248408154",
   },
   socials: {
     linkedin: "https://www.linkedin.com/company/kaytech-africa",
