@@ -22,6 +22,10 @@ export function Footer() {
             <p className="mt-4 text-sm leading-relaxed text-on-dark/70">
               {siteConfig.description}
             </p>
+            <p className="mt-3 text-xs leading-relaxed text-on-dark/55">
+              Best web developer in Ghana · Top web designer Accra · Website
+              design Kumasi &amp; Tema · SEO company Ghana
+            </p>
             <p className="mt-6 font-display text-lg font-semibold text-on-dark">
               Contact with us
             </p>

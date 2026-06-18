@@ -3,22 +3,22 @@ import { PageHero } from "@/components/ui/PageHero";
 import { FAQ } from "@/components/home/FAQ";
 import { pageImages } from "@/lib/page-images";
 import { createPageMetadata } from "@/lib/page-metadata";
+import { ghanaSearchKeywords, pageSeoCopy } from "@/lib/localized-seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "FAQ — Web Design, SEO & Academy Questions | KayTech Africa Ghana",
-  description:
-    "Frequently asked questions about KayTech web design, SEO, MoMo payments, project kickoff, academy programs, and our Accra headquarters.",
+  title: pageSeoCopy.faq.title,
+  description: pageSeoCopy.faq.description,
   path: "/faq",
-  keywords: ["web design FAQ Ghana", "SEO questions Accra", "KayTech academy FAQ"],
+  keywords: [...ghanaSearchKeywords],
 });
 
 export default function FAQPage() {
   return (
     <>
       <PageHero
-        eyebrow="Help"
-        title="Questions, answered"
-        description="How projects start, who we work with, MoMo support, academy tracks, and where we're based."
+        eyebrow="FAQ Ghana"
+        title={pageSeoCopy.faq.heroTitle}
+        description={pageSeoCopy.faq.heroDescription}
         cta={{ label: "Still need help?", href: "/contact" }}
         image={pageImages.faq}
       />

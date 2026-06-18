@@ -4,7 +4,8 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
-import { faqs, siteConfig } from "@/lib/site";
+import { allFaqs } from "@/lib/seo";
+import { siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 type FAQProps = {
@@ -19,7 +20,7 @@ export function FAQ({
   showFooter = true,
 }: FAQProps) {
   const [open, setOpen] = useState<number | null>(0);
-  const items = limit ? faqs.slice(0, limit) : faqs;
+  const items = limit ? allFaqs.slice(0, limit) : allFaqs;
 
   return (
     <section id="faq" className="bg-canvas px-5 py-16 lg:px-20 lg:py-32">
@@ -75,13 +76,13 @@ export function FAQ({
           })}
         </div>
 
-        {limit && limit < faqs.length ? (
+        {limit && limit < allFaqs.length ? (
           <p className="mx-auto mt-8 max-w-3xl text-center">
             <Link
               href="/faq"
               className="text-sm font-semibold text-primary hover:underline"
             >
-              View all {faqs.length} questions
+              View all {allFaqs.length} questions
             </Link>
           </p>
         ) : null}

@@ -8,16 +8,17 @@ import { FAQ } from "@/components/home/FAQ";
 import { academyCourses, siteConfig } from "@/lib/site";
 import { academyCourseImages, pageImages } from "@/lib/page-images";
 import { createPageMetadata } from "@/lib/page-metadata";
+import { ghanaSearchKeywords, pageSeoCopy } from "@/lib/localized-seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "KayTech Academy — Web Design, Development & Digital Marketing Courses in Ghana",
-  description:
-    "Learn web design, web development, digital marketing, AI automation, and UI/UX at KayTech Academy in Accra. Practical cohorts for Ghana's next generation of digital talent.",
+  title: pageSeoCopy.academy.title,
+  description: pageSeoCopy.academy.description,
   path: "/academy",
   keywords: [
+    ...ghanaSearchKeywords,
     "web design course Ghana",
     "coding academy Accra",
-    "digital marketing training Ghana",
+    "learn web development Ghana",
   ],
 });
 
@@ -36,7 +37,7 @@ export default function AcademyPage() {
       <PageHero
         eyebrow="KayTech Academy"
         title="Skills that pay. Taught by builders."
-        description="Practical programs in web design, development, digital marketing, AI, and more — designed for Ghanaian and African learners who want real income, not just certificates."
+        description={pageSeoCopy.academy.heroDescription}
         cta={{
           label: "Enroll on WhatsApp",
           href: siteConfig.contact.whatsapp,

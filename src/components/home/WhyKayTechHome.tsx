@@ -34,9 +34,10 @@ export function WhyKayTechHome() {
             Africa runs on ambition. Your stack should keep up.
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-muted sm:mt-4 sm:text-lg">
-            We are a full-service digital studio in Accra — web design, SEO,
-            e-commerce, and growth systems for brands that need results, not
-            templates.
+            KayTech is the best web design company in Accra for brands that need
+            results — trusted as one of the top web developers in Ghana for
+            business websites, SEO, e-commerce, and growth across Accra, Kumasi,
+            and nationwide.
           </p>
         </div>
 

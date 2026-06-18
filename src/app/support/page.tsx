@@ -4,12 +4,14 @@ import { SupportSection } from "@/components/home/SupportSection";
 import { pageImages } from "@/lib/page-images";
 import { createPageMetadata } from "@/lib/page-metadata";
 import { siteConfig } from "@/lib/site";
+import { ghanaSearchKeywords } from "@/lib/localized-seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Client Support — KayTech Africa Web Design & Academy Ghana",
+  title: "Client Support | Best Web Design Company Accra | KayTech Ghana",
   description:
-    "WhatsApp, phone, and email support for KayTech web design clients and academy learners — based in Accra, serving Ghana and Africa.",
+    "Support for KayTech web design and development clients in Ghana. WhatsApp, phone, and email from Accra's trusted website design company.",
   path: "/support",
+  keywords: [...ghanaSearchKeywords],
 });
 
 export default function SupportPage() {

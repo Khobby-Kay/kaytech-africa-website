@@ -3,7 +3,7 @@ export const siteConfig = {
   shortName: "KayTech",
   tagline: "African Digital Infrastructure. Built Different.",
   description:
-    "KayTech Africa builds AI automation, web development, Web3, robotics, and growth systems for African businesses — plus an academy training the next generation of digital talent.",
+    "KayTech Africa is the best web design company in Ghana — AI automation, web development, SEO, e-commerce, and an academy training Africa's next generation of digital talent. Accra-based, serving Kumasi, Tema, and nationwide.",
   url: "https://kaytechafrica.com",
   founded: 2020,
   location: {

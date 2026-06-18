@@ -5,22 +5,22 @@ import { LeadershipSection } from "@/components/home/LeadershipSection";
 import { Testimonials } from "@/components/home/Testimonials";
 import { pageImages } from "@/lib/page-images";
 import { createPageMetadata } from "@/lib/page-metadata";
+import { ghanaSearchKeywords, pageSeoCopy } from "@/lib/localized-seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "About KayTech Africa — Web Design & Digital Studio in Accra, Ghana",
-  description:
-    "Meet KayTech Africa — Accra's trusted web design, SEO, and digital marketing studio. Learn about our team, mission, and Afrocentric approach to building for Ghana and Africa.",
+  title: pageSeoCopy.about.title,
+  description: pageSeoCopy.about.description,
   path: "/about",
-  keywords: ["about KayTech Africa", "web design company Accra", "digital agency Ghana"],
+  keywords: [...ghanaSearchKeywords],
 });
 
 export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="Company"
-        title="Built in Accra. Designed for Africa."
-        description="KayTech turns ambitious ideas into live infrastructure — with a studio and academy rooted in how African businesses actually grow."
+        eyebrow="About us"
+        title={pageSeoCopy.about.heroTitle}
+        description={pageSeoCopy.about.heroDescription}
         cta={{ label: "Meet the team below", href: "#leadership" }}
         image={pageImages.about}
       />

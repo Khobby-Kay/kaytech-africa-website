@@ -4,27 +4,22 @@ import { ServicesTabs } from "@/components/home/ServicesTabs";
 import { AppShowcase } from "@/components/home/AppShowcase";
 import { pageImages } from "@/lib/page-images";
 import { createPageMetadata } from "@/lib/page-metadata";
+import { ghanaSearchKeywords, pageSeoCopy } from "@/lib/localized-seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Web Design, SEO & Digital Marketing Services in Ghana | KayTech Africa",
-  description:
-    "Professional web development, SEO, e-commerce, AI automation, and digital marketing services in Accra and across Ghana. Responsive, MoMo-ready websites that convert.",
+  title: pageSeoCopy.features.title,
+  description: pageSeoCopy.features.description,
   path: "/features",
-  keywords: [
-    "web design services Ghana",
-    "SEO services Accra",
-    "e-commerce development Ghana",
-    "digital marketing Ghana",
-  ],
+  keywords: [...ghanaSearchKeywords],
 });
 
 export default function FeaturesPage() {
   return (
     <>
       <PageHero
-        eyebrow="Studio"
-        title="Everything we build for African growth"
-        description="From intelligent automation to conversion-first websites — scoped for mobile networks, MoMo payments, and real market conditions."
+        eyebrow="Web design Ghana"
+        title={pageSeoCopy.features.heroTitle}
+        description={pageSeoCopy.features.heroDescription}
         cta={{ label: "Start a project", href: "/contact" }}
         image={pageImages.features}
       />

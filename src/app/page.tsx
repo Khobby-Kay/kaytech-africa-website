@@ -3,16 +3,18 @@ import { Hero } from "@/components/home/Hero";
 import { MobileQuickCallStrip } from "@/components/home/MobileQuickCallStrip";
 import { LeadingCompanySection } from "@/components/home/LeadingCompanySection";
 import { HomeMainContent } from "@/components/home/HomeMainContent";
+import { LocalizedSeoSection } from "@/components/home/LocalizedSeoSection";
 import { WhyKayTechHome } from "@/components/home/WhyKayTechHome";
 import { Testimonials } from "@/components/home/Testimonials";
-import { defaultDescription, defaultTitle } from "@/lib/seo";
 import { createPageMetadata } from "@/lib/page-metadata";
+import { ghanaSearchKeywords, pageSeoCopy } from "@/lib/localized-seo";
 import { leadingCompany } from "@/lib/home-content";
 
 export const metadata: Metadata = createPageMetadata({
-  title: defaultTitle,
-  description: defaultDescription,
+  title: pageSeoCopy.home.title,
+  description: pageSeoCopy.home.description,
   path: "/",
+  keywords: [...ghanaSearchKeywords],
 });
 
 export default function HomePage() {
@@ -22,6 +24,7 @@ export default function HomePage() {
       <MobileQuickCallStrip />
       <LeadingCompanySection />
       <HomeMainContent />
+      <LocalizedSeoSection />
       <WhyKayTechHome />
       <Testimonials />
       <noscript>

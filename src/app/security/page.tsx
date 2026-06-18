@@ -3,12 +3,14 @@ import { PageHero } from "@/components/ui/PageHero";
 import { SecuritySection } from "@/components/home/SecuritySection";
 import { pageImages } from "@/lib/page-images";
 import { createPageMetadata } from "@/lib/page-metadata";
+import { ghanaSearchKeywords } from "@/lib/localized-seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Security & Delivery Standards | KayTech Africa Web Development Ghana",
+  title: "Security & Delivery Standards | Best Web Developer Ghana | KayTech",
   description:
-    "MoMo-ready payment flows, 3G-optimised builds, and studio-grade security on every KayTech web design and development project in Ghana.",
+    "Studio-grade security and delivery from one of Ghana's best web development companies. Professional websites for Accra, Kumasi, Tema, and nationwide clients.",
   path: "/security",
+  keywords: [...ghanaSearchKeywords],
 });
 
 export default function SecurityPage() {

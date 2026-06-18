@@ -1,28 +1,17 @@
-import { faqs, siteConfig } from "@/lib/site";
+import { faqs as coreFaqs, siteConfig } from "@/lib/site";
+import { ghanaSearchKeywords, seoFaqs } from "@/lib/localized-seo";
+
+export const allFaqs = [...seoFaqs, ...coreFaqs];
 
 export const seoKeywords = [
-  "KayTech Africa",
-  "web design Ghana",
-  "best web design company Ghana",
-  "web development Accra",
-  "web development Kumasi",
-  "SEO services Ghana",
-  "SEO Accra",
-  "e-commerce development Ghana",
-  "digital marketing Ghana",
-  "affordable web design Accra",
-  "responsive website Ghana",
-  "MoMo payment website",
-  "AI automation Ghana",
-  "tech academy Accra",
-  "website design company Ghana",
+  ...ghanaSearchKeywords,
 ] as const;
 
 export const defaultTitle =
-  "KayTech Africa: Top Web Design, SEO & Digital Marketing in Accra, Ghana";
+  "Best Web Developer in Ghana | Top Web Designer Accra | KayTech Africa";
 
 export const defaultDescription =
-  "Top-rated affordable, professional web design and digital marketing in Accra, Kumasi, and across Ghana. KayTech builds responsive websites, e-commerce stores, SEO-optimized designs, and custom web development that drives traffic, conversions, and sales.";
+  "KayTech Africa — the best web design company in Ghana. Hire the top web developer or website designer in Accra, Kumasi & nationwide. Affordable SEO, e-commerce & digital marketing. 250+ projects delivered.";
 
 export const siteName =
   "KayTech Africa — Best Web Design Company in Ghana | Web Development & SEO";
@@ -113,7 +102,7 @@ export function getOrganizationJsonLd() {
       {
         "@type": "FAQPage",
         "@id": `${siteConfig.url}/#faq`,
-        mainEntity: faqs.map((faq) => ({
+        mainEntity: allFaqs.map((faq) => ({
           "@type": "Question",
           name: faq.question,
           acceptedAnswer: {

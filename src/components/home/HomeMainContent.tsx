@@ -14,8 +14,13 @@ export function HomeMainContent() {
               Tailored services
             </span>
             <h2 className="mt-4 font-display text-2xl tracking-tight text-ink sm:text-3xl lg:text-4xl">
-              Designed to boost your online visibility and performance
+              Professional web design &amp; development services in Ghana
             </h2>
+            <p className="mt-3 text-sm text-muted sm:text-base">
+              The best website designer in Accra for SEO, e-commerce, and
+              affordable business websites — serving Accra, Kumasi, Tema, and all
+              of Ghana.
+            </p>
           </div>
 
           <div className="mt-10 space-y-4">
@@ -67,12 +72,12 @@ export function HomeMainContent() {
                 Why partner with us
               </span>
               <h2 className="mt-4 font-display text-2xl tracking-tight text-ink sm:text-3xl lg:text-4xl">
-                We deliver results that drive growth for your business
+                Why hire the best web developer in Ghana?
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
-                In today&apos;s competitive digital landscape, your website
-                isn&apos;t just an online presence—it&apos;s your most powerful
-                tool to generate leads, increase traffic, and drive conversions.
+                When you search for the best web designer in Accra or an
+                affordable website design company in Ghana, you need a partner
+                who delivers leads and sales — not just a pretty homepage.
               </p>
               <Link
                 href="/about"
@@ -109,11 +114,11 @@ export function HomeMainContent() {
               Revenue-generating service
             </p>
             <h2 className="mt-3 font-display text-2xl tracking-tight sm:text-3xl lg:text-4xl">
-              Worked with ambitious brands across Ghana with remarkable results
+              Top web design company in Ghana — 250+ projects delivered
             </h2>
             <p className="mt-4 max-w-xl text-sm text-on-primary/85 sm:text-base">
-              Our goal is to help businesses flourish online—gaining more sales,
-              visibility, and systems they can trust.
+              Trusted as one of the best web developers in Accra and the go-to
+              website design company for brands in Kumasi, Tema, and nationwide.
             </p>
             <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
               {stats.map((s) => (
