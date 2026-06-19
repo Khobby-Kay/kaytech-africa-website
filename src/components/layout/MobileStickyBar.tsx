@@ -12,6 +12,8 @@ export function MobileStickyBar() {
           href={`tel:${siteConfig.contact.phone}`}
           className="flex min-h-[52px] flex-col items-center justify-center gap-0.5 px-2 py-2 text-center"
           aria-label="Call KayTech Africa"
+          data-track="call_click"
+          data-track-location="mobile_sticky_bar"
         >
           <Phone className="h-4 w-4 text-primary" />
           <span className="text-[10px] font-semibold text-ink">Call</span>
@@ -22,6 +24,8 @@ export function MobileStickyBar() {
           rel="noopener noreferrer"
           className="flex min-h-[52px] flex-col items-center justify-center gap-0.5 px-2 py-2 text-center"
           aria-label="WhatsApp KayTech Africa"
+          data-track="whatsapp_click"
+          data-track-location="mobile_sticky_bar"
         >
           <MessageCircle className="h-4 w-4 text-semantic-up-deep" />
           <span className="text-[10px] font-semibold text-ink">WhatsApp</span>
@@ -29,6 +33,8 @@ export function MobileStickyBar() {
         <Link
           href="/contact"
           className="flex min-h-[52px] flex-col items-center justify-center gap-0.5 bg-primary px-2 py-2 text-center"
+          data-track="get_started_click"
+          data-track-location="mobile_sticky_bar"
         >
           <span className="text-[10px] font-bold uppercase tracking-wide text-on-primary">
             Get started

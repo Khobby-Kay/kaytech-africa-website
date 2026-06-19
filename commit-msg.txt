@@ -1,0 +1,10 @@
+Make KayTech market-ready: analytics, AI assistant, leads, portfolio.
+
+- GA4 + Search Console verification (env-gated) and CTA click tracking
+- Compress images (~42MB saved) and regenerate blur placeholders
+- On-site AI assistant with knowledge base and WhatsApp escalation
+- Dedicated /ai-automation service page with SEO and footer nav
+- Contact form + /api/lead route (Resend when configured, WhatsApp fallback)
+- Portfolio case studies section on homepage
+- marketing/GROWTH-KIT.md with Google Business Profile and directory copy
+- .env.example documenting optional integrations

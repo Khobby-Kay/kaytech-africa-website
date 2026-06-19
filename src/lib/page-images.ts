@@ -3,6 +3,10 @@ export const pageImages = {
     src: "/images/sections/service-web.jpg",
     alt: "Best web design and development services in Ghana — KayTech Africa team building a responsive website in Accra",
   },
+  aiAutomation: {
+    src: "/images/sections/service-ai.jpg",
+    alt: "AI business automation, chatbots and WhatsApp automation for companies in Ghana by KayTech Africa",
+  },
   about: {
     src: "/images/sections/why-studio.jpg",
     alt: "KayTech Africa studio in Accra — the web design company Ghana businesses trust",

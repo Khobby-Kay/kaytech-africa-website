@@ -10,6 +10,7 @@ export const mainNav = [
 export const footerNav = {
   product: [
     { href: "/features", label: "Web Development" },
+    { href: "/ai-automation", label: "AI Automation" },
     { href: "/features", label: "Digital Marketing" },
     { href: "/features", label: "SEO Services" },
     { href: "/features", label: "E-Commerce" },

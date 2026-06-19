@@ -4,6 +4,8 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { MobileStickyBar } from "@/components/layout/MobileStickyBar";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { Analytics } from "@/components/analytics/Analytics";
+import { AiAssistant } from "@/components/assistant/AiAssistant";
 import { siteConfig } from "@/lib/site";
 import {
   defaultDescription,
@@ -47,6 +49,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  verification: process.env.GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.GOOGLE_SITE_VERIFICATION }
+    : undefined,
   openGraph: {
     type: "website",
     locale: "en_GH",
@@ -91,6 +96,8 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <MobileStickyBar />
+        <AiAssistant />
+        <Analytics />
       </body>
     </html>
   );

@@ -142,4 +142,13 @@ export const pageSeoCopy = {
     heroDescription:
       "Train with the team behind one of Ghana's best web design companies. Web design, development, SEO, and digital marketing courses in Accra for students and career switchers.",
   },
+  aiAutomation: {
+    title:
+      "AI Business Automation in Ghana | Chatbots & WhatsApp Automation | KayTech",
+    description:
+      "KayTech Africa builds AI business automation for Ghanaian companies — AI chatbots, WhatsApp automation, lead-capture assistants, and workflow bots that save hours and win more customers. Based in Accra, serving all of Ghana.",
+    heroTitle: "AI business automation for Ghanaian companies",
+    heroDescription:
+      "Capture leads 24/7, answer customers instantly, and automate the busywork. KayTech builds AI chatbots, WhatsApp automation, and workflow bots for businesses in Accra, Kumasi, Tema, and across Ghana.",
+  },
 } as const;

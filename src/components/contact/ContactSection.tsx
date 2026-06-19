@@ -6,6 +6,7 @@ import {
   Phone,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { ContactForm } from "@/components/contact/ContactForm";
 import { siteConfig } from "@/lib/site";
 
 export function ContactSection() {
@@ -23,11 +24,21 @@ export function ContactSection() {
               We typically respond within one business day.
             </p>
 
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            <div className="mt-6">
+              <ContactForm />
+            </div>
+
+            <p className="mt-8 text-xs font-semibold uppercase tracking-wider text-muted">
+              Prefer to talk now?
+            </p>
+
+            <div className="mt-4 grid gap-4 sm:grid-cols-2">
               <a
                 href={siteConfig.contact.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-track="whatsapp_click"
+                data-track-location="contact_page"
                 className="flex items-center gap-4 rounded-2xl border border-semantic-up/30 bg-semantic-up/10 p-4 transition hover:bg-semantic-up/15"
               >
                 <span className="grid h-11 w-11 place-items-center rounded-xl bg-semantic-up/20 text-semantic-up-deep">
@@ -45,6 +56,8 @@ export function ContactSection() {
 
               <a
                 href={`tel:${siteConfig.contact.phone}`}
+                data-track="call_click"
+                data-track-location="contact_page"
                 className="flex items-center gap-4 rounded-2xl border border-hairline bg-canvas p-4 transition hover:border-primary/30"
               >
                 <span className="grid h-11 w-11 place-items-center rounded-xl bg-primary/10 text-primary">
@@ -62,6 +75,8 @@ export function ContactSection() {
 
               <a
                 href={`mailto:${siteConfig.contact.email}`}
+                data-track="email_click"
+                data-track-location="contact_page"
                 className="flex items-center gap-4 rounded-2xl border border-hairline bg-canvas p-4 transition hover:border-primary/30"
               >
                 <span className="grid h-11 w-11 place-items-center rounded-xl bg-primary/10 text-primary">

@@ -5,6 +5,7 @@ import { LeadingCompanySection } from "@/components/home/LeadingCompanySection";
 import { HomeMainContent } from "@/components/home/HomeMainContent";
 import { LocalizedSeoSection } from "@/components/home/LocalizedSeoSection";
 import { KeyFacts } from "@/components/home/KeyFacts";
+import { Portfolio } from "@/components/home/Portfolio";
 import { WhyKayTechHome } from "@/components/home/WhyKayTechHome";
 import { Testimonials } from "@/components/home/Testimonials";
 import { createPageMetadata } from "@/lib/page-metadata";
@@ -28,6 +29,7 @@ export default function HomePage() {
       <KeyFacts />
       <LocalizedSeoSection />
       <WhyKayTechHome />
+      <Portfolio />
       <Testimonials />
       <noscript>
         <section className="px-5 py-8">

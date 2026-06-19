@@ -74,6 +74,7 @@ function buildLlmsTxt(): string {
   lines.push(`- Home: ${siteConfig.url}/`);
   lines.push(`- About: ${siteConfig.url}/about`);
   lines.push(`- Services & features: ${siteConfig.url}/features`);
+  lines.push(`- AI business automation: ${siteConfig.url}/ai-automation`);
   lines.push(`- Academy: ${siteConfig.url}/academy`);
   lines.push(`- FAQ: ${siteConfig.url}/faq`);
   lines.push(`- Contact: ${siteConfig.url}/contact`);
