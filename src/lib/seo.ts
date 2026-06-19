@@ -1,4 +1,4 @@
-import { faqs as coreFaqs, siteConfig } from "@/lib/site";
+import { faqs as coreFaqs, services, siteConfig } from "@/lib/site";
 import { ghanaSearchKeywords, seoFaqs } from "@/lib/localized-seo";
 
 export const allFaqs = [...seoFaqs, ...coreFaqs];
@@ -24,11 +24,45 @@ export function getOrganizationJsonLd() {
         "@type": "Organization",
         "@id": `${siteConfig.url}/#organization`,
         name: siteConfig.name,
+        alternateName: siteConfig.shortName,
+        legalName: siteConfig.name,
         url: siteConfig.url,
+        description: defaultDescription,
+        slogan: siteConfig.tagline,
+        foundingDate: String(siteConfig.founded),
+        email: siteConfig.contact.email,
+        telephone: siteConfig.contact.phone,
         logo: {
           "@type": "ImageObject",
           url: `${siteConfig.url}/logo.svg`,
         },
+        image: `${siteConfig.url}/images/sections/service-web.jpg`,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: siteConfig.location.line1,
+          addressRegion: siteConfig.location.line2,
+          addressCountry: "GH",
+        },
+        areaServed: [
+          "Accra",
+          "Kumasi",
+          "Tema",
+          "East Legon",
+          "Takoradi",
+          "Cape Coast",
+          "Ghana",
+        ].map((name) => ({ "@type": "City", name })),
+        knowsAbout: [
+          "Web design",
+          "Web development",
+          "SEO",
+          "E-commerce development",
+          "Digital marketing",
+          "AI automation",
+          "Web3 development",
+        ],
+        knowsLanguage: ["en"],
+        keywords: [...ghanaSearchKeywords].join(", "),
         sameAs: [
           siteConfig.socials.linkedin,
           siteConfig.socials.instagram,
@@ -36,6 +70,7 @@ export function getOrganizationJsonLd() {
         contactPoint: {
           "@type": "ContactPoint",
           telephone: siteConfig.contact.phone,
+          email: siteConfig.contact.email,
           contactType: "customer service",
           areaServed: "GH",
           availableLanguage: ["English"],
@@ -132,6 +167,23 @@ export function getOrganizationJsonLd() {
         about: { "@id": `${siteConfig.url}/#organization` },
         inLanguage: "en-GH",
       },
+      ...services.map((service) => ({
+        "@type": "Service",
+        "@id": `${siteConfig.url}/#service-${service.title
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/(^-|-$)/g, "")}`,
+        serviceType: service.title,
+        name: `${service.title} in Ghana`,
+        description: service.description,
+        provider: { "@id": `${siteConfig.url}/#organization` },
+        areaServed: { "@type": "Country", name: "Ghana" },
+        availableChannel: {
+          "@type": "ServiceChannel",
+          serviceUrl: `${siteConfig.url}/features`,
+          servicePhone: siteConfig.contact.phone,
+        },
+      })),
       {
         "@type": "FAQPage",
         "@id": `${siteConfig.url}/#faq`,
