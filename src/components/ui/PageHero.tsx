@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Container } from "@/components/ui/Container";
+import { Media } from "@/components/ui/Media";
 
 export function PageHero({
   eyebrow,
@@ -61,16 +61,14 @@ export function PageHero({
           </div>
 
           {image ? (
-            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-hairline shadow-card lg:aspect-[5/4]">
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                priority
-                sizes="(max-width: 1024px) 100vw, 540px"
-                className="object-cover"
-              />
-            </div>
+            <Media
+              src={image.src}
+              alt={image.alt}
+              ratio="4/3"
+              priority
+              sizes="(max-width: 1024px) 100vw, 540px"
+              className="lg:aspect-[5/4]"
+            />
           ) : null}
         </div>
       </Container>

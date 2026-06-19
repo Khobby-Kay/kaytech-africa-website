@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { Media } from "@/components/ui/Media";
 import { PageHero } from "@/components/ui/PageHero";
 import { FAQ } from "@/components/home/FAQ";
 import { academyCourses, siteConfig } from "@/lib/site";
@@ -49,15 +49,13 @@ export default function AcademyPage() {
       <section className="border-b border-hairline bg-canvas px-5 py-16 lg:px-20 lg:py-20">
         <Container>
           <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-hairline shadow-card lg:aspect-auto lg:min-h-[360px]">
-              <Image
-                src="/images/sections/academy-learning.jpg"
-                alt="Academy learners in a KayTech cohort session"
-                fill
-                sizes="(max-width: 1024px) 100vw, 540px"
-                className="object-cover"
-              />
-            </div>
+            <Media
+              src="/images/sections/academy-learning.jpg"
+              alt="Learn web design and web development in Accra at KayTech Academy Ghana"
+              ratio="4/3"
+              sizes="(max-width: 1024px) 100vw, 540px"
+              className="lg:aspect-auto lg:min-h-[360px]"
+            />
             <div>
               <span className="inline-flex items-center gap-2 rounded-pill bg-surface-strong px-4 py-1.5 font-mono text-xs font-semibold uppercase tracking-[0.08em] text-ink">
                 Why learn with us
@@ -105,17 +103,16 @@ export default function AcademyPage() {
             {academyCourses.map((course, i) => (
               <article
                 key={course.slug}
-                className="flex flex-col overflow-hidden rounded-3xl border border-hairline bg-surface-soft"
+                className="group flex flex-col overflow-hidden rounded-3xl border border-hairline bg-surface-soft transition duration-300 hover:-translate-y-1 hover:shadow-float"
               >
-                <div className="relative aspect-[16/9]">
-                  <Image
-                    src={academyCourseImages[i]}
-                    alt={course.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 480px"
-                    className="object-cover"
-                  />
-                </div>
+                <Media
+                  src={academyCourseImages[i]}
+                  alt={`${course.title} course in Accra, Ghana — KayTech Academy`}
+                  ratio="16/9"
+                  rounded="none"
+                  framed={false}
+                  sizes="(max-width: 768px) 100vw, 480px"
+                />
                 <div className="flex flex-1 flex-col p-6 sm:p-8">
                 <div className="flex flex-wrap items-center gap-3">
                   <span className="rounded-pill bg-canvas px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider text-primary ring-1 ring-hairline">

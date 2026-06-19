@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { Container } from "@/components/ui/Container";
+import { Media } from "@/components/ui/Media";
 import { principles } from "@/lib/site";
 import { principleImages } from "@/lib/page-images";
 
@@ -35,18 +35,17 @@ export function SecuritySection() {
           {principles.map((p, i) => (
             <article
               key={p.title}
-              className="overflow-hidden rounded-3xl border border-hairline bg-surface-soft"
+              className="group overflow-hidden rounded-3xl border border-hairline bg-surface-soft transition duration-300 hover:-translate-y-1 hover:shadow-float"
             >
-              <div className="relative aspect-[16/9]">
-                <Image
-                  src={principleImages[i].src}
-                  alt={principleImages[i].alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 480px"
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-surface-dark/60 to-transparent" />
-              </div>
+              <Media
+                src={principleImages[i].src}
+                alt={principleImages[i].alt}
+                ratio="16/9"
+                rounded="none"
+                framed={false}
+                scrim
+                sizes="(max-width: 768px) 100vw, 480px"
+              />
               <div className="p-5 sm:p-6 lg:p-8">
                 <h3 className="font-display text-lg font-semibold text-ink sm:text-xl">
                   {p.title}

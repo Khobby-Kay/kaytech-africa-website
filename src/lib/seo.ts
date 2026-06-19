@@ -42,9 +42,10 @@ export function getOrganizationJsonLd() {
         },
       },
       {
-        "@type": "LocalBusiness",
+        "@type": ["LocalBusiness", "ProfessionalService"],
         "@id": `${siteConfig.url}/#localbusiness`,
         name: siteConfig.name,
+        description: defaultDescription,
         image: `${siteConfig.url}/images/sections/service-web.jpg`,
         url: siteConfig.url,
         telephone: siteConfig.contact.phone,
@@ -61,6 +62,38 @@ export function getOrganizationJsonLd() {
           longitude: siteConfig.location.coordinates.lng,
         },
         priceRange: "$$",
+        areaServed: [
+          "Accra",
+          "Kumasi",
+          "Tema",
+          "East Legon",
+          "Takoradi",
+          "Cape Coast",
+          "Ghana",
+        ].map((name) => ({ "@type": "City", name })),
+        knowsAbout: [
+          "Web design",
+          "Web development",
+          "SEO",
+          "E-commerce development",
+          "Digital marketing",
+          "AI automation",
+        ],
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Web design & digital services in Ghana",
+          itemListElement: [
+            "Web Design",
+            "Web Development",
+            "Search Engine Optimization (SEO)",
+            "E-Commerce Development",
+            "Digital Marketing",
+            "AI & Automation",
+          ].map((service) => ({
+            "@type": "Offer",
+            itemOffered: { "@type": "Service", name: service, areaServed: "GH" },
+          })),
+        },
         openingHoursSpecification: {
           "@type": "OpeningHoursSpecification",
           dayOfWeek: [

@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { Media } from "@/components/ui/Media";
 import { leadership } from "@/lib/site";
 
 export function LeadershipSection() {
@@ -26,16 +26,18 @@ export function LeadershipSection() {
         <div className="mt-14 grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
           <article className="overflow-hidden rounded-3xl border border-hairline bg-surface-soft shadow-card">
             <div className="grid md:grid-cols-[280px_1fr]">
-              <div className="relative aspect-[4/5] min-h-[280px] md:min-h-[360px]">
-                <Image
-                  src={ceo.image}
-                  alt={ceo.name}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 280px"
-                  className="object-cover object-top"
-                  priority
-                />
-              </div>
+              <Media
+                src={ceo.image}
+                alt={`${ceo.name}, ${ceo.title} of KayTech Africa — leading web design company in Accra, Ghana`}
+                ratio="4/5"
+                rounded="none"
+                framed={false}
+                zoom={false}
+                priority
+                objectPosition="top"
+                sizes="(max-width: 768px) 100vw, 280px"
+                className="min-h-[280px] md:min-h-[360px]"
+              />
               <div className="flex flex-col justify-center p-8 lg:p-10">
                 <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-primary">
                   {ceo.title}
@@ -63,17 +65,19 @@ export function LeadershipSection() {
             {team.map((member) => (
               <article
                 key={member.name}
-                className="flex items-center gap-4 rounded-3xl border border-hairline bg-surface-soft p-4 shadow-card"
+                className="flex items-center gap-4 rounded-3xl border border-hairline bg-surface-soft p-4 shadow-card transition hover:shadow-float"
               >
-                <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-2xl">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    sizes="80px"
-                    className="object-cover object-top"
-                  />
-                </div>
+                <Media
+                  src={member.image}
+                  alt={`${member.name}, ${member.title} at KayTech Africa, Accra`}
+                  ratio="square"
+                  rounded="2xl"
+                  framed={false}
+                  zoom={false}
+                  objectPosition="top"
+                  sizes="80px"
+                  className="h-20 w-20 shrink-0"
+                />
                 <div>
                   <p className="font-semibold text-ink">{member.name}</p>
                   <p className="text-sm text-muted">{member.title}</p>

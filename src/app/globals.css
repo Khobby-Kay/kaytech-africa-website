@@ -29,6 +29,24 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
+/* HCI: keep anchored sections clear of the fixed navbar when jumped to. */
+:target,
+[id] {
+  scroll-margin-top: 6rem;
+}
+
+/* HCI: visible, consistent keyboard focus affordance across the whole UI. */
+:focus-visible {
+  outline: 2px solid #1c3f69;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* HCI: crisp image rendering for a premium feel. */
+img {
+  image-rendering: auto;
+}
+
 @media (max-width: 1023px) {
   input,
   select,
@@ -41,6 +59,18 @@ button {
 ::selection {
   background: rgba(28, 63, 105, 0.15);
   color: #0a0a0a;
+}
+
+/* HCI: respect users who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 @layer utilities {

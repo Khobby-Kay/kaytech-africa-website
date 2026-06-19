@@ -1,7 +1,7 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { Media } from "@/components/ui/Media";
 import { siteConfig } from "@/lib/site";
 import { leadingCompany } from "@/lib/home-content";
 
@@ -40,15 +40,17 @@ export function LeadingCompanySection() {
             </div>
           </div>
 
-          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-hairline shadow-card lg:aspect-[5/4]">
-            <Image
-              src="/images/sections/service-web.jpg"
-              alt="Best web design company in Ghana — KayTech Africa web development and SEO services in Accra"
-              fill
-              sizes="(max-width: 1024px) 100vw, 480px"
-              className="object-cover"
+          <Media
+            src="/images/sections/service-web.jpg"
+            alt="Best web design company in Ghana — KayTech Africa web development and SEO services in Accra"
+            ratio="4/3"
+            sizes="(max-width: 1024px) 100vw, 480px"
+            className="lg:aspect-[5/4]"
+          >
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-6 text-on-dark">
               <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-on-dark/80">
                 Accra · Ghana
@@ -60,7 +62,7 @@ export function LeadingCompanySection() {
                 Quick call: {siteConfig.contact.phoneDisplay}
               </p>
             </div>
-          </div>
+          </Media>
         </div>
       </Container>
     </section>

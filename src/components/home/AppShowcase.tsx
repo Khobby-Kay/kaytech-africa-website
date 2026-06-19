@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import { GraduationCap, MessageCircle } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { Media } from "@/components/ui/Media";
 import { servicePreviewImages } from "@/lib/page-images";
 import { siteConfig } from "@/lib/site";
 
@@ -9,14 +9,20 @@ const cards = [
   {
     title: "AI automation studio",
     body: "Workflow bots, assistants, and LLM integrations for African operators.",
+    image: servicePreviewImages[0],
   },
   {
     title: "Web & product builds",
-    body: "Next.js sites and apps optimised for 3G, MoMo, and mobile-first users.",
+    body: "Professional web development in Accra — fast, mobile-first sites for Ghana.",
+    image: servicePreviewImages[1],
   },
   {
     title: "KayTech Academy",
     body: "Cohort-based training in web, marketing, and AI — portfolio-ready projects.",
+    image: {
+      src: "/images/sections/academy-learning.jpg",
+      alt: "Learn web design and development in Accra at KayTech Academy Ghana",
+    },
   },
 ];
 
@@ -67,24 +73,19 @@ export function AppShowcase() {
         </div>
 
         <div className="mt-10 grid gap-4 sm:mt-14 sm:gap-5 md:grid-cols-3">
-          {cards.map((card, i) => (
+          {cards.map((card) => (
             <div
               key={card.title}
-              className="overflow-hidden rounded-3xl border border-hairline bg-canvas shadow-card"
+              className="group overflow-hidden rounded-3xl border border-hairline bg-canvas shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-float"
             >
-              <div className="relative aspect-[4/5]">
-                <Image
-                  src={
-                    i === 2
-                      ? "/images/sections/academy-learning.jpg"
-                      : servicePreviewImages[i].src
-                  }
-                  alt={card.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover"
-                />
-              </div>
+              <Media
+                src={card.image.src}
+                alt={card.image.alt}
+                ratio="4/5"
+                rounded="none"
+                framed={false}
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
               <div className="p-4 sm:p-5">
                 <p className="font-semibold text-ink">{card.title}</p>
                 <p className="mt-2 text-sm leading-relaxed text-muted">
