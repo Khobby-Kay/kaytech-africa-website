@@ -1,5 +1,6 @@
 import { faqs as coreFaqs, services, siteConfig } from "@/lib/site";
 import { ghanaSearchKeywords, seoFaqs } from "@/lib/localized-seo";
+import { contentImages, SEO_IMAGE_PHRASE } from "@/lib/image-seo";
 
 export const allFaqs = [...seoFaqs, ...coreFaqs];
 
@@ -36,7 +37,7 @@ export function getOrganizationJsonLd() {
           "@type": "ImageObject",
           url: `${siteConfig.url}/logo.svg`,
         },
-        image: `${siteConfig.url}/images/sections/service-web.jpg`,
+        image: `${siteConfig.url}${contentImages.serviceWeb.src}`,
         address: {
           "@type": "PostalAddress",
           addressLocality: siteConfig.location.line1,
@@ -81,7 +82,7 @@ export function getOrganizationJsonLd() {
         "@id": `${siteConfig.url}/#localbusiness`,
         name: siteConfig.name,
         description: defaultDescription,
-        image: `${siteConfig.url}/images/sections/service-web.jpg`,
+        image: `${siteConfig.url}${contentImages.serviceWeb.src}`,
         url: siteConfig.url,
         telephone: siteConfig.contact.phone,
         email: siteConfig.contact.email,
@@ -201,8 +202,8 @@ export function getOrganizationJsonLd() {
 }
 
 export const ogImage = {
-  url: "/images/sections/service-web.jpg",
+  url: contentImages.serviceWeb.src,
   width: 1200,
   height: 630,
-  alt: "KayTech Africa — Best Web Design Company in Ghana | Web Development, SEO & E-Commerce",
+  alt: `${SEO_IMAGE_PHRASE} 1`,
 };

@@ -2,7 +2,13 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Media } from "@/components/ui/Media";
+import { contentImages } from "@/lib/image-seo";
 import { leadership } from "@/lib/site";
+
+const teamImageAlts = [
+  contentImages.teamEngineering.alt,
+  contentImages.teamAcademy.alt,
+] as const;
 
 export function LeadershipSection() {
   const { ceo, team } = leadership;
@@ -28,7 +34,7 @@ export function LeadershipSection() {
             <div className="grid md:grid-cols-[280px_1fr]">
               <Media
                 src={ceo.image}
-                alt={`${ceo.name}, ${ceo.title} of KayTech Africa — leading web design company in Accra, Ghana`}
+                alt={contentImages.teamCeo.alt}
                 ratio="4/5"
                 rounded="none"
                 framed={false}
@@ -62,14 +68,14 @@ export function LeadershipSection() {
           </article>
 
           <div className="grid gap-5">
-            {team.map((member) => (
+            {team.map((member, i) => (
               <article
                 key={member.name}
                 className="flex items-center gap-4 rounded-3xl border border-hairline bg-surface-soft p-4 shadow-card transition hover:shadow-float"
               >
                 <Media
                   src={member.image}
-                  alt={`${member.name}, ${member.title} at KayTech Africa, Accra`}
+                  alt={teamImageAlts[i]}
                   ratio="square"
                   rounded="2xl"
                   framed={false}

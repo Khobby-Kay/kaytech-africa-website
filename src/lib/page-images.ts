@@ -1,103 +1,63 @@
+import { contentImages, pageHeroImages } from "@/lib/image-seo";
+
 export const pageImages = {
-  features: {
-    src: "/images/sections/service-web.jpg",
-    alt: "Best web design and development services in Ghana — KayTech Africa team building a responsive website in Accra",
-  },
-  aiAutomation: {
-    src: "/images/sections/service-ai.jpg",
-    alt: "AI business automation, chatbots and WhatsApp automation for companies in Ghana by KayTech Africa",
-  },
-  about: {
-    src: "/images/sections/why-studio.jpg",
-    alt: "KayTech Africa studio in Accra — the web design company Ghana businesses trust",
-  },
-  academy: {
-    src: "/images/sections/academy-learning.jpg",
-    alt: "Learn web design and web development in Accra at KayTech Academy Ghana",
-  },
-  security: {
-    src: "/images/pages/security.jpg",
-    alt: "Secure, professional web development delivery by Ghana's best web design company",
-  },
-  support: {
-    src: "/images/pages/support.jpg",
-    alt: "KayTech Africa client support for web design and SEO clients across Ghana",
-  },
-  contact: {
-    src: "/images/pages/contact.jpg",
-    alt: "Contact the best web designer in Accra — KayTech Africa, Ghana",
-  },
-  faq: {
-    src: "/images/sections/faq-help.jpg",
-    alt: "Answers from Ghana's top web development company — KayTech Africa in Accra",
-  },
-  privacy: {
-    src: "/images/sections/privacy-trust.jpg",
-    alt: "KayTech Africa protects client data — trusted web design company in Ghana",
-  },
-  terms: {
-    src: "/images/sections/terms-agreement.jpg",
-    alt: "Clear partnership terms with KayTech Africa, a professional web design company in Accra",
-  },
+  features: pageHeroImages.features,
+  aiAutomation: pageHeroImages.aiAutomation,
+  about: pageHeroImages.about,
+  academy: pageHeroImages.academy,
+  security: pageHeroImages.security,
+  support: pageHeroImages.support,
+  contact: pageHeroImages.contact,
+  faq: pageHeroImages.faq,
+  privacy: pageHeroImages.privacy,
+  terms: pageHeroImages.terms,
 } as const;
 
 export const whyHomeImages = [
   {
-    src: "/images/sections/why-studio.jpg",
-    alt: "KayTech Africa web design studio session in Accra, Ghana",
+    src: contentImages.whyStudio.src,
+    alt: contentImages.whyStudio.alt,
     caption: "Studio",
   },
   {
-    src: "/images/sections/why-payments.jpg",
-    alt: "E-commerce and payment flows built by the best web developers in Ghana",
+    src: contentImages.whyPayments.src,
+    alt: contentImages.whyPayments.alt,
     caption: "E-commerce",
   },
   {
-    src: "/images/sections/why-mobile.jpg",
-    alt: "Mobile-first website design for Ghanaian users by KayTech Accra",
+    src: contentImages.whyMobile.src,
+    alt: contentImages.whyMobile.alt,
     caption: "Mobile-first",
   },
 ] as const;
 
 export const principleImages = [
-  {
-    src: "/images/sections/principle-speed.jpg",
-    alt: "Fast-loading websites built by Ghana's best web developers",
-  },
-  {
-    src: "/images/sections/principle-momo.jpg",
-    alt: "E-commerce and online payment integration for businesses in Ghana",
-  },
-  {
-    src: "/images/sections/principle-convert.jpg",
-    alt: "Conversion-focused web design in Accra that turns visitors into customers",
-  },
-  {
-    src: "/images/sections/principle-local.jpg",
-    alt: "Local web design expertise for Accra, Kumasi, and all of Ghana",
-  },
+  contentImages.principleSpeed,
+  contentImages.principleMomo,
+  contentImages.principleConvert,
+  contentImages.principleLocal,
 ] as const;
 
 export const servicePreviewImages = [
-  {
-    src: "/images/sections/service-ai.jpg",
-    alt: "AI automation services for businesses in Ghana by KayTech Africa",
-  },
-  {
-    src: "/images/sections/service-web.jpg",
-    alt: "Professional web development and website design in Accra, Ghana",
-  },
-  {
-    src: "/images/sections/service-growth.jpg",
-    alt: "SEO and digital marketing growth services in Ghana by KayTech",
-  },
+  contentImages.serviceAi,
+  contentImages.serviceWeb,
+  contentImages.serviceGrowth,
 ] as const;
 
 export const academyCourseImages = [
-  "/images/sections/course-design.jpg",
-  "/images/sections/course-dev.jpg",
-  "/images/sections/course-marketing.jpg",
-  "/images/sections/course-ai.jpg",
-  "/images/sections/course-ux.jpg",
-  "/images/sections/course-business.jpg",
+  contentImages.courseDesign.src,
+  contentImages.courseDev.src,
+  contentImages.courseMarketing.src,
+  contentImages.courseAi.src,
+  contentImages.courseUx.src,
+  contentImages.courseBusiness.src,
+] as const;
+
+export const academyCourseAlts = [
+  contentImages.courseDesign.alt,
+  contentImages.courseDev.alt,
+  contentImages.courseMarketing.alt,
+  contentImages.courseAi.alt,
+  contentImages.courseUx.alt,
+  contentImages.courseBusiness.alt,
 ] as const;

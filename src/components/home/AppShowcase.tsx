@@ -3,6 +3,7 @@ import { GraduationCap, MessageCircle } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Media } from "@/components/ui/Media";
 import { servicePreviewImages } from "@/lib/page-images";
+import { contentImages } from "@/lib/image-seo";
 import { siteConfig } from "@/lib/site";
 
 const cards = [
@@ -19,10 +20,7 @@ const cards = [
   {
     title: "KayTech Academy",
     body: "Cohort-based training in web, marketing, and AI — portfolio-ready projects.",
-    image: {
-      src: "/images/sections/academy-learning.jpg",
-      alt: "Learn web design and development in Accra at KayTech Academy Ghana",
-    },
+    image: contentImages.academyLearning,
   },
 ];
 

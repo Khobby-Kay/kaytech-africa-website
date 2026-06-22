@@ -1,3 +1,5 @@
+import { contentImages } from "@/lib/image-seo";
+
 /**
  * Portfolio / case studies.
  *
@@ -25,10 +27,7 @@ export const caseStudies: CaseStudy[] = [
       "Built a fast, mobile-first online store with Paystack and Mobile Money checkout so customers can buy in a few taps.",
     result: "Faster checkout and more completed orders on mobile data",
     tags: ["E-commerce", "Payments", "Mobile-first"],
-    image: {
-      src: "/images/sections/why-payments.jpg",
-      alt: "E-commerce website with Mobile Money checkout built by KayTech Africa for an Accra retail brand",
-    },
+    image: contentImages.whyPayments,
   },
   {
     client: "Professional services firm",
@@ -38,10 +37,7 @@ export const caseStudies: CaseStudy[] = [
       "Redesigned a dated website into a conversion-focused site and optimised it to rank for local service searches.",
     result: "Higher local search visibility and more qualified enquiries",
     tags: ["Web design", "SEO", "Local search"],
-    image: {
-      src: "/images/sections/service-growth.jpg",
-      alt: "SEO and web design project for a professional services firm in Kumasi by KayTech Africa",
-    },
+    image: contentImages.serviceGrowth,
   },
   {
     client: "Service business",
@@ -51,9 +47,6 @@ export const caseStudies: CaseStudy[] = [
       "Deployed an AI assistant and WhatsApp automation to answer customers instantly and capture leads around the clock.",
     result: "24/7 lead capture without adding headcount",
     tags: ["AI automation", "WhatsApp", "Lead capture"],
-    image: {
-      src: "/images/sections/service-ai.jpg",
-      alt: "AI automation and WhatsApp chatbot built by KayTech Africa for a service business in Tema",
-    },
+    image: contentImages.serviceAi,
   },
 ];

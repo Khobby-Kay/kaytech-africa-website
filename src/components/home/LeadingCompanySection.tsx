@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Media } from "@/components/ui/Media";
-import { siteConfig } from "@/lib/site";
+import { contentImages } from "@/lib/image-seo";
 import { leadingCompany } from "@/lib/home-content";
 
 export function LeadingCompanySection() {
@@ -41,8 +41,8 @@ export function LeadingCompanySection() {
           </div>
 
           <Media
-            src="/images/sections/service-web.jpg"
-            alt="Best web design company in Ghana — KayTech Africa web development and SEO services in Accra"
+            src={contentImages.serviceWeb.src}
+            alt={contentImages.serviceWeb.alt}
             ratio="4/3"
             sizes="(max-width: 1024px) 100vw, 480px"
             className="lg:aspect-[5/4]"

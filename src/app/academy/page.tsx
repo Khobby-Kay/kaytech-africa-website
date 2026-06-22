@@ -5,10 +5,15 @@ import { Container } from "@/components/ui/Container";
 import { Media } from "@/components/ui/Media";
 import { PageHero } from "@/components/ui/PageHero";
 import { FAQ } from "@/components/home/FAQ";
+import { contentImages } from "@/lib/image-seo";
 import { academyCourses, siteConfig } from "@/lib/site";
-import { academyCourseImages, pageImages } from "@/lib/page-images";
-import { createPageMetadata } from "@/lib/page-metadata";
+import {
+  academyCourseAlts,
+  academyCourseImages,
+  pageImages,
+} from "@/lib/page-images";
 import { ghanaSearchKeywords, pageSeoCopy } from "@/lib/localized-seo";
+import { createPageMetadata } from "@/lib/page-metadata";
 
 export const metadata: Metadata = createPageMetadata({
   title: pageSeoCopy.academy.title,
@@ -50,8 +55,8 @@ export default function AcademyPage() {
         <Container>
           <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center">
             <Media
-              src="/images/sections/academy-learning.jpg"
-              alt="Learn web design and web development in Accra at KayTech Academy Ghana"
+              src={contentImages.academyLearning.src}
+              alt={contentImages.academyLearning.alt}
               ratio="4/3"
               sizes="(max-width: 1024px) 100vw, 540px"
               className="lg:aspect-auto lg:min-h-[360px]"
@@ -107,7 +112,7 @@ export default function AcademyPage() {
               >
                 <Media
                   src={academyCourseImages[i]}
-                  alt={`${course.title} course in Accra, Ghana — KayTech Academy`}
+                  alt={academyCourseAlts[i]}
                   ratio="16/9"
                   rounded="none"
                   framed={false}

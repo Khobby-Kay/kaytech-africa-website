@@ -1,3 +1,5 @@
+import { contentImages } from "@/lib/image-seo";
+
 export const siteConfig = {
   name: "KayTech Africa",
   shortName: "KayTech",
@@ -133,19 +135,19 @@ export const leadership = {
     name: "Aikins Armstrong",
     title: "Founder & CEO",
     bio: "Certified futurist and keynote speaker architecting African digital infrastructure — from AI middleware to the studio and academy.",
-    image: "/images/team/aikins-armstrong.jpg",
+    image: contentImages.teamCeo.src,
     linkedin: "https://www.linkedin.com/in/aikins-armstrong",
   },
   team: [
     {
       name: "Amara Okonkwo",
       title: "Head of Engineering",
-      image: "/images/team/amara-okonkwo.jpg",
+      image: contentImages.teamEngineering.src,
     },
     {
       name: "Kwame Asante",
       title: "Academy Director",
-      image: "/images/team/kwame-asante.jpg",
+      image: contentImages.teamAcademy.src,
     },
   ],
 } as const;
