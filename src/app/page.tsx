@@ -8,6 +8,7 @@ import { KeyFacts } from "@/components/home/KeyFacts";
 import { Portfolio } from "@/components/home/Portfolio";
 import { WhyKayTechHome } from "@/components/home/WhyKayTechHome";
 import { Testimonials } from "@/components/home/Testimonials";
+import { ClientLogoStrip } from "@/components/home/ClientLogoStrip";
 import { createPageMetadata } from "@/lib/page-metadata";
 import { ghanaSearchKeywords, pageSeoCopy } from "@/lib/localized-seo";
 import { leadingCompany } from "@/lib/home-content";
@@ -29,6 +30,7 @@ export default function HomePage() {
       <KeyFacts />
       <LocalizedSeoSection />
       <WhyKayTechHome />
+      <ClientLogoStrip />
       <Portfolio />
       <Testimonials />
       <noscript>
