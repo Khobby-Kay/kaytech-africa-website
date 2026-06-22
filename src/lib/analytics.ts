@@ -1,8 +1,10 @@
+/** KayTech GA4 measurement ID — public, safe to ship in client bundle. */
+export const GA_MEASUREMENT_ID = "G-LGL9G3SYVY";
+
 /**
- * Lightweight analytics helpers. GA4 only loads when NEXT_PUBLIC_GA_ID is set,
- * so the site works perfectly with or without a measurement ID configured.
+ * Env override for staging/preview; defaults to the live KayTech property.
  */
-export const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+export const GA_ID = process.env.NEXT_PUBLIC_GA_ID || GA_MEASUREMENT_ID;
 
 type GtagParams = Record<string, string | number | boolean | undefined>;
 

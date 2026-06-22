@@ -5,9 +5,8 @@ import { useEffect } from "react";
 import { GA_ID, trackEvent } from "@/lib/analytics";
 
 /**
- * Loads GA4 (only when NEXT_PUBLIC_GA_ID is configured) and tracks lead-intent
- * clicks via event delegation, so server components can stay server components —
- * any link/button with a `data-track="..."` attribute is automatically logged.
+ * Loads Google tag (gtag.js) on every page via the root layout, plus tracks
+ * lead-intent clicks via event delegation.
  */
 export function Analytics() {
   useEffect(() => {
