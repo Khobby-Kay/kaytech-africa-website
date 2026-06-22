@@ -15,7 +15,7 @@ is what builds trust with Google and AI engines.
 - **Phone:** 024 840 8154  (+233 24 840 8154)
 - **WhatsApp:** 055 992 1979
 - **Email:** info@kaytechafrica.com
-- **Website:** https://kaytechafrica.com
+- **Website:** https://www.kaytechafrica.com
 - **Area served:** Accra, Kumasi, Tema, Takoradi, Cape Coast & all of Ghana
 - **Hours:** Mon–Fri 9:00–18:00, Sat by appointment
 
@@ -36,9 +36,9 @@ In Vercel → Project → Settings → Environment Variables, add:
 After adding, redeploy. The site works without these — they just turn features on.
 
 ### Google Search Console (critical for SEO speed)
-1. Add property `https://kaytechafrica.com`.
+1. Add property `https://www.kaytechafrica.com`.
 2. Verify with the `GOOGLE_SITE_VERIFICATION` token (above) or via DNS.
-3. Submit sitemap: `https://kaytechafrica.com/sitemap.xml`.
+3. Submit sitemap: `https://www.kaytechafrica.com/sitemap.xml`.
 4. Use "URL Inspection" → "Request indexing" for the homepage and key pages.
 
 ### Bing Webmaster Tools (powers Copilot + some AI search)
