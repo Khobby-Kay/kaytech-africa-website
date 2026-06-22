@@ -10,7 +10,8 @@
     "lint": "next lint",
     "blur": "node scripts/generate-blur.mjs",
     "compress": "node scripts/compress-images.mjs",
-    "rename-images": "node scripts/rename-images.mjs"
+    "rename-images": "node scripts/rename-images.mjs",
+    "brand-assets": "node scripts/generate-brand-assets.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.18.0",
