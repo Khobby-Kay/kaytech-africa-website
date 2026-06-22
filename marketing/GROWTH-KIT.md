@@ -14,7 +14,7 @@ is what builds trust with Google and AI engines.
 - **Category:** Website designer / Web developer / Software company
 - **Phone:** 024 840 8154  (+233 24 840 8154)
 - **WhatsApp:** 055 992 1979
-- **Email:** hello@kaytechafrica.com
+- **Email:** info@kaytechafrica.com
 - **Website:** https://kaytechafrica.com
 - **Area served:** Accra, Kumasi, Tema, Takoradi, Cape Coast & all of Ghana
 - **Hours:** Mon–Fri 9:00–18:00, Sat by appointment
@@ -30,8 +30,8 @@ In Vercel → Project → Settings → Environment Variables, add:
 | `NEXT_PUBLIC_GA_ID` | analytics.google.com → Admin → Data Streams → Measurement ID (`G-XXXX`) | Traffic + conversion analytics |
 | `GOOGLE_SITE_VERIFICATION` | search.google.com/search-console → add property → HTML tag → copy the `content="..."` value | Faster Google indexing + search data |
 | `RESEND_API_KEY` | resend.com → API Keys | Contact form emails leads to your inbox |
-| `LEAD_INBOX` | your email (default hello@kaytechafrica.com) | Where leads are delivered |
-| `LEAD_FROM` | e.g. `KayTech <leads@kaytechafrica.com>` (after verifying domain in Resend) | Sender of lead emails |
+| `LEAD_INBOX` | your email (default info@kaytechafrica.com) | Where leads are delivered |
+| `LEAD_FROM` | e.g. `KayTech Africa <info@kaytechafrica.com>` (after verifying domain in Resend) | Sender of lead emails |
 
 After adding, redeploy. The site works without these — they just turn features on.
 

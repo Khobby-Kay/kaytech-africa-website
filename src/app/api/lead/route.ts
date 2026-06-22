@@ -49,7 +49,7 @@ export async function POST(request: Request) {
 
   const apiKey = process.env.RESEND_API_KEY;
   const to = process.env.LEAD_INBOX || siteConfig.contact.email;
-  const from = process.env.LEAD_FROM || "KayTech Website <onboarding@resend.dev>";
+  const from = process.env.LEAD_FROM || "KayTech Africa <info@kaytechafrica.com>";
 
   // No mail provider configured — accept the lead so the client can fall back
   // to WhatsApp/email without showing an error.
