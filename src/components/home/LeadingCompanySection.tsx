@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { Media } from "@/components/ui/Media";
 import { contentImages } from "@/lib/image-seo";
 import { leadingCompany } from "@/lib/home-content";
+import { siteConfig } from "@/lib/site";
 
 export function LeadingCompanySection() {
   return (
