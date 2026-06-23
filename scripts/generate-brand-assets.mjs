@@ -8,7 +8,7 @@ import { fileURLToPath } from "node:url";
 import sharp from "sharp";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const logoPath = join(root, "public", "logo.svg");
+const logoPath = join(root, "public", "logo.jpg");
 
 const BRAND = {
   navy: "#1c3f69",
@@ -17,8 +17,8 @@ const BRAND = {
 };
 
 async function logoPng(size) {
-  const svg = await readFile(logoPath);
-  return sharp(svg).resize(size, size).png().toBuffer();
+  const source = await readFile(logoPath);
+  return sharp(source).resize(size, size).png().toBuffer();
 }
 
 async function writeIcon(size, outPath) {
@@ -88,7 +88,6 @@ async function main() {
   await writeFavicon(join(appDir, "favicon.ico"));
   await writeFavicon(join(publicDir, "favicon.ico"));
   await writeOgImage(join(publicDir, "og.jpg"));
-  await writeOgImage(join(appDir, "opengraph-image.jpg"));
 }
 
 main().catch((err) => {
