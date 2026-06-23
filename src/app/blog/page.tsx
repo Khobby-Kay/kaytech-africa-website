@@ -5,7 +5,7 @@ import { Container } from "@/components/ui/Container";
 import { Media } from "@/components/ui/Media";
 import { PageHero } from "@/components/ui/PageHero";
 import { getAllPosts } from "@/lib/blog";
-import { pageImages } from "@/lib/page-images";
+import { blogHeroImage } from "@/lib/image-seo";
 import { createPageMetadata } from "@/lib/page-metadata";
 import { ghanaSearchKeywords } from "@/lib/localized-seo";
 import { siteConfig } from "@/lib/site";
@@ -34,7 +34,7 @@ export default function BlogPage() {
         title="Web design, SEO & growth insights for Ghana"
         description="Practical guides on building, ranking, and growing a business website in Accra, Kumasi, Tema, and across Ghana — written by the KayTech Africa studio team."
         cta={{ label: "Get a free consultation", href: "/contact" }}
-        image={pageImages.features}
+        image={blogHeroImage}
       />
 
       <section className="bg-canvas px-5 py-12 lg:px-20 lg:py-16">

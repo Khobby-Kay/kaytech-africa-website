@@ -64,6 +64,32 @@ export const contentImages = {
   teamAcademy: { src: contentSrc("team", 20), alt: seoImageAlt(20) },
 } as const;
 
+/** Blog images — fresh, topic-specific photography for the blog pages. */
+function blogSrc(index: number): string {
+  return `/images/blog/${SEO_IMAGE_SLUG}-blog-${index}.jpg`;
+}
+
+export const blogHeroImage = {
+  src: `/images/blog/${SEO_IMAGE_SLUG}-blog-hero.jpg`,
+  alt: `${SEO_IMAGE_PHRASE} blog hero`,
+} as const;
+
+export const portfolioHeroImage = {
+  src: `/images/portfolio/${SEO_IMAGE_SLUG}-portfolio-hero.jpg`,
+  alt: `${SEO_IMAGE_PHRASE} portfolio hero`,
+} as const;
+
+/** One image per blog post, indexed 1–7. */
+export const blogImages = {
+  1: { src: blogSrc(1), alt: `${SEO_IMAGE_PHRASE} blog 1` },
+  2: { src: blogSrc(2), alt: `${SEO_IMAGE_PHRASE} blog 2` },
+  3: { src: blogSrc(3), alt: `${SEO_IMAGE_PHRASE} blog 3` },
+  4: { src: blogSrc(4), alt: `${SEO_IMAGE_PHRASE} blog 4` },
+  5: { src: blogSrc(5), alt: `${SEO_IMAGE_PHRASE} blog 5` },
+  6: { src: blogSrc(6), alt: `${SEO_IMAGE_PHRASE} blog 6` },
+  7: { src: blogSrc(7), alt: `${SEO_IMAGE_PHRASE} blog 7` },
+} as const;
+
 /** Legacy path → new SEO filename (for rename script + blur regeneration). */
 export const legacyImageRenameMap: Record<string, string> = {
   "/images/hero/hero-1.jpg": homeHeroSlides[0].src,

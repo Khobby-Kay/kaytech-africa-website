@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { Media } from "@/components/ui/Media";
 import { PageHero } from "@/components/ui/PageHero";
 import { portfolioProjects } from "@/lib/portfolio-projects";
-import { pageImages } from "@/lib/page-images";
+import { portfolioHeroImage } from "@/lib/image-seo";
 import { createPageMetadata } from "@/lib/page-metadata";
 import { ghanaSearchKeywords } from "@/lib/localized-seo";
 import { siteConfig } from "@/lib/site";
@@ -30,7 +31,7 @@ export default function PortfolioPage() {
         title="Transforming visions into digital success"
         description="We take pride in our clients' success stories. From startups to established enterprises across Ghana, brands trust KayTech Africa to turn digital visions into high-performing websites that deliver real results."
         cta={{ label: "Start your project", href: "/contact" }}
-        image={pageImages.features}
+        image={portfolioHeroImage}
       />
 
       <section className="border-b border-hairline bg-canvas px-5 py-14 lg:px-20 lg:py-20">
@@ -79,21 +80,15 @@ export default function PortfolioPage() {
                 rel="noopener noreferrer"
                 className="group flex flex-col overflow-hidden rounded-3xl border border-hairline bg-canvas transition duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-float"
               >
-                <div className="relative aspect-[4/3] w-full overflow-hidden bg-surface-soft">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={`https://s.wordpress.com/mshots/v1/${encodeURIComponent(
-                      project.url,
-                    )}?w=1280&h=960`}
-                    alt={`${project.name} website preview — ${project.image.alt}`}
-                    loading="lazy"
-                    className="h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-                  />
-                  <div
-                    aria-hidden
-                    className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-black/5"
-                  />
-                </div>
+                <Media
+                  src={project.image.src}
+                  alt={project.image.alt}
+                  ratio="4/3"
+                  rounded="none"
+                  framed={false}
+                  objectPosition="top"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
+                />
                 <div className="flex flex-1 flex-col p-5">
                   <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-primary">
                     {project.sector} · {project.location}

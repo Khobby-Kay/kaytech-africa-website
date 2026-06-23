@@ -1,4 +1,4 @@
-import { contentImages } from "@/lib/image-seo";
+import { blogImages } from "@/lib/image-seo";
 
 export type BlogSection = {
   heading?: string;
@@ -39,7 +39,7 @@ export const blogPosts: BlogPost[] = [
     readingTime: "7 min read",
     excerpt:
       "Your website is usually the first conversation a customer has with your brand. Here are the 10 web design trends shaping how Ghanaian businesses win attention, trust, and sales in 2026 and into 2027.",
-    image: { src: contentImages.serviceWeb.src, alt: contentImages.serviceWeb.alt },
+    image: blogImages[1],
     keywords: [
       "web design trends Ghana",
       "best web design company in Ghana",
@@ -123,7 +123,7 @@ export const blogPosts: BlogPost[] = [
     readingTime: "8 min read",
     excerpt:
       "Online shopping in Ghana is growing fast on the back of cheaper data and wider smartphone use. These are the ten features every store needs to earn trust, convenience, and repeat sales in 2026.",
-    image: { src: contentImages.whyPayments.src, alt: contentImages.whyPayments.alt },
+    image: blogImages[2],
     keywords: [
       "e-commerce website Ghana",
       "online store developer Ghana",
@@ -207,7 +207,7 @@ export const blogPosts: BlogPost[] = [
     readingTime: "6 min read",
     excerpt:
       "Worried about balancing cost and quality? Here is how to get a professional, effective website in Ghana without overpaying — and how to spot real value from cheap shortcuts.",
-    image: { src: contentImages.serviceGrowth.src, alt: contentImages.serviceGrowth.alt },
+    image: blogImages[3],
     keywords: [
       "affordable web design Ghana",
       "cheap website design Accra",
@@ -254,7 +254,7 @@ export const blogPosts: BlogPost[] = [
       "Affordable and professional are not opposites. KayTech Africa scopes every project clearly so SMEs and growing brands across Ghana get a website that fits their budget and their goals. Request a transparent quote today.",
   },
   {
-    slug: "best-web-development-company-accra-2026",
+    slug: "best-web-developer-in-accra-ghana-2026",
     title: "Discover the Best Web Development Company in Accra, Ghana for 2026 & 2027",
     category: "Web Development and Design",
     author: "KayTech Africa",
@@ -263,7 +263,7 @@ export const blogPosts: BlogPost[] = [
     readingTime: "7 min read",
     excerpt:
       "Accra's digital scene is crowded with web companies. Here is how to identify a studio with real expertise, strong support, and a track record of delivering results.",
-    image: { src: contentImages.serviceAi.src, alt: contentImages.serviceAi.alt },
+    image: blogImages[4],
     keywords: [
       "best web development company Accra",
       "web development company Ghana",
@@ -308,7 +308,7 @@ export const blogPosts: BlogPost[] = [
       "When you weigh expertise, service, and results, KayTech Africa stands out as one of the best web development companies in Accra for 2026 and 2027. Reach out for a discovery call and a clear proposal.",
   },
   {
-    slug: "best-web-design-company-accra-2026",
+    slug: "best-web-designer-in-accra-ghana-2026",
     title: "Unlocking Your Business Potential: The Best Web Design Company in Accra, Ghana 2026",
     category: "Web Development and Design",
     author: "KayTech Africa",
@@ -317,7 +317,7 @@ export const blogPosts: BlogPost[] = [
     readingTime: "6 min read",
     excerpt:
       "A strong online presence is essential for business success today. Here is how the right web design partner in Accra helps you capture attention and turn it into revenue.",
-    image: { src: contentImages.whyStudio.src, alt: contentImages.whyStudio.alt },
+    image: blogImages[5],
     keywords: [
       "best web design company Accra",
       "best web design company in Ghana",
@@ -365,7 +365,7 @@ export const blogPosts: BlogPost[] = [
     readingTime: "6 min read",
     excerpt:
       "Overwhelmed by choices? Here is how to tell top-tier web design firms in Accra apart from the rest — and choose a partner who truly understands your vision.",
-    image: { src: contentImages.serviceWeb.src, alt: contentImages.serviceWeb.alt },
+    image: blogImages[6],
     keywords: [
       "best web design companies Accra",
       "web design company Ghana",
@@ -419,7 +419,7 @@ export const blogPosts: BlogPost[] = [
     readingTime: "7 min read",
     excerpt:
       "Wondering what it takes to get a professional website in Ghana — and whether it's worth it? This guide covers costs, quality, and how to find the right partner.",
-    image: { src: contentImages.serviceGrowth.src, alt: contentImages.serviceGrowth.alt },
+    image: blogImages[7],
     keywords: [
       "web design services Ghana",
       "professional website Ghana",
