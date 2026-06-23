@@ -5,7 +5,7 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Media } from "@/components/ui/Media";
 import { PageHero } from "@/components/ui/PageHero";
-import { caseStudies } from "@/lib/portfolio";
+import { portfolioProjects } from "@/lib/portfolio-projects";
 import { clientLogos } from "@/lib/client-logos";
 import { pageImages } from "@/lib/page-images";
 import { createPageMetadata } from "@/lib/page-metadata";
@@ -112,15 +112,18 @@ export default function PortfolioPage() {
             </Link>
           </div>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {caseStudies.map((study) => (
-              <article
-                key={`${study.client}-${study.sector}`}
-                className="flex flex-col overflow-hidden rounded-3xl border border-hairline bg-surface-soft"
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {portfolioProjects.map((project) => (
+              <a
+                key={project.name}
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col overflow-hidden rounded-3xl border border-hairline bg-surface-soft transition duration-300 hover:-translate-y-1 hover:shadow-float"
               >
                 <Media
-                  src={study.image.src}
-                  alt={study.image.alt}
+                  src={project.image.src}
+                  alt={`${project.name} — ${project.image.alt}`}
                   ratio="16/10"
                   rounded="none"
                   framed={false}
@@ -128,29 +131,20 @@ export default function PortfolioPage() {
                 />
                 <div className="flex flex-1 flex-col p-6">
                   <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-primary">
-                    {study.sector} · {study.location}
+                    {project.sector} · {project.location}
                   </p>
                   <h3 className="mt-2 font-display text-lg font-semibold text-ink">
-                    {study.client}
+                    {project.name}
                   </h3>
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
-                    {study.summary}
+                    {project.summary}
                   </p>
-                  <p className="mt-4 rounded-2xl bg-canvas px-4 py-3 text-sm font-medium text-ink">
-                    {study.result}
-                  </p>
-                  <ul className="mt-4 flex flex-wrap gap-2">
-                    {study.tags.map((tag) => (
-                      <li
-                        key={tag}
-                        className="rounded-pill border border-hairline bg-canvas px-3 py-1 text-xs text-muted"
-                      >
-                        {tag}
-                      </li>
-                    ))}
-                  </ul>
+                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-primary">
+                    Visit live site
+                    <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </span>
                 </div>
-              </article>
+              </a>
             ))}
           </div>
         </Container>
