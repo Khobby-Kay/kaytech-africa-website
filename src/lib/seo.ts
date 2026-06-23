@@ -34,7 +34,9 @@ export function getOrganizationJsonLd() {
         telephone: siteConfig.contact.phone,
         logo: {
           "@type": "ImageObject",
-          url: `${siteConfig.url}/logo.jpg`,
+          url: `${siteConfig.url}/icon-192.png`,
+          width: 192,
+          height: 192,
         },
         image: `${siteConfig.url}/og.jpg`,
         address: {

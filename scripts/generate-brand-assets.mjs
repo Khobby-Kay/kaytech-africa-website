@@ -52,28 +52,61 @@ async function writeOgImage(outPath) {
   console.log(`Wrote ${outPath}`);
 }
 
-/** Minimal valid ICO wrapping a 32x32 PNG (works in browsers & LinkedIn). */
-async function writeFavicon(outPath) {
-  const png = await sharp(await logoPng(32)).png().toBuffer();
+/** ICO with one embedded PNG — Google prefers ≥48px for search-result favicons. */
+async function writeFavicon(outPath, size = 48) {
+  const png = await sharp(await logoPng(size)).png().toBuffer();
   const pngLen = png.length;
 
-  // ICO header (6) + entry (16) + PNG data
   const header = Buffer.alloc(6);
-  header.writeUInt16LE(0, 0); // reserved
-  header.writeUInt16LE(1, 2); // type: icon
-  header.writeUInt16LE(1, 4); // count
+  header.writeUInt16LE(0, 0);
+  header.writeUInt16LE(1, 2);
+  header.writeUInt16LE(1, 4);
 
   const entry = Buffer.alloc(16);
-  entry.writeUInt8(32, 0); // width
-  entry.writeUInt8(32, 1); // height
-  entry.writeUInt8(0, 2); // palette
-  entry.writeUInt8(0, 3); // reserved
-  entry.writeUInt16LE(1, 4); // color planes
-  entry.writeUInt16LE(32, 6); // bpp
-  entry.writeUInt32LE(pngLen, 8); // size
-  entry.writeUInt32LE(22, 12); // offset (6 + 16)
+  entry.writeUInt8(size >= 256 ? 0 : size, 0);
+  entry.writeUInt8(size >= 256 ? 0 : size, 1);
+  entry.writeUInt8(0, 2);
+  entry.writeUInt8(0, 3);
+  entry.writeUInt16LE(1, 4);
+  entry.writeUInt16LE(32, 6);
+  entry.writeUInt32LE(pngLen, 8);
+  entry.writeUInt32LE(22, 12);
 
   await writeFile(outPath, Buffer.concat([header, entry, png]));
+  console.log(`Wrote ${outPath} (${size}px)`);
+}
+
+async function writeManifest(publicDir) {
+  const manifest = {
+    name: "KayTech Africa",
+    short_name: "KayTech",
+    description:
+      "Best web design company in Ghana — web development, SEO, e-commerce, and AI automation in Accra.",
+    start_url: "/",
+    display: "standalone",
+    background_color: "#ffffff",
+    theme_color: "#1c3f69",
+    icons: [
+      {
+        src: "/icon-48.png",
+        sizes: "48x48",
+        type: "image/png",
+      },
+      {
+        src: "/icon-192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+      {
+        src: "/icon-512.png",
+        sizes: "512x512",
+        type: "image/png",
+      },
+    ],
+  };
+
+  const outPath = join(publicDir, "site.webmanifest");
+  await writeFile(outPath, `${JSON.stringify(manifest, null, 2)}\n`, "utf8");
   console.log(`Wrote ${outPath}`);
 }
 
@@ -83,11 +116,19 @@ async function main() {
   await mkdir(appDir, { recursive: true });
   await mkdir(publicDir, { recursive: true });
 
-  await writeIcon(32, join(appDir, "icon.png"));
+  // Google Search favicon guideline: square, at least 48×48.
+  await writeIcon(48, join(publicDir, "icon-48.png"));
+  await writeIcon(48, join(publicDir, "icon.png"));
+  await writeIcon(48, join(appDir, "icon.png"));
+  await writeIcon(192, join(publicDir, "icon-192.png"));
+  await writeIcon(512, join(publicDir, "icon-512.png"));
   await writeIcon(180, join(appDir, "apple-icon.png"));
-  await writeFavicon(join(appDir, "favicon.ico"));
-  await writeFavicon(join(publicDir, "favicon.ico"));
+  await writeIcon(180, join(publicDir, "apple-icon.png"));
+
+  await writeFavicon(join(appDir, "favicon.ico"), 48);
+  await writeFavicon(join(publicDir, "favicon.ico"), 48);
   await writeOgImage(join(publicDir, "og.jpg"));
+  await writeManifest(publicDir);
 }
 
 main().catch((err) => {
