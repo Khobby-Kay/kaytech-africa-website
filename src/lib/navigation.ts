@@ -2,6 +2,8 @@ export const mainNav = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
   { href: "/features", label: "Services" },
+  { href: "/portfolio", label: "Portfolio" },
+  { href: "/blog", label: "Blog" },
   { href: "/academy", label: "Academy" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact Us" },
@@ -18,6 +20,8 @@ export const footerNav = {
   ],
   company: [
     { href: "/about", label: "About Us" },
+    { href: "/portfolio", label: "Portfolio" },
+    { href: "/blog", label: "Blog" },
     { href: "/academy", label: "Academy" },
     { href: "/contact", label: "Contact Us" },
     { href: "/faq", label: "FAQ" },
