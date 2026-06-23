@@ -52,9 +52,11 @@ export function ContactForm() {
       });
       const data = await res.json();
 
-      if (!res.ok || !data.ok) {
+      if (!res.ok || !data.ok || data.delivered === false) {
         setStatus("error");
-        setError(data.error || "Something went wrong. Please try WhatsApp instead.");
+        setError(
+          data.error || "Message received, but email delivery failed. Please use WhatsApp instead.",
+        );
         return;
       }
 

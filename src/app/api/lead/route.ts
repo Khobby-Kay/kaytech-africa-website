@@ -54,7 +54,15 @@ export async function POST(request: Request) {
   // No mail provider configured — accept the lead so the client can fall back
   // to WhatsApp/email without showing an error.
   if (!apiKey) {
-    return NextResponse.json({ ok: true, delivered: false });
+    console.error("[lead] Missing RESEND_API_KEY in environment.");
+    return NextResponse.json(
+      {
+        ok: false,
+        delivered: false,
+        error: "Email delivery is not configured yet. Please use WhatsApp for now.",
+      },
+      { status: 503 },
+    );
   }
 
   const html = `
@@ -84,11 +92,33 @@ export async function POST(request: Request) {
     });
 
     if (!res.ok) {
-      return NextResponse.json({ ok: true, delivered: false });
+      const reason = await res.text();
+      console.error("[lead] Resend delivery failed", {
+        status: res.status,
+        reason,
+        to,
+        from,
+      });
+      return NextResponse.json(
+        {
+          ok: false,
+          delivered: false,
+          error: "We could not deliver your message by email right now. Please use WhatsApp.",
+        },
+        { status: 502 },
+      );
     }
 
     return NextResponse.json({ ok: true, delivered: true });
-  } catch {
-    return NextResponse.json({ ok: true, delivered: false });
+  } catch (error) {
+    console.error("[lead] Unexpected delivery error", error);
+    return NextResponse.json(
+      {
+        ok: false,
+        delivered: false,
+        error: "Temporary email issue. Please use WhatsApp while we fix this.",
+      },
+      { status: 500 },
+    );
   }
 }

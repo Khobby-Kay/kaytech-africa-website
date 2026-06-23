@@ -4,7 +4,7 @@ Official website for **KayTech Africa** — AI automation, web development, Web3
 
 ## Stack
 
-- Next.js 14 (App Router)
+- Modern React framework (App Router)
 - TypeScript
 - Tailwind CSS
 

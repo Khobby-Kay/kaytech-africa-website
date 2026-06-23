@@ -38,7 +38,7 @@ const tabs = [
     label: "Web",
     title: "Sites that load fast on 3G and convert on mobile.",
     description:
-      "Next.js, e-commerce, and SaaS builds engineered for African networks, MoMo checkout, and mobile-first users.",
+      "Modern web, e-commerce, and SaaS builds engineered for African networks, MoMo checkout, and mobile-first users.",
     cta: "Try KayTech now",
     features: [
       {

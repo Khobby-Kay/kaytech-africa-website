@@ -41,7 +41,7 @@ export const services = [
     title: "Web Development",
     description:
       "Blazing-fast, conversion-first websites and web apps engineered for African networks and mobile-first users.",
-    tags: ["Next.js", "E-commerce", "SaaS"],
+    tags: ["Modern Web", "E-commerce", "SaaS"],
   },
   {
     icon: "Blocks",
@@ -89,8 +89,8 @@ export const academyCourses = [
     duration: "12 weeks",
     level: "Beginner → Intermediate",
     description:
-      "HTML, CSS, JavaScript, React, and Next.js — build production-ready sites from scratch to deployment.",
-    outcomes: ["Full-stack basics", "APIs", "Deploy to Vercel"],
+      "HTML, CSS, JavaScript, React, and modern web frameworks — build production-ready sites from scratch to deployment.",
+    outcomes: ["Full-stack basics", "APIs", "Deploy to cloud"],
   },
   {
     slug: "digital-marketing",

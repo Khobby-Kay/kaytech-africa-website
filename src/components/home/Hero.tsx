@@ -152,7 +152,7 @@ export function Hero() {
             <FloatingCard
               icon={<ArrowDownToLine className="h-4 w-4" />}
               title="Project shipped"
-              subtitle="Next.js · Live"
+              subtitle="Production · Live"
               value="+ 40%"
             />
           </div>
