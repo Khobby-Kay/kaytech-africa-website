@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { Media } from "@/components/ui/Media";
 import { PageHero } from "@/components/ui/PageHero";
 import { portfolioProjects } from "@/lib/portfolio-projects";
-import { clientLogos } from "@/lib/client-logos";
 import { pageImages } from "@/lib/page-images";
 import { createPageMetadata } from "@/lib/page-metadata";
 import { ghanaSearchKeywords } from "@/lib/localized-seo";
@@ -58,94 +55,52 @@ export default function PortfolioPage() {
       </section>
 
       <section
-        aria-label="KayTech Africa featured web design clients in Ghana"
+        aria-label="KayTech Africa featured web design and development work"
         className="border-b border-hairline bg-surface-soft px-5 py-14 lg:px-20 lg:py-20"
       >
         <Container>
-          <h2 className="font-display text-2xl tracking-tight text-ink sm:text-3xl">
-            Brands we&apos;ve worked with
-          </h2>
-          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted sm:text-base">
-            A selection of organisations across Ghana and beyond that have
-            trusted KayTech Africa with their digital presence.
-          </p>
-          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-            {clientLogos.map((logo) => (
-              <div
-                key={logo.name}
-                className="flex h-28 items-center justify-center rounded-2xl border border-hairline bg-canvas p-6"
-              >
-                <div className="relative h-12 w-full">
-                  <Image
-                    src={logo.src}
-                    alt={`${logo.name} — KayTech Africa web design client in Ghana`}
-                    fill
-                    sizes="200px"
-                    className="object-contain opacity-85 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      <section className="border-b border-hairline bg-canvas px-5 py-14 lg:px-20 lg:py-20">
-        <Container>
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-            <div className="max-w-2xl">
-              <h2 className="font-display text-2xl tracking-tight text-ink sm:text-3xl">
-                Our featured work
-              </h2>
-              <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">
-                Every website we build is engineered with a purpose: to drive
-                measurable success for our clients across web design, SEO,
-                e-commerce, and AI automation.
-              </p>
-            </div>
-            <Link
-              href="/contact"
-              className="inline-flex h-11 shrink-0 items-center gap-2 rounded-pill border border-hairline px-5 text-sm font-semibold text-ink transition hover:border-primary/40"
-            >
-              Start your project
-              <ArrowUpRight className="h-4 w-4" />
-            </Link>
+          <div className="max-w-2xl">
+            <h2 className="font-display text-2xl tracking-tight text-ink sm:text-3xl lg:text-4xl">
+              Our featured work
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">
+              Every website we build is engineered with a purpose: to drive
+              measurable success for our clients. Explore a selection of the
+              brands and platforms we showcase.
+            </p>
           </div>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5 lg:grid-cols-3">
             {portfolioProjects.map((project) => (
               <a
                 key={project.name}
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex flex-col overflow-hidden rounded-3xl border border-hairline bg-surface-soft transition duration-300 hover:-translate-y-1 hover:shadow-float"
+                className="group flex min-h-[140px] flex-col items-center justify-center rounded-2xl border border-hairline bg-canvas p-6 text-center transition duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-float sm:min-h-[170px]"
               >
-                <Media
-                  src={project.image.src}
-                  alt={`${project.name} — ${project.image.alt}`}
-                  ratio="16/10"
-                  rounded="none"
-                  framed={false}
-                  sizes="(max-width: 768px) 100vw, 380px"
-                />
-                <div className="flex flex-1 flex-col p-6">
-                  <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-primary">
-                    {project.sector} · {project.location}
-                  </p>
-                  <h3 className="mt-2 font-display text-lg font-semibold text-ink">
-                    {project.name}
-                  </h3>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
-                    {project.summary}
-                  </p>
-                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-primary">
-                    Visit live site
-                    <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                  </span>
-                </div>
+                <h3 className="font-display text-lg font-semibold tracking-tight text-ink transition-colors group-hover:text-primary sm:text-xl lg:text-2xl">
+                  {project.name}
+                </h3>
+                <p className="mt-2 font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-muted">
+                  {project.sector}
+                </p>
+                <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-primary opacity-0 transition-opacity group-hover:opacity-100">
+                  Visit site
+                  <ArrowUpRight className="h-3.5 w-3.5" />
+                </span>
               </a>
             ))}
+          </div>
+
+          <div className="mt-10">
+            <Link
+              href="/contact"
+              className="inline-flex h-11 items-center gap-2 rounded-pill bg-primary px-6 text-sm font-semibold text-on-primary transition hover:bg-primary-deep"
+            >
+              Start your project
+              <ArrowUpRight className="h-4 w-4" />
+            </Link>
           </div>
         </Container>
       </section>
