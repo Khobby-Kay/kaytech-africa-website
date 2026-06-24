@@ -97,6 +97,9 @@ export default function RootLayout({
     <html lang="en-GH">
       <head>
         <JsonLd />
+        <link rel="icon" href="/favicon.ico" sizes="48x48" />
+        <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" sizes="180x180" />
       </head>
       <body className="min-h-screen bg-canvas pb-[calc(52px+env(safe-area-inset-bottom))] font-sans text-ink antialiased lg:pb-0">
         <Navbar />

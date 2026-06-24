@@ -16,7 +16,7 @@ export function Footer() {
               href="/"
               className="inline-flex items-center gap-2 font-display text-xl text-on-dark"
             >
-              <LogoMark className="h-8 w-8" />
+              <LogoMark className="h-8 w-auto" />
               {siteConfig.shortName}
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-on-dark/70">

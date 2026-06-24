@@ -1,14 +1,17 @@
 /**
  * Generates KayTech-branded favicon, apple-touch icon, and Open Graph image.
+ *
+ * Uses text-based SVG marks so favicons never show only the V-shaped logo
+ * element (which Google/LinkedIn can mistake for the Vercel triangle).
+ *
  * Run: node scripts/generate-brand-assets.mjs
  */
-import { readFile, writeFile, mkdir } from "node:fs/promises";
+import { writeFile, mkdir } from "node:fs/promises";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import sharp from "sharp";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const logoPath = join(root, "public", "logo.jpg");
 
 const BRAND = {
   navy: "#1c3f69",
@@ -16,22 +19,30 @@ const BRAND = {
   accent: "#3d7ab8",
 };
 
-async function logoPng(size) {
-  const source = await readFile(logoPath);
-  return sharp(source).resize(size, size).png().toBuffer();
+function iconSvg(size) {
+  const radius = Math.round(size * 0.14);
+  const titleSize = Math.round(size * 0.17);
+  const subSize = Math.round(size * 0.085);
+  const tagSize = Math.round(size * 0.055);
+
+  return Buffer.from(`<svg width="${size}" height="${size}" xmlns="http://www.w3.org/2000/svg">
+  <rect width="${size}" height="${size}" rx="${radius}" fill="${BRAND.navy}"/>
+  <text x="${size / 2}" y="${size * 0.4}" text-anchor="middle" fill="${BRAND.white}" font-family="Arial Black, Arial, sans-serif" font-size="${titleSize}" font-weight="900">KayTech</text>
+  <text x="${size / 2}" y="${size * 0.54}" text-anchor="middle" fill="${BRAND.white}" font-family="Arial, Helvetica, sans-serif" font-size="${subSize}" font-weight="700">AFRICA</text>
+  <text x="${size / 2}" y="${size * 0.68}" text-anchor="middle" fill="${BRAND.white}" font-family="Arial, Helvetica, sans-serif" font-size="${tagSize}" opacity="0.85">Web Design · Accra</text>
+</svg>`);
 }
 
 async function writeIcon(size, outPath) {
-  await sharp(await logoPng(size)).png().toFile(outPath);
+  await sharp(iconSvg(size)).png().toFile(outPath);
   console.log(`Wrote ${outPath}`);
 }
 
 async function writeOgImage(outPath) {
   const width = 1200;
   const height = 630;
-  const logo = await logoPng(160);
 
-  const textSvg = Buffer.from(`<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
+  const svg = Buffer.from(`<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="${BRAND.navy}"/>
@@ -39,22 +50,18 @@ async function writeOgImage(outPath) {
     </linearGradient>
   </defs>
   <rect width="${width}" height="${height}" fill="url(#bg)"/>
-  <text x="600" y="280" text-anchor="middle" fill="${BRAND.white}" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="700">KayTech Africa</text>
-  <text x="600" y="360" text-anchor="middle" fill="${BRAND.white}" font-family="Arial, Helvetica, sans-serif" font-size="36" opacity="0.92">Best Web Design in Accra, Ghana</text>
-  <text x="600" y="420" text-anchor="middle" fill="${BRAND.white}" font-family="Arial, Helvetica, sans-serif" font-size="24" opacity="0.8">Web Development · SEO · E-Commerce · AI Automation</text>
+  <text x="600" y="250" text-anchor="middle" fill="${BRAND.white}" font-family="Arial Black, Arial, sans-serif" font-size="96" font-weight="900">KayTech Africa</text>
+  <text x="600" y="340" text-anchor="middle" fill="${BRAND.white}" font-family="Arial, Helvetica, sans-serif" font-size="44" opacity="0.95">Best Web Design in Accra, Ghana</text>
+  <text x="600" y="410" text-anchor="middle" fill="${BRAND.white}" font-family="Arial, Helvetica, sans-serif" font-size="28" opacity="0.85">Web Development · SEO · E-Commerce · AI Automation</text>
+  <text x="600" y="520" text-anchor="middle" fill="${BRAND.white}" font-family="Arial, Helvetica, sans-serif" font-size="22" opacity="0.7">www.kaytechafrica.com</text>
 </svg>`);
 
-  await sharp(textSvg)
-    .composite([{ input: logo, top: 120, left: Math.round((width - 160) / 2) }])
-    .jpeg({ quality: 90, mozjpeg: true })
-    .toFile(outPath);
-
+  await sharp(svg).jpeg({ quality: 90, mozjpeg: true }).toFile(outPath);
   console.log(`Wrote ${outPath}`);
 }
 
-/** ICO with one embedded PNG — Google prefers ≥48px for search-result favicons. */
 async function writeFavicon(outPath, size = 48) {
-  const png = await sharp(await logoPng(size)).png().toBuffer();
+  const png = await sharp(iconSvg(size)).png().toBuffer();
   const pngLen = png.length;
 
   const header = Buffer.alloc(6);
@@ -84,7 +91,7 @@ async function writeManifest(publicDir) {
       "Best web design company in Ghana — web development, SEO, e-commerce, and AI automation in Accra.",
     start_url: "/",
     display: "standalone",
-    background_color: "#ffffff",
+    background_color: "#1c3f69",
     theme_color: "#1c3f69",
     icons: [
       {
@@ -116,7 +123,6 @@ async function main() {
   await mkdir(appDir, { recursive: true });
   await mkdir(publicDir, { recursive: true });
 
-  // Google Search favicon guideline: square, at least 48×48.
   await writeIcon(48, join(publicDir, "icon-48.png"));
   await writeIcon(48, join(publicDir, "icon.png"));
   await writeIcon(48, join(appDir, "icon.png"));
@@ -128,6 +134,8 @@ async function main() {
   await writeFavicon(join(appDir, "favicon.ico"), 48);
   await writeFavicon(join(publicDir, "favicon.ico"), 48);
   await writeOgImage(join(publicDir, "og.jpg"));
+  await writeOgImage(join(appDir, "opengraph-image.jpg"));
+  await writeOgImage(join(appDir, "twitter-image.jpg"));
   await writeManifest(publicDir);
 }
 
