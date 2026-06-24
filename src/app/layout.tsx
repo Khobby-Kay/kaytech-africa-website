@@ -7,7 +7,13 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { Analytics } from "@/components/analytics/Analytics";
 import { AiAssistant } from "@/components/assistant/AiAssistant";
 import { siteConfig } from "@/lib/site";
-import { brandAsset } from "@/lib/brand-assets";
+import {
+  APPLE_ICON,
+  FAVICON_48,
+  FAVICON_192,
+  FAVICON_512,
+  FAVICON_ICO,
+} from "@/lib/brand-assets";
 import {
   defaultDescription,
   defaultTitle,
@@ -70,19 +76,17 @@ export const metadata: Metadata = {
     creator: "@kaytech_africa",
     site: "@kaytech_africa",
   },
-  manifest: brandAsset("/site.webmanifest"),
+  manifest: "/site.webmanifest",
   icons: {
     icon: [
-      { url: brandAsset("/icon-192.png"), sizes: "192x192", type: "image/png" },
-      { url: brandAsset("/icon-512.png"), sizes: "512x512", type: "image/png" },
-      { url: brandAsset("/icon-48.png"), sizes: "48x48", type: "image/png" },
-      { url: brandAsset("/favicon.png"), sizes: "48x48", type: "image/png" },
-      { url: brandAsset("/favicon.ico"), sizes: "48x48" },
+      { url: FAVICON_192, sizes: "192x192", type: "image/png" },
+      { url: FAVICON_512, sizes: "512x512", type: "image/png" },
+      { url: FAVICON_48, sizes: "48x48", type: "image/png" },
+      { url: "/favicon.png", sizes: "48x48", type: "image/png" },
+      { url: FAVICON_ICO, sizes: "48x48" },
     ],
-    shortcut: [{ url: brandAsset("/icon-192.png"), type: "image/png" }],
-    apple: [
-      { url: brandAsset("/apple-icon.png"), sizes: "180x180", type: "image/png" },
-    ],
+    shortcut: [{ url: FAVICON_192, type: "image/png" }],
+    apple: [{ url: APPLE_ICON, sizes: "180x180", type: "image/png" }],
   },
   other: {
     "geo.region": "GH-AA",
@@ -103,24 +107,24 @@ export default function RootLayout({
         <JsonLd />
         <link
           rel="icon"
-          href={`${siteConfig.url}${brandAsset("/icon-192.png")}`}
+          href={`${siteConfig.url}${FAVICON_192}`}
           type="image/png"
           sizes="192x192"
         />
         <link
           rel="icon"
-          href={`${siteConfig.url}${brandAsset("/icon-48.png")}`}
+          href={`${siteConfig.url}${FAVICON_48}`}
           type="image/png"
           sizes="48x48"
         />
         <link
           rel="shortcut icon"
-          href={`${siteConfig.url}${brandAsset("/favicon.ico")}`}
+          href={`${siteConfig.url}${FAVICON_ICO}`}
           type="image/x-icon"
         />
         <link
           rel="apple-touch-icon"
-          href={`${siteConfig.url}${brandAsset("/apple-icon.png")}`}
+          href={`${siteConfig.url}${APPLE_ICON}`}
           sizes="180x180"
         />
       </head>

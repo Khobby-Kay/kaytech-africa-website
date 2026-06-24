@@ -1,9 +1,10 @@
 /**
  * Generates KayTech favicons, apple-touch icons, and Open Graph images.
  *
- * Does NOT overwrite public/logo.jpg or logo.svg — those are your official
- * brand files. Favicons use a separate text mark so Google never picks up
- * the V-shaped logo element alone.
+ * Favicons are resized from public/logo.jpg (square 1024×1024) so Google
+ * shows the full brand mark — same approach as doctorbarns.com.
+ *
+ * Does NOT overwrite public/logo.jpg or logo.svg.
  *
  * Run: node scripts/generate-brand-assets.mjs
  */
@@ -20,26 +21,11 @@ const BRAND = {
   accent: "#3d7ab8",
 };
 
-/** Bump when favicons change — busts Google/browser cache. Keep in sync with src/lib/brand-assets.ts */
-const BRAND_ASSET_VERSION = "5";
+const LOGO_SOURCE = join(root, "public", "logo.jpg");
 
-function iconSvg(size) {
-  const radius = Math.round(size * 0.14);
-  const titleSize = Math.round(size * 0.17);
-  const subSize = Math.round(size * 0.085);
-  const tagSize = Math.round(size * 0.055);
-
-  return Buffer.from(`<svg width="${size}" height="${size}" xmlns="http://www.w3.org/2000/svg">
-  <rect width="${size}" height="${size}" rx="${radius}" fill="${BRAND.navy}"/>
-  <text x="${size / 2}" y="${size * 0.4}" text-anchor="middle" fill="${BRAND.white}" font-family="Arial Black, Arial, sans-serif" font-size="${titleSize}" font-weight="900">KayTech</text>
-  <text x="${size / 2}" y="${size * 0.54}" text-anchor="middle" fill="${BRAND.white}" font-family="Arial, Helvetica, sans-serif" font-size="${subSize}" font-weight="700">AFRICA</text>
-  <text x="${size / 2}" y="${size * 0.68}" text-anchor="middle" fill="${BRAND.white}" font-family="Arial, Helvetica, sans-serif" font-size="${tagSize}" opacity="0.85">Web Design · Accra</text>
-</svg>`);
-}
-
-async function writeIcon(size, outPath) {
-  await sharp(iconSvg(size)).png().toFile(outPath);
-  console.log(`Wrote ${outPath}`);
+async function writeLogoIcon(size, outPath) {
+  await sharp(LOGO_SOURCE).resize(size, size).png().toFile(outPath);
+  console.log(`Wrote ${outPath} (${size}px from logo.jpg)`);
 }
 
 async function writeOgImage(outPath) {
@@ -65,7 +51,7 @@ async function writeOgImage(outPath) {
 }
 
 async function writeFavicon(outPath, size = 48) {
-  const png = await sharp(iconSvg(size)).png().toBuffer();
+  const png = await sharp(LOGO_SOURCE).resize(size, size).png().toBuffer();
   const pngLen = png.length;
 
   const header = Buffer.alloc(6);
@@ -84,11 +70,10 @@ async function writeFavicon(outPath, size = 48) {
   entry.writeUInt32LE(22, 12);
 
   await writeFile(outPath, Buffer.concat([header, entry, png]));
-  console.log(`Wrote ${outPath} (${size}px)`);
+  console.log(`Wrote ${outPath} (${size}px from logo.jpg)`);
 }
 
 async function writeManifest(publicDir) {
-  const v = BRAND_ASSET_VERSION;
   const manifest = {
     name: "KayTech Africa",
     short_name: "KayTech",
@@ -99,24 +84,9 @@ async function writeManifest(publicDir) {
     background_color: "#1c3f69",
     theme_color: "#1c3f69",
     icons: [
-      {
-        src: `/icon-48.png?v=${v}`,
-        sizes: "48x48",
-        type: "image/png",
-        purpose: "any",
-      },
-      {
-        src: `/icon-192.png?v=${v}`,
-        sizes: "192x192",
-        type: "image/png",
-        purpose: "any",
-      },
-      {
-        src: `/icon-512.png?v=${v}`,
-        sizes: "512x512",
-        type: "image/png",
-        purpose: "any",
-      },
+      { src: "/icon-48.png", sizes: "48x48", type: "image/png", purpose: "any" },
+      { src: "/icon-192.png", sizes: "192x192", type: "image/png", purpose: "any" },
+      { src: "/icon-512.png", sizes: "512x512", type: "image/png", purpose: "any" },
     ],
   };
 
@@ -131,15 +101,15 @@ async function main() {
   await mkdir(appDir, { recursive: true });
   await mkdir(publicDir, { recursive: true });
 
-  await writeIcon(48, join(publicDir, "icon-48.png"));
-  await writeIcon(48, join(publicDir, "icon.png"));
-  await writeIcon(48, join(publicDir, "favicon.png"));
-  await writeIcon(192, join(publicDir, "icon-192.png"));
-  await writeIcon(512, join(publicDir, "icon-512.png"));
-  await writeIcon(180, join(publicDir, "apple-icon.png"));
+  await writeLogoIcon(48, join(publicDir, "icon-48.png"));
+  await writeLogoIcon(48, join(publicDir, "icon.png"));
+  await writeLogoIcon(48, join(publicDir, "favicon.png"));
+  await writeLogoIcon(192, join(publicDir, "icon-192.png"));
+  await writeLogoIcon(512, join(publicDir, "icon-512.png"));
+  await writeLogoIcon(180, join(publicDir, "apple-icon.png"));
 
-  await writeIcon(48, join(appDir, "icon.png"));
-  await writeIcon(180, join(appDir, "apple-icon.png"));
+  await writeLogoIcon(48, join(appDir, "icon.png"));
+  await writeLogoIcon(180, join(appDir, "apple-icon.png"));
   await writeFavicon(join(appDir, "favicon.ico"), 48);
   await writeFavicon(join(publicDir, "favicon.ico"), 48);
 

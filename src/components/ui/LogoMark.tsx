@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-/** Official KayTech logo — favicons use separate text marks for Google. */
+/** Official KayTech logo — favicons are generated from the same file. */
 export function LogoMark({ className = "h-7 w-auto" }: { className?: string }) {
   return (
     <Image

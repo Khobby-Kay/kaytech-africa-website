@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, Clock, User } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Media } from "@/components/ui/Media";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
+import { ORGANIZATION_LOGO } from "@/lib/brand-assets";
 import { createPageMetadata } from "@/lib/page-metadata";
 import { siteConfig } from "@/lib/site";
 
@@ -58,7 +59,9 @@ export default function BlogPostPage({ params }: { params: Params }) {
       name: siteConfig.name,
       logo: {
         "@type": "ImageObject",
-        url: `${siteConfig.url}/icon-192.png`,
+        url: `${siteConfig.url}${ORGANIZATION_LOGO}`,
+        width: 512,
+        height: 512,
       },
     },
     mainEntityOfPage: {
