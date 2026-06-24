@@ -1,13 +1,12 @@
 import Image from "next/image";
-import { brandAsset } from "@/lib/brand-assets";
 
-/** Full KayTech wordmark — never the V-only mark (Google confuses it with Vercel). */
+/** Official KayTech logo — favicons use separate text marks for Google. */
 export function LogoMark({ className = "h-7 w-auto" }: { className?: string }) {
   return (
     <Image
-      src={brandAsset("/logo.png")}
-      alt="KayTech Africa — best web design in Accra, Ghana"
-      width={160}
+      src="/logo.jpg"
+      alt="KayTech Africa logo"
+      width={140}
       height={40}
       className={className}
       priority

@@ -1,8 +1,9 @@
 /**
- * Generates KayTech-branded favicon, logo, apple-touch icon, and OG image.
+ * Generates KayTech favicons, apple-touch icons, and Open Graph images.
  *
- * Never use the V-shaped mark alone — Google and browsers confuse it with Vercel.
- * All square icons use a clear "KayTech / AFRICA" text mark.
+ * Does NOT overwrite public/logo.jpg or logo.svg — those are your official
+ * brand files. Favicons use a separate text mark so Google never picks up
+ * the V-shaped logo element alone.
  *
  * Run: node scripts/generate-brand-assets.mjs
  */
@@ -36,34 +37,9 @@ function iconSvg(size) {
 </svg>`);
 }
 
-/** Horizontal wordmark for navbar — not the V-only mark. */
-function wordmarkSvg(width, height) {
-  return Buffer.from(`<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
-  <rect width="${width}" height="${height}" rx="12" fill="${BRAND.navy}"/>
-  <text x="${width / 2}" y="${height * 0.48}" text-anchor="middle" fill="${BRAND.white}" font-family="Arial Black, Arial, sans-serif" font-size="52" font-weight="900">KayTech Africa</text>
-  <text x="${width / 2}" y="${height * 0.78}" text-anchor="middle" fill="${BRAND.white}" font-family="Arial, Helvetica, sans-serif" font-size="22" opacity="0.9">Innovating to Impact · Best Web Design Accra</text>
-</svg>`);
-}
-
-function wordmarkSvgFile() {
-  return Buffer.from(`<svg viewBox="0 0 400 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="400" height="100" rx="12" fill="${BRAND.navy}"/>
-  <text x="200" y="48" text-anchor="middle" fill="${BRAND.white}" font-family="Arial Black, Arial, sans-serif" font-size="36" font-weight="900">KayTech Africa</text>
-  <text x="200" y="78" text-anchor="middle" fill="${BRAND.white}" font-family="Arial, Helvetica, sans-serif" font-size="14" opacity="0.9">Best Web Design in Accra, Ghana</text>
-</svg>`);
-}
-
 async function writeIcon(size, outPath) {
   await sharp(iconSvg(size)).png().toFile(outPath);
   console.log(`Wrote ${outPath}`);
-}
-
-async function writeWordmark(publicDir) {
-  const svg = wordmarkSvg(800, 200);
-  await sharp(svg).png().toFile(join(publicDir, "logo.png"));
-  await sharp(svg).jpeg({ quality: 92, mozjpeg: true }).toFile(join(publicDir, "logo.jpg"));
-  await writeFile(join(publicDir, "logo.svg"), wordmarkSvgFile(), "utf8");
-  console.log("Wrote public/logo.png, logo.jpg, logo.svg");
 }
 
 async function writeOgImage(outPath) {
@@ -154,8 +130,6 @@ async function main() {
   const publicDir = join(root, "public");
   await mkdir(appDir, { recursive: true });
   await mkdir(publicDir, { recursive: true });
-
-  await writeWordmark(publicDir);
 
   await writeIcon(48, join(publicDir, "icon-48.png"));
   await writeIcon(48, join(publicDir, "icon.png"));
