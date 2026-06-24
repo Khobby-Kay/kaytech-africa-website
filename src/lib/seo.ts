@@ -34,11 +34,11 @@ export function getOrganizationJsonLd() {
         telephone: siteConfig.contact.phone,
         logo: {
           "@type": "ImageObject",
-          url: `${siteConfig.url}/icon-192.png`,
-          width: 192,
-          height: 192,
+          url: `${siteConfig.url}/icon-512.png?v=5`,
+          width: 512,
+          height: 512,
         },
-        image: `${siteConfig.url}/og.jpg`,
+        image: `${siteConfig.url}/og.jpg?v=5`,
         address: {
           "@type": "PostalAddress",
           addressLocality: siteConfig.location.line1,
@@ -83,7 +83,7 @@ export function getOrganizationJsonLd() {
         "@id": `${siteConfig.url}/#localbusiness`,
         name: siteConfig.name,
         description: defaultDescription,
-        image: `${siteConfig.url}/og.jpg`,
+        image: `${siteConfig.url}/og.jpg?v=5`,
         url: siteConfig.url,
         telephone: siteConfig.contact.phone,
         email: siteConfig.contact.email,
@@ -203,7 +203,7 @@ export function getOrganizationJsonLd() {
 }
 
 export const ogImage = {
-  url: "/og.jpg",
+  url: "/og.jpg?v=5",
   width: 1200,
   height: 630,
   alt: "KayTech Africa — Best Web Design Company in Accra, Ghana",
