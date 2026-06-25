@@ -9,7 +9,6 @@ import { AiAssistant } from "@/components/assistant/AiAssistant";
 import { siteConfig } from "@/lib/site";
 import {
   APPLE_ICON,
-  FAVICON_48,
   FAVICON_192,
   FAVICON_512,
   FAVICON_ICO,
@@ -79,13 +78,11 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
   icons: {
     icon: [
+      { url: FAVICON_ICO, sizes: "48x48" },
       { url: FAVICON_192, sizes: "192x192", type: "image/png" },
       { url: FAVICON_512, sizes: "512x512", type: "image/png" },
-      { url: FAVICON_48, sizes: "48x48", type: "image/png" },
-      { url: "/favicon.png", sizes: "48x48", type: "image/png" },
-      { url: FAVICON_ICO, sizes: "48x48" },
     ],
-    shortcut: [{ url: FAVICON_192, type: "image/png" }],
+    shortcut: [{ url: FAVICON_ICO }],
     apple: [{ url: APPLE_ICON, sizes: "180x180", type: "image/png" }],
   },
   other: {
@@ -105,28 +102,6 @@ export default function RootLayout({
     <html lang="en-GH">
       <head>
         <JsonLd />
-        <link
-          rel="icon"
-          href={`${siteConfig.url}${FAVICON_192}`}
-          type="image/png"
-          sizes="192x192"
-        />
-        <link
-          rel="icon"
-          href={`${siteConfig.url}${FAVICON_48}`}
-          type="image/png"
-          sizes="48x48"
-        />
-        <link
-          rel="shortcut icon"
-          href={`${siteConfig.url}${FAVICON_ICO}`}
-          type="image/x-icon"
-        />
-        <link
-          rel="apple-touch-icon"
-          href={`${siteConfig.url}${APPLE_ICON}`}
-          sizes="180x180"
-        />
       </head>
       <body className="min-h-screen bg-canvas pb-[calc(52px+env(safe-area-inset-bottom))] font-sans text-ink antialiased lg:pb-0">
         <Navbar />
