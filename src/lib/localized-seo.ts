@@ -24,6 +24,49 @@ export const ghanaSearchKeywords = [
   "logo and website design Ghana",
   "company website Ghana",
   "online store developer Ghana",
+  // Pricing / cost intent
+  "how much does a website cost in Ghana",
+  "website design prices in Ghana",
+  "web design packages Ghana",
+  "website cost in cedis",
+  // Local payment integration
+  "mobile money website integration Ghana",
+  "MoMo payment website Ghana",
+  "Paystack integration developer Ghana",
+  "Flutterwave website developer Ghana",
+  "WhatsApp business integration Ghana",
+  // Industry-specific
+  "church website design Ghana",
+  "school website design Ghana",
+  "hospital website design Ghana",
+  "hotel website design Ghana",
+  "restaurant website design Ghana",
+  "real estate website design Ghana",
+  "NGO website design Ghana",
+  // Platform / tech
+  "WordPress developer Ghana",
+  "Shopify expert Ghana",
+  "web app developer Ghana",
+  "custom software development Ghana",
+  "mobile app developer Ghana",
+  // Service variants
+  "website redesign Ghana",
+  "website maintenance Ghana",
+  "landing page design Ghana",
+  "website speed optimization Ghana",
+  "SEO audit Ghana",
+  // Brand / Africa-wide positioning
+  "digital infrastructure Africa",
+  "Afrocentric web design",
+  "web design agency West Africa",
+  "AI automation agency Ghana",
+  // More cities
+  "web designer Takoradi",
+  "web design Cape Coast",
+  "web designer Tamale",
+  "web design Osu",
+  "web design Spintex",
+  "web design Adenta",
   "KayTech Africa",
 ] as const;
 

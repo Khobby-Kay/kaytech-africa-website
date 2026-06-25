@@ -463,6 +463,222 @@ export const blogPosts: BlogPost[] = [
     conclusion:
       "A professional website is one of the best investments a Ghanaian business can make. KayTech Africa offers clear, results-driven web design services across Accra, Kumasi, Tema, and nationwide — get in touch for a free consultation.",
   },
+  {
+    slug: "church-website-design-ghana",
+    title: "Church Website Design in Ghana: A Practical Guide for 2026",
+    category: "Industry Guides",
+    author: "KayTech Africa",
+    date: "2026-01-08",
+    dateDisplay: "Jan 8, 2026",
+    readingTime: "6 min read",
+    excerpt:
+      "A good church website welcomes visitors, keeps members informed, and even receives offerings online. Here is what a modern church website in Ghana should include.",
+    image: blogImages[1],
+    keywords: [
+      "church website design Ghana",
+      "church website Accra",
+      "website for churches Ghana",
+      "Mobile Money giving website Ghana",
+    ],
+    intro:
+      "For many Ghanaians, a church's website is the first place they look before visiting on a Sunday. A clear, welcoming site helps newcomers find service times, lets members stay connected, and makes giving simple. Here is how KayTech Africa approaches church website design for congregations across Ghana.",
+    sections: [
+      {
+        heading: "Make service times and location obvious",
+        paragraphs: [
+          "Visitors want one thing first: when and where to come. Put service times, the address, and a map link where they cannot be missed — ideally on the homepage and on mobile.",
+        ],
+      },
+      {
+        heading: "Online giving with Mobile Money",
+        paragraphs: [
+          "Tithes and offerings increasingly move online. Integrating MoMo, Paystack, or Flutterwave lets members give securely from their phones, whether they are at home, travelling, or in the diaspora.",
+        ],
+      },
+      {
+        heading: "Sermons, events, and announcements",
+        paragraphs: [
+          "A simple way to share sermon recordings, upcoming events, and weekly announcements keeps the congregation engaged through the week — not just on Sunday.",
+        ],
+      },
+      {
+        heading: "Mobile-first and fast",
+        paragraphs: [
+          "Most members will open the site on a phone, often on mobile data. A lightweight, fast-loading design ensures everyone can reach you without frustration.",
+        ],
+      },
+      {
+        heading: "Connect cards and prayer requests",
+        paragraphs: [
+          "Simple forms for new visitors, prayer requests, and volunteer sign-ups help your team follow up and care for people personally.",
+        ],
+      },
+    ],
+    conclusion:
+      "A thoughtful church website extends your ministry beyond the building. KayTech Africa builds welcoming, mobile-first church sites with online giving for congregations across Accra, Kumasi, and all of Ghana. Reach out for a tailored quote.",
+  },
+  {
+    slug: "school-website-design-ghana",
+    title: "School Website Design in Ghana: What Parents Expect in 2026",
+    category: "Industry Guides",
+    author: "KayTech Africa",
+    date: "2026-01-09",
+    dateDisplay: "Jan 9, 2026",
+    readingTime: "6 min read",
+    excerpt:
+      "A strong school website builds trust with parents, simplifies admissions, and showcases what makes your school special. Here is what it should include.",
+    image: blogImages[2],
+    keywords: [
+      "school website design Ghana",
+      "school website Accra",
+      "website for schools Ghana",
+      "online admissions website Ghana",
+    ],
+    intro:
+      "When parents in Ghana research a school, the website is where first impressions are made. A professional, informative site reassures families, reduces phone calls to the office, and can even handle admissions enquiries online. Here is what KayTech Africa builds into school websites.",
+    sections: [
+      {
+        heading: "Tell your school's story clearly",
+        paragraphs: [
+          "Parents want to understand your values, curriculum, facilities, and results. Clear pages with real photos of your campus and pupils build instant trust.",
+        ],
+      },
+      {
+        heading: "Online admissions and enquiries",
+        paragraphs: [
+          "An online enquiry or application form captures interested parents 24/7 and saves your administration team hours of repetitive phone calls and paperwork.",
+        ],
+      },
+      {
+        heading: "News, calendar, and announcements",
+        paragraphs: [
+          "A simple news and events section keeps parents informed about term dates, holidays, and school activities, reducing confusion and missed communication.",
+        ],
+      },
+      {
+        heading: "Mobile-first for busy parents",
+        paragraphs: [
+          "Parents check schools on their phones between work and home. A fast, mobile-first site ensures they can find what they need quickly.",
+        ],
+      },
+      {
+        heading: "Fee payments and portals",
+        paragraphs: [
+          "For schools ready to go further, online fee payment via Mobile Money and parent or student portals add real convenience and set you apart from competitors.",
+        ],
+      },
+    ],
+    conclusion:
+      "A great school website is a recruitment and communication tool that works around the clock. KayTech Africa designs professional, mobile-first school websites for institutions across Ghana. Contact us for a tailored quote.",
+  },
+  {
+    slug: "restaurant-website-design-ghana",
+    title: "Restaurant Website Design in Ghana: Win More Orders in 2026",
+    category: "Industry Guides",
+    author: "KayTech Africa",
+    date: "2026-01-10",
+    dateDisplay: "Jan 10, 2026",
+    readingTime: "6 min read",
+    excerpt:
+      "Hungry customers search online before they choose where to eat. A fast restaurant website with your menu, location, and online ordering turns searches into sales.",
+    image: blogImages[3],
+    keywords: [
+      "restaurant website design Ghana",
+      "restaurant website Accra",
+      "food ordering website Ghana",
+      "online ordering Mobile Money Ghana",
+    ],
+    intro:
+      "Whether someone is craving jollof, pizza, or a fine-dining experience, the decision often starts with a quick search on a phone. A clean restaurant website with your menu, photos, and an easy way to order helps you capture that hunger before a competitor does. Here is what KayTech Africa builds for restaurants in Ghana.",
+    sections: [
+      {
+        heading: "A mouth-watering, up-to-date menu",
+        paragraphs: [
+          "Your menu is the star. Clear categories, appetising photos, and current prices in cedis help customers decide fast — and an easy-to-update menu keeps it accurate.",
+        ],
+      },
+      {
+        heading: "Online ordering and WhatsApp",
+        paragraphs: [
+          "Let customers order directly through your site or via a WhatsApp button. Integrating Mobile Money and card payments turns browsers into paying customers without a phone call.",
+        ],
+      },
+      {
+        heading: "Location, hours, and reservations",
+        paragraphs: [
+          "Make your address, map, opening hours, and a reservation option easy to find so customers can visit or book without friction.",
+        ],
+      },
+      {
+        heading: "Fast, mobile-first design",
+        paragraphs: [
+          "A hungry customer will not wait for a slow page. A lightweight, mobile-first build keeps your site quick on any network.",
+        ],
+      },
+      {
+        heading: "Reviews and social proof",
+        paragraphs: [
+          "Showcasing customer reviews and linking your social media builds trust and brings your best dishes to life for new diners.",
+        ],
+      },
+    ],
+    conclusion:
+      "A well-built restaurant website is a 24/7 sales channel for your kitchen. KayTech Africa designs fast, appetising restaurant sites with online ordering and Mobile Money for businesses across Ghana. Get in touch for a tailored quote.",
+  },
+  {
+    slug: "real-estate-website-design-ghana",
+    title: "Real Estate Website Design in Ghana: Generate More Leads in 2026",
+    category: "Industry Guides",
+    author: "KayTech Africa",
+    date: "2026-01-11",
+    dateDisplay: "Jan 11, 2026",
+    readingTime: "7 min read",
+    excerpt:
+      "Property buyers and renters start their search online. A professional real estate website with searchable listings and strong visuals turns that interest into qualified leads.",
+    image: blogImages[4],
+    keywords: [
+      "real estate website design Ghana",
+      "property website Accra",
+      "real estate listings website Ghana",
+      "estate agent website Ghana",
+    ],
+    intro:
+      "In Ghana's growing property market, buyers, renters, and diaspora investors all begin their search online. A polished real estate website with high-quality visuals and searchable listings positions your agency as credible and makes it easy for serious leads to reach you. Here is what KayTech Africa builds for property businesses.",
+    sections: [
+      {
+        heading: "Searchable, filterable listings",
+        paragraphs: [
+          "Let visitors filter by location, price, type, and bedrooms so they quickly find relevant properties. A clean listing system keeps your inventory organised and easy to update.",
+        ],
+      },
+      {
+        heading: "Strong visuals and virtual tours",
+        paragraphs: [
+          "Property sells on imagery. High-quality photos, galleries, and optional video or virtual tours help buyers picture themselves in the space — crucial for diaspora clients who cannot visit in person.",
+        ],
+      },
+      {
+        heading: "Clear enquiry and viewing requests",
+        paragraphs: [
+          "Prominent enquiry forms, WhatsApp buttons, and viewing-request options on every listing capture leads while their interest is high.",
+        ],
+      },
+      {
+        heading: "Trust and credibility",
+        paragraphs: [
+          "An about section, testimonials, and clear contact details reassure clients they are dealing with a legitimate, professional agency — vital in a market where trust matters.",
+        ],
+      },
+      {
+        heading: "Mobile-first and fast",
+        paragraphs: [
+          "Most property searches happen on phones. A fast, mobile-first site keeps browsers engaged and improves your ranking on Google for local property searches.",
+        ],
+      },
+    ],
+    conclusion:
+      "A professional real estate website is your hardest-working sales agent. KayTech Africa builds visual, lead-focused property websites for agencies and developers across Ghana. Contact us for a tailored quote.",
+  },
 ];
 
 export function getAllPosts(): BlogPost[] {
