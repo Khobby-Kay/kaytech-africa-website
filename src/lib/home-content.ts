@@ -13,31 +13,31 @@ export const numberedServices = [
     num: "01",
     title: "Search Engine Optimization (SEO)",
     body: "As Ghana's trusted SEO company, we integrate keyword research, on-page optimization, and technical SEO into every project — helping you rank for searches like best web designer in Accra and your industry across Ghana.",
-    href: "/features",
+    href: "/services/best-seo-services-accra-ghana",
   },
   {
     num: "02",
     title: "E-Commerce Development",
     body: "Hire Ghana's best e-commerce website developers — online stores with intuitive product pages and checkout flows built for Ghanaian customers in Accra, Kumasi, and nationwide.",
-    href: "/features",
+    href: "/services/best-ecommerce-development-accra-ghana",
   },
   {
     num: "03",
     title: "AI & Automation",
     body: "Workflow bots, intelligent assistants, and automation systems that save hours every week for African operators.",
-    href: "/features",
+    href: "/ai-automation",
   },
   {
     num: "04",
     title: "Digital Marketing & Growth",
-    body: "Performance campaigns, content systems, and funnels designed to create tangible leads, sales, and engagement.",
-    href: "/features",
+    body: "Performance marketing, content systems, and funnels designed to create tangible leads, sales, and engagement.",
+    href: "/services/best-digital-marketing-accra-ghana",
   },
   {
     num: "05",
     title: "Web Development & Design",
     body: "Work with the best web developer in Ghana — we create high-conversion business websites engineered for mobile-first users, fast load times, and brands in Accra, Tema, Kumasi, and beyond.",
-    href: "/features",
+    href: "/services/best-web-development-design-accra-ghana",
   },
 ] as const;
 
@@ -61,11 +61,11 @@ export const whyPartner = [
 ] as const;
 
 export const footerServices = [
-  { href: "/features", label: "Web Development" },
-  { href: "/features", label: "Digital Marketing" },
-  { href: "/features", label: "AI & Automation" },
-  { href: "/features", label: "Search Engine Optimization" },
-  { href: "/features", label: "E-Commerce Development" },
+  { href: "/services/best-web-development-design-accra-ghana", label: "Web Development" },
+  { href: "/services/best-digital-marketing-accra-ghana", label: "Digital Marketing" },
+  { href: "/ai-automation", label: "AI & Automation" },
+  { href: "/services/best-seo-services-accra-ghana", label: "Search Engine Optimization" },
+  { href: "/services/best-ecommerce-development-accra-ghana", label: "E-Commerce Development" },
 ] as const;
 
 export const workingHours = {

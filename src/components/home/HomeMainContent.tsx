@@ -55,7 +55,7 @@ export function HomeMainContent() {
 
           <div className="mt-10 text-center">
             <Link
-              href="/features"
+              href="/services"
               className="inline-flex h-11 items-center rounded-pill border border-hairline bg-canvas px-6 text-sm font-semibold text-ink transition hover:bg-surface-soft"
             >
               View all services

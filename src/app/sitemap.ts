@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site";
 import { getAllPosts } from "@/lib/blog";
+import { getAllServicePages, getServicePath } from "@/lib/service-pages";
+import { getAllTeamMembers, getTeamPath } from "@/lib/team-pages";
 
 type StaticRoute = {
   path: string;
@@ -8,11 +10,12 @@ type StaticRoute = {
   priority: number;
 };
 
-/** Core site pages — portfolio & blog boosted for SEO discovery. */
+/** Core site pages — portfolio, blog, and service landings boosted for SEO. */
 const staticRoutes: StaticRoute[] = [
   { path: "", changeFrequency: "weekly", priority: 1 },
   { path: "/portfolio", changeFrequency: "weekly", priority: 0.9 },
   { path: "/blog", changeFrequency: "weekly", priority: 0.9 },
+  { path: "/services", changeFrequency: "weekly", priority: 0.88 },
   { path: "/features", changeFrequency: "monthly", priority: 0.85 },
   { path: "/pricing", changeFrequency: "monthly", priority: 0.85 },
   { path: "/about", changeFrequency: "monthly", priority: 0.85 },
@@ -38,6 +41,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   );
 
+  const serviceEntries: MetadataRoute.Sitemap = getAllServicePages().map((page) => ({
+    url: `${siteConfig.url}${getServicePath(page.slug)}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.85,
+  }));
+
+  const teamEntries: MetadataRoute.Sitemap = getAllTeamMembers().map((member) => ({
+    url: `${siteConfig.url}${getTeamPath(member.slug)}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.65,
+  }));
+
   const blogEntries: MetadataRoute.Sitemap = getAllPosts().map((post) => ({
     url: `${siteConfig.url}/blog/${post.slug}`,
     lastModified: new Date(post.date),
@@ -48,5 +65,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       : 0.75,
   }));
 
-  return [...staticEntries, ...blogEntries];
+  return [...staticEntries, ...serviceEntries, ...teamEntries, ...blogEntries];
 }

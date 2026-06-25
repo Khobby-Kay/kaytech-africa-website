@@ -1,7 +1,8 @@
 export const mainNav = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
-  { href: "/features", label: "Services" },
+  { href: "/services", label: "Services" },
+  { href: "/features", label: "All capabilities" },
   { href: "/pricing", label: "Pricing" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/blog", label: "Blog" },
@@ -12,11 +13,12 @@ export const mainNav = [
 
 export const footerNav = {
   product: [
-    { href: "/features", label: "Web Development" },
+    { href: "/services", label: "All Services" },
+    { href: "/services/best-web-development-design-accra-ghana", label: "Web Development" },
     { href: "/ai-automation", label: "AI Automation" },
-    { href: "/features", label: "Digital Marketing" },
-    { href: "/features", label: "SEO Services" },
-    { href: "/features", label: "E-Commerce" },
+    { href: "/services/best-digital-marketing-accra-ghana", label: "Digital Marketing" },
+    { href: "/services/best-seo-services-accra-ghana", label: "SEO Services" },
+    { href: "/services/best-ecommerce-development-accra-ghana", label: "E-Commerce" },
     { href: "/pricing", label: "Pricing" },
     { href: "/support", label: "Support" },
   ],

@@ -1,0 +1,37 @@
+---
+description: KayTech Africa — favicon and logo for Google search (this repo only)
+globs: src/app/layout.tsx,scripts/generate-brand-assets.mjs,public/favicon.ico,public/icon-*.png,src/lib/brand-assets.ts,src/lib/seo.ts
+alwaysApply: false
+---
+
+# KayTech Africa — Google favicon / logo (this project only)
+
+Goal: Google Search shows the **KayTech logo** from `public/logo.jpg`, not a Vercel/v0 default icon.
+
+## This repo only
+
+These rules apply to **kaytech-africa** only. Other projects use their own branding.
+
+## Favicon source of truth
+
+- Generate from `public/logo.jpg`: `npm run brand-assets` (runs on build)
+- Files: `public/favicon.ico`, `public/icon-192.png`, `public/icon-512.png`, `src/app/favicon.ico`
+- Do **not** restore default Next/Vercel triangle favicons
+
+## HTML head
+
+`src/app/layout.tsx` must include:
+
+```html
+<link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="48x48" />
+```
+
+Square icons, 48×48 or multiples (96, 192, 512). Organization JSON-LD logo should point at `/icon-512.png`.
+
+## What Google needs (not code alone)
+
+1. Production URL indexed: `https://www.kaytechafrica.com` (Search Console → Request indexing)
+2. Favicon crawlable: `/favicon.ico` returns 200 on **www**, not only `*.vercel.app`
+3. **Weeks** for Google to refresh favicons after deploy — not instant
+
+Google does not guarantee favicons in results even when configured correctly.

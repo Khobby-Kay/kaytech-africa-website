@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { Media } from "@/components/ui/Media";
 import { contentImages } from "@/lib/image-seo";
 import { leadership } from "@/lib/site";
+import { getTeamPath } from "@/lib/team-pages";
 
 const teamImageAlts = [
   contentImages.teamEngineering.alt,
@@ -68,11 +69,14 @@ export function LeadershipSection() {
           </article>
 
           <div className="grid gap-5">
-            {team.map((member, i) => (
+            {team.map((member, i) => {
+              const slugs = ["amara-okonkwo", "kwame-ante"] as const;
+              return (
               <article
                 key={member.name}
                 className="flex items-center gap-4 rounded-3xl border border-hairline bg-surface-soft p-4 shadow-card transition hover:shadow-float"
               >
+                <Link href={getTeamPath(slugs[i])} className="shrink-0">
                 <Media
                   src={member.image}
                   alt={teamImageAlts[i]}
@@ -84,12 +88,18 @@ export function LeadershipSection() {
                   sizes="80px"
                   className="h-20 w-20 shrink-0"
                 />
+                </Link>
                 <div>
-                  <p className="font-semibold text-ink">{member.name}</p>
+                  <Link
+                    href={getTeamPath(slugs[i])}
+                    className="font-semibold text-ink hover:text-primary"
+                  >
+                    {member.name}
+                  </Link>
                   <p className="text-sm text-muted">{member.title}</p>
                 </div>
               </article>
-            ))}
+            );})}
           </div>
         </div>
       </Container>

@@ -1,14 +1,14 @@
 /**
  * Generates KayTech favicons, apple-touch icons, and Open Graph images.
  *
- * Favicons are resized from public/logo.jpg (square 1024×1024) so Google
- * shows the full brand mark — same approach as doctorbarns.com.
+ * Favicons are resized from public/logo.jpg (square 1024×1024).
+ * Replaces any default Vercel/v0 favicon — never commit placeholder icons.
  *
  * Does NOT overwrite public/logo.jpg or logo.svg.
  *
  * Run: node scripts/generate-brand-assets.mjs
  */
-import { writeFile, mkdir } from "node:fs/promises";
+import { writeFile, mkdir, unlink } from "node:fs/promises";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import sharp from "sharp";
@@ -85,6 +85,7 @@ async function writeManifest(publicDir) {
     theme_color: "#1c3f69",
     icons: [
       { src: "/icon-48.png", sizes: "48x48", type: "image/png", purpose: "any" },
+      { src: "/icon-96.png", sizes: "96x96", type: "image/png", purpose: "any" },
       { src: "/icon-192.png", sizes: "192x192", type: "image/png", purpose: "any" },
       { src: "/icon-512.png", sizes: "512x512", type: "image/png", purpose: "any" },
     ],
@@ -102,13 +103,19 @@ async function main() {
   await mkdir(publicDir, { recursive: true });
 
   await writeLogoIcon(48, join(publicDir, "icon-48.png"));
+  await writeLogoIcon(96, join(publicDir, "icon-96.png"));
   await writeLogoIcon(48, join(publicDir, "icon.png"));
   await writeLogoIcon(48, join(publicDir, "favicon.png"));
   await writeLogoIcon(192, join(publicDir, "icon-192.png"));
   await writeLogoIcon(512, join(publicDir, "icon-512.png"));
   await writeLogoIcon(180, join(publicDir, "apple-icon.png"));
 
-  await writeLogoIcon(48, join(appDir, "icon.png"));
+  // App Router: favicon.ico only (no app/icon.png — avoids duplicate metadata)
+  try {
+    await unlink(join(appDir, "icon.png"));
+  } catch {
+    /* already removed */
+  }
   await writeLogoIcon(180, join(appDir, "apple-icon.png"));
   await writeFavicon(join(appDir, "favicon.ico"), 48);
   await writeFavicon(join(publicDir, "favicon.ico"), 48);

@@ -1,5 +1,6 @@
 import { siteConfig, services, academyCourses, stats } from "@/lib/site";
 import { allFaqs } from "@/lib/seo";
+import { getAllServicePages, getServicePath } from "@/lib/service-pages";
 
 export const dynamic = "force-static";
 
@@ -73,7 +74,11 @@ function buildLlmsTxt(): string {
   lines.push("");
   lines.push(`- Home: ${siteConfig.url}/`);
   lines.push(`- About: ${siteConfig.url}/about`);
-  lines.push(`- Services & features: ${siteConfig.url}/features`);
+  lines.push(`- Services hub: ${siteConfig.url}/services`);
+  for (const page of getAllServicePages()) {
+    lines.push(`- ${page.heroTitle}: ${siteConfig.url}${getServicePath(page.slug)}`);
+  }
+  lines.push(`- All capabilities: ${siteConfig.url}/features`);
   lines.push(`- AI business automation: ${siteConfig.url}/ai-automation`);
   lines.push(`- Academy: ${siteConfig.url}/academy`);
   lines.push(`- FAQ: ${siteConfig.url}/faq`);

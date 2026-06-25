@@ -1,6 +1,7 @@
 import { ORGANIZATION_LOGO } from "@/lib/brand-assets";
-import { faqs as coreFaqs, services, siteConfig } from "@/lib/site";
+import { faqs as coreFaqs, siteConfig } from "@/lib/site";
 import { ghanaSearchKeywords, seoFaqs } from "@/lib/localized-seo";
+import { getAllServicePages, getServicePath } from "@/lib/service-pages";
 
 export const allFaqs = [...seoFaqs, ...coreFaqs];
 
@@ -141,16 +142,14 @@ export function getOrganizationJsonLd() {
         hasOfferCatalog: {
           "@type": "OfferCatalog",
           name: "Web design & digital services in Ghana",
-          itemListElement: [
-            "Web Design",
-            "Web Development",
-            "Search Engine Optimization (SEO)",
-            "E-Commerce Development",
-            "Digital Marketing",
-            "AI & Automation",
-          ].map((service) => ({
+          itemListElement: getAllServicePages().map((page) => ({
             "@type": "Offer",
-            itemOffered: { "@type": "Service", name: service, areaServed: "GH" },
+            itemOffered: {
+              "@type": "Service",
+              name: page.heroTitle,
+              url: `${siteConfig.url}${getServicePath(page.slug)}`,
+              areaServed: "GH",
+            },
           })),
         },
         openingHoursSpecification: {
@@ -191,20 +190,18 @@ export function getOrganizationJsonLd() {
         about: { "@id": `${siteConfig.url}/#organization` },
         inLanguage: "en-GH",
       },
-      ...services.map((service) => ({
+      ...getAllServicePages().map((page) => ({
         "@type": "Service",
-        "@id": `${siteConfig.url}/#service-${service.title
-          .toLowerCase()
-          .replace(/[^a-z0-9]+/g, "-")
-          .replace(/(^-|-$)/g, "")}`,
-        serviceType: service.title,
-        name: `${service.title} in Ghana`,
-        description: service.description,
+        "@id": `${siteConfig.url}${getServicePath(page.slug)}#service`,
+        serviceType: page.eyebrow,
+        name: page.heroTitle,
+        description: page.metaDescription,
+        url: `${siteConfig.url}${getServicePath(page.slug)}`,
         provider: { "@id": `${siteConfig.url}/#organization` },
         areaServed: { "@type": "Country", name: "Ghana" },
         availableChannel: {
           "@type": "ServiceChannel",
-          serviceUrl: `${siteConfig.url}/features`,
+          serviceUrl: `${siteConfig.url}${getServicePath(page.slug)}`,
           servicePhone: siteConfig.contact.phone,
         },
       })),
