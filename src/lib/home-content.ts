@@ -5,7 +5,7 @@ export const leadingCompany = {
   intro:
     "Welcome to KayTech Africa — the best web design company in Ghana and a top choice when you search for the best web developer in Accra, affordable website design in Kumasi, or a professional SEO company in Ghana. We craft custom websites, e-commerce stores, and digital marketing systems that drive traffic, leads, and sales.",
   secondary:
-    "Whether you need the best web designer in Accra for a startup, a business website in Tema or East Legon, or an e-commerce developer in Ghana who understands local customers — KayTech delivers high-performance, SEO-optimized builds trusted by 250+ clients nationwide.",
+    "Whether you need the best web designer in Accra for a startup, a business website in Tema or East Legon, or an e-commerce developer in Ghana who understands local customers — KayTech delivers high-performance, SEO-optimized builds trusted by 1914+ businesses nationwide.",
 } as const;
 
 export const numberedServices = [
@@ -85,7 +85,7 @@ export const whyKayTechHighlights = [
   {
     icon: "Users",
     title: "Built for real businesses",
-    body: "250+ projects for startups, SMEs, and growing brands across Ghana — from landing pages to full platforms.",
+    body: "1914+ businesses served for startups, SMEs, and growing brands across Ghana — from landing pages to full platforms.",
   },
   {
     icon: "Headphones",

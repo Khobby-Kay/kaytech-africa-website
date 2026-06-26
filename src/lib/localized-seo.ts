@@ -77,7 +77,7 @@ export const homepageSearchBlock = {
   eyebrow: "Find us on Google",
   title: "Looking for the best web developer or designer in Ghana?",
   intro:
-    "Thousands of business owners search every month for the best web developer in Ghana, the best web designer in Accra, affordable website design in Kumasi, or a trusted SEO company in Ghana. KayTech Africa is the Accra-based studio they choose — 250+ projects delivered for brands that need real results, not templates.",
+    "Thousands of business owners search every month for the best web developer in Ghana, the best web designer in Accra, affordable website design in Kumasi, or a trusted SEO company in Ghana. KayTech Africa is the Accra-based studio they choose — 1914+ businesses served for brands that need real results, not templates.",
   areas: [
     "Best web design company in Accra",
     "Top web developer in Ghana",
@@ -113,7 +113,7 @@ export const seoFaqs = [
   {
     question: "Who is the best web developer in Ghana?",
     answer:
-      "KayTech Africa is one of Ghana's top-rated web development studios, with 250+ projects delivered from our Accra base. We build responsive business websites, e-commerce stores, and SEO-optimized platforms for clients in Accra, Kumasi, Tema, and across the country.",
+      "KayTech Africa is one of Ghana's top-rated web development studios, with 1914+ businesses served from our Accra base and an accumulated 30 years experience. We build responsive business websites, e-commerce stores, and SEO-optimized platforms for clients in Accra, Kumasi, Tema, and across the country.",
   },
   {
     question: "Where can I find the best web designer in Accra?",
@@ -142,7 +142,7 @@ export const pageSeoCopy = {
     title:
       "Best Web Developer in Ghana | Top Web Designer Accra | KayTech Africa",
     description:
-      "KayTech Africa — the best web design company in Ghana. Hire the top web developer or website designer in Accra, Kumasi & nationwide. Affordable SEO, e-commerce & digital marketing. 250+ projects. Call 024 840 8154.",
+      "KayTech Africa — the best web design company in Ghana. Hire the top web developer or website designer in Accra, Kumasi & nationwide. Affordable SEO, e-commerce & digital marketing. 1914+ businesses served. Call 024 840 8154.",
   },
   features: {
     title:
@@ -157,7 +157,7 @@ export const pageSeoCopy = {
     title:
       "About KayTech — Best Web Design Company in Accra, Ghana",
     description:
-      "Meet KayTech Africa, Accra's top web design and development studio. 250+ projects, academy-backed talent, and a team Ghanaians trust when they search for the best website designer in Ghana.",
+      "Meet KayTech Africa, Accra's top web design and development studio. 1914+ businesses served, academy-backed talent, and a team Ghanaians trust when they search for the best website designer in Ghana.",
     heroTitle: "The web design company Accra & Ghana trusts",
     heroDescription:
       "KayTech Africa is among the best web developers in Ghana — built in Accra, serving Kumasi, Tema, and brands nationwide with websites, SEO, and growth systems that actually perform.",
@@ -175,7 +175,7 @@ export const pageSeoCopy = {
     title:
       "FAQ — Best Web Developer Ghana, Web Design Accra | KayTech Africa",
     description:
-      "Answers about hiring the best web designer in Accra, affordable web design in Ghana, SEO services, Kumasi & Tema projects, and how KayTech delivers 250+ successful builds.",
+      "Answers about hiring the best web designer in Accra, affordable web design in Ghana, SEO services, Kumasi & Tema projects, and how KayTech delivers results for 1914+ businesses.",
     heroTitle: "Web design & development questions Ghanaians ask",
     heroDescription:
       "Who is the best web developer in Ghana? How much does a website cost? Do you work in Kumasi and Accra? Find answers from KayTech Africa's studio team.",

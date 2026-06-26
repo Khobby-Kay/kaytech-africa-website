@@ -13,7 +13,7 @@ export const defaultTitle =
   "Best Web Developer in Ghana | Top Web Designer Accra | KayTech Africa";
 
 export const defaultDescription =
-  "KayTech Africa — the best web design company in Ghana. Hire the top web developer or website designer in Accra, Kumasi & nationwide. Affordable SEO, e-commerce & digital marketing. 250+ projects delivered.";
+  "KayTech Africa — the best web design company in Ghana. Hire the top web developer or website designer in Accra, Kumasi & nationwide. Affordable SEO, e-commerce & digital marketing. 1914+ businesses served with remarkable results.";
 
 export const siteName =
   "KayTech Africa — Best Web Design Company in Ghana | Web Development & SEO";

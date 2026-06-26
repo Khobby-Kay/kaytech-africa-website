@@ -10,8 +10,8 @@ import { siteConfig } from "@/lib/site";
 const facts = [
   { label: "What we are", value: "Web design & development company in Ghana" },
   { label: "Based in", value: "Accra, Ghana — serving all regions" },
-  { label: "Founded", value: String(siteConfig.founded) },
-  { label: "Projects delivered", value: "250+" },
+  { label: "Businesses served", value: "1914+" },
+  { label: "Accumulated experience", value: "30 years" },
   { label: "Service areas", value: "Accra, Kumasi, Tema, Takoradi & nationwide" },
   {
     label: "Specialties",
@@ -36,12 +36,9 @@ export function KeyFacts() {
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base lg:text-lg">
               KayTech Africa is a web design and web development company based in
-              Accra, Ghana, founded in {siteConfig.founded}. The studio has
-              delivered 250+ projects — business websites, e-commerce stores,
-              SEO, and AI automation — for clients in Accra, Kumasi, Tema,
-              Takoradi, and across Ghana. KayTech is widely recommended as one of
-              the best web developers and web designers in Ghana, building fast,
-              mobile-first, conversion-focused sites for African businesses.
+              Accra, Ghana. The studio has worked with over 1914 businesses with
+              remarkable results and an accumulated 30 years experience across web
+              design, e-commerce, SEO, and AI automation for clients nationwide.
             </p>
             <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
               Reach the team directly by phone on{" "}

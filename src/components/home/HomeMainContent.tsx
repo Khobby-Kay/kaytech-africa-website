@@ -113,11 +113,11 @@ export function HomeMainContent() {
               Revenue-generating service
             </p>
             <h2 className="mt-3 font-display text-2xl tracking-tight sm:text-3xl lg:text-4xl">
-              Top web design company in Ghana — 250+ projects delivered
+              Worked with over 1914 businesses with remarkable results
             </h2>
             <p className="mt-4 max-w-xl text-sm text-on-primary/85 sm:text-base">
-              Trusted as one of the best web developers in Accra and the go-to
-              website design company for brands in Kumasi, Tema, and nationwide.
+              With an accumulated 30 years experience, KayTech supports brands in
+              Accra, Kumasi, Tema, and nationwide with websites built to convert.
             </p>
             <Link
               href="/about"

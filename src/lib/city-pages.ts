@@ -39,7 +39,7 @@ export const cityPages: CityPage[] = [
     heroDescription:
       "Custom websites that rank on Google, load fast on mobile data, and turn visitors into calls and WhatsApp enquiries — built for Accra businesses.",
     intro:
-      "Accra is Ghana's most competitive digital market. Whether you run a shop in Osu, a clinic in East Legon, or a corporate brand in Airport City, your website must look professional, work on every phone, and make it easy to contact you. KayTech Africa is an Accra-based web design and development studio serving Greater Accra and nationwide — 250+ projects delivered since 2020.",
+      "Accra is Ghana's most competitive digital market. Whether you run a shop in Osu, a clinic in East Legon, or a corporate brand in Airport City, your website must look professional, work on every phone, and make it easy to contact you. KayTech Africa is an Accra-based web design and development studio serving Greater Accra and nationwide — 1914+ businesses served with remarkable results.",
     areas: [
       "East Legon",
       "Osu",
@@ -254,7 +254,7 @@ export const cityPages: CityPage[] = [
     heroDescription:
       "Professional websites for Takoradi, Sekondi, and Western Region businesses — mobile-first, MoMo-ready, and built to rank on Google.",
     intro:
-      "Takoradi and the wider Western Region are hubs for oil, gas, logistics, retail, and services. Businesses here need websites that look credible to corporate partners and work flawlessly on mobile for everyday customers. KayTech Africa serves Takoradi remotely from our Accra studio with the same quality we deliver nationwide — 250+ projects since 2020.",
+      "Takoradi and the wider Western Region are hubs for oil, gas, logistics, retail, and services. Businesses here need websites that look credible to corporate partners and work flawlessly on mobile for everyday customers. KayTech Africa serves Takoradi remotely from our Accra studio with the same quality we deliver nationwide — 1914+ businesses served with remarkable results.",
     areas: [
       "Sekondi-Takoradi",
       "Takoradi Central",

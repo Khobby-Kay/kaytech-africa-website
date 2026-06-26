@@ -101,7 +101,7 @@ export const servicePages: ServicePage[] = [
     slug: "best-web-development-design-accra-ghana",
     title: "Best Web Development & Design in Accra, Ghana | KayTech Africa",
     metaDescription:
-      "KayTech Africa — top web development company in Accra. Custom business websites and web apps: mobile-first, fast on 3G, conversion-focused. 250+ projects in Ghana.",
+      "KayTech Africa — top web development company in Accra. Custom business websites and web apps: mobile-first, fast on 3G, conversion-focused. 1914+ businesses served in Ghana.",
     keywords: [
       "best web developer in Ghana",
       "web development company Accra",
@@ -114,7 +114,7 @@ export const servicePages: ServicePage[] = [
     heroDescription:
       "Custom websites and web apps — fast on mobile data, built for conversion, and scoped for startups and established brands in Accra and across Ghana.",
     intro:
-      "The best web developer in Ghana builds more than pages — they build systems that load quickly, guide visitors to act, and hold up on the networks your customers actually use. KayTech Africa is an Accra-based web development studio with 250+ projects delivered for businesses nationwide, from landing pages to full platforms.",
+      "The best web developer in Ghana builds more than pages — they build systems that load quickly, guide visitors to act, and hold up on the networks your customers actually use. KayTech Africa is an Accra-based web development studio with 1914+ businesses served nationwide, from landing pages to full platforms.",
     image: contentImages.serviceWeb,
     benefits: [
       "Mobile-first, 3G-optimised performance",
