@@ -6,7 +6,6 @@ import { HomeMainContent } from "@/components/home/HomeMainContent";
 import { LocalizedSeoSection } from "@/components/home/LocalizedSeoSection";
 import { KeyFacts } from "@/components/home/KeyFacts";
 import { Portfolio } from "@/components/home/Portfolio";
-import { WhyKayTechHome } from "@/components/home/WhyKayTechHome";
 import { Testimonials } from "@/components/home/Testimonials";
 import { ClientLogoStrip } from "@/components/home/ClientLogoStrip";
 import { createPageMetadata } from "@/lib/page-metadata";
@@ -29,7 +28,6 @@ export default function HomePage() {
       <HomeMainContent />
       <KeyFacts />
       <LocalizedSeoSection />
-      <WhyKayTechHome />
       <ClientLogoStrip />
       <Portfolio />
       <Testimonials />

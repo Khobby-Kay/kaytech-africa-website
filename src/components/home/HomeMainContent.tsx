@@ -2,7 +2,6 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { numberedServices, whyPartner } from "@/lib/home-content";
-import { stats } from "@/lib/site";
 
 export function HomeMainContent() {
   return (
@@ -120,18 +119,13 @@ export function HomeMainContent() {
               Trusted as one of the best web developers in Accra and the go-to
               website design company for brands in Kumasi, Tema, and nationwide.
             </p>
-            <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
-              {stats.map((s) => (
-                <div key={s.label}>
-                  <p className="font-display text-2xl font-semibold sm:text-3xl">
-                    {s.value}
-                  </p>
-                  <p className="mt-1 text-xs text-on-primary/75 sm:text-sm">
-                    {s.label}
-                  </p>
-                </div>
-              ))}
-            </div>
+            <Link
+              href="/about"
+              className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-on-primary underline-offset-4 hover:underline"
+            >
+              Why businesses choose KayTech
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
           <Link
             href="/contact"
