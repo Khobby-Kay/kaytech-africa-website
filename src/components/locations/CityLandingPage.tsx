@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight, MapPin, MessageCircle, Phone } from "lucide-react";
 import { MarketingPageHero } from "@/components/ui/MarketingPageHero";
 import { Container } from "@/components/ui/Container";
+import { RevealOnScroll, StaggerReveal } from "@/components/ui/RevealOnScroll";
 import { LeadCaptureStrip } from "@/components/layout/LeadCaptureStrip";
 import type { CityPage } from "@/lib/city-pages";
 import { getServicePath } from "@/lib/service-pages";
@@ -33,21 +34,24 @@ const cityServices = [
 export function CityLandingPage({ page }: { page: CityPage }) {
   return (
     <>
-      <MarketingPageHero
-        eyebrow={`Web design · ${page.cityName}, Ghana`}
-        title={page.heroTitle}
-        description={page.heroDescription}
-        image={page.image}
-        imageCaption={page.imageCaption}
-        location={`${page.cityName} · ${page.region}`}
-      />
+      <RevealOnScroll variant="fade-down" duration={800}>
+        <MarketingPageHero
+          eyebrow={`Web design · ${page.cityName}, Ghana`}
+          title={page.heroTitle}
+          description={page.heroDescription}
+          image={page.image}
+          imageCaption={page.imageCaption}
+          location={`${page.cityName} · ${page.region}`}
+        />
+      </RevealOnScroll>
 
       <LeadCaptureStrip location={`city_${page.slug}`} compact />
 
       <section className="border-b border-hairline bg-canvas px-5 py-16 lg:px-20 lg:py-24">
         <Container>
           <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:gap-16">
-            <div>
+            <RevealOnScroll variant="fade-right">
+              <div>
               <h2 className="font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl lg:text-4xl">
                 Website design in {page.cityName} that drives real business
               </h2>
@@ -73,8 +77,10 @@ export function CityLandingPage({ page }: { page: CityPage }) {
                   {siteConfig.contact.phoneDisplay}
                 </a>
               </div>
-            </div>
+              </div>
+            </RevealOnScroll>
 
+            <RevealOnScroll variant="fade-left" delay={100}>
             <div className="rounded-3xl border border-hairline bg-surface-accent p-6 sm:p-8">
               <div className="flex items-center gap-2 text-accent">
                 <MapPin className="h-5 w-5" />
@@ -93,20 +99,23 @@ export function CityLandingPage({ page }: { page: CityPage }) {
                 ))}
               </ul>
             </div>
+            </RevealOnScroll>
           </div>
         </Container>
       </section>
 
       <section className="border-b border-hairline bg-surface-soft px-5 py-16 lg:px-20 lg:py-24">
         <Container>
-          <h2 className="font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
-            Why {page.cityName} businesses choose KayTech
-          </h2>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2">
+          <RevealOnScroll variant="fade-up">
+            <h2 className="font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
+              Why {page.cityName} businesses choose KayTech
+            </h2>
+          </RevealOnScroll>
+          <StaggerReveal className="mt-10 grid gap-4 sm:grid-cols-2" staggerMs={90}>
             {page.whyChoose.map((item, i) => (
               <article
                 key={item.title}
-                className="rounded-3xl border border-hairline bg-canvas p-6 shadow-card"
+                className="rounded-3xl border border-hairline bg-canvas p-6 shadow-card transition hover:-translate-y-1 motion-reduce:transform-none"
               >
                 <span className="font-display text-2xl font-bold text-accent/50">
                   {String(i + 1).padStart(2, "0")}
@@ -119,7 +128,7 @@ export function CityLandingPage({ page }: { page: CityPage }) {
                 </p>
               </article>
             ))}
-          </div>
+          </StaggerReveal>
         </Container>
       </section>
 

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Media } from "@/components/ui/Media";
+import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 import { contentImages } from "@/lib/image-seo";
 import { leadingCompany } from "@/lib/home-content";
 import { siteConfig } from "@/lib/site";
@@ -11,7 +12,8 @@ export function LeadingCompanySection() {
     <section className="border-b border-hairline bg-canvas px-5 py-12 sm:py-16 lg:px-20 lg:py-24">
       <Container>
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-16">
-          <div>
+          <RevealOnScroll variant="fade-right">
+            <div>
             <span className="inline-flex items-center gap-2 rounded-pill bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-accent">
               {leadingCompany.eyebrow}
             </span>
@@ -39,8 +41,10 @@ export function LeadingCompanySection() {
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
-          </div>
+            </div>
+          </RevealOnScroll>
 
+          <RevealOnScroll variant="fade-left" delay={120}>
           <Media
             src={contentImages.serviceWeb.src}
             alt={contentImages.serviceWeb.alt}
@@ -64,6 +68,7 @@ export function LeadingCompanySection() {
               </p>
             </div>
           </Media>
+          </RevealOnScroll>
         </div>
       </Container>
     </section>

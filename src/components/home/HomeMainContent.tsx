@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { RevealOnScroll, StaggerReveal } from "@/components/ui/RevealOnScroll";
 import { numberedServices, whyPartner } from "@/lib/home-content";
 
 export function HomeMainContent() {
@@ -8,7 +9,8 @@ export function HomeMainContent() {
     <>
       <section className="border-b border-hairline bg-surface-soft px-5 py-12 sm:py-16 lg:px-20 lg:py-20">
         <Container>
-          <div className="max-w-2xl">
+          <RevealOnScroll variant="fade-up">
+            <div className="max-w-2xl">
             <span className="inline-flex items-center gap-2 rounded-pill bg-canvas px-4 py-1.5 font-mono text-xs font-semibold uppercase tracking-[0.08em] text-ink ring-1 ring-hairline">
               Tailored services
             </span>
@@ -20,13 +22,14 @@ export function HomeMainContent() {
               affordable business websites — serving Accra, Kumasi, Tema, and all
               of Ghana.
             </p>
-          </div>
+            </div>
+          </RevealOnScroll>
 
-          <div className="mt-10 space-y-4">
+          <StaggerReveal className="mt-10 space-y-4" staggerMs={90}>
             {numberedServices.map((service) => (
               <article
                 key={service.num}
-                className="group rounded-3xl border border-hairline bg-canvas p-5 transition hover:border-primary/25 hover:shadow-card sm:p-6 lg:p-8"
+                className="group rounded-3xl border border-hairline bg-canvas p-5 transition hover:-translate-y-1 hover:border-primary/25 hover:shadow-card motion-reduce:transform-none sm:p-6 lg:p-8"
               >
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-8">
                   <span className="font-display text-3xl font-semibold text-primary/30 sm:text-4xl">
@@ -50,16 +53,16 @@ export function HomeMainContent() {
                 </div>
               </article>
             ))}
-          </div>
+          </StaggerReveal>
 
-          <div className="mt-10 text-center">
+          <RevealOnScroll variant="fade-up" className="mt-10 text-center">
             <Link
               href="/services"
               className="inline-flex h-11 items-center rounded-pill border border-hairline bg-canvas px-6 text-sm font-semibold text-ink transition hover:bg-surface-soft"
             >
               View all services
             </Link>
-          </div>
+          </RevealOnScroll>
         </Container>
       </section>
 

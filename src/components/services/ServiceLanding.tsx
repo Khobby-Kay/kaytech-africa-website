@@ -3,6 +3,7 @@ import { ArrowRight, CheckCircle2, MessageCircle, Phone } from "lucide-react";
 import { PageHero } from "@/components/ui/PageHero";
 import { Container } from "@/components/ui/Container";
 import { LeadCaptureStrip } from "@/components/layout/LeadCaptureStrip";
+import { RevealOnScroll, StaggerReveal } from "@/components/ui/RevealOnScroll";
 import type { ServicePage } from "@/lib/service-pages";
 import { getServicePath } from "@/lib/service-pages";
 import { siteConfig } from "@/lib/site";
@@ -10,45 +11,50 @@ import { siteConfig } from "@/lib/site";
 export function ServiceLanding({ page }: { page: ServicePage }) {
   return (
     <>
-      <PageHero
-        eyebrow={page.eyebrow}
-        title={page.heroTitle}
-        description={page.heroDescription}
-        cta={{ label: "Get a quote", href: "/contact" }}
-        image={page.image}
-      />
+      <RevealOnScroll variant="fade-down" duration={800}>
+        <PageHero
+          eyebrow={page.eyebrow}
+          title={page.heroTitle}
+          description={page.heroDescription}
+          cta={{ label: "Get a quote", href: "/contact" }}
+          image={page.image}
+        />
+      </RevealOnScroll>
 
       <LeadCaptureStrip location={`service_${page.slug}`} compact />
 
       <section className="border-b border-hairline bg-canvas px-5 py-16 lg:px-20 lg:py-24">
         <Container>
-          <div className="max-w-3xl">
-            <p className="text-base leading-relaxed text-muted sm:text-lg">
-              {page.intro}
-            </p>
-          </div>
+          <RevealOnScroll variant="fade-up">
+            <div className="max-w-3xl">
+              <p className="text-base leading-relaxed text-muted sm:text-lg">
+                {page.intro}
+              </p>
+            </div>
+          </RevealOnScroll>
 
-          <ul className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <StaggerReveal className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3" staggerMs={80}>
             {page.benefits.map((benefit) => (
               <li
                 key={benefit}
-                className="flex items-start gap-3 rounded-2xl border border-hairline bg-surface-soft p-4 text-sm text-ink"
+                className="flex list-none items-start gap-3 rounded-2xl border border-hairline bg-surface-soft p-4 text-sm text-ink transition hover:-translate-y-0.5 hover:shadow-card motion-reduce:transform-none"
               >
                 <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
                 {benefit}
               </li>
             ))}
-          </ul>
+          </StaggerReveal>
         </Container>
       </section>
 
-      {page.sections.map((section) => (
+      {page.sections.map((section, index) => (
         <section
           key={section.heading}
           className="border-b border-hairline bg-surface-soft px-5 py-16 even:bg-canvas lg:px-20 lg:py-24"
         >
           <Container>
-            <div className="max-w-3xl">
+            <RevealOnScroll variant="fade-up" delay={index * 40}>
+              <div className="max-w-3xl">
               <h2 className="font-display text-2xl tracking-tight text-ink sm:text-3xl">
                 {section.heading}
               </h2>
@@ -73,14 +79,16 @@ export function ServiceLanding({ page }: { page: ServicePage }) {
                   ))}
                 </ul>
               ) : null}
-            </div>
+              </div>
+            </RevealOnScroll>
           </Container>
         </section>
       ))}
 
       <section className="bg-canvas px-5 py-16 lg:px-20 lg:py-24">
         <Container>
-          <div className="rounded-3xl border border-hairline bg-primary p-8 text-on-primary sm:p-12">
+          <RevealOnScroll variant="zoom-in">
+            <div className="rounded-3xl border border-hairline bg-primary p-8 text-on-primary sm:p-12">
             <h2 className="font-display text-2xl font-semibold sm:text-3xl">
               Ready to start your project?
             </h2>
@@ -126,7 +134,8 @@ export function ServiceLanding({ page }: { page: ServicePage }) {
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
-          </div>
+            </div>
+          </RevealOnScroll>
         </Container>
       </section>
     </>

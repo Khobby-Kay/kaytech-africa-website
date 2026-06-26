@@ -101,53 +101,25 @@ export const servicePages: ServicePage[] = [
     slug: "best-web-development-design-accra-ghana",
     title: "Best Web Development & Design in Accra, Ghana | KayTech Africa",
     metaDescription:
-      "KayTech Africa — top web development company in Accra. Custom business websites and web apps: mobile-first, fast on 3G, conversion-focused. 1914+ businesses served in Ghana.",
+      "KayTech Africa — top web development company in Accra. Custom websites for growth, sales, and conversions — mobile-first, SEO-ready, 1914+ businesses served across Ghana.",
     keywords: [
       "best web developer in Ghana",
       "web development company Accra",
       "hire web developer Ghana",
       "custom web development Ghana",
       "web app developer Ghana",
+      "web design services Ghana",
     ],
-    eyebrow: "Web development Ghana",
-    heroTitle: "Web development in Ghana that drives growth",
+    eyebrow: "Web development & design Ghana",
+    heroTitle:
+      "Web design services in Ghana — custom solutions for growth, sales, and conversions",
     heroDescription:
-      "Custom websites and web apps — fast on mobile data, built for conversion, and scoped for startups and established brands in Accra and across Ghana.",
+      "More than developers — we are your growth partners. KayTech Africa builds websites that look great, load fast on mobile data, and turn visitors into calls, WhatsApp chats, and paying customers.",
     intro:
-      "The best web developer in Ghana builds more than pages — they build systems that load quickly, guide visitors to act, and hold up on the networks your customers actually use. KayTech Africa is an Accra-based web development studio with 1914+ businesses served nationwide, from landing pages to full platforms.",
+      "KayTech Africa is an Accra-based web development studio with 1914+ businesses served nationwide.",
     image: contentImages.serviceWeb,
-    benefits: [
-      "Mobile-first, 3G-optimised performance",
-      "Custom design — not generic templates",
-      "SEO-ready structure from day one",
-      "Clear scope and transparent proposals",
-      "Post-launch support via WhatsApp and phone",
-    ],
-    sections: [
-      {
-        heading: "Business websites that convert",
-        paragraphs: [
-          "We engineer each page around a job: inform, reassure, and push toward a call, form, or WhatsApp message. Layouts, CTAs, and copy structure are built for Ghanaian buyers — not copied from Western themes that break on local networks.",
-        ],
-      },
-      {
-        heading: "Web apps and custom platforms",
-        paragraphs: [
-          "Need dashboards, client portals, booking systems, or internal tools? We develop on modern stacks with security, maintainability, and mobile use in mind.",
-        ],
-      },
-      {
-        heading: "Our development process",
-        paragraphs: ["Every project moves through:"],
-        bullets: [
-          "Discovery and goals alignment",
-          "UX and design approval",
-          "Development with regular check-ins",
-          "Testing on real mobile devices and networks",
-          "Launch, training, and handover",
-        ],
-      },
-    ],
+    benefits: [],
+    sections: [],
   },
   {
     slug: "best-digital-marketing-accra-ghana",

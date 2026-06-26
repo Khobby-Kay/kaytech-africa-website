@@ -62,6 +62,16 @@ const nextConfig = {
         destination: "/about",
         permanent: true,
       },
+      {
+        source: "/service/best-web-development-and-design-in-accra-ghana",
+        destination: "/services/best-web-development-design-accra-ghana",
+        permanent: true,
+      },
+      {
+        source: "/best-web-development-and-design-in-accra-ghana",
+        destination: "/services/best-web-development-design-accra-ghana",
+        permanent: true,
+      },
     ];
   },
 };

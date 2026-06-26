@@ -1,6 +1,7 @@
 "use client";
 
 import { Container } from "@/components/ui/Container";
+import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 
 const quotes = [
   {
@@ -39,12 +40,14 @@ export function Testimonials() {
   return (
     <section className="overflow-hidden border-y border-hairline bg-surface-soft py-16 lg:py-24">
       <Container>
-        <h2 className="max-w-2xl font-display text-3xl tracking-tight text-ink sm:text-4xl">
-          Loved by builders, founders and busy teams
-        </h2>
-        <p className="mt-3 text-muted">
-          Built with Africans who already lived the workaround.
-        </p>
+        <RevealOnScroll variant="fade-up">
+          <h2 className="max-w-2xl font-display text-3xl tracking-tight text-ink sm:text-4xl">
+            Loved by builders, founders and busy teams
+          </h2>
+          <p className="mt-3 text-muted">
+            Built with Africans who already lived the workaround.
+          </p>
+        </RevealOnScroll>
       </Container>
 
       <div className="mt-12 overflow-hidden">

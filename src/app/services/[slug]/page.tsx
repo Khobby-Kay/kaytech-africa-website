@@ -12,7 +12,12 @@ import {
   ServiceRelatedLinks,
 } from "@/components/services/ServiceLanding";
 import { EcommerceServicePage } from "@/components/services/EcommerceServicePage";
+import { WebDevelopmentServicePage } from "@/components/services/WebDevelopmentServicePage";
 import { ecommerceFaqs, ecommercePageMeta } from "@/lib/ecommerce-service-content";
+import {
+  webDevFaqs,
+  webDevPageMeta,
+} from "@/lib/web-development-service-content";
 
 type Params = { slug: string };
 
@@ -47,16 +52,23 @@ export default function ServicePage({ params }: { params: Params }) {
   if (!page) notFound();
 
   const isEcommerce = params.slug === "best-ecommerce-development-accra-ghana";
+  const isWebDev = params.slug === "best-web-development-design-accra-ghana";
   const allPages = getAllServicePages();
 
-  const serviceJsonLd = isEcommerce
+  const enhancedMeta = isEcommerce
+    ? { title: ecommercePageMeta.heroTitle, description: ecommercePageMeta.metaDescription, faqs: ecommerceFaqs }
+    : isWebDev
+      ? { title: webDevPageMeta.heroTitle, description: webDevPageMeta.metaDescription, faqs: webDevFaqs }
+      : null;
+
+  const serviceJsonLd = enhancedMeta
     ? {
         "@context": "https://schema.org",
         "@graph": [
           {
             "@type": "Service",
-            name: ecommercePageMeta.heroTitle,
-            description: ecommercePageMeta.metaDescription,
+            name: enhancedMeta.title,
+            description: enhancedMeta.description,
             provider: {
               "@type": "Organization",
               name: "KayTech Africa",
@@ -67,7 +79,7 @@ export default function ServicePage({ params }: { params: Params }) {
           },
           {
             "@type": "FAQPage",
-            mainEntity: ecommerceFaqs.map((faq) => ({
+            mainEntity: enhancedMeta.faqs.map((faq) => ({
               "@type": "Question",
               name: faq.question,
               acceptedAnswer: { "@type": "Answer", text: faq.answer },
@@ -97,6 +109,8 @@ export default function ServicePage({ params }: { params: Params }) {
       />
       {isEcommerce ? (
         <EcommerceServicePage />
+      ) : isWebDev ? (
+        <WebDevelopmentServicePage />
       ) : (
         <>
           <ServiceLanding page={page} />

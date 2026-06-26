@@ -1,4 +1,5 @@
 import { Container } from "@/components/ui/Container";
+import { RevealOnScroll, StaggerReveal } from "@/components/ui/RevealOnScroll";
 import { siteConfig } from "@/lib/site";
 
 /**
@@ -27,7 +28,8 @@ export function KeyFacts() {
     >
       <Container>
         <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:gap-16">
-          <div className="max-w-2xl">
+          <RevealOnScroll variant="fade-right">
+            <div className="max-w-2xl">
             <span className="inline-flex items-center gap-2 rounded-pill bg-surface-soft px-4 py-1.5 font-mono text-xs font-semibold uppercase tracking-[0.08em] text-primary ring-1 ring-hairline">
               About KayTech Africa
             </span>
@@ -57,20 +59,24 @@ export function KeyFacts() {
               </a>
               .
             </p>
-          </div>
+            </div>
+          </RevealOnScroll>
 
-          <dl className="grid gap-px overflow-hidden rounded-3xl border border-hairline bg-hairline sm:grid-cols-2">
+          <StaggerReveal
+            className="grid gap-px overflow-hidden rounded-3xl border border-hairline bg-hairline sm:grid-cols-2"
+            staggerMs={70}
+          >
             {facts.map((fact) => (
               <div key={fact.label} className="bg-surface-soft p-5 sm:p-6">
-                <dt className="font-mono text-xs font-semibold uppercase tracking-[0.08em] text-muted">
+                <p className="font-mono text-xs font-semibold uppercase tracking-[0.08em] text-muted">
                   {fact.label}
-                </dt>
-                <dd className="mt-2 text-sm font-medium leading-relaxed text-ink sm:text-base">
+                </p>
+                <p className="mt-2 text-sm font-medium leading-relaxed text-ink sm:text-base">
                   {fact.value}
-                </dd>
+                </p>
               </div>
             ))}
-          </dl>
+          </StaggerReveal>
         </div>
       </Container>
     </section>
