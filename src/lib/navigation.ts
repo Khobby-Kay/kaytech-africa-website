@@ -51,13 +51,6 @@ export const footerNav = {
     { href: "/pricing", label: "Pricing" },
   ],
   company: [
-    { href: "/web-design/accra-ghana", label: "Web Design Accra" },
-    { href: "/web-design/kumasi-ghana", label: "Web Design Kumasi" },
-    { href: "/web-design/tema-ghana", label: "Web Design Tema" },
-    { href: "/web-design/takoradi-ghana", label: "Web Design Takoradi" },
-    { href: "/web-design/cape-coast-ghana", label: "Web Design Cape Coast" },
-    { href: "/web-design/volta-ho-hohoe-ghana", label: "Ho & Hohoe · Volta" },
-    { href: "/website-cost-ghana", label: "Website Cost Guide" },
     { href: "/about", label: "About Us" },
     { href: "/portfolio", label: "Portfolio" },
     { href: "/blog", label: "Blog" },
@@ -65,6 +58,14 @@ export const footerNav = {
     { href: "/faq", label: "FAQ" },
     { href: "/support", label: "Support" },
     { href: "/contact", label: "Contact Us" },
+  ],
+  locations: [
+    { href: "/web-design/accra-ghana", label: "Accra" },
+    { href: "/web-design/kumasi-ghana", label: "Kumasi" },
+    { href: "/web-design/tema-ghana", label: "Tema" },
+    { href: "/web-design/takoradi-ghana", label: "Takoradi" },
+    { href: "/web-design/cape-coast-ghana", label: "Cape Coast" },
+    { href: "/web-design/volta-ho-hohoe-ghana", label: "Ho & Hohoe" },
   ],
   legal: [
     { href: "/privacy", label: "Privacy Policy" },
