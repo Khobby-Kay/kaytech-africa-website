@@ -36,7 +36,11 @@ export const footerNav = {
     },
     {
       href: "/services/best-digital-marketing-accra-ghana",
-      label: "Digital Marketing",
+      label: "Digital Marketing & PPC Ads",
+    },
+    {
+      href: "/services/best-software-as-a-services-saas-accra-ghana",
+      label: "Software As A Services (SAAS)",
     },
     { href: "/ai-automation", label: "AI Automation" },
     {

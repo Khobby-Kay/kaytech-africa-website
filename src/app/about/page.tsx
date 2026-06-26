@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/PageHero";
+import { AboutExpansion } from "@/components/about/AboutExpansion";
 import { WhyKayTech } from "@/components/home/WhyKayTech";
 import { LeadershipSection } from "@/components/home/LeadershipSection";
 import { Testimonials } from "@/components/home/Testimonials";
@@ -24,6 +25,7 @@ export default function AboutPage() {
         cta={{ label: "Meet the team below", href: "#leadership" }}
         image={pageImages.about}
       />
+      <AboutExpansion />
       <WhyKayTech />
       <LeadershipSection />
       <Testimonials />

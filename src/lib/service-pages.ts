@@ -151,7 +151,7 @@ export const servicePages: ServicePage[] = [
   },
   {
     slug: "best-digital-marketing-accra-ghana",
-    title: "Best Digital Marketing & PPC in Accra, Ghana | KayTech Africa",
+    title: "Best Digital Marketing & PPC Ads in Accra, Ghana | KayTech Africa",
     metaDescription:
       "Digital marketing agency in Accra, Ghana — SEO, paid media, content, and growth funnels that generate leads and sales for Ghanaian businesses.",
     keywords: [
@@ -161,8 +161,8 @@ export const servicePages: ServicePage[] = [
       "online marketing company Ghana",
       "growth marketing Accra",
     ],
-    eyebrow: "Digital marketing Ghana",
-    heroTitle: "Digital marketing that delivers measurable results",
+    eyebrow: "Digital marketing & PPC Ghana",
+    heroTitle: "Digital marketing & PPC ads that deliver measurable results",
     heroDescription:
       "Performance marketing, content systems, and funnels for Accra, Kumasi, Tema, and nationwide — tied to leads and revenue, not vanity metrics.",
     intro:
@@ -192,6 +192,59 @@ export const servicePages: ServicePage[] = [
         heading: "Content and SEO as long-term assets",
         paragraphs: [
           "Blog posts, service pages, and FAQs compound over time — ranking for searches your customers type month after month without paying per click.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "best-software-as-a-services-saas-accra-ghana",
+    title:
+      "Best Software As A Services (SAAS) in Accra, Ghana | KayTech Africa",
+    metaDescription:
+      "KayTech Africa builds Software as a Service (SaaS) platforms in Accra and Ghana — product strategy, web app development, subscriptions, dashboards, and scalable cloud deployment.",
+    keywords: [
+      "SaaS development Ghana",
+      "software as a service Accra",
+      "SaaS developer Ghana",
+      "subscription software Ghana",
+      "web app SaaS development Accra",
+    ],
+    eyebrow: "Software As A Services (SAAS)",
+    heroTitle: "SaaS development in Ghana for scalable digital products",
+    heroDescription:
+      "From MVP to production SaaS platforms — subscription billing, dashboards, and cloud-ready web apps built for growth.",
+    intro:
+      "Software as a Service is one of the fastest ways to build recurring digital revenue. KayTech Africa helps founders and businesses in Accra and across Ghana design, build, and launch SaaS products that are secure, scalable, and easy for users to adopt.",
+    image: contentImages.serviceAi,
+    benefits: [
+      "MVP planning and product architecture",
+      "Modern web app development",
+      "Role-based dashboards and admin panels",
+      "Subscription billing-ready flows",
+      "Cloud deployment and post-launch support",
+    ],
+    sections: [
+      {
+        heading: "From idea to launch-ready SaaS",
+        paragraphs: [
+          "We translate your product idea into a clear build roadmap — user roles, key workflows, monetization, and milestones — then ship in iterative phases so you validate with real users quickly.",
+        ],
+      },
+      {
+        heading: "Core features we build",
+        paragraphs: ["Typical SaaS builds can include:"],
+        bullets: [
+          "User signup, onboarding, and authentication",
+          "Subscription plans and billing integrations",
+          "Customer and admin dashboards",
+          "Team roles, permissions, and audit trails",
+          "Analytics events and retention hooks",
+        ],
+      },
+      {
+        heading: "Built to scale",
+        paragraphs: [
+          "Performance, security, and maintainability are designed in from day one. We deploy to reliable cloud environments and provide ongoing support so your platform grows without constant rewrites.",
         ],
       },
     ],

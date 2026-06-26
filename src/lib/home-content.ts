@@ -29,12 +29,18 @@ export const numberedServices = [
   },
   {
     num: "04",
-    title: "Digital Marketing & Growth",
-    body: "Performance marketing, content systems, and funnels designed to create tangible leads, sales, and engagement.",
+    title: "Digital Marketing & PPC Ads",
+    body: "Performance marketing, paid search campaigns, content systems, and funnels designed to create tangible leads, sales, and engagement.",
     href: "/services/best-digital-marketing-accra-ghana",
   },
   {
     num: "05",
+    title: "Software As A Services (SAAS)",
+    body: "SaaS product development for founders and businesses — dashboards, subscriptions, and scalable cloud-ready web apps.",
+    href: "/services/best-software-as-a-services-saas-accra-ghana",
+  },
+  {
+    num: "06",
     title: "Web Development & Design",
     body: "Work with the best web developer in Ghana — we create high-conversion business websites engineered for mobile-first users, fast load times, and brands in Accra, Tema, Kumasi, and beyond.",
     href: "/services/best-web-development-design-accra-ghana",
@@ -63,7 +69,8 @@ export const whyPartner = [
 export const footerServices = [
   { href: "/services", label: "All Services" },
   { href: "/services/best-web-development-design-accra-ghana", label: "Web Development" },
-  { href: "/services/best-digital-marketing-accra-ghana", label: "Digital Marketing" },
+  { href: "/services/best-digital-marketing-accra-ghana", label: "Digital Marketing & PPC Ads" },
+  { href: "/services/best-software-as-a-services-saas-accra-ghana", label: "Software As A Services (SAAS)" },
   { href: "/ai-automation", label: "AI & Automation" },
   { href: "/services/best-seo-services-accra-ghana", label: "Search Engine Optimization" },
   { href: "/services/best-ecommerce-development-accra-ghana", label: "E-Commerce Development" },

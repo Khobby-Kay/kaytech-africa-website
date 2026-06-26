@@ -21,8 +21,12 @@ const cityServices = [
     slug: "best-seo-services-accra-ghana",
   },
   {
-    title: "Digital Marketing",
+    title: "Digital Marketing & PPC Ads",
     slug: "best-digital-marketing-accra-ghana",
+  },
+  {
+    title: "Software As A Services (SAAS)",
+    slug: "best-software-as-a-services-saas-accra-ghana",
   },
 ] as const;
 

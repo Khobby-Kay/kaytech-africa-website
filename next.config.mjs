@@ -57,6 +57,11 @@ const nextConfig = {
         destination: "/website-cost-ghana",
         permanent: true,
       },
+      {
+        source: "/about-us-best-web-design-ghana",
+        destination: "/about",
+        permanent: true,
+      },
     ];
   },
 };

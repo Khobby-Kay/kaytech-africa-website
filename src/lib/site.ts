@@ -66,10 +66,17 @@ export const services = [
   },
   {
     icon: "LineChart",
-    title: "Digital Marketing",
+    title: "Digital Marketing & PPC Ads",
     description:
       "Performance campaigns, brand strategy, and growth funnels that turn attention into measurable revenue.",
     tags: ["SEO", "Paid Media", "Analytics"],
+  },
+  {
+    icon: "Blocks",
+    title: "Software As A Services (SAAS)",
+    description:
+      "SaaS product design and development — subscription-ready web apps, dashboards, and scalable cloud platforms.",
+    tags: ["SaaS MVP", "Subscriptions", "Web Apps"],
   },
 ] as const;
 
