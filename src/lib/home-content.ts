@@ -61,11 +61,14 @@ export const whyPartner = [
 ] as const;
 
 export const footerServices = [
+  { href: "/services", label: "All Services" },
   { href: "/services/best-web-development-design-accra-ghana", label: "Web Development" },
   { href: "/services/best-digital-marketing-accra-ghana", label: "Digital Marketing" },
   { href: "/ai-automation", label: "AI & Automation" },
   { href: "/services/best-seo-services-accra-ghana", label: "Search Engine Optimization" },
   { href: "/services/best-ecommerce-development-accra-ghana", label: "E-Commerce Development" },
+  { href: "/features", label: "All Capabilities" },
+  { href: "/pricing", label: "Pricing" },
 ] as const;
 
 export const workingHours = {

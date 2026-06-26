@@ -1,6 +1,7 @@
 import { siteConfig, services, academyCourses, stats } from "@/lib/site";
 import { allFaqs } from "@/lib/seo";
 import { getAllServicePages, getServicePath } from "@/lib/service-pages";
+import { getAllCityPages, getCityPath } from "@/lib/city-pages";
 
 export const dynamic = "force-static";
 
@@ -78,7 +79,14 @@ function buildLlmsTxt(): string {
   for (const page of getAllServicePages()) {
     lines.push(`- ${page.heroTitle}: ${siteConfig.url}${getServicePath(page.slug)}`);
   }
+  for (const city of getAllCityPages()) {
+    lines.push(
+      `- Web design ${city.cityName}: ${siteConfig.url}${getCityPath(city.slug)}`,
+    );
+  }
   lines.push(`- All capabilities: ${siteConfig.url}/features`);
+  lines.push(`- Website cost in Ghana: ${siteConfig.url}/website-cost-ghana`);
+  lines.push(`- Pricing approach: ${siteConfig.url}/pricing`);
   lines.push(`- AI business automation: ${siteConfig.url}/ai-automation`);
   lines.push(`- Academy: ${siteConfig.url}/academy`);
   lines.push(`- FAQ: ${siteConfig.url}/faq`);

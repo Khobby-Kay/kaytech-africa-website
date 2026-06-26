@@ -11,6 +11,8 @@ import {
   ServiceLanding,
   ServiceRelatedLinks,
 } from "@/components/services/ServiceLanding";
+import { EcommerceServicePage } from "@/components/services/EcommerceServicePage";
+import { ecommerceFaqs, ecommercePageMeta } from "@/lib/ecommerce-service-content";
 
 type Params = { slug: string };
 
@@ -44,21 +46,48 @@ export default function ServicePage({ params }: { params: Params }) {
   const page = getServiceBySlug(params.slug);
   if (!page) notFound();
 
+  const isEcommerce = params.slug === "best-ecommerce-development-accra-ghana";
   const allPages = getAllServicePages();
 
-  const serviceJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: page.heroTitle,
-    description: page.metaDescription,
-    provider: {
-      "@type": "Organization",
-      name: "KayTech Africa",
-      url: "https://www.kaytechafrica.com",
-    },
-    areaServed: { "@type": "Country", name: "Ghana" },
-    url: `https://www.kaytechafrica.com${getServicePath(page.slug)}`,
-  };
+  const serviceJsonLd = isEcommerce
+    ? {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Service",
+            name: ecommercePageMeta.heroTitle,
+            description: ecommercePageMeta.metaDescription,
+            provider: {
+              "@type": "Organization",
+              name: "KayTech Africa",
+              url: "https://www.kaytechafrica.com",
+            },
+            areaServed: { "@type": "Country", name: "Ghana" },
+            url: `https://www.kaytechafrica.com${getServicePath(params.slug)}`,
+          },
+          {
+            "@type": "FAQPage",
+            mainEntity: ecommerceFaqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: { "@type": "Answer", text: faq.answer },
+            })),
+          },
+        ],
+      }
+    : {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: page.heroTitle,
+        description: page.metaDescription,
+        provider: {
+          "@type": "Organization",
+          name: "KayTech Africa",
+          url: "https://www.kaytechafrica.com",
+        },
+        areaServed: { "@type": "Country", name: "Ghana" },
+        url: `https://www.kaytechafrica.com${getServicePath(page.slug)}`,
+      };
 
   return (
     <>
@@ -66,8 +95,14 @@ export default function ServicePage({ params }: { params: Params }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
-      <ServiceLanding page={page} />
-      <ServiceRelatedLinks currentSlug={page.slug} pages={allPages} />
+      {isEcommerce ? (
+        <EcommerceServicePage />
+      ) : (
+        <>
+          <ServiceLanding page={page} />
+          <ServiceRelatedLinks currentSlug={page.slug} pages={allPages} />
+        </>
+      )}
     </>
   );
 }

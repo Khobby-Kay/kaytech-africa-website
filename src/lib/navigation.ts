@@ -1,34 +1,68 @@
 export const mainNav = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
-  { href: "/services", label: "Services" },
-  { href: "/features", label: "All capabilities" },
-  { href: "/pricing", label: "Pricing" },
+  {
+    href: "/services/best-web-development-design-accra-ghana",
+    label: "Service",
+  },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/blog", label: "Blog" },
-  { href: "/academy", label: "Academy" },
-  { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact Us" },
+  { href: "/academy", label: "Academy" },
+] as const;
+
+/** Pages kept off the main nav but linked from footer, mobile menu, and homepage. */
+export const secondaryNav = [
+  { href: "/services", label: "All Services" },
+  { href: "/web-design/accra-ghana", label: "Web Design Accra" },
+  { href: "/web-design/kumasi-ghana", label: "Web Design Kumasi" },
+  { href: "/web-design/tema-ghana", label: "Web Design Tema" },
+  { href: "/web-design/takoradi-ghana", label: "Web Design Takoradi" },
+  { href: "/web-design/cape-coast-ghana", label: "Web Design Cape Coast" },
+  { href: "/website-cost-ghana", label: "Website Cost Ghana" },
+  { href: "/features", label: "All Capabilities" },
+  { href: "/pricing", label: "Pricing" },
+  { href: "/faq", label: "FAQ" },
+  { href: "/support", label: "Support" },
 ] as const;
 
 export const footerNav = {
-  product: [
+  services: [
     { href: "/services", label: "All Services" },
-    { href: "/services/best-web-development-design-accra-ghana", label: "Web Development" },
+    {
+      href: "/services/best-web-development-design-accra-ghana",
+      label: "Web Development",
+    },
+    {
+      href: "/services/best-digital-marketing-accra-ghana",
+      label: "Digital Marketing",
+    },
     { href: "/ai-automation", label: "AI Automation" },
-    { href: "/services/best-digital-marketing-accra-ghana", label: "Digital Marketing" },
-    { href: "/services/best-seo-services-accra-ghana", label: "SEO Services" },
-    { href: "/services/best-ecommerce-development-accra-ghana", label: "E-Commerce" },
+    {
+      href: "/services/best-seo-services-accra-ghana",
+      label: "SEO Services",
+    },
+    {
+      href: "/services/best-ecommerce-development-accra-ghana",
+      label: "E-Commerce",
+    },
+    { href: "/features", label: "All Capabilities" },
     { href: "/pricing", label: "Pricing" },
-    { href: "/support", label: "Support" },
   ],
   company: [
+    { href: "/web-design/accra-ghana", label: "Web Design Accra" },
+    { href: "/web-design/kumasi-ghana", label: "Web Design Kumasi" },
+    { href: "/web-design/tema-ghana", label: "Web Design Tema" },
+    { href: "/web-design/takoradi-ghana", label: "Web Design Takoradi" },
+    { href: "/web-design/cape-coast-ghana", label: "Web Design Cape Coast" },
+    { href: "/website-cost-ghana", label: "Website Cost Guide" },
     { href: "/about", label: "About Us" },
     { href: "/portfolio", label: "Portfolio" },
     { href: "/blog", label: "Blog" },
     { href: "/academy", label: "Academy" },
-    { href: "/contact", label: "Contact Us" },
     { href: "/faq", label: "FAQ" },
+    { href: "/support", label: "Support" },
+    { href: "/contact", label: "Contact Us" },
   ],
   legal: [
     { href: "/privacy", label: "Privacy Policy" },

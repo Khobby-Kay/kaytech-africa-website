@@ -4,9 +4,23 @@ import { Container } from "@/components/ui/Container";
 
 const pages = [
   {
+    href: "/services",
+    eyebrow: "Services",
+    title: "All services",
+    description:
+      "Web development, SEO, e-commerce, digital marketing, and AI automation — each with a dedicated Ghana-focused landing page.",
+  },
+  {
+    href: "/pricing",
+    eyebrow: "Pricing",
+    title: "How we price projects",
+    description:
+      "Value-focused proposals scoped to your goals — no surprise add-ons. See our approach before you request a quote.",
+  },
+  {
     href: "/features",
     eyebrow: "Studio",
-    title: "Features & services",
+    title: "Features & capabilities",
     description:
       "AI automation, web development, Web3, robotics, and growth systems — scoped for African operators.",
   },

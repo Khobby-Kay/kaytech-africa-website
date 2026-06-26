@@ -3,10 +3,10 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { ArrowRight, Mail, MapPin, Menu, Phone, X } from "lucide-react";
+import { Mail, MapPin, Menu, Phone, X } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { LogoMark } from "@/components/ui/LogoMark";
-import { mainNav } from "@/lib/navigation";
+import { mainNav, secondaryNav } from "@/lib/navigation";
 import { siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -54,7 +54,13 @@ export function Navbar() {
           </Link>
 
           <nav className="hidden items-center gap-6 xl:gap-8 lg:flex">
-            {mainNav.map((l) => (
+            {mainNav.map((l) => {
+              const isActive =
+                pathname === l.href ||
+                (l.href.startsWith("/services/") &&
+                  pathname.startsWith("/services"));
+
+              return (
               <Link
                 key={l.href}
                 href={l.href}
@@ -62,29 +68,32 @@ export function Navbar() {
                   "text-sm font-medium transition-colors",
                   onHero
                     ? "text-white/80 hover:text-on-dark"
-                    : pathname === l.href
+                    : isActive
                       ? "text-ink"
                       : "text-muted hover:text-ink"
                 )}
               >
                 {l.label}
               </Link>
-            ))}
+              );
+            })}
           </nav>
 
           <div className="hidden items-center gap-3 lg:flex">
-            <Link
-              href="/academy"
+            <a
+              href={`tel:${siteConfig.contact.phone}`}
+              data-track="call_click"
+              data-track-location="navbar"
               className={cn(
-                "inline-flex items-center gap-1.5 text-sm font-semibold transition-colors",
+                "hidden items-center gap-1.5 text-sm font-semibold transition xl:inline-flex",
                 onHero
                   ? "text-on-dark hover:text-white"
-                  : "text-ink hover:text-primary"
+                  : "text-primary hover:text-primary-deep",
               )}
             >
-              Academy
-              <ArrowRight className="h-3.5 w-3.5" />
-            </Link>
+              <Phone className="h-4 w-4" />
+              {siteConfig.contact.phoneDisplay}
+            </a>
             <Link
               href="/contact"
               className={cn(
@@ -184,22 +193,50 @@ export function Navbar() {
           </div>
 
           <nav className="mt-5 flex flex-col gap-1">
-            {mainNav.map((l) => (
+            {mainNav.map((l) => {
+              const isActive =
+                pathname === l.href ||
+                (l.href.startsWith("/services/") &&
+                  pathname.startsWith("/services"));
+
+              return (
               <Link
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
                 className={cn(
                   "rounded-xl px-3 py-3.5 text-base font-medium transition",
-                  pathname === l.href
+                  isActive
                     ? "bg-primary/10 text-primary"
                     : "text-ink hover:bg-surface-soft"
                 )}
               >
                 {l.label}
               </Link>
-            ))}
+              );
+            })}
           </nav>
+
+          <div className="mt-6 border-t border-hairline pt-5">
+            <p className="px-3 text-xs font-semibold uppercase tracking-wider text-muted">
+              More from KayTech
+            </p>
+            <div className="mt-2 flex flex-col gap-1">
+              {secondaryNav.map((l) => (
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  onClick={() => setOpen(false)}
+                  className={cn(
+                    "rounded-xl px-3 py-3 text-base font-medium text-ink transition hover:bg-surface-soft",
+                    pathname === l.href && "bg-primary/10 text-primary",
+                  )}
+                >
+                  {l.label}
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div className="border-t border-hairline p-5 pb-[calc(1.25rem+env(safe-area-inset-bottom))]">

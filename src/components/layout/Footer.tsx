@@ -2,8 +2,8 @@ import Link from "next/link";
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { LogoMark } from "@/components/ui/LogoMark";
-import { footerNav } from "@/lib/navigation";
-import { footerServices, workingHours } from "@/lib/home-content";
+import { footerNav, secondaryNav } from "@/lib/navigation";
+import { workingHours } from "@/lib/home-content";
 import { siteConfig } from "@/lib/site";
 
 export function Footer() {
@@ -106,7 +106,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <p className="text-sm font-semibold text-on-dark">Services links</p>
             <ul className="mt-4 space-y-2.5">
-              {footerServices.map((item) => (
+              {footerNav.services.map((item) => (
                 <li key={item.label}>
                   <Link
                     href={item.href}
@@ -157,6 +157,11 @@ export function Footer() {
             {siteConfig.name} © {new Date().getFullYear()} — All rights reserved
           </p>
           <div className="flex flex-wrap gap-x-4 gap-y-2">
+            {secondaryNav.map((item) => (
+              <Link key={item.href} href={item.href} className="hover:text-on-dark">
+                {item.label}
+              </Link>
+            ))}
             {footerNav.legal.map((item) => (
               <Link
                 key={item.href}

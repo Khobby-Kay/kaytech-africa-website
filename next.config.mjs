@@ -10,6 +10,40 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/web-design-accra-ghana",
+        destination: "/web-design/accra-ghana",
+        permanent: true,
+      },
+      {
+        source: "/web-design-kumasi-ghana",
+        destination: "/web-design/kumasi-ghana",
+        permanent: true,
+      },
+      {
+        source: "/web-design-tema-ghana",
+        destination: "/web-design/tema-ghana",
+        permanent: true,
+      },
+      {
+        source: "/web-design-takoradi-ghana",
+        destination: "/web-design/takoradi-ghana",
+        permanent: true,
+      },
+      {
+        source: "/web-design-cape-coast-ghana",
+        destination: "/web-design/cape-coast-ghana",
+        permanent: true,
+      },
+      {
+        source: "/how-much-does-a-website-cost-in-ghana",
+        destination: "/website-cost-ghana",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

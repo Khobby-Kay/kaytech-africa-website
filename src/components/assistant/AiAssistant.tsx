@@ -1,26 +1,25 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { MessageCircle, X, Send, Sparkles, Phone } from "lucide-react";
+import { MessageCircle, X, Send, Phone } from "lucide-react";
 import { siteConfig } from "@/lib/site";
 import {
   getAssistantReply,
   assistantPrompts,
   whatsappQuoteLink,
 } from "@/lib/assistant";
+import { TEEDRA } from "@/lib/teedra";
+import { TeedraAvatar } from "@/components/assistant/TeedraAvatar";
 import { trackEvent } from "@/lib/analytics";
 
 type Message = { id: number; from: "bot" | "user"; text: string };
-
-const GREETING =
-  "Hi! I'm KayTech's assistant. Ask me about our web design, development, SEO, or AI automation services — or get a quote in seconds.";
 
 export function AiAssistant() {
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
   const [showEscalate, setShowEscalate] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { id: 0, from: "bot", text: GREETING },
+    { id: 0, from: "bot", text: TEEDRA.greeting },
   ]);
   const idRef = useRef(1);
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -58,28 +57,30 @@ export function AiAssistant() {
       <button
         type="button"
         onClick={toggle}
-        aria-label={open ? "Close assistant" : "Open KayTech assistant"}
+        aria-label={open ? "Close Teedra chat" : "Chat with Teedra"}
         aria-expanded={open}
-        className="fixed bottom-[68px] right-4 z-[60] grid h-14 w-14 place-items-center rounded-full bg-primary text-on-primary shadow-lg ring-1 ring-black/5 transition hover:bg-primary-deep lg:bottom-6 lg:right-6"
+        className="fixed bottom-[68px] right-4 z-[60] overflow-hidden rounded-full shadow-lg ring-2 ring-white/20 transition hover:scale-105 lg:bottom-6 lg:right-6"
       >
-        {open ? <X className="h-6 w-6" /> : <MessageCircle className="h-6 w-6" />}
+        {open ? (
+          <span className="grid h-14 w-14 place-items-center bg-primary text-on-primary">
+            <X className="h-6 w-6" />
+          </span>
+        ) : (
+          <TeedraAvatar className="h-14 w-14" />
+        )}
       </button>
 
       {open ? (
         <div
           role="dialog"
-          aria-label="KayTech assistant"
+          aria-label="Teedra — KayTech assistant"
           className="fixed bottom-[136px] right-4 z-[60] flex h-[min(70vh,520px)] w-[min(92vw,380px)] flex-col overflow-hidden rounded-3xl border border-hairline bg-canvas shadow-2xl lg:bottom-24 lg:right-6"
         >
           <header className="flex items-center gap-3 border-b border-hairline bg-primary px-4 py-3 text-on-primary">
-            <span className="grid h-9 w-9 place-items-center rounded-full bg-white/15">
-              <Sparkles className="h-5 w-5" />
-            </span>
+            <TeedraAvatar className="h-10 w-10 shrink-0 ring-2 ring-white/20" />
             <div className="leading-tight">
-              <p className="text-sm font-semibold">KayTech Assistant</p>
-              <p className="text-[11px] text-on-primary/80">
-                Typically replies instantly
-              </p>
+              <p className="text-sm font-semibold">{TEEDRA.name}</p>
+              <p className="text-[11px] text-on-primary/80">{TEEDRA.tagline}</p>
             </div>
           </header>
 
@@ -91,9 +92,12 @@ export function AiAssistant() {
               <div
                 key={m.id}
                 className={
-                  m.from === "user" ? "flex justify-end" : "flex justify-start"
+                  m.from === "user" ? "flex justify-end" : "flex items-end gap-2"
                 }
               >
+                {m.from === "bot" ? (
+                  <TeedraAvatar className="h-7 w-7 shrink-0" />
+                ) : null}
                 <p
                   className={
                     m.from === "user"
@@ -113,7 +117,7 @@ export function AiAssistant() {
                   target="_blank"
                   rel="noopener noreferrer"
                   data-track="whatsapp_click"
-                  data-track-location="assistant"
+                  data-track-location="teedra"
                   className="inline-flex items-center justify-center gap-2 rounded-pill bg-semantic-up-deep px-4 py-2.5 text-sm font-semibold text-white"
                 >
                   <MessageCircle className="h-4 w-4" />
@@ -122,7 +126,7 @@ export function AiAssistant() {
                 <a
                   href={`tel:${siteConfig.contact.phone}`}
                   data-track="call_click"
-                  data-track-location="assistant"
+                  data-track-location="teedra"
                   className="inline-flex items-center justify-center gap-2 rounded-pill border border-hairline px-4 py-2.5 text-sm font-semibold text-ink"
                 >
                   <Phone className="h-4 w-4" />
@@ -157,13 +161,13 @@ export function AiAssistant() {
             <input
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="Ask about services, pricing…"
-              aria-label="Message the assistant"
+              placeholder={TEEDRA.placeholder}
+              aria-label="Message Teedra"
               className="min-w-0 flex-1 rounded-pill border border-hairline bg-surface-soft px-4 py-2.5 text-sm text-ink outline-none focus:border-primary/50"
             />
             <button
               type="submit"
-              aria-label="Send message"
+              aria-label="Send message to Teedra"
               className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-primary text-on-primary transition hover:bg-primary-deep"
             >
               <Send className="h-4 w-4" />

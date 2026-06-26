@@ -75,55 +75,27 @@ export const servicePages: ServicePage[] = [
   },
   {
     slug: "best-ecommerce-development-accra-ghana",
-    title: "Best E-Commerce Development in Accra, Ghana | KayTech Africa",
+    title:
+      "Top E-Commerce & Online Store Development in Accra, Ghana | KayTech Africa",
     metaDescription:
-      "Hire Ghana's best e-commerce developers in Accra. Online stores with Mobile Money, Paystack, Flutterwave, WhatsApp checkout, and mobile-first design.",
+      "KayTech Africa builds affordable, mobile-first e-commerce stores in Accra and Ghana — MoMo, Paystack, WhatsApp orders, SEO product pages, and secure checkout.",
     keywords: [
       "e-commerce website developer Ghana",
+      "online store development Accra",
       "online store developer Ghana",
       "e-commerce development Accra",
       "Mobile Money checkout website Ghana",
-      "Shopify expert Ghana",
+      "affordable e-commerce Ghana",
     ],
-    eyebrow: "E-commerce Ghana",
-    heroTitle: "E-commerce development built for how Ghana pays",
+    eyebrow: "E-commerce · Accra, Ghana",
+    heroTitle: "Helping you sell more online in Ghana",
     heroDescription:
-      "Online stores with MoMo, Paystack, and Flutterwave — plus WhatsApp ordering and fast mobile checkout. KayTech builds e-commerce that converts on 3G.",
+      "Custom online store development with MoMo, Paystack, and mobile-first checkout — built for Ghanaian buyers.",
     intro:
-      "Selling online in Ghana means meeting customers on mobile, accepting Mobile Money, and making checkout simple enough to finish on a small screen. KayTech Africa develops e-commerce websites and custom stores for brands in Accra, Kumasi, Tema, and nationwide — engineered for local payment rails and real buying behaviour.",
+      "KayTech Africa develops e-commerce websites and custom online stores for brands in Accra, Kumasi, Tema, and nationwide.",
     image: contentImages.whyPayments,
-    benefits: [
-      "Mobile Money & card payments (Paystack, Flutterwave, Hubtel)",
-      "WhatsApp order and support flows",
-      "Product pages optimized for mobile data",
-      "Inventory and order management",
-      "SEO so customers find your store on Google",
-    ],
-    sections: [
-      {
-        heading: "Checkout that matches local habits",
-        paragraphs: [
-          "Cards alone are not enough. We integrate the payment methods Ghanaians trust — MoMo first, with Paystack and Flutterwave for cards and bank — so fewer abandoned carts.",
-        ],
-      },
-      {
-        heading: "Mobile-first storefronts",
-        paragraphs: [
-          "Most of your traffic will be on a phone. We design product grids, search, and checkout for small screens and slower networks so browsing feels fast, not frustrating.",
-        ],
-      },
-      {
-        heading: "Features we build into Ghana e-commerce sites",
-        paragraphs: ["Stores can include:"],
-        bullets: [
-          "Catalogue, categories, and search",
-          "Guest checkout and account optional",
-          "Delivery zones and order notifications",
-          "Admin dashboard for products and orders",
-          "Reviews and trust signals on product pages",
-        ],
-      },
-    ],
+    benefits: [],
+    sections: [],
   },
   {
     slug: "best-web-development-design-accra-ghana",

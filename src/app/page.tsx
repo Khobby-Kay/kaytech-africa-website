@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/home/Hero";
-import { MobileQuickCallStrip } from "@/components/home/MobileQuickCallStrip";
+import { LeadCaptureStrip } from "@/components/layout/LeadCaptureStrip";
 import { LeadingCompanySection } from "@/components/home/LeadingCompanySection";
 import { HomeMainContent } from "@/components/home/HomeMainContent";
 import { LocalizedSeoSection } from "@/components/home/LocalizedSeoSection";
@@ -24,7 +24,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <MobileQuickCallStrip />
+      <LeadCaptureStrip location="homepage" />
       <LeadingCompanySection />
       <HomeMainContent />
       <KeyFacts />

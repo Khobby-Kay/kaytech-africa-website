@@ -4,7 +4,7 @@ import {
   ArrowDownToLine,
   CircleCheck,
   MessageCircle,
-  GraduationCap,
+  Phone,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { siteConfig } from "@/lib/site";
@@ -18,15 +18,24 @@ function ActionButton({
   label,
   title,
   external,
+  track,
+  trackLocation,
 }: {
   href: string;
   icon: ReactNode;
   label: string;
   title: string;
   external?: boolean;
+  track?: string;
+  trackLocation?: string;
 }) {
   const className =
     "inline-flex h-11 min-w-[8.75rem] items-center gap-2.5 rounded-lg border border-white/90 px-3.5 text-white transition hover:opacity-85";
+
+  const trackProps =
+    track && trackLocation
+      ? { "data-track": track, "data-track-location": trackLocation }
+      : {};
 
   const inner = (
     <>
@@ -42,13 +51,15 @@ function ActionButton({
     </>
   );
 
-  if (external) {
+  if (external || href.startsWith("tel:") || href.startsWith("mailto:")) {
     return (
       <a
         href={href}
-        target="_blank"
-        rel="noopener noreferrer"
+        {...(external
+          ? { target: "_blank", rel: "noopener noreferrer" }
+          : {})}
         className={className}
+        {...trackProps}
       >
         {inner}
       </a>
@@ -56,7 +67,7 @@ function ActionButton({
   }
 
   return (
-    <Link href={href} className={className}>
+    <Link href={href} className={className} {...trackProps}>
       {inner}
     </Link>
   );
@@ -120,23 +131,29 @@ export function Hero() {
 
           <div className="mt-6 flex flex-wrap items-center gap-3 sm:mt-10">
             <ActionButton
+              href={`tel:${siteConfig.contact.phone}`}
+              label="Quick call"
+              title={siteConfig.contact.phoneDisplay}
+              icon={<Phone className="h-6 w-6" />}
+              track="call_click"
+              trackLocation="hero"
+            />
+            <ActionButton
               href={siteConfig.contact.whatsapp}
               external
               label="Chat on"
               title="WhatsApp"
               icon={<MessageCircle className="h-6 w-6" />}
-            />
-            <ActionButton
-              href="/academy"
-              label="Explore the"
-              title="Academy"
-              icon={<GraduationCap className="h-6 w-6" />}
+              track="whatsapp_click"
+              trackLocation="hero"
             />
             <Link
-              href="/features"
-              className="hidden h-14 items-center justify-center rounded-pill border border-white/60 px-8 text-base font-semibold tracking-[-0.005em] text-on-dark transition hover:border-white/80 hover:bg-white/10 sm:inline-flex"
+              href="/contact"
+              data-track="get_started_click"
+              data-track-location="hero"
+              className="inline-flex h-11 items-center justify-center rounded-lg bg-semantic-up px-6 text-base font-semibold tracking-[-0.005em] text-surface-dark transition hover:brightness-110 sm:h-14 sm:px-8"
             >
-              See how it works
+              Get a free quote
             </Link>
           </div>
 

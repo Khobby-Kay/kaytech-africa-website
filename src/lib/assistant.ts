@@ -65,7 +65,7 @@ function buildKnowledge(): KnowledgeEntry[] {
         "ai automation chatbot bot workflow automate business assistant agent whatsapp",
       ),
       answer:
-        "Yes — AI business automation is one of our specialties: chatbots, WhatsApp automation, workflow bots, and AI assistants (like this one) that capture leads and save your team hours. See /features or ask for a quote.",
+        "Yes — AI business automation is one of our specialties: chatbots, WhatsApp automation, workflow bots, and Teedra-style assistants on your site that capture leads and save your team hours. See /ai-automation or ask for a quote.",
     },
     {
       keywords: tokenize("time long timeline deliver fast how soon weeks duration build"),
@@ -90,7 +90,7 @@ export function getAssistantReply(message: string): AssistantReply {
   const words = tokenize(message);
   if (words.length === 0) {
     return {
-      text: "Ask me about our services, pricing, the academy, timelines, or how to get a quote.",
+      text: "I'm Teedra — ask me about KayTech's services, pricing, the academy, timelines, or how to get a quote.",
       escalate: false,
     };
   }
@@ -113,7 +113,7 @@ export function getAssistantReply(message: string): AssistantReply {
   }
 
   return {
-    text: `Good question — let me connect you with a human who can help directly. Tap “Chat on WhatsApp” below, or call ${siteConfig.contact.phoneDisplay}.`,
+    text: `Good question — I'll connect you with our team. Tap "Chat on WhatsApp" below, or call ${siteConfig.contact.phoneDisplay}.`,
     escalate: true,
   };
 }

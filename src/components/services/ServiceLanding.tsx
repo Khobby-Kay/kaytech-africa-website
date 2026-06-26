@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, MessageCircle, Phone } from "lucide-react";
 import { PageHero } from "@/components/ui/PageHero";
 import { Container } from "@/components/ui/Container";
+import { LeadCaptureStrip } from "@/components/layout/LeadCaptureStrip";
 import type { ServicePage } from "@/lib/service-pages";
 import { getServicePath } from "@/lib/service-pages";
 import { siteConfig } from "@/lib/site";
@@ -16,6 +17,8 @@ export function ServiceLanding({ page }: { page: ServicePage }) {
         cta={{ label: "Get a quote", href: "/contact" }}
         image={page.image}
       />
+
+      <LeadCaptureStrip location={`service_${page.slug}`} compact />
 
       <section className="border-b border-hairline bg-canvas px-5 py-16 lg:px-20 lg:py-24">
         <Container>
@@ -86,13 +89,35 @@ export function ServiceLanding({ page }: { page: ServicePage }) {
               of Ghana. Call {siteConfig.contact.phoneDisplay} or WhatsApp{" "}
               {siteConfig.contact.whatsappDisplay} for a clear, tailored quote.
             </p>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link
                 href="/contact"
+                data-track="get_started_click"
+                data-track-location={`service_${page.slug}`}
                 className="inline-flex h-11 items-center justify-center rounded-pill bg-on-primary px-6 text-sm font-semibold text-primary transition hover:bg-white"
               >
                 Request a quote
               </Link>
+              <a
+                href={`tel:${siteConfig.contact.phone}`}
+                data-track="call_click"
+                data-track-location={`service_${page.slug}`}
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-pill border border-white/30 px-6 text-sm font-semibold text-on-primary transition hover:bg-white/10"
+              >
+                <Phone className="h-4 w-4" />
+                Call now
+              </a>
+              <a
+                href={siteConfig.contact.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-track="whatsapp_click"
+                data-track-location={`service_${page.slug}`}
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-pill border border-white/30 px-6 text-sm font-semibold text-on-primary transition hover:bg-white/10"
+              >
+                <MessageCircle className="h-4 w-4" />
+                WhatsApp
+              </a>
               <Link
                 href="/pricing"
                 className="inline-flex h-11 items-center justify-center gap-2 rounded-pill border border-white/30 px-6 text-sm font-semibold text-on-primary transition hover:bg-white/10"

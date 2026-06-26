@@ -40,7 +40,7 @@ const capabilities = [
   {
     icon: Bot,
     title: "Lead-capture assistants",
-    body: "Smart assistants (like the one on this site) that greet visitors, answer questions, and push hot leads straight to your sales team.",
+    body: "Teedra-style smart assistants that greet visitors, answer questions, and push hot leads straight to your sales team — on your website 24/7.",
   },
   {
     icon: Workflow,
@@ -159,8 +159,8 @@ export default function AiAutomationPage() {
               </h2>
               <p className="mt-3 text-sm text-on-primary/85 sm:text-base">
                 Tell us what&apos;s slowing your team down. We&apos;ll scope an
-                automation that pays for itself — and you can start with the
-                on-site assistant you&apos;re using right now.
+                automation that pays for itself — and you can start with Teedra,
+                our on-site assistant, right now.
               </p>
             </div>
             <div className="flex shrink-0 flex-col gap-3 sm:flex-row">

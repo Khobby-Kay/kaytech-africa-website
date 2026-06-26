@@ -12,10 +12,10 @@ export function LeadingCompanySection() {
       <Container>
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-16">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-pill bg-surface-strong px-4 py-1.5 font-mono text-xs font-semibold uppercase tracking-[0.08em] text-primary">
+            <span className="inline-flex items-center gap-2 rounded-pill bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-accent">
               {leadingCompany.eyebrow}
             </span>
-            <h2 className="mt-5 font-display text-xl leading-tight tracking-tight text-ink sm:text-3xl lg:text-4xl">
+            <h2 className="mt-5 font-display text-2xl font-bold leading-tight tracking-tight text-ink sm:text-3xl lg:text-4xl">
               {leadingCompany.title}
             </h2>
             <p className="mt-5 text-sm leading-relaxed text-muted sm:text-base lg:text-lg">
@@ -27,13 +27,13 @@ export function LeadingCompanySection() {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/contact"
-                className="inline-flex h-11 items-center justify-center rounded-pill bg-primary px-6 text-sm font-semibold text-on-primary transition hover:bg-primary-deep"
+                className="inline-flex h-11 items-center justify-center rounded-pill bg-gradient-to-r from-primary to-primary-light px-6 text-sm font-semibold text-on-primary shadow-card transition hover:brightness-110"
               >
-                Get a quote
+                Get a free quote
               </Link>
               <Link
-                href="/features"
-                className="inline-flex h-11 items-center justify-center gap-2 rounded-pill border border-hairline px-6 text-sm font-semibold text-ink transition hover:bg-surface-soft"
+                href="/services"
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-pill border border-hairline bg-canvas px-6 text-sm font-semibold text-ink transition hover:border-accent/30 hover:bg-surface-accent"
               >
                 View all services
                 <ArrowRight className="h-4 w-4" />
@@ -50,7 +50,7 @@ export function LeadingCompanySection() {
           >
             <div
               aria-hidden
-              className="pointer-events-none absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"
+              className="pointer-events-none absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/30 to-transparent"
             />
             <div className="absolute bottom-0 left-0 right-0 p-6 text-on-dark">
               <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-on-dark/80">
