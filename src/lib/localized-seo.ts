@@ -181,12 +181,11 @@ export const pageSeoCopy = {
       "Who is the best web developer in Ghana? How much does a website cost? Do you work in Kumasi and Accra? Find answers from KayTech Africa's studio team.",
   },
   academy: {
-    title:
-      "Web Design & Development Courses Accra Ghana | KayTech Academy",
+    title: "KayTech Academy | Best Web Design and Development School in Ghana",
     description:
-      "Learn web design and web development in Accra, Ghana. KayTech Academy trains the next generation of website designers and developers — practical courses for Ghana's digital economy.",
+      "KayTech Academy — Ghana's practical web design, development, digital marketing, and SaaS school in Accra. Job-ready training in 3 months. Online and on-site.",
     heroDescription:
-      "Train with the team behind one of Ghana's best web design companies. Web design, development, SEO, and digital marketing courses in Accra for students and career switchers.",
+      "Train with the team behind one of Ghana's best web design companies. Web design, development, SEO, digital marketing, and SaaS courses for students and career switchers.",
   },
   aiAutomation: {
     title:

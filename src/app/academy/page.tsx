@@ -1,171 +1,64 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
-import { Container } from "@/components/ui/Container";
-import { Media } from "@/components/ui/Media";
-import { PageHero } from "@/components/ui/PageHero";
-import { FAQ } from "@/components/home/FAQ";
-import { contentImages } from "@/lib/image-seo";
-import { academyCourses, siteConfig } from "@/lib/site";
-import {
-  academyCourseAlts,
-  academyCourseImages,
-  pageImages,
-} from "@/lib/page-images";
-import { ghanaSearchKeywords, pageSeoCopy } from "@/lib/localized-seo";
+import { AcademyPageContent } from "@/components/academy/AcademyPageContent";
+import { academyFaqs, academyPageMeta } from "@/lib/academy-content";
+import { ghanaSearchKeywords } from "@/lib/localized-seo";
 import { createPageMetadata } from "@/lib/page-metadata";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: pageSeoCopy.academy.title,
-  description: pageSeoCopy.academy.description,
+  title: academyPageMeta.title,
+  description: academyPageMeta.description,
   path: "/academy",
   keywords: [
     ...ghanaSearchKeywords,
     "web design course Ghana",
+    "web development school Ghana",
     "coding academy Accra",
     "learn web development Ghana",
+    "digital marketing course Accra",
+    "SaaS course Ghana",
   ],
 });
 
-const benefits = [
-  "Live sessions with working practitioners",
-  "Portfolio-ready projects, not toy exercises",
-  "Cohort-based learning with peer support",
-  "Career & freelance business coaching included",
-  "Certificate on completion",
-  "Access to KayTech client referral network",
-];
+const academyJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "EducationalOrganization",
+      name: "KayTech Academy",
+      description: academyPageMeta.description,
+      url: `${siteConfig.url}/academy`,
+      parentOrganization: {
+        "@type": "Organization",
+        name: siteConfig.name,
+        url: siteConfig.url,
+      },
+      areaServed: { "@type": "Country", name: "Ghana" },
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Accra",
+        addressCountry: "GH",
+      },
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: academyFaqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: { "@type": "Answer", text: faq.answer },
+      })),
+    },
+  ],
+};
 
 export default function AcademyPage() {
   return (
     <>
-      <PageHero
-        eyebrow="KayTech Academy"
-        title="Skills that pay. Taught by builders."
-        description={pageSeoCopy.academy.heroDescription}
-        cta={{
-          label: "Enroll on WhatsApp",
-          href: siteConfig.contact.whatsapp,
-          external: true,
-        }}
-        image={pageImages.academy}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(academyJsonLd) }}
       />
-
-      <section className="border-b border-hairline bg-canvas px-5 py-16 lg:px-20 lg:py-20">
-        <Container>
-          <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center">
-            <Media
-              src={contentImages.academyLearning.src}
-              alt={contentImages.academyLearning.alt}
-              ratio="4/3"
-              sizes="(max-width: 1024px) 100vw, 540px"
-              className="lg:aspect-auto lg:min-h-[360px]"
-            />
-            <div>
-              <span className="inline-flex items-center gap-2 rounded-pill bg-surface-strong px-4 py-1.5 font-mono text-xs font-semibold uppercase tracking-[0.08em] text-ink">
-                Why learn with us
-              </span>
-              <h2 className="mt-6 font-display text-3xl tracking-tight text-ink sm:text-4xl">
-                The academy is an extension of our studio
-              </h2>
-              <p className="mt-4 text-muted">
-                Everything we teach is what we use daily for clients — modern
-                stacks, African market context, and delivery skills that get you
-                hired.
-              </p>
-            </div>
-            <ul className="grid gap-3 sm:grid-cols-2">
-              {benefits.map((b) => (
-                <li
-                  key={b}
-                  className="flex items-start gap-2.5 rounded-2xl border border-hairline bg-surface-soft p-4 text-sm text-muted"
-                >
-                  <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-semantic-up-deep" />
-                  {b}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </Container>
-      </section>
-
-      <section className="bg-canvas px-5 py-20 lg:px-20 lg:py-28">
-        <Container>
-          <div className="max-w-2xl">
-            <span className="inline-flex items-center gap-2 rounded-pill bg-surface-strong px-4 py-1.5 font-mono text-xs font-semibold uppercase tracking-[0.08em] text-ink">
-              Programs
-            </span>
-            <h2 className="mt-6 font-display text-3xl tracking-tight text-ink sm:text-4xl">
-              Choose your track
-            </h2>
-            <p className="mt-4 text-muted">
-              Flexible cohorts — online-first with optional in-person workshops
-              in Accra.
-            </p>
-          </div>
-
-          <div className="mt-14 grid gap-5 md:grid-cols-2">
-            {academyCourses.map((course, i) => (
-              <article
-                key={course.slug}
-                className="group flex flex-col overflow-hidden rounded-3xl border border-hairline bg-surface-soft transition duration-300 hover:-translate-y-1 hover:shadow-float"
-              >
-                <Media
-                  src={academyCourseImages[i]}
-                  alt={academyCourseAlts[i]}
-                  ratio="16/9"
-                  rounded="none"
-                  framed={false}
-                  sizes="(max-width: 768px) 100vw, 480px"
-                />
-                <div className="flex flex-1 flex-col p-6 sm:p-8">
-                <div className="flex flex-wrap items-center gap-3">
-                  <span className="rounded-pill bg-canvas px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider text-primary ring-1 ring-hairline">
-                    {course.level}
-                  </span>
-                  <span className="text-xs text-muted">{course.duration}</span>
-                </div>
-                <h2 className="mt-4 font-display text-2xl font-semibold text-ink">
-                  {course.title}
-                </h2>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
-                  {course.description}
-                </p>
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {course.outcomes.map((o) => (
-                    <span
-                      key={o}
-                      className="rounded-pill border border-hairline bg-canvas px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-muted"
-                    >
-                      {o}
-                    </span>
-                  ))}
-                </div>
-                <a
-                  href={`${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi KayTech! I'm interested in the ${course.title} academy program.`)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
-                >
-                  Request syllabus
-                  <ArrowRight className="h-4 w-4" />
-                </a>
-                </div>
-              </article>
-            ))}
-          </div>
-
-          <p className="mt-10 text-center text-sm text-muted">
-            Custom corporate training available.{" "}
-            <Link href="/contact" className="text-ink hover:underline">
-              Contact us
-            </Link>{" "}
-            for team packages.
-          </p>
-        </Container>
-      </section>
-
-      <FAQ limit={4} />
+      <AcademyPageContent />
     </>
   );
 }
