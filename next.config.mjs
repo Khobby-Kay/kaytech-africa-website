@@ -38,6 +38,21 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/web-design-volta-ho-hohoe-ghana",
+        destination: "/web-design/volta-ho-hohoe-ghana",
+        permanent: true,
+      },
+      {
+        source: "/web-design-ho-ghana",
+        destination: "/web-design/volta-ho-hohoe-ghana",
+        permanent: true,
+      },
+      {
+        source: "/web-design-hohoe-ghana",
+        destination: "/web-design/volta-ho-hohoe-ghana",
+        permanent: true,
+      },
+      {
         source: "/how-much-does-a-website-cost-in-ghana",
         destination: "/website-cost-ghana",
         permanent: true,

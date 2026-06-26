@@ -370,6 +370,81 @@ export const cityPages: CityPage[] = [
     image: contentImages.principleConvert,
     imageCaption: "Websites that convert for Cape Coast businesses",
   },
+  {
+    slug: "volta-ho-hohoe-ghana",
+    cityName: "Ho & Hohoe",
+    region: "Volta Region",
+    title:
+      "Best Web Design in Ho, Hohoe & Volta Region, Ghana | KayTech Africa",
+    metaDescription:
+      "Web design in Ho, Hohoe, and Volta Region, Ghana. KayTech Africa builds mobile-first business websites, e-commerce, and SEO for Volta brands. Call 024 840 8154.",
+    keywords: [
+      "web design Ho Ghana",
+      "web design Hohoe Ghana",
+      "website designer Volta Region",
+      "web developer Ho Volta",
+      "website design Hohoe Volta Region",
+      "affordable web design Ho",
+    ],
+    heroTitle: "Web design in Ho, Hohoe & Volta Region",
+    heroDescription:
+      "Professional websites for Ho, Hohoe, and businesses across Volta Region — mobile-first, MoMo-ready, and built to rank on Google.",
+    intro:
+      "The Volta Region — from Ho municipal capital to Hohoe and surrounding districts — is home to agriculture, trade, education, hospitality, and a growing SME sector. Businesses in Ho and Hohoe need websites that work on mobile, accept MoMo, and make it easy for customers to call or WhatsApp. KayTech Africa serves Volta Region clients remotely from our Accra studio with the same quality we deliver nationwide.",
+    areas: [
+      "Ho",
+      "Hohoe",
+      "Kpando",
+      "Keta",
+      "Aflao",
+      "Sogakope",
+      "Jasikan",
+      "Kadjebi",
+      "Volta Region",
+    ],
+    whyChoose: [
+      {
+        title: "Ho & Hohoe coverage",
+        body: "One trusted studio for Ho municipal, Hohoe, and Volta districts — web design, e-commerce, and SEO without travelling to Accra.",
+      },
+      {
+        title: "Built for Volta buyers",
+        body: "Fast pages on everyday networks, WhatsApp ordering, and MoMo checkout — how Volta Region customers browse and pay.",
+      },
+      {
+        title: "Agriculture & local trade",
+        body: "Catalogues, wholesale listings, and lead capture for agribusiness, retail, and services across the region.",
+      },
+      {
+        title: "Volta Region SEO",
+        body: "Rank for “web design Ho”, “website Hohoe”, and your industry + Volta Region on Google.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Do you build websites for businesses in Ho and Hohoe?",
+        answer:
+          "Yes. KayTech serves Ho, Hohoe, and all of Volta Region — with web design, e-commerce, SEO, and AI automation. Most projects run smoothly via WhatsApp and phone from our Accra studio.",
+      },
+      {
+        question: "Can you help Volta Region businesses sell online?",
+        answer:
+          "Absolutely. We build online stores with Mobile Money, Paystack, product catalogues, and WhatsApp order alerts — ideal for retailers and traders in Ho, Hohoe, and beyond.",
+      },
+      {
+        question: "How much does a website cost in Volta Region?",
+        answer:
+          "Pricing is scoped per project. See our website cost guide at /website-cost-ghana or request a free quote — we send clear proposals with no hidden fees.",
+      },
+      {
+        question: "How do I get started?",
+        answer:
+          "Call 024 840 8154, WhatsApp 055 992 1979, or use our contact form. Tell us what you sell and where you operate in Volta Region — we'll reply with a clear next step.",
+      },
+    ],
+    image: contentImages.whyStudio,
+    imageCaption: "Web design for Ho, Hohoe & Volta Region businesses",
+  },
 ];
 
 export function getCityBySlug(slug: string): CityPage | undefined {
