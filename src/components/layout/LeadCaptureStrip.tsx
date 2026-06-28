@@ -8,6 +8,8 @@ type LeadCaptureStripProps = {
   location: string;
   className?: string;
   compact?: boolean;
+  /** Hide the entire strip on mobile (e.g. when hero already has CTAs + sticky bar) */
+  hideOnMobile?: boolean;
 };
 
 /** Always-visible conversion strip — call, WhatsApp, quote. */
@@ -15,11 +17,13 @@ export function LeadCaptureStrip({
   location,
   className,
   compact = false,
+  hideOnMobile = false,
 }: LeadCaptureStripProps) {
   return (
     <div
       className={cn(
         "border-b border-hairline bg-gradient-to-r from-surface-accent via-surface-soft to-surface-accent",
+        hideOnMobile && "hidden lg:block",
         className,
       )}
     >

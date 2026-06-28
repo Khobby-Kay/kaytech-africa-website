@@ -52,7 +52,7 @@ function AcademyApplyBanner() {
   return (
     <section
       id="apply"
-      className="sticky top-[calc(5.75rem+env(safe-area-inset-top,0px))] z-30 border-b border-accent/25 bg-gradient-to-r from-accent/20 via-surface-accent to-accent/20 px-4 py-3 shadow-sm backdrop-blur-sm sm:px-5 sm:py-4 lg:top-[4.5rem] lg:px-20"
+      className="sticky top-[calc(3.75rem+env(safe-area-inset-top,0px))] z-30 border-b border-accent/25 bg-gradient-to-r from-accent/20 via-surface-accent to-accent/20 px-4 py-3 shadow-sm backdrop-blur-sm sm:px-5 sm:py-4 lg:top-[4.5rem] lg:px-20"
     >
       <Container className="flex flex-col items-stretch justify-between gap-3 sm:flex-row sm:items-center">
         <div className="min-w-0">
@@ -93,7 +93,7 @@ function AcademyHeroSlider() {
     <section className="relative min-h-[62vh] w-full overflow-hidden border-b border-hairline sm:min-h-[72vh] lg:min-h-[85vh]">
       <HeroImageBackground slides={academyHeroImages} active={active} />
 
-      <Container className="relative pb-28 pt-[6.25rem] sm:pb-28 sm:pt-28 lg:pb-32 lg:pt-40">
+      <Container className="relative pb-28 pt-[5.25rem] sm:pb-28 sm:pt-28 lg:pb-32 lg:pt-40">
         <div className="max-w-3xl max-lg:mt-4">
           <h1
             key={slide.title}

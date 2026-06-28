@@ -80,8 +80,8 @@ export function PageHero({
         className={cn(
           "relative",
           compact
-            ? "pb-16 pt-[6.25rem] sm:pb-20 sm:pt-28 lg:pb-24 lg:pt-36"
-            : "pb-20 pt-[6.25rem] sm:pb-24 sm:pt-28 lg:pb-28 lg:pt-40",
+            ? "pb-16 pt-[5.25rem] sm:pb-20 sm:pt-28 lg:pb-24 lg:pt-36"
+            : "pb-20 pt-[5.25rem] sm:pb-24 sm:pt-28 lg:pb-28 lg:pt-40",
         )}
       >
         <div className="max-w-3xl max-lg:mt-4">

@@ -23,7 +23,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <LeadCaptureStrip location="homepage" />
+      <LeadCaptureStrip location="homepage" hideOnMobile />
       <LeadingCompanySection />
       <HomeMainContent />
       <KeyFacts />

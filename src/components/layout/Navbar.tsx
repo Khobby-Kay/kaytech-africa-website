@@ -3,9 +3,10 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Menu, Phone, X } from "lucide-react";
+import { Clock, MapPin, Menu, Phone, X } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { LogoMark } from "@/components/ui/LogoMark";
+import { workingHours } from "@/lib/home-content";
 import { mainNav } from "@/lib/navigation";
 import { siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
@@ -38,25 +39,9 @@ export function Navbar() {
 
   return (
     <>
-      {/* Doctor Barns–style quick-call strip — mobile & tablet only */}
-      <div className="fixed inset-x-0 top-0 z-[51] border-b border-white/10 bg-primary lg:hidden">
-        <a
-          href={`tel:${siteConfig.contact.phone}`}
-          data-track="call_click"
-          data-track-location="navbar_mobile_strip"
-          className="flex min-h-9 items-center justify-center gap-2 px-4 text-center text-xs font-semibold text-on-primary"
-        >
-          <Phone className="h-3.5 w-3.5 shrink-0" aria-hidden />
-          <span>
-            Quick call:{" "}
-            <span className="font-bold">{siteConfig.contact.phoneDisplay}</span>
-          </span>
-        </a>
-      </div>
-
       <header
         className={cn(
-          "fixed inset-x-0 top-9 z-50 w-full transition-all duration-300 lg:top-0",
+          "fixed inset-x-0 top-0 z-50 w-full transition-all duration-300",
           lightHeaderText
             ? "max-lg:bg-surface-dark/45 max-lg:backdrop-blur-md lg:bg-transparent"
             : "border-b border-hairline bg-canvas/95 backdrop-blur-xl",
@@ -130,7 +115,6 @@ export function Navbar() {
             </Link>
           </div>
 
-          {/* Mobile / tablet — menu only (same nav links as desktop, inside drawer) */}
           <div className="flex shrink-0 items-center lg:hidden">
             <button
               type="button"
@@ -213,6 +197,37 @@ export function Navbar() {
               );
             })}
           </nav>
+
+          <div className="mt-5 rounded-2xl border border-hairline bg-surface-soft p-4">
+            <div className="flex items-start gap-3">
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+              <div>
+                <p className="text-sm font-semibold text-ink">
+                  {siteConfig.location.line1}, Ghana
+                </p>
+                <p className="text-xs text-muted">{siteConfig.location.line2}</p>
+                <a
+                  href={siteConfig.location.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1 inline-block text-xs font-semibold text-primary"
+                >
+                  Get directions
+                </a>
+              </div>
+            </div>
+            <div className="mt-3 flex items-start gap-3 border-t border-hairline pt-3">
+              <Clock className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted">
+                  Office hours
+                </p>
+                <p className="mt-0.5 text-sm text-ink">
+                  {workingHours.days} · {workingHours.hours}
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="border-t border-hairline p-4 pb-[calc(1rem+env(safe-area-inset-bottom))] sm:p-5">

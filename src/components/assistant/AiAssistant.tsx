@@ -59,7 +59,7 @@ export function AiAssistant() {
         onClick={toggle}
         aria-label={open ? "Close Teedra chat" : "Chat with Teedra"}
         aria-expanded={open}
-        className="fixed bottom-[calc(68px+env(safe-area-inset-bottom,0px))] right-3 z-[55] transition hover:scale-105 motion-reduce:hover:scale-100 sm:right-4 lg:bottom-6 lg:right-6"
+        className="fixed bottom-[calc(56px+env(safe-area-inset-bottom,0px))] right-3 z-[55] transition hover:scale-105 motion-reduce:hover:scale-100 sm:right-4 lg:bottom-6 lg:right-6"
       >
         {open ? (
           <span className="grid h-14 w-14 place-items-center rounded-full bg-primary text-on-primary shadow-lg ring-2 ring-white/20">
@@ -74,7 +74,7 @@ export function AiAssistant() {
         <div
           role="dialog"
           aria-label="Teedra — KayTech assistant"
-          className="fixed bottom-[calc(136px+env(safe-area-inset-bottom,0px))] right-3 z-[55] flex h-[min(68vh,520px)] w-[min(calc(100vw-1.5rem),380px)] flex-col overflow-hidden rounded-3xl border border-hairline bg-canvas shadow-2xl sm:right-4 lg:bottom-24 lg:right-6"
+          className="fixed bottom-[calc(118px+env(safe-area-inset-bottom,0px))] right-3 z-[55] flex h-[min(68vh,520px)] w-[min(calc(100vw-1.5rem),380px)] flex-col overflow-hidden rounded-3xl border border-hairline bg-canvas shadow-2xl sm:right-4 lg:bottom-24 lg:right-6"
         >
           <header className="flex items-center gap-3 border-b border-hairline bg-primary px-4 py-3 text-on-primary">
             <TeedraAvatar className="h-10 w-10 shrink-0" active />

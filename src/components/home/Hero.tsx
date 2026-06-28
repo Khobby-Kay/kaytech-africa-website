@@ -35,7 +35,7 @@ function ActionButton({
   trackLocation?: string;
 }) {
   const className =
-    "inline-flex h-11 min-h-[44px] w-full items-center justify-center gap-2.5 rounded-lg border border-white/90 px-3.5 text-white transition hover:opacity-85 sm:min-w-[8.75rem] sm:w-auto";
+    "inline-flex h-9 min-h-[36px] items-center justify-center gap-1.5 rounded-lg border border-white/90 px-2.5 text-white transition hover:opacity-85 sm:h-11 sm:min-h-[44px] sm:gap-2.5 sm:px-3.5 sm:min-w-[8.75rem]";
 
   const trackProps =
     track && trackLocation
@@ -45,7 +45,7 @@ function ActionButton({
   const inner = (
     <>
       <span className="shrink-0">{icon}</span>
-      <span className="flex flex-col leading-none text-left">
+      <span className="hidden flex-col leading-none text-left sm:flex">
         <span className="text-[9px] font-medium tracking-wide opacity-90">
           {label}
         </span>
@@ -53,6 +53,7 @@ function ActionButton({
           {title}
         </span>
       </span>
+      <span className="text-[11px] font-semibold sm:hidden">{label}</span>
     </>
   );
 
@@ -120,7 +121,7 @@ export function Hero() {
     >
       <HeroBackground active={active} />
 
-      <Container className="relative pb-28 pt-[6.25rem] sm:pb-28 sm:pt-28 lg:pb-32 lg:pt-40">
+      <Container className="relative pb-28 pt-[5.25rem] sm:pb-28 sm:pt-28 lg:pb-32 lg:pt-40">
         <div className="max-w-3xl max-lg:mt-6">
           <h1
             key={slide.title}
@@ -142,29 +143,31 @@ export function Hero() {
             {slide.description}
           </p>
 
-          <div className="mt-6 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:items-center">
-            <ActionButton
-              href={`tel:${siteConfig.contact.phone}`}
-              label="Quick call"
-              title={siteConfig.contact.phoneDisplay}
-              icon={<Phone className="h-6 w-6" />}
-              track="call_click"
-              trackLocation="hero"
-            />
-            <ActionButton
-              href={siteConfig.contact.whatsapp}
-              external
-              label="Chat on"
-              title="WhatsApp"
-              icon={<MessageCircle className="h-6 w-6" />}
-              track="whatsapp_click"
-              trackLocation="hero"
-            />
+          <div className="mt-6 flex flex-col gap-2.5 sm:mt-10 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3">
+            <div className="hidden gap-2 sm:flex sm:flex-wrap sm:items-center">
+              <ActionButton
+                href={`tel:${siteConfig.contact.phone}`}
+                label="Quick call"
+                title={siteConfig.contact.phoneDisplay}
+                icon={<Phone className="h-5 w-5 sm:h-6 sm:w-6" />}
+                track="call_click"
+                trackLocation="hero"
+              />
+              <ActionButton
+                href={siteConfig.contact.whatsapp}
+                external
+                label="Chat on"
+                title="WhatsApp"
+                icon={<MessageCircle className="h-5 w-5 sm:h-6 sm:w-6" />}
+                track="whatsapp_click"
+                trackLocation="hero"
+              />
+            </div>
             <Link
               href="/contact"
               data-track="get_started_click"
               data-track-location="hero"
-              className="inline-flex h-11 min-h-[44px] w-full items-center justify-center rounded-lg bg-semantic-up px-6 text-base font-semibold tracking-[-0.005em] text-surface-dark transition hover:brightness-110 sm:h-14 sm:w-auto sm:px-8"
+              className="inline-flex h-11 min-h-[44px] w-full items-center justify-center rounded-lg bg-semantic-up px-6 text-sm font-semibold tracking-[-0.005em] text-surface-dark transition hover:brightness-110 sm:h-14 sm:w-auto sm:px-8 sm:text-base"
             >
               Get a free quote
             </Link>

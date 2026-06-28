@@ -38,7 +38,7 @@ button {
 @media (max-width: 1023px) {
   :target,
   [id] {
-    scroll-margin-top: 7.5rem;
+    scroll-margin-top: 4.5rem;
   }
 }
 
