@@ -114,7 +114,22 @@ function AcademyHeroSlider() {
             Ghana&apos;s practical web design and development school — studio-backed
             training for students, career switchers, and aspiring freelancers.
           </p>
-          <div className="mt-6 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap">
+          <div className="mt-4 flex gap-2">
+            {slides.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                aria-label={`Show headline ${i + 1}`}
+                onClick={() => setActive(i)}
+                className={cn(
+                  "h-1.5 rounded-full transition-all duration-300",
+                  i === active ? "w-8 bg-on-dark" : "w-2 bg-on-dark/40 hover:bg-on-dark/70",
+                )}
+              />
+            ))}
+          </div>
+
+          <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap">
             <a
               {...applyFormProps()}
               data-track="academy_apply_click"

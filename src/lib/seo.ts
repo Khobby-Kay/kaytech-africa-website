@@ -206,6 +206,30 @@ export function getOrganizationJsonLd() {
         },
       })),
       {
+        "@type": "ItemList",
+        "@id": `${siteConfig.url}/#sitenavigation`,
+        name: "KayTech Africa — Main Navigation",
+        itemListElement: [
+          { "@type": "SiteLinksSearchBox", target: { "@type": "EntryPoint", urlTemplate: `${siteConfig.url}/faq?q={search_term_string}` } },
+          ...[
+            { name: "Web Design & Development", url: `${siteConfig.url}/services/best-web-development-design-accra-ghana`, description: "Custom websites and web apps built for Ghana" },
+            { name: "SEO Services", url: `${siteConfig.url}/services/best-seo-services-accra-ghana`, description: "Search engine optimisation for Ghanaian businesses" },
+            { name: "E-Commerce Development", url: `${siteConfig.url}/services/best-ecommerce-development-accra-ghana`, description: "Online stores with MoMo and card payment integration" },
+            { name: "Digital Marketing & PPC", url: `${siteConfig.url}/services/best-digital-marketing-accra-ghana`, description: "Paid ads, content, and growth campaigns" },
+            { name: "KayTech Academy", url: `${siteConfig.url}/academy`, description: "Practical web and digital marketing training in Ghana" },
+            { name: "Portfolio", url: `${siteConfig.url}/portfolio`, description: "Web design projects across Ghana" },
+            { name: "Pricing", url: `${siteConfig.url}/pricing`, description: "Website cost and pricing guide for Ghana" },
+            { name: "Contact Us", url: `${siteConfig.url}/contact`, description: "Get a free web design quote in Accra" },
+          ].map((item, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            name: item.name,
+            url: item.url,
+            description: item.description,
+          })),
+        ],
+      },
+      {
         "@type": "FAQPage",
         "@id": `${siteConfig.url}/#faq`,
         mainEntity: allFaqs.map((faq) => ({

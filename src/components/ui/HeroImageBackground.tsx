@@ -57,6 +57,26 @@ export function HeroImageBackground({
         </div>
       ))}
       <div aria-hidden className={cn("absolute inset-0", overlayClassName)} />
+
+      {hasMultiple ? (
+        <div className="absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 gap-2 sm:bottom-8">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              type="button"
+              aria-label={`Show slide ${index + 1} of ${slides.length}`}
+              aria-current={index === active ? "true" : undefined}
+              onClick={() => setActive(index)}
+              className={cn(
+                "h-1.5 rounded-full transition-all duration-300",
+                index === active
+                  ? "w-8 bg-on-dark"
+                  : "w-2 bg-on-dark/40 hover:bg-on-dark/70",
+              )}
+            />
+          ))}
+        </div>
+      ) : null}
     </div>
   );
 }
