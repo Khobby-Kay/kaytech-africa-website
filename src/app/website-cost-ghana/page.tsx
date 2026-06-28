@@ -50,7 +50,6 @@ export default function WebsiteCostGhanaPage() {
       />
 
       <MarketingPageHero
-        eyebrow="Pricing guide · Ghana"
         title="How much does a website cost in Ghana?"
         description="No one-size-fits-all price — but here's what drives cost, what you should expect, and how to get a clear, honest quote from KayTech Africa."
         image={contentImages.academyLearning}

@@ -18,7 +18,6 @@ export default function SupportPage() {
   return (
     <>
       <PageHero
-        eyebrow="Client support"
         title="Help when you need it"
         description="Active project or academy enrollment — our team is one message away on WhatsApp, phone, or email."
         cta={{

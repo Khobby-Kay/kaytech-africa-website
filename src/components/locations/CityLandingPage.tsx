@@ -36,7 +36,6 @@ export function CityLandingPage({ page }: { page: CityPage }) {
     <>
       <RevealOnScroll variant="fade-down" duration={800}>
         <MarketingPageHero
-          eyebrow={`Web design · ${page.cityName}, Ghana`}
           title={page.heroTitle}
           description={page.heroDescription}
           image={page.image}

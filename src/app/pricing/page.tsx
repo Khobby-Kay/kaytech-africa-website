@@ -173,7 +173,6 @@ export default function PricingPage() {
       />
 
       <PageHero
-        eyebrow="Web design pricing Ghana"
         title="Pricing built around value, not templates"
         description="Wondering how much a website costs in Ghana? The honest answer is: it depends on what will actually grow your business. We scope every project clearly and price around the value it delivers — so you invest in results, not a guess."
         cta={{ label: "Request a tailored quote", href: "/contact" }}

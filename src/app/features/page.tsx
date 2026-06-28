@@ -17,7 +17,6 @@ export default function FeaturesPage() {
   return (
     <>
       <PageHero
-        eyebrow="Web design Ghana"
         title={pageSeoCopy.features.heroTitle}
         description={pageSeoCopy.features.heroDescription}
         cta={{ label: "Start a project", href: "/contact" }}

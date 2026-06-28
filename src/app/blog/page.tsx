@@ -30,7 +30,6 @@ export default function BlogPage() {
   return (
     <>
       <PageHero
-        eyebrow="KayTech Blog"
         title="Web design, SEO & growth insights for Ghana"
         description="Practical guides on building, ranking, and growing a business website in Accra, Kumasi, Tema, and across Ghana — written by the KayTech Africa studio team."
         cta={{ label: "Get a free consultation", href: "/contact" }}

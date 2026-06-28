@@ -22,7 +22,6 @@ export default function ServicesHubPage() {
   return (
     <>
       <PageHero
-        eyebrow="Services Ghana"
         title="Web design & digital services across Ghana"
         description="Dedicated pages for SEO, e-commerce, web development, web design, and digital marketing — built for Accra, Kumasi, Tema, and nationwide."
         cta={{ label: "Get a quote", href: "/contact" }}

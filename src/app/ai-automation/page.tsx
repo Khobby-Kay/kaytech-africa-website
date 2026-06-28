@@ -71,7 +71,6 @@ export default function AiAutomationPage() {
   return (
     <>
       <PageHero
-        eyebrow="AI automation Ghana"
         title={pageSeoCopy.aiAutomation.heroTitle}
         description={pageSeoCopy.aiAutomation.heroDescription}
         cta={{ label: "Get an automation quote", href: "/contact" }}

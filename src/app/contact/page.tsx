@@ -16,7 +16,6 @@ export default function ContactPage() {
   return (
     <>
       <PageHero
-        eyebrow="Get a quote"
         title={pageSeoCopy.contact.heroTitle}
         description={pageSeoCopy.contact.heroDescription}
         image={pageImages.contact}

@@ -17,7 +17,6 @@ export default function SecurityPage() {
   return (
     <>
       <PageHero
-        eyebrow="Trust"
         title="Studio-grade delivery for African markets"
         description="Every payment flow, page load, and launch is protected by principles we ship with on every project."
         image={pageImages.security}

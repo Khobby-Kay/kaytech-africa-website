@@ -16,7 +16,6 @@ export default function FAQPage() {
   return (
     <>
       <PageHero
-        eyebrow="FAQ Ghana"
         title={pageSeoCopy.faq.heroTitle}
         description={pageSeoCopy.faq.heroDescription}
         cta={{ label: "Still need help?", href: "/contact" }}

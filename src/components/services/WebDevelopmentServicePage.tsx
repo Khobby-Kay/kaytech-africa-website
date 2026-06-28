@@ -63,7 +63,6 @@ export function WebDevelopmentServicePage() {
     <>
       <RevealOnScroll variant="fade-down" duration={800}>
         <PageHero
-          eyebrow="Web development & design · Accra, Ghana"
           title={webDevPageMeta.heroTitle}
           description={webDevPageMeta.heroDescription}
           cta={{ label: "Book consultation", href: "/contact" }}

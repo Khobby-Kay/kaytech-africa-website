@@ -104,12 +104,9 @@ function AcademyHeroSlider() {
 
       <Container className="relative pb-28 pt-[6.25rem] sm:pb-28 sm:pt-28 lg:pb-32 lg:pt-40">
         <div className="max-w-3xl max-lg:mt-4">
-          <span className="inline-flex items-center gap-2 rounded-pill bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-on-dark/90">
-            KayTech Academy · Accra, Ghana
-          </span>
           <h1
             key={slide.title}
-            className="mt-5 animate-fade-up font-display text-[2rem] leading-[1.02] tracking-tight text-on-dark sm:text-[36px] md:text-[44px] lg:text-[52px]"
+            className="mt-0 animate-fade-up font-display text-[2rem] leading-[1.02] tracking-tight text-on-dark sm:text-[36px] md:text-[44px] lg:text-[52px]"
           >
             {slide.title}
           </h1>

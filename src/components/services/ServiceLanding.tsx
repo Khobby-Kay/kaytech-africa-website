@@ -13,7 +13,6 @@ export function ServiceLanding({ page }: { page: ServicePage }) {
     <>
       <RevealOnScroll variant="fade-down" duration={800}>
         <PageHero
-          eyebrow={page.eyebrow}
           title={page.heroTitle}
           description={page.heroDescription}
           cta={{ label: "Get a quote", href: "/contact" }}

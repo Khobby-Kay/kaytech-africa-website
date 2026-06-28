@@ -16,7 +16,6 @@ export default function PrivacyPage() {
   return (
     <>
       <PageHero
-        eyebrow="Legal"
         title="Privacy Policy"
         description={`Last updated: June 2026. This policy applies to ${siteConfig.name} websites, academy programs, and client services.`}
         image={pageImages.privacy}

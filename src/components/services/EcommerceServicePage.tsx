@@ -29,7 +29,6 @@ export function EcommerceServicePage() {
     <>
       <RevealOnScroll variant="fade-down" duration={800}>
         <PageHero
-          eyebrow="E-commerce · Online store development · Accra"
           title={ecommercePageMeta.heroTitle}
           description={ecommercePageMeta.heroDescription}
           cta={{ label: "Book a consultation", href: "/contact" }}

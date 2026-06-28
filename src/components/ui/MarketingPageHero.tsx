@@ -4,7 +4,6 @@ import { PageHero } from "@/components/ui/PageHero";
 import { siteConfig } from "@/lib/site";
 
 type MarketingPageHeroProps = {
-  eyebrow: string;
   title: string;
   description: string;
   image: { src: string; alt: string };
@@ -14,7 +13,6 @@ type MarketingPageHeroProps = {
 
 /** Full-bleed hero — same image treatment as the homepage, with page-specific copy. */
 export function MarketingPageHero({
-  eyebrow,
   title,
   description,
   image,
@@ -23,7 +21,6 @@ export function MarketingPageHero({
 }: MarketingPageHeroProps) {
   return (
     <PageHero
-      eyebrow={eyebrow}
       title={title}
       description={description}
       image={image}

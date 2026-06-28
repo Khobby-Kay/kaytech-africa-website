@@ -19,7 +19,6 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About us"
         title={pageSeoCopy.about.heroTitle}
         description={pageSeoCopy.about.heroDescription}
         cta={{ label: "Meet the team below", href: "#leadership" }}

@@ -27,7 +27,6 @@ export default function PortfolioPage() {
   return (
     <>
       <PageHero
-        eyebrow="Our work"
         title="Transforming visions into digital success"
         description="We take pride in our clients' success stories. From startups to established enterprises across Ghana, brands trust KayTech Africa to turn digital visions into high-performing websites that deliver real results."
         cta={{ label: "Start your project", href: "/contact" }}

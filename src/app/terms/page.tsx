@@ -16,7 +16,6 @@ export default function TermsPage() {
   return (
     <>
       <PageHero
-        eyebrow="Legal"
         title="Terms of Service"
         description={`Last updated: June 2026. By using ${siteConfig.name} services or enrolling in our academy, you agree to these terms.`}
         image={pageImages.terms}
