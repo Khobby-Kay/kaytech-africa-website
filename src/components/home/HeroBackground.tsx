@@ -3,6 +3,10 @@
 import { HeroImageBackground } from "@/components/ui/HeroImageBackground";
 import { heroSlides } from "@/lib/hero-slides";
 
-export function HeroBackground() {
-  return <HeroImageBackground slides={heroSlides} />;
+type HeroBackgroundProps = {
+  active: number;
+};
+
+export function HeroBackground({ active }: HeroBackgroundProps) {
+  return <HeroImageBackground slides={heroSlides} active={active} />;
 }

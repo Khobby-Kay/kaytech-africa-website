@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import type { ReactNode } from "react";
 import {
@@ -7,8 +9,11 @@ import {
   Phone,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { HeroHeadlineDots } from "@/components/ui/HeroHeadlineDots";
 import { siteConfig } from "@/lib/site";
+import { homeHeroHeadlines } from "@/lib/home-hero-content";
 import { cn } from "@/lib/utils";
+import { useHeroCarousel } from "@/hooks/useHeroCarousel";
 import { HeroBackground } from "@/components/home/HeroBackground";
 import { HeroTicker } from "@/components/home/HeroTicker";
 
@@ -105,28 +110,36 @@ function FloatingCard({
 }
 
 export function Hero() {
+  const { active, setActive } = useHeroCarousel(homeHeroHeadlines.length, 7000);
+  const slide = homeHeroHeadlines[active];
+
   return (
     <section
       id="hero"
       className="relative min-h-[62vh] w-full overflow-hidden sm:min-h-[75vh] lg:min-h-screen"
     >
-      <HeroBackground />
+      <HeroBackground active={active} />
 
       <Container className="relative pb-28 pt-[6.25rem] sm:pb-28 sm:pt-28 lg:pb-32 lg:pt-40">
         <div className="max-w-3xl max-lg:mt-6">
-          <h1 className="font-display text-[2rem] leading-[1.02] tracking-tight text-on-dark sm:text-[36px] md:text-[44px] lg:text-[52px] xl:text-[64px] 2xl:text-[78px]">
-            African digital infrastructure.
+          <h1
+            key={slide.title}
+            className="animate-hero-fade-up font-display text-[2rem] leading-[1.02] tracking-tight text-on-dark motion-reduce:animate-none sm:text-[36px] md:text-[44px] lg:text-[52px] xl:text-[64px] 2xl:text-[78px]"
+          >
+            {slide.title}
           </h1>
 
-          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-on-dark/85 sm:mt-6 sm:text-lg lg:text-xl">
-            <span className="sm:hidden">
-              AI, web &amp; growth — shipped for mobile-first Africa.
-            </span>
-            <span className="hidden sm:inline">
-              AI automation, web development, Web3, and growth systems — plus an
-              academy training Africa&apos;s next wave of talent. Ideas in,
-              products out, in weeks not quarters.
-            </span>
+          <HeroHeadlineDots
+            count={homeHeroHeadlines.length}
+            active={active}
+            onSelect={setActive}
+          />
+
+          <p
+            key={slide.description}
+            className="mt-4 max-w-2xl animate-hero-fade-up text-sm leading-relaxed text-on-dark/85 motion-reduce:animate-none sm:mt-6 sm:text-lg lg:text-xl [animation-delay:80ms]"
+          >
+            {slide.description}
           </p>
 
           <div className="mt-6 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:items-center">
@@ -157,10 +170,20 @@ export function Hero() {
             </Link>
           </div>
 
-          <div className="mt-6 hidden items-center gap-2 text-sm text-on-dark/70 sm:flex">
-            <CircleCheck className="h-4 w-4 text-semantic-up" />
-            Free consultation · Accra-based since{" "}
-            {siteConfig.founded}.
+          <div className="mt-6 hidden items-center gap-4 text-sm text-on-dark/70 sm:flex">
+            <Link
+              href="/services"
+              className="font-semibold text-on-dark underline-offset-4 transition hover:underline"
+            >
+              View all our services
+            </Link>
+            <span className="text-on-dark/40" aria-hidden>
+              ·
+            </span>
+            <span className="inline-flex items-center gap-2">
+              <CircleCheck className="h-4 w-4 text-semantic-up" />
+              Free consultation · Accra-based since {siteConfig.founded}
+            </span>
           </div>
         </div>
 

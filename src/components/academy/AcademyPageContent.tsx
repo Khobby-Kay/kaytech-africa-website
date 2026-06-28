@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -11,6 +10,7 @@ import {
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { HeroImageBackground } from "@/components/ui/HeroImageBackground";
+import { HeroHeadlineDots } from "@/components/ui/HeroHeadlineDots";
 import { Media } from "@/components/ui/Media";
 import { RevealOnScroll, StaggerReveal } from "@/components/ui/RevealOnScroll";
 import { TestimonialCarousel } from "@/components/ui/TestimonialCarousel";
@@ -34,6 +34,7 @@ import { contentImages } from "@/lib/image-seo";
 import { pageImages } from "@/lib/page-images";
 import { siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
+import { useHeroCarousel } from "@/hooks/useHeroCarousel";
 
 function applyWhatsApp(message: string) {
   return `${siteConfig.contact.whatsapp}?text=${encodeURIComponent(message)}`;
@@ -81,53 +82,36 @@ function AcademyApplyBanner() {
 const academyHeroImages = [
   pageImages.academy,
   contentImages.academyLearning,
-  contentImages.courseDev,
-  contentImages.courseMarketing,
 ];
 
 function AcademyHeroSlider() {
   const slides = academyPageMeta.heroSlides;
-  const [active, setActive] = useState(0);
-
-  useEffect(() => {
-    const id = window.setInterval(() => {
-      setActive((prev) => (prev + 1) % slides.length);
-    }, 7000);
-    return () => window.clearInterval(id);
-  }, [slides.length]);
-
+  const { active, setActive } = useHeroCarousel(slides.length, 7000);
   const slide = slides[active];
 
   return (
     <section className="relative min-h-[62vh] w-full overflow-hidden border-b border-hairline sm:min-h-[72vh] lg:min-h-[85vh]">
-      <HeroImageBackground slides={academyHeroImages} />
+      <HeroImageBackground slides={academyHeroImages} active={active} />
 
       <Container className="relative pb-28 pt-[6.25rem] sm:pb-28 sm:pt-28 lg:pb-32 lg:pt-40">
         <div className="max-w-3xl max-lg:mt-4">
           <h1
             key={slide.title}
-            className="mt-0 animate-fade-up font-display text-[2rem] leading-[1.02] tracking-tight text-on-dark sm:text-[36px] md:text-[44px] lg:text-[52px]"
+            className="mt-0 animate-hero-fade-up font-display text-[2rem] leading-[1.02] tracking-tight text-on-dark motion-reduce:animate-none sm:text-[36px] md:text-[44px] lg:text-[52px]"
           >
             {slide.title}
           </h1>
+
+          <HeroHeadlineDots
+            count={slides.length}
+            active={active}
+            onSelect={setActive}
+          />
+
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-on-dark/85 sm:mt-6 sm:text-lg lg:text-xl">
             Ghana&apos;s practical web design and development school — studio-backed
             training for students, career switchers, and aspiring freelancers.
           </p>
-          <div className="mt-4 flex gap-2">
-            {slides.map((_, i) => (
-              <button
-                key={i}
-                type="button"
-                aria-label={`Show headline ${i + 1}`}
-                onClick={() => setActive(i)}
-                className={cn(
-                  "h-1.5 rounded-full transition-all duration-300",
-                  i === active ? "w-8 bg-on-dark" : "w-2 bg-on-dark/40 hover:bg-on-dark/70",
-                )}
-              />
-            ))}
-          </div>
 
           <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap">
             <a

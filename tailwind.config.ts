@@ -57,6 +57,8 @@ const config: Config = {
         "fade-up": "fadeUp 0.7s ease-out forwards",
         "teedra-glow": "teedraGlow 2.8s ease-in-out infinite",
         "teedra-breathe": "teedraBreathe 3.2s ease-in-out infinite",
+        "hero-ken-burns": "heroKenBurns 7s ease-out forwards",
+        "hero-fade-up": "heroFadeUp 0.65s ease-out forwards",
       },
       keyframes: {
         marquee: {
@@ -78,6 +80,14 @@ const config: Config = {
         teedraBreathe: {
           "0%, 100%": { transform: "scale(1)" },
           "50%": { transform: "scale(1.035)" },
+        },
+        heroKenBurns: {
+          from: { transform: "scale(1)" },
+          to: { transform: "scale(1.1)" },
+        },
+        heroFadeUp: {
+          from: { opacity: "0", transform: "translateY(18px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
         },
       },
     },

@@ -3,17 +3,10 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import {
-  Mail,
-  MapPin,
-  Menu,
-  MessageCircle,
-  Phone,
-  X,
-} from "lucide-react";
+import { Menu, Phone, X } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { LogoMark } from "@/components/ui/LogoMark";
-import { mainNav, secondaryNav } from "@/lib/navigation";
+import { mainNav } from "@/lib/navigation";
 import { siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -137,37 +130,8 @@ export function Navbar() {
             </Link>
           </div>
 
-          {/* Mobile / tablet actions — Barns-style call + menu */}
-          <div className="flex shrink-0 items-center gap-1.5 sm:gap-2 lg:hidden">
-            <a
-              href={siteConfig.contact.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-track="whatsapp_click"
-              data-track-location="navbar_mobile"
-              aria-label="WhatsApp KayTech Africa"
-              className={cn(
-                "inline-flex h-10 w-10 items-center justify-center rounded-full border transition",
-                lightHeaderText && !scrolled
-                  ? "border-white/35 bg-white/10 text-on-dark"
-                  : "border-hairline bg-canvas text-semantic-up-deep",
-              )}
-            >
-              <MessageCircle className="h-4 w-4" />
-            </a>
-            <Link
-              href="/contact"
-              data-track="get_started_click"
-              data-track-location="navbar_mobile"
-              className={cn(
-                "hidden h-10 items-center justify-center rounded-pill px-3.5 text-xs font-bold sm:inline-flex",
-                lightHeaderText && !scrolled
-                  ? "bg-semantic-up text-surface-dark"
-                  : "bg-primary text-on-primary",
-              )}
-            >
-              Get quote
-            </Link>
+          {/* Mobile / tablet — menu only (same nav links as desktop, inside drawer) */}
+          <div className="flex shrink-0 items-center lg:hidden">
             <button
               type="button"
               className={cn(
@@ -249,76 +213,6 @@ export function Navbar() {
               );
             })}
           </nav>
-
-          <div className="mt-5 border-t border-hairline pt-5">
-            <p className="px-3 text-[11px] font-semibold uppercase tracking-wider text-muted">
-              More from KayTech
-            </p>
-            <div className="mt-2 flex flex-col gap-0.5">
-              {secondaryNav.map((l) => (
-                <Link
-                  key={l.href}
-                  href={l.href}
-                  onClick={() => setOpen(false)}
-                  className={cn(
-                    "rounded-xl px-3 py-3 text-[15px] font-medium text-ink transition hover:bg-surface-soft active:scale-[0.99]",
-                    pathname === l.href && "bg-primary/10 font-semibold text-primary",
-                  )}
-                >
-                  {l.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-5 rounded-2xl border border-hairline bg-surface-soft p-4">
-            <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-primary">
-              Contact
-            </p>
-            <a
-              href={`tel:${siteConfig.contact.phone}`}
-              data-track="call_click"
-              data-track-location="navbar_drawer"
-              className="mt-3 flex items-center gap-2 text-base font-semibold text-ink"
-            >
-              <Phone className="h-4 w-4 text-primary" />
-              {siteConfig.contact.phoneDisplay}
-            </a>
-            <a
-              href={siteConfig.contact.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-track="whatsapp_click"
-              data-track-location="navbar_drawer"
-              className="mt-3 flex items-center gap-2 text-sm font-semibold text-semantic-up-deep"
-            >
-              <MessageCircle className="h-4 w-4" />
-              WhatsApp {siteConfig.contact.whatsappDisplay}
-            </a>
-            <p className="mt-3 text-sm text-muted">
-              <a
-                href={`mailto:${siteConfig.contact.email}`}
-                className="font-medium text-ink underline"
-              >
-                {siteConfig.contact.email}
-              </a>
-            </p>
-            <div className="mt-3 flex items-start gap-2 text-sm text-muted">
-              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-              <div>
-                <p>{siteConfig.location.line1}</p>
-                <p>{siteConfig.location.line2}</p>
-                <a
-                  href={siteConfig.location.mapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-2 inline-block text-sm font-semibold text-primary"
-                >
-                  Get directions
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
 
         <div className="border-t border-hairline p-4 pb-[calc(1rem+env(safe-area-inset-bottom))] sm:p-5">
@@ -331,24 +225,6 @@ export function Navbar() {
           >
             Get started now
           </Link>
-          <div className="mt-2 grid grid-cols-2 gap-2">
-            <a
-              href={`tel:${siteConfig.contact.phone}`}
-              data-track="call_click"
-              data-track-location="navbar_drawer"
-              className="flex h-11 items-center justify-center gap-2 rounded-pill border border-hairline text-sm font-semibold text-ink"
-            >
-              <Phone className="h-4 w-4" />
-              Call
-            </a>
-            <a
-              href={`mailto:${siteConfig.contact.email}`}
-              className="flex h-11 items-center justify-center gap-2 rounded-pill border border-hairline text-sm font-semibold text-ink"
-            >
-              <Mail className="h-4 w-4" />
-              Email
-            </a>
-          </div>
         </div>
       </aside>
     </>
