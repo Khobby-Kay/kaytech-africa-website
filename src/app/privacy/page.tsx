@@ -20,6 +20,7 @@ export default function PrivacyPage() {
         title="Privacy Policy"
         description={`Last updated: June 2026. This policy applies to ${siteConfig.name} websites, academy programs, and client services.`}
         image={pageImages.privacy}
+        compact
       />
       <section className="bg-canvas px-5 py-16 lg:px-20 lg:py-20">
         <Container>

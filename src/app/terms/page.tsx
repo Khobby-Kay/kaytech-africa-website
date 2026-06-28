@@ -20,6 +20,7 @@ export default function TermsPage() {
         title="Terms of Service"
         description={`Last updated: June 2026. By using ${siteConfig.name} services or enrolling in our academy, you agree to these terms.`}
         image={pageImages.terms}
+        compact
       />
       <section className="bg-canvas px-5 py-16 lg:px-20 lg:py-20">
         <Container>

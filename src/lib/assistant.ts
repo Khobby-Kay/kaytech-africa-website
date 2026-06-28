@@ -1,4 +1,5 @@
 import { siteConfig, services, academyCourses } from "@/lib/site";
+import { academyApplicationForm } from "@/lib/academy-content";
 import { allFaqs } from "@/lib/seo";
 
 /** A retrieval-based knowledge entry the on-site assistant can answer from. */
@@ -36,7 +37,7 @@ function buildKnowledge(): KnowledgeEntry[] {
 
   const academyAnswer = `KayTech Academy runs practical, cohort-based tracks: ${academyCourses
     .map((c) => c.title)
-    .join(", ")}. Each is taught by working practitioners. Visit ${siteConfig.url}/academy for details.`;
+    .join(", ")}. Apply on ${siteConfig.url}/academy or use the application form: ${academyApplicationForm.url}. Only 10 seats per cohort.`;
 
   const extras: KnowledgeEntry[] = [
     {

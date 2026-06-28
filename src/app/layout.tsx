@@ -13,6 +13,8 @@ import {
   FAVICON_192,
   FAVICON_512,
   FAVICON_ICO,
+  LOGO_JPG,
+  withBrandVersion,
 } from "@/lib/brand-assets";
 import {
   defaultDescription,
@@ -79,13 +81,14 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
   icons: {
     icon: [
-      { url: FAVICON_ICO, sizes: "48x48", type: "image/x-icon" },
-      { url: FAVICON_96, sizes: "96x96", type: "image/png" },
-      { url: FAVICON_192, sizes: "192x192", type: "image/png" },
-      { url: FAVICON_512, sizes: "512x512", type: "image/png" },
+      { url: withBrandVersion(LOGO_JPG), sizes: "1024x1024", type: "image/jpeg" },
+      { url: withBrandVersion(FAVICON_ICO), sizes: "48x48", type: "image/x-icon" },
+      { url: withBrandVersion(FAVICON_96), sizes: "96x96", type: "image/png" },
+      { url: withBrandVersion(FAVICON_192), sizes: "192x192", type: "image/png" },
+      { url: withBrandVersion(FAVICON_512), sizes: "512x512", type: "image/png" },
     ],
-    shortcut: [{ url: FAVICON_ICO }],
-    apple: [{ url: APPLE_ICON, sizes: "180x180", type: "image/png" }],
+    shortcut: [{ url: withBrandVersion(FAVICON_ICO) }],
+    apple: [{ url: withBrandVersion(APPLE_ICON), sizes: "180x180", type: "image/png" }],
   },
   other: {
     "geo.region": "GH-AA",
@@ -106,7 +109,13 @@ export default function RootLayout({
         <JsonLd />
         <link
           rel="icon"
-          href={FAVICON_ICO}
+          href={withBrandVersion(LOGO_JPG)}
+          type="image/jpeg"
+          sizes="1024x1024"
+        />
+        <link
+          rel="icon"
+          href={withBrandVersion(FAVICON_ICO)}
           type="image/x-icon"
           sizes="48x48"
         />

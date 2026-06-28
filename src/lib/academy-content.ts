@@ -1,3 +1,11 @@
+/** Official KayTech Academy application form (Google Forms). */
+export const academyApplicationForm = {
+  url: "https://forms.gle/EaJ4nwLX28AkPDkQ8",
+  label: "Apply now",
+  formLabel: "Fill application form",
+  note: "Only 10 admissions per cohort — selected applicants receive a call from our admissions team.",
+} as const;
+
 export const academyPageMeta = {
   title: "KayTech Academy | Best Web Design and Development School in Ghana",
   description:
@@ -12,8 +20,8 @@ export const academyPageMeta = {
     {
       title:
         "Unlock your potential — build websites, create SaaS products, and dominate digital marketing!",
-      cta: "Apply now",
-      href: "#apply",
+      cta: "View all courses",
+      href: "#courses",
     },
   ],
 } as const;
@@ -249,6 +257,6 @@ export const academyFaqs = [
   {
     question: "How do I apply?",
     answer:
-      "WhatsApp us, call 024 840 8154, or use the contact form at /contact. Tell us your goals and preferred track — we will confirm seat availability and next cohort dates.",
+      "Complete the KayTech Academy application form on this page — it takes a few minutes. We admit only 10 students per cohort; selected applicants receive a call from our admissions team. You can also WhatsApp us or call 024 840 8154 if you have questions before applying.",
   },
 ] as const;

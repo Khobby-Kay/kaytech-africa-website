@@ -7,15 +7,17 @@ import {
   CheckCircle2,
   ChevronLeft,
   ChevronRight,
+  ClipboardList,
   MessageCircle,
   Phone,
 } from "lucide-react";
-import { LeadCaptureStrip } from "@/components/layout/LeadCaptureStrip";
 import { Container } from "@/components/ui/Container";
+import { HeroImageBackground } from "@/components/ui/HeroImageBackground";
 import { Media } from "@/components/ui/Media";
 import { RevealOnScroll, StaggerReveal } from "@/components/ui/RevealOnScroll";
 import { TestimonialCarousel } from "@/components/ui/TestimonialCarousel";
 import {
+  academyApplicationForm,
   academyDelivery,
   academyFeaturedCourses,
   academyGains,
@@ -39,6 +41,52 @@ function applyWhatsApp(message: string) {
   return `${siteConfig.contact.whatsapp}?text=${encodeURIComponent(message)}`;
 }
 
+function applyFormProps() {
+  return {
+    href: academyApplicationForm.url,
+    target: "_blank" as const,
+    rel: "noopener noreferrer",
+  };
+}
+
+function AcademyApplyBanner() {
+  return (
+    <section
+      id="apply"
+      className="sticky top-16 z-30 border-b border-accent/25 bg-gradient-to-r from-accent/20 via-surface-accent to-accent/20 px-5 py-4 shadow-sm backdrop-blur-sm lg:top-[4.5rem] lg:px-20"
+    >
+      <Container className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
+        <div className="min-w-0">
+          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-accent">
+            Admissions open
+          </p>
+          <p className="mt-1 font-display text-lg font-semibold text-ink sm:text-xl">
+            Apply to KayTech Academy — 10 seats per cohort
+          </p>
+          <p className="mt-1 text-sm text-muted">{academyApplicationForm.note}</p>
+        </div>
+        <a
+          {...applyFormProps()}
+          data-track="academy_apply_click"
+          data-track-location="apply_banner"
+          className="inline-flex h-12 shrink-0 items-center gap-2 rounded-pill bg-accent px-7 text-sm font-bold text-white shadow-glow transition hover:bg-accent-bright sm:text-base"
+        >
+          <ClipboardList className="h-4 w-4" />
+          {academyApplicationForm.formLabel}
+          <ArrowRight className="h-4 w-4" />
+        </a>
+      </Container>
+    </section>
+  );
+}
+
+const academyHeroImages = [
+  pageImages.academy,
+  contentImages.academyLearning,
+  contentImages.courseDev,
+  contentImages.courseMarketing,
+];
+
 function AcademyHeroSlider() {
   const slides = academyPageMeta.heroSlides;
   const [active, setActive] = useState(0);
@@ -53,98 +101,91 @@ function AcademyHeroSlider() {
   const slide = slides[active];
 
   return (
-    <section className="relative overflow-hidden border-b border-hairline bg-gradient-to-br from-primary via-primary-deep to-[#0c2d4a] px-5 pt-24 pb-16 text-on-primary sm:pt-28 lg:px-20 lg:pt-32 lg:pb-24">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-24 top-0 h-80 w-80 rounded-full bg-accent/20 blur-3xl"
+    <section className="relative min-h-[72vh] w-full overflow-hidden border-b border-hairline sm:min-h-[80vh] lg:min-h-[85vh]">
+      <HeroImageBackground
+        slides={academyHeroImages}
+        dotsClassName="bottom-28 left-5 lg:left-12 lg:bottom-32"
       />
-      <Container className="relative">
-        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-          <div>
-            <span className="inline-flex items-center gap-2 rounded-pill bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-on-primary/90">
-              KayTech Academy · Accra, Ghana
-            </span>
-            <h1
-              key={slide.title}
-              className="mt-5 animate-fade-up font-display text-[1.75rem] font-bold leading-[1.12] tracking-tight sm:text-4xl lg:text-5xl"
+
+      <Container className="relative pb-24 pt-32 sm:pb-28 sm:pt-28 lg:pb-32 lg:pt-40">
+        <div className="max-w-3xl max-lg:mt-4">
+          <span className="inline-flex items-center gap-2 rounded-pill bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-on-dark/90">
+            KayTech Academy · Accra, Ghana
+          </span>
+          <h1
+            key={slide.title}
+            className="mt-5 animate-fade-up font-display text-[2rem] leading-[1.02] tracking-tight text-on-dark sm:text-[36px] md:text-[44px] lg:text-[52px]"
+          >
+            {slide.title}
+          </h1>
+          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-on-dark/85 sm:mt-6 sm:text-lg lg:text-xl">
+            Ghana&apos;s practical web design and development school — studio-backed
+            training for students, career switchers, and aspiring freelancers.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3 sm:mt-10">
+            <a
+              {...applyFormProps()}
+              data-track="academy_apply_click"
+              data-track-location="hero_primary"
+              className="inline-flex h-11 items-center gap-2 rounded-lg bg-semantic-up px-6 text-base font-semibold tracking-[-0.005em] text-surface-dark transition hover:brightness-110 sm:h-12"
             >
-              {slide.title}
-            </h1>
-            <p className="mt-5 max-w-xl text-base leading-relaxed text-on-primary/85 sm:text-lg">
-              Ghana&apos;s practical web design and development school — studio-backed
-              training for students, career switchers, and aspiring freelancers.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href={slide.href}
-                className="inline-flex h-11 items-center rounded-pill bg-accent px-6 text-sm font-semibold text-white shadow-glow transition hover:bg-accent-bright"
-              >
-                {slide.cta}
-              </a>
-              <a
-                href={applyWhatsApp("Hi KayTech! I want to apply to KayTech Academy.")}
-                target="_blank"
-                rel="noopener noreferrer"
-                id="apply"
-                className="inline-flex h-11 items-center gap-2 rounded-pill border border-white/30 px-6 text-sm font-semibold transition hover:bg-white/10"
-              >
-                Apply now
-              </a>
-            </div>
-            <div className="mt-6 flex items-center gap-3">
-              <button
-                type="button"
-                aria-label="Previous slide"
-                onClick={() =>
-                  setActive((prev) => (prev - 1 + slides.length) % slides.length)
-                }
-                className="grid h-9 w-9 place-items-center rounded-full border border-white/25 transition hover:bg-white/10"
-              >
-                <ChevronLeft className="h-4 w-4" />
-              </button>
-              <button
-                type="button"
-                aria-label="Next slide"
-                onClick={() => setActive((prev) => (prev + 1) % slides.length)}
-                className="grid h-9 w-9 place-items-center rounded-full border border-white/25 transition hover:bg-white/10"
-              >
-                <ChevronRight className="h-4 w-4" />
-              </button>
-              <div className="flex gap-2">
-                {slides.map((_, i) => (
-                  <button
-                    key={i}
-                    type="button"
-                    aria-label={`Go to slide ${i + 1}`}
-                    onClick={() => setActive(i)}
-                    className={cn(
-                      "h-2 rounded-full transition-all",
-                      i === active ? "w-6 bg-accent" : "w-2 bg-white/30",
-                    )}
-                  />
-                ))}
-              </div>
+              <ClipboardList className="h-4 w-4" />
+              {academyApplicationForm.formLabel}
+            </a>
+            <a
+              href={slide.href}
+              className="inline-flex h-11 items-center rounded-lg border border-white/90 px-6 text-sm font-semibold text-white transition hover:opacity-85 sm:h-12"
+            >
+              {slide.cta}
+            </a>
+          </div>
+          <div className="mt-6 flex items-center gap-3">
+            <button
+              type="button"
+              aria-label="Previous headline"
+              onClick={() =>
+                setActive((prev) => (prev - 1 + slides.length) % slides.length)
+              }
+              className="grid h-9 w-9 place-items-center rounded-full border border-white/25 text-on-dark transition hover:bg-white/10"
+            >
+              <ChevronLeft className="h-4 w-4" />
+            </button>
+            <button
+              type="button"
+              aria-label="Next headline"
+              onClick={() => setActive((prev) => (prev + 1) % slides.length)}
+              className="grid h-9 w-9 place-items-center rounded-full border border-white/25 text-on-dark transition hover:bg-white/10"
+            >
+              <ChevronRight className="h-4 w-4" />
+            </button>
+            <div className="flex gap-2">
+              {slides.map((_, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  aria-label={`Show headline ${i + 1}`}
+                  onClick={() => setActive(i)}
+                  className={cn(
+                    "h-1.5 rounded-full transition-all duration-300",
+                    i === active ? "w-8 bg-on-dark" : "w-2 bg-on-dark/40 hover:bg-on-dark/70",
+                  )}
+                />
+              ))}
             </div>
           </div>
+        </div>
 
-          <Media
-            src={pageImages.academy.src}
-            alt={pageImages.academy.alt}
-            ratio="4/3"
-            priority
-            sizes="(max-width: 1024px) 100vw, 540px"
-            className="lg:aspect-[5/4]"
-            scrim
-          >
-            <div className="absolute bottom-0 left-0 right-0 p-6 text-on-dark">
+        <div className="pointer-events-none absolute inset-0 hidden lg:block">
+          <div className="absolute bottom-[18%] right-12 max-w-sm animate-float">
+            <div className="rounded-2xl border border-white/15 bg-surface-dark/35 px-5 py-4 backdrop-blur-sm">
               <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-on-dark/75">
                 Top awarded academy · Ghana
               </p>
-              <p className="mt-2 font-display text-xl font-semibold sm:text-2xl">
+              <p className="mt-2 font-display text-xl font-semibold text-on-dark">
                 Global career opportunities start here
               </p>
             </div>
-          </Media>
+          </div>
         </div>
       </Container>
     </section>
@@ -157,7 +198,7 @@ export function AcademyPageContent() {
   return (
     <>
       <AcademyHeroSlider />
-      <LeadCaptureStrip location="academy" compact />
+      <AcademyApplyBanner />
 
       <section className="border-b border-hairline bg-canvas px-5 py-12 lg:px-20 lg:py-16">
         <Container>
@@ -207,11 +248,12 @@ export function AcademyPageContent() {
               {academyPromise.urgency}
             </p>
             <a
-              href={applyWhatsApp("Hi KayTech! I want to apply to the next academy cohort.")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-flex h-11 items-center rounded-pill bg-gradient-to-r from-primary to-primary-light px-6 text-sm font-semibold text-on-primary shadow-card transition hover:brightness-110"
+              {...applyFormProps()}
+              data-track="academy_apply_click"
+              data-track-location="promise"
+              className="mt-6 inline-flex h-11 items-center gap-2 rounded-pill bg-gradient-to-r from-primary to-primary-light px-6 text-sm font-semibold text-on-primary shadow-card transition hover:brightness-110"
             >
+              <ClipboardList className="h-4 w-4" />
               {academyPromise.ctaLabel}
             </a>
           </RevealOnScroll>
@@ -285,12 +327,22 @@ export function AcademyPageContent() {
                 Call today: {siteConfig.contact.phoneDisplay}
               </a>
               <a
-                href={applyWhatsApp("Hi KayTech! I want to apply to KayTech Academy.")}
+                {...applyFormProps()}
+                data-track="academy_apply_click"
+                data-track-location="delivery"
+                className="inline-flex h-11 items-center gap-2 rounded-pill bg-accent px-5 text-sm font-semibold text-white shadow-glow transition hover:bg-accent-bright"
+              >
+                <ClipboardList className="h-4 w-4" />
+                {academyApplicationForm.formLabel}
+              </a>
+              <a
+                href={applyWhatsApp("Hi KayTech! I have a question about KayTech Academy before I apply.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex h-11 items-center gap-2 rounded-pill border border-hairline bg-canvas px-5 text-sm font-semibold text-ink"
               >
-                Apply now
+                <MessageCircle className="h-4 w-4" />
+                Questions on WhatsApp
               </a>
             </div>
           </RevealOnScroll>
@@ -456,12 +508,13 @@ export function AcademyPageContent() {
               Our courses
             </a>
             <a
-              href={applyWhatsApp("Hi KayTech! I want to apply to KayTech Academy.")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex h-11 items-center rounded-pill bg-primary px-6 text-sm font-semibold text-on-primary"
+              {...applyFormProps()}
+              data-track="academy_apply_click"
+              data-track-location="gains"
+              className="inline-flex h-11 items-center gap-2 rounded-pill bg-primary px-6 text-sm font-semibold text-on-primary"
             >
-              Apply now
+              <ClipboardList className="h-4 w-4" />
+              {academyApplicationForm.label}
             </a>
           </RevealOnScroll>
         </Container>
@@ -527,19 +580,18 @@ export function AcademyPageContent() {
                   ))}
                 </ul>
                 <a
-                  href={applyWhatsApp(
-                    `Hi KayTech! I'm interested in the ${plan.title} academy program.`,
-                  )}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  {...applyFormProps()}
+                  data-track="academy_apply_click"
+                  data-track-location={`pricing_${plan.id}`}
                   className={cn(
-                    "mt-6 inline-flex h-11 items-center justify-center rounded-pill px-5 text-sm font-semibold transition",
+                    "mt-6 inline-flex h-11 items-center justify-center gap-2 rounded-pill px-5 text-sm font-semibold transition",
                     plan.featured
                       ? "bg-primary text-on-primary hover:brightness-110"
                       : "border border-hairline bg-canvas text-ink hover:border-accent/40",
                   )}
                 >
-                  Get started with plan
+                  <ClipboardList className="h-4 w-4" />
+                  Apply for this course
                 </a>
               </article>
             ))}
@@ -646,26 +698,29 @@ export function AcademyPageContent() {
                 Ready to join KayTech Academy?
               </h2>
               <p className="mt-4 text-sm text-on-primary/85 sm:text-base">
-                Accra-based with online cohorts nationwide. Call{" "}
-                {siteConfig.contact.phoneDisplay} or WhatsApp{" "}
-                {siteConfig.contact.whatsappDisplay} to secure your seat.
+                Complete the application form to secure your seat — only 10 admissions
+                per cohort. Questions? Call {siteConfig.contact.phoneDisplay} or
+                WhatsApp {siteConfig.contact.whatsappDisplay}.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <a
-                  href={applyWhatsApp("Hi KayTech! I want to enroll in KayTech Academy.")}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  {...applyFormProps()}
+                  data-track="academy_apply_click"
+                  data-track-location="footer_cta"
                   className="inline-flex h-11 items-center gap-2 rounded-pill bg-on-primary px-6 text-sm font-semibold text-primary"
                 >
-                  <MessageCircle className="h-4 w-4" />
-                  Apply on WhatsApp
+                  <ClipboardList className="h-4 w-4" />
+                  {academyApplicationForm.formLabel}
                 </a>
-                <Link
-                  href="/contact"
-                  className="inline-flex h-11 items-center rounded-pill border border-white/30 px-6 text-sm font-semibold transition hover:bg-white/10"
+                <a
+                  href={applyWhatsApp("Hi KayTech! I have a question about KayTech Academy before I apply.")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-11 items-center gap-2 rounded-pill border border-white/30 px-6 text-sm font-semibold transition hover:bg-white/10"
                 >
-                  Contact us
-                </Link>
+                  <MessageCircle className="h-4 w-4" />
+                  Ask on WhatsApp
+                </a>
               </div>
             </div>
           </RevealOnScroll>

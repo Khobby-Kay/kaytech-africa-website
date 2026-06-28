@@ -23,8 +23,24 @@ const BRAND = {
 
 const LOGO_SOURCE = join(root, "public", "logo.jpg");
 
+/** Keep in sync with src/lib/brand-assets.ts BRAND_ASSET_VERSION */
+const BRAND_ASSET_VERSION = "6";
+
+async function assertLogoSource() {
+  const meta = await sharp(LOGO_SOURCE).metadata();
+  if (!meta.width || !meta.height) {
+    throw new Error("public/logo.jpg is missing or unreadable.");
+  }
+  console.log(
+    `Using public/logo.jpg (${meta.width}x${meta.height}, ${meta.format}) as favicon source`,
+  );
+}
+
 async function writeLogoIcon(size, outPath) {
-  await sharp(LOGO_SOURCE).resize(size, size).png().toFile(outPath);
+  await sharp(LOGO_SOURCE)
+    .resize(size, size, { fit: "cover", position: "centre" })
+    .png()
+    .toFile(outPath);
   console.log(`Wrote ${outPath} (${size}px from logo.jpg)`);
 }
 
@@ -101,6 +117,9 @@ async function main() {
   const publicDir = join(root, "public");
   await mkdir(appDir, { recursive: true });
   await mkdir(publicDir, { recursive: true });
+
+  await assertLogoSource();
+  console.log(`Brand asset version: ${BRAND_ASSET_VERSION}`);
 
   await writeLogoIcon(48, join(publicDir, "icon-48.png"));
   await writeLogoIcon(96, join(publicDir, "icon-96.png"));

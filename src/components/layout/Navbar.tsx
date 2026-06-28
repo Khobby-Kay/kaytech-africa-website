@@ -49,7 +49,7 @@ export function Navbar() {
               onHero ? "text-on-dark" : "text-ink"
             )}
           >
-            <LogoMark className="h-7 w-auto shrink-0" />
+            <LogoMark className="h-8 w-8 shrink-0 rounded-lg" />
             <span className="truncate">kaytech</span>
           </Link>
 

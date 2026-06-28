@@ -1,4 +1,4 @@
-import { ORGANIZATION_LOGO } from "@/lib/brand-assets";
+import { ORGANIZATION_LOGO, withBrandVersion } from "@/lib/brand-assets";
 import { faqs as coreFaqs, siteConfig } from "@/lib/site";
 import { ghanaSearchKeywords, seoFaqs } from "@/lib/localized-seo";
 import { getAllServicePages, getServicePath } from "@/lib/service-pages";
@@ -36,11 +36,11 @@ export function getOrganizationJsonLd() {
         telephone: siteConfig.contact.phone,
         logo: {
           "@type": "ImageObject",
-          "@id": `${siteConfig.url}${ORGANIZATION_LOGO}#logo`,
-          url: `${siteConfig.url}${ORGANIZATION_LOGO}`,
-          contentUrl: `${siteConfig.url}${ORGANIZATION_LOGO}`,
-          width: 512,
-          height: 512,
+          "@id": `${siteConfig.url}${withBrandVersion(ORGANIZATION_LOGO)}#logo`,
+          url: `${siteConfig.url}${withBrandVersion(ORGANIZATION_LOGO)}`,
+          contentUrl: `${siteConfig.url}${withBrandVersion(ORGANIZATION_LOGO)}`,
+          width: 1024,
+          height: 1024,
         },
         image: `${siteConfig.url}/og.jpg`,
         address: {
