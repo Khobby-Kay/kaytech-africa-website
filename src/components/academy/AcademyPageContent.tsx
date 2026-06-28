@@ -72,7 +72,7 @@ function AcademyApplyBanner() {
           className="inline-flex h-12 shrink-0 items-center gap-2 rounded-pill bg-accent px-7 text-sm font-bold text-white shadow-glow transition hover:bg-accent-bright sm:text-base"
         >
           <ClipboardList className="h-4 w-4" />
-          {academyApplicationForm.formLabel}
+          {academyApplicationForm.label}
           <ArrowRight className="h-4 w-4" />
         </a>
       </Container>
@@ -130,7 +130,7 @@ function AcademyHeroSlider() {
               className="inline-flex h-11 items-center gap-2 rounded-lg bg-semantic-up px-6 text-base font-semibold tracking-[-0.005em] text-surface-dark transition hover:brightness-110 sm:h-12"
             >
               <ClipboardList className="h-4 w-4" />
-              {academyApplicationForm.formLabel}
+              {academyApplicationForm.label}
             </a>
             <a
               href={slide.href}
@@ -333,7 +333,7 @@ export function AcademyPageContent() {
                 className="inline-flex h-11 items-center gap-2 rounded-pill bg-accent px-5 text-sm font-semibold text-white shadow-glow transition hover:bg-accent-bright"
               >
                 <ClipboardList className="h-4 w-4" />
-                {academyApplicationForm.formLabel}
+                {academyApplicationForm.label}
               </a>
               <a
                 href={applyWhatsApp("Hi KayTech! I have a question about KayTech Academy before I apply.")}
@@ -710,7 +710,7 @@ export function AcademyPageContent() {
                   className="inline-flex h-11 items-center gap-2 rounded-pill bg-on-primary px-6 text-sm font-semibold text-primary"
                 >
                   <ClipboardList className="h-4 w-4" />
-                  {academyApplicationForm.formLabel}
+                  {academyApplicationForm.label}
                 </a>
                 <a
                   href={applyWhatsApp("Hi KayTech! I have a question about KayTech Academy before I apply.")}

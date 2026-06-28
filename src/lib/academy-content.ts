@@ -2,7 +2,6 @@
 export const academyApplicationForm = {
   url: "https://forms.gle/EaJ4nwLX28AkPDkQ8",
   label: "Apply now",
-  formLabel: "Fill application form",
   note: "Only 10 admissions per cohort — selected applicants receive a call from our admissions team.",
 } as const;
 
