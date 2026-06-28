@@ -11,6 +11,7 @@ import {
 import { Container } from "@/components/ui/Container";
 import { HeroImageBackground } from "@/components/ui/HeroImageBackground";
 import { HeroHeadlineDots } from "@/components/ui/HeroHeadlineDots";
+import { HeroCta, HeroCtaRow } from "@/components/ui/HeroCta";
 import { Media } from "@/components/ui/Media";
 import { RevealOnScroll, StaggerReveal } from "@/components/ui/RevealOnScroll";
 import { TestimonialCarousel } from "@/components/ui/TestimonialCarousel";
@@ -113,23 +114,20 @@ function AcademyHeroSlider() {
             training for students, career switchers, and aspiring freelancers.
           </p>
 
-          <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap">
-            <a
-              {...applyFormProps()}
-              data-track="academy_apply_click"
-              data-track-location="hero_primary"
-              className="inline-flex h-11 min-h-[44px] w-full items-center justify-center gap-2 rounded-lg bg-semantic-up px-6 text-base font-semibold tracking-[-0.005em] text-surface-dark transition hover:brightness-110 sm:h-12 sm:w-auto"
+          <HeroCtaRow className="sm:mt-8">
+            <HeroCta
+              href={academyApplicationForm.url}
+              external
+              track="academy_apply_click"
+              trackLocation="hero_primary"
             >
               <ClipboardList className="h-4 w-4" />
               {academyApplicationForm.label}
-            </a>
-            <a
-              href={slide.href}
-              className="inline-flex h-11 min-h-[44px] w-full items-center justify-center rounded-lg border border-white/90 px-6 text-sm font-semibold text-white transition hover:opacity-85 sm:h-12 sm:w-auto"
-            >
+            </HeroCta>
+            <HeroCta href={slide.href} variant="secondary">
               {slide.cta}
-            </a>
-          </div>
+            </HeroCta>
+          </HeroCtaRow>
         </div>
 
         <div className="pointer-events-none absolute inset-0 hidden lg:block">

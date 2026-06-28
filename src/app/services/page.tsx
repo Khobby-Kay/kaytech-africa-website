@@ -24,11 +24,12 @@ export default function ServicesHubPage() {
       <PageHero
         title="Web design & digital services across Ghana"
         description="Dedicated pages for SEO, e-commerce, web development, web design, and digital marketing — built for Accra, Kumasi, Tema, and nationwide."
-        cta={{ label: "Get a quote", href: "/contact" }}
+        cta={{ label: "See our work", href: "/portfolio" }}
+        secondaryCta={{ label: "Browse services", href: "#services-list" }}
         image={contentImages.serviceWeb}
       />
 
-      <section className="border-b border-hairline bg-canvas px-5 py-16 lg:px-20 lg:py-24">
+      <section id="services-list" className="border-b border-hairline bg-canvas px-5 py-16 lg:px-20 lg:py-24">
         <Container>
           <div className="grid gap-4 sm:grid-cols-2">
             {pages.map((page) => (

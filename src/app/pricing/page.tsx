@@ -175,11 +175,12 @@ export default function PricingPage() {
       <PageHero
         title="Pricing built around value, not templates"
         description="Wondering how much a website costs in Ghana? The honest answer is: it depends on what will actually grow your business. We scope every project clearly and price around the value it delivers — so you invest in results, not a guess."
-        cta={{ label: "Request a tailored quote", href: "/contact" }}
+        cta={{ label: "Compare plans", href: "#plans" }}
+        secondaryCta={{ label: "See our work", href: "/portfolio" }}
         image={contentImages.serviceGrowth}
       />
 
-      <section className="border-b border-hairline bg-canvas px-5 py-16 lg:px-20 lg:py-24">
+      <section id="plans" className="border-b border-hairline bg-canvas px-5 py-16 lg:px-20 lg:py-24">
         <Container>
           <div className="max-w-2xl">
             <h2 className="font-display text-2xl tracking-tight text-ink sm:text-3xl lg:text-4xl">

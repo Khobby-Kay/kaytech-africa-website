@@ -1,19 +1,26 @@
 "use client";
 
-import Link from "next/link";
 import type { ReactNode } from "react";
 import { Container } from "@/components/ui/Container";
 import {
   HeroImageBackground,
   type HeroImageSlide,
 } from "@/components/ui/HeroImageBackground";
+import { HeroCta, HeroCtaRow } from "@/components/ui/HeroCta";
 import { cn } from "@/lib/utils";
+
+type HeroCtaConfig = {
+  label: string;
+  href: string;
+  external?: boolean;
+};
 
 type PageHeroProps = {
   eyebrow?: string;
   title: string;
   description?: string;
-  cta?: { label: string; href: string; external?: boolean };
+  cta?: HeroCtaConfig;
+  secondaryCta?: HeroCtaConfig;
   /** Single hero background image */
   image?: HeroImageSlide;
   /** Optional carousel — overrides `image` when provided */
@@ -38,11 +45,27 @@ function resolveSlides(
   return [];
 }
 
+function renderCta({ label, href, external }: HeroCtaConfig, variant: "primary" | "secondary") {
+  if (external) {
+    return (
+      <HeroCta href={href} external variant={variant}>
+        {label}
+      </HeroCta>
+    );
+  }
+  return (
+    <HeroCta href={href} variant={variant}>
+      {label}
+    </HeroCta>
+  );
+}
+
 export function PageHero({
   eyebrow,
   title,
   description,
   cta,
+  secondaryCta,
   image,
   images,
   imageCaption,
@@ -53,9 +76,6 @@ export function PageHero({
   compact = false,
 }: PageHeroProps) {
   const slides = resolveSlides(image, images);
-
-  const ctaClass =
-    "inline-flex h-11 min-h-[44px] w-full items-center justify-center rounded-lg bg-semantic-up px-6 text-base font-semibold tracking-[-0.005em] text-surface-dark transition hover:brightness-110 sm:h-12 sm:w-auto sm:px-8";
 
   return (
     <section
@@ -108,34 +128,16 @@ export function PageHero({
           ) : null}
 
           {actions ? (
-            <div className="mt-6 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:items-center">
-              {actions}
-            </div>
+            <HeroCtaRow>{actions}</HeroCtaRow>
           ) : cta ? (
-            <div className="mt-6 sm:mt-10">
-              {cta.external ? (
-                <a
-                  href={cta.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={ctaClass}
-                >
-                  {cta.label}
-                </a>
-              ) : cta.href.startsWith("#") ? (
-                <a href={cta.href} className={ctaClass}>
-                  {cta.label}
-                </a>
-              ) : (
-                <Link href={cta.href} className={ctaClass}>
-                  {cta.label}
-                </Link>
-              )}
-            </div>
+            <HeroCtaRow>
+              {renderCta(cta, "primary")}
+              {secondaryCta ? renderCta(secondaryCta, "secondary") : null}
+            </HeroCtaRow>
           ) : null}
 
           {footnote ? (
-            <div className="mt-6 hidden text-sm text-on-dark/70 sm:block">
+            <div className="mt-5 hidden text-sm text-on-dark/70 sm:block">
               {footnote}
             </div>
           ) : null}

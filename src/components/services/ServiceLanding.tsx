@@ -15,7 +15,8 @@ export function ServiceLanding({ page }: { page: ServicePage }) {
         <PageHero
           title={page.heroTitle}
           description={page.heroDescription}
-          cta={{ label: "Get a quote", href: "/contact" }}
+          cta={{ label: "See our work", href: "/portfolio" }}
+          secondaryCta={{ label: "All services", href: "/services" }}
           image={page.image}
         />
       </RevealOnScroll>

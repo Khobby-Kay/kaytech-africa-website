@@ -4,80 +4,18 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import {
   ArrowDownToLine,
+  ArrowRight,
   CircleCheck,
-  MessageCircle,
-  Phone,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { HeroHeadlineDots } from "@/components/ui/HeroHeadlineDots";
+import { HeroCta, HeroCtaRow } from "@/components/ui/HeroCta";
 import { siteConfig } from "@/lib/site";
 import { homeHeroHeadlines } from "@/lib/home-hero-content";
 import { cn } from "@/lib/utils";
 import { useHeroCarousel } from "@/hooks/useHeroCarousel";
 import { HeroBackground } from "@/components/home/HeroBackground";
 import { HeroTicker } from "@/components/home/HeroTicker";
-
-function ActionButton({
-  href,
-  icon,
-  label,
-  title,
-  external,
-  track,
-  trackLocation,
-}: {
-  href: string;
-  icon: ReactNode;
-  label: string;
-  title: string;
-  external?: boolean;
-  track?: string;
-  trackLocation?: string;
-}) {
-  const className =
-    "inline-flex h-9 min-h-[36px] items-center justify-center gap-1.5 rounded-lg border border-white/90 px-2.5 text-white transition hover:opacity-85 sm:h-11 sm:min-h-[44px] sm:gap-2.5 sm:px-3.5 sm:min-w-[8.75rem]";
-
-  const trackProps =
-    track && trackLocation
-      ? { "data-track": track, "data-track-location": trackLocation }
-      : {};
-
-  const inner = (
-    <>
-      <span className="shrink-0">{icon}</span>
-      <span className="hidden flex-col leading-none text-left sm:flex">
-        <span className="text-[9px] font-medium tracking-wide opacity-90">
-          {label}
-        </span>
-        <span className="mt-0.5 text-[15px] font-semibold tracking-tight">
-          {title}
-        </span>
-      </span>
-      <span className="text-[11px] font-semibold sm:hidden">{label}</span>
-    </>
-  );
-
-  if (external || href.startsWith("tel:") || href.startsWith("mailto:")) {
-    return (
-      <a
-        href={href}
-        {...(external
-          ? { target: "_blank", rel: "noopener noreferrer" }
-          : {})}
-        className={className}
-        {...trackProps}
-      >
-        {inner}
-      </a>
-    );
-  }
-
-  return (
-    <Link href={href} className={className} {...trackProps}>
-      {inner}
-    </Link>
-  );
-}
 
 function FloatingCard({
   icon,
@@ -143,49 +81,33 @@ export function Hero() {
             {slide.description}
           </p>
 
-          <div className="mt-6 flex flex-col gap-2.5 sm:mt-10 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3">
-            <div className="hidden gap-2 sm:flex sm:flex-wrap sm:items-center">
-              <ActionButton
-                href={`tel:${siteConfig.contact.phone}`}
-                label="Quick call"
-                title={siteConfig.contact.phoneDisplay}
-                icon={<Phone className="h-5 w-5 sm:h-6 sm:w-6" />}
-                track="call_click"
-                trackLocation="hero"
-              />
-              <ActionButton
-                href={siteConfig.contact.whatsapp}
-                external
-                label="Chat on"
-                title="WhatsApp"
-                icon={<MessageCircle className="h-5 w-5 sm:h-6 sm:w-6" />}
-                track="whatsapp_click"
-                trackLocation="hero"
-              />
-            </div>
-            <Link
-              href="/contact"
-              data-track="get_started_click"
-              data-track-location="hero"
-              className="inline-flex h-11 min-h-[44px] w-full items-center justify-center rounded-lg bg-semantic-up px-6 text-sm font-semibold tracking-[-0.005em] text-surface-dark transition hover:brightness-110 sm:h-14 sm:w-auto sm:px-8 sm:text-base"
+          <HeroCtaRow>
+            <HeroCta
+              href="/portfolio"
+              track="portfolio_click"
+              trackLocation="hero"
             >
-              Get a free quote
-            </Link>
-          </div>
+              See our work
+              <ArrowRight className="h-4 w-4" />
+            </HeroCta>
+            <HeroCta href="/pricing" variant="secondary">
+              Website pricing
+            </HeroCta>
+          </HeroCtaRow>
 
-          <div className="mt-6 hidden items-center gap-4 text-sm text-on-dark/70 sm:flex">
+          <div className="mt-5 hidden items-center gap-4 text-sm text-on-dark/70 sm:flex">
             <Link
               href="/services"
               className="font-semibold text-on-dark underline-offset-4 transition hover:underline"
             >
-              View all our services
+              View all services
             </Link>
             <span className="text-on-dark/40" aria-hidden>
               ·
             </span>
             <span className="inline-flex items-center gap-2">
               <CircleCheck className="h-4 w-4 text-semantic-up" />
-              Free consultation · Accra-based since {siteConfig.founded}
+              1914+ businesses served · Accra since {siteConfig.founded}
             </span>
           </div>
         </div>

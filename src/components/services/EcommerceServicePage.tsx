@@ -31,7 +31,8 @@ export function EcommerceServicePage() {
         <PageHero
           title={ecommercePageMeta.heroTitle}
           description={ecommercePageMeta.heroDescription}
-          cta={{ label: "Book a consultation", href: "/contact" }}
+          cta={{ label: "See our work", href: "/portfolio" }}
+          secondaryCta={{ label: "Pricing guide", href: "/pricing" }}
           image={ecommercePageMeta.image}
         />
       </RevealOnScroll>

@@ -32,11 +32,12 @@ export default function BlogPage() {
       <PageHero
         title="Web design, SEO & growth insights for Ghana"
         description="Practical guides on building, ranking, and growing a business website in Accra, Kumasi, Tema, and across Ghana — written by the KayTech Africa studio team."
-        cta={{ label: "Get a free consultation", href: "/contact" }}
+        cta={{ label: "Browse articles", href: "#articles" }}
+        secondaryCta={{ label: "Our services", href: "/services" }}
         image={blogHeroImage}
       />
 
-      <section className="bg-canvas px-5 py-12 lg:px-20 lg:py-16">
+      <section id="articles" className="bg-canvas px-5 py-12 lg:px-20 lg:py-16">
         <Container>
           {featured ? (
             <Link

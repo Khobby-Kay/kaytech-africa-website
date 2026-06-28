@@ -29,11 +29,12 @@ export default function PortfolioPage() {
       <PageHero
         title="Transforming visions into digital success"
         description="We take pride in our clients' success stories. From startups to established enterprises across Ghana, brands trust KayTech Africa to turn digital visions into high-performing websites that deliver real results."
-        cta={{ label: "Start your project", href: "/contact" }}
+        cta={{ label: "View projects", href: "#projects" }}
+        secondaryCta={{ label: "Our services", href: "/services" }}
         image={portfolioHeroImage}
       />
 
-      <section className="border-b border-hairline bg-canvas px-5 py-14 lg:px-20 lg:py-20">
+      <section id="projects" className="border-b border-hairline bg-canvas px-5 py-14 lg:px-20 lg:py-20">
         <Container>
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-2 rounded-pill bg-surface-soft px-4 py-1.5 font-mono text-xs font-semibold uppercase tracking-[0.08em] text-primary ring-1 ring-hairline">

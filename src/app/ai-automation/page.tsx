@@ -73,11 +73,12 @@ export default function AiAutomationPage() {
       <PageHero
         title={pageSeoCopy.aiAutomation.heroTitle}
         description={pageSeoCopy.aiAutomation.heroDescription}
-        cta={{ label: "Get an automation quote", href: "/contact" }}
+        cta={{ label: "See our work", href: "/portfolio" }}
+        secondaryCta={{ label: "What we automate", href: "#capabilities" }}
         image={pageImages.aiAutomation}
       />
 
-      <section className="border-b border-hairline bg-canvas px-5 py-16 lg:px-20 lg:py-24">
+      <section id="capabilities" className="border-b border-hairline bg-canvas px-5 py-16 lg:px-20 lg:py-24">
         <Container>
           <div className="max-w-2xl">
             <h2 className="font-display text-2xl tracking-tight text-ink sm:text-3xl lg:text-4xl">

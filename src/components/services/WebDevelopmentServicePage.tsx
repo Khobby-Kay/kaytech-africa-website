@@ -65,7 +65,8 @@ export function WebDevelopmentServicePage() {
         <PageHero
           title={webDevPageMeta.heroTitle}
           description={webDevPageMeta.heroDescription}
-          cta={{ label: "Book consultation", href: "/contact" }}
+          cta={{ label: "See our work", href: "/portfolio" }}
+          secondaryCta={{ label: "Pricing guide", href: "/pricing" }}
           image={webDevPageMeta.image}
         />
       </RevealOnScroll>

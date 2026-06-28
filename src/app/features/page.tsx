@@ -19,10 +19,13 @@ export default function FeaturesPage() {
       <PageHero
         title={pageSeoCopy.features.heroTitle}
         description={pageSeoCopy.features.heroDescription}
-        cta={{ label: "Start a project", href: "/contact" }}
+        cta={{ label: "Explore capabilities", href: "#capabilities" }}
+        secondaryCta={{ label: "See our work", href: "/portfolio" }}
         image={pageImages.features}
       />
+      <div id="capabilities">
       <ServicesTabs />
+      </div>
       <AppShowcase />
     </>
   );
