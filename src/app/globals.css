@@ -35,6 +35,13 @@ button {
   scroll-margin-top: 6rem;
 }
 
+@media (max-width: 1023px) {
+  :target,
+  [id] {
+    scroll-margin-top: 7.5rem;
+  }
+}
+
 /* HCI: visible, consistent keyboard focus affordance across the whole UI. */
 :focus-visible {
   outline: 2px solid #1a4971;

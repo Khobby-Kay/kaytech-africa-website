@@ -55,6 +55,8 @@ const config: Config = {
         marquee: "marquee 28s linear infinite",
         float: "float 6s ease-in-out infinite",
         "fade-up": "fadeUp 0.7s ease-out forwards",
+        "teedra-glow": "teedraGlow 2.8s ease-in-out infinite",
+        "teedra-breathe": "teedraBreathe 3.2s ease-in-out infinite",
       },
       keyframes: {
         marquee: {
@@ -68,6 +70,14 @@ const config: Config = {
         fadeUp: {
           from: { opacity: "0", transform: "translateY(24px)" },
           to: { opacity: "1", transform: "translateY(0)" },
+        },
+        teedraGlow: {
+          "0%, 100%": { boxShadow: "0 0 0 0 rgba(13,148,136,0.5)" },
+          "50%": { boxShadow: "0 0 0 10px rgba(13,148,136,0)" },
+        },
+        teedraBreathe: {
+          "0%, 100%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.035)" },
         },
       },
     },

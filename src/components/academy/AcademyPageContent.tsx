@@ -5,8 +5,6 @@ import Link from "next/link";
 import {
   ArrowRight,
   CheckCircle2,
-  ChevronLeft,
-  ChevronRight,
   ClipboardList,
   MessageCircle,
   Phone,
@@ -53,9 +51,9 @@ function AcademyApplyBanner() {
   return (
     <section
       id="apply"
-      className="sticky top-16 z-30 border-b border-accent/25 bg-gradient-to-r from-accent/20 via-surface-accent to-accent/20 px-5 py-4 shadow-sm backdrop-blur-sm lg:top-[4.5rem] lg:px-20"
+      className="sticky top-[calc(5.75rem+env(safe-area-inset-top,0px))] z-30 border-b border-accent/25 bg-gradient-to-r from-accent/20 via-surface-accent to-accent/20 px-4 py-3 shadow-sm backdrop-blur-sm sm:px-5 sm:py-4 lg:top-[4.5rem] lg:px-20"
     >
-      <Container className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
+      <Container className="flex flex-col items-stretch justify-between gap-3 sm:flex-row sm:items-center">
         <div className="min-w-0">
           <p className="text-xs font-semibold uppercase tracking-[0.12em] text-accent">
             Admissions open
@@ -69,7 +67,7 @@ function AcademyApplyBanner() {
           {...applyFormProps()}
           data-track="academy_apply_click"
           data-track-location="apply_banner"
-          className="inline-flex h-12 shrink-0 items-center gap-2 rounded-pill bg-accent px-7 text-sm font-bold text-white shadow-glow transition hover:bg-accent-bright sm:text-base"
+          className="inline-flex h-12 min-h-[44px] w-full shrink-0 items-center justify-center gap-2 rounded-pill bg-accent px-7 text-sm font-bold text-white shadow-glow transition hover:bg-accent-bright sm:w-auto sm:text-base"
         >
           <ClipboardList className="h-4 w-4" />
           {academyApplicationForm.label}
@@ -101,13 +99,10 @@ function AcademyHeroSlider() {
   const slide = slides[active];
 
   return (
-    <section className="relative min-h-[72vh] w-full overflow-hidden border-b border-hairline sm:min-h-[80vh] lg:min-h-[85vh]">
-      <HeroImageBackground
-        slides={academyHeroImages}
-        dotsClassName="bottom-28 left-5 lg:left-12 lg:bottom-32"
-      />
+    <section className="relative min-h-[62vh] w-full overflow-hidden border-b border-hairline sm:min-h-[72vh] lg:min-h-[85vh]">
+      <HeroImageBackground slides={academyHeroImages} />
 
-      <Container className="relative pb-24 pt-32 sm:pb-28 sm:pt-28 lg:pb-32 lg:pt-40">
+      <Container className="relative pb-28 pt-[6.25rem] sm:pb-28 sm:pt-28 lg:pb-32 lg:pt-40">
         <div className="max-w-3xl max-lg:mt-4">
           <span className="inline-flex items-center gap-2 rounded-pill bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-on-dark/90">
             KayTech Academy · Accra, Ghana
@@ -122,56 +117,22 @@ function AcademyHeroSlider() {
             Ghana&apos;s practical web design and development school — studio-backed
             training for students, career switchers, and aspiring freelancers.
           </p>
-          <div className="mt-6 flex flex-wrap gap-3 sm:mt-10">
+          <div className="mt-6 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap">
             <a
               {...applyFormProps()}
               data-track="academy_apply_click"
               data-track-location="hero_primary"
-              className="inline-flex h-11 items-center gap-2 rounded-lg bg-semantic-up px-6 text-base font-semibold tracking-[-0.005em] text-surface-dark transition hover:brightness-110 sm:h-12"
+              className="inline-flex h-11 min-h-[44px] w-full items-center justify-center gap-2 rounded-lg bg-semantic-up px-6 text-base font-semibold tracking-[-0.005em] text-surface-dark transition hover:brightness-110 sm:h-12 sm:w-auto"
             >
               <ClipboardList className="h-4 w-4" />
               {academyApplicationForm.label}
             </a>
             <a
               href={slide.href}
-              className="inline-flex h-11 items-center rounded-lg border border-white/90 px-6 text-sm font-semibold text-white transition hover:opacity-85 sm:h-12"
+              className="inline-flex h-11 min-h-[44px] w-full items-center justify-center rounded-lg border border-white/90 px-6 text-sm font-semibold text-white transition hover:opacity-85 sm:h-12 sm:w-auto"
             >
               {slide.cta}
             </a>
-          </div>
-          <div className="mt-6 flex items-center gap-3">
-            <button
-              type="button"
-              aria-label="Previous headline"
-              onClick={() =>
-                setActive((prev) => (prev - 1 + slides.length) % slides.length)
-              }
-              className="grid h-9 w-9 place-items-center rounded-full border border-white/25 text-on-dark transition hover:bg-white/10"
-            >
-              <ChevronLeft className="h-4 w-4" />
-            </button>
-            <button
-              type="button"
-              aria-label="Next headline"
-              onClick={() => setActive((prev) => (prev + 1) % slides.length)}
-              className="grid h-9 w-9 place-items-center rounded-full border border-white/25 text-on-dark transition hover:bg-white/10"
-            >
-              <ChevronRight className="h-4 w-4" />
-            </button>
-            <div className="flex gap-2">
-              {slides.map((_, i) => (
-                <button
-                  key={i}
-                  type="button"
-                  aria-label={`Show headline ${i + 1}`}
-                  onClick={() => setActive(i)}
-                  className={cn(
-                    "h-1.5 rounded-full transition-all duration-300",
-                    i === active ? "w-8 bg-on-dark" : "w-2 bg-on-dark/40 hover:bg-on-dark/70",
-                  )}
-                />
-              ))}
-            </div>
           </div>
         </div>
 

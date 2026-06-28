@@ -35,7 +35,7 @@ export function MarketingPageHero({
             href="/contact"
             data-track="get_started_click"
             data-track-location="marketing_hero"
-            className="inline-flex h-11 items-center justify-center rounded-lg bg-semantic-up px-6 text-base font-semibold tracking-[-0.005em] text-surface-dark transition hover:brightness-110 sm:h-12 sm:px-8"
+            className="inline-flex h-11 min-h-[44px] w-full items-center justify-center rounded-lg bg-semantic-up px-6 text-base font-semibold tracking-[-0.005em] text-surface-dark transition hover:brightness-110 sm:h-12 sm:w-auto sm:px-8"
           >
             Get a free quote
           </Link>
@@ -43,7 +43,7 @@ export function MarketingPageHero({
             href={`tel:${siteConfig.contact.phone}`}
             data-track="call_click"
             data-track-location="marketing_hero"
-            className="inline-flex h-11 min-w-[8.75rem] items-center gap-2.5 rounded-lg border border-white/90 px-3.5 text-white transition hover:opacity-85"
+            className="inline-flex h-11 min-h-[44px] w-full items-center justify-center gap-2.5 rounded-lg border border-white/90 px-3.5 text-white transition hover:opacity-85 sm:min-w-[8.75rem] sm:w-auto"
           >
             <Phone className="h-6 w-6 shrink-0" />
             <span className="flex flex-col leading-none text-left">
@@ -61,7 +61,7 @@ export function MarketingPageHero({
             rel="noopener noreferrer"
             data-track="whatsapp_click"
             data-track-location="marketing_hero"
-            className="inline-flex h-11 min-w-[8.75rem] items-center gap-2.5 rounded-lg border border-white/90 px-3.5 text-white transition hover:opacity-85"
+            className="inline-flex h-11 min-h-[44px] w-full items-center justify-center gap-2.5 rounded-lg border border-white/90 px-3.5 text-white transition hover:opacity-85 sm:min-w-[8.75rem] sm:w-auto"
           >
             <MessageCircle className="h-6 w-6 shrink-0" />
             <span className="flex flex-col leading-none text-left">

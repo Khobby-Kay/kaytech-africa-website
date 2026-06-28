@@ -59,14 +59,14 @@ export function AiAssistant() {
         onClick={toggle}
         aria-label={open ? "Close Teedra chat" : "Chat with Teedra"}
         aria-expanded={open}
-        className="fixed bottom-[68px] right-4 z-[60] overflow-hidden rounded-full shadow-lg ring-2 ring-white/20 transition hover:scale-105 lg:bottom-6 lg:right-6"
+        className="fixed bottom-[calc(68px+env(safe-area-inset-bottom,0px))] right-3 z-[55] transition hover:scale-105 motion-reduce:hover:scale-100 sm:right-4 lg:bottom-6 lg:right-6"
       >
         {open ? (
-          <span className="grid h-14 w-14 place-items-center bg-primary text-on-primary">
+          <span className="grid h-14 w-14 place-items-center rounded-full bg-primary text-on-primary shadow-lg ring-2 ring-white/20">
             <X className="h-6 w-6" />
           </span>
         ) : (
-          <TeedraAvatar className="h-14 w-14" />
+          <TeedraAvatar className="h-14 w-14" animated />
         )}
       </button>
 
@@ -74,10 +74,10 @@ export function AiAssistant() {
         <div
           role="dialog"
           aria-label="Teedra — KayTech assistant"
-          className="fixed bottom-[136px] right-4 z-[60] flex h-[min(70vh,520px)] w-[min(92vw,380px)] flex-col overflow-hidden rounded-3xl border border-hairline bg-canvas shadow-2xl lg:bottom-24 lg:right-6"
+          className="fixed bottom-[calc(136px+env(safe-area-inset-bottom,0px))] right-3 z-[55] flex h-[min(68vh,520px)] w-[min(calc(100vw-1.5rem),380px)] flex-col overflow-hidden rounded-3xl border border-hairline bg-canvas shadow-2xl sm:right-4 lg:bottom-24 lg:right-6"
         >
           <header className="flex items-center gap-3 border-b border-hairline bg-primary px-4 py-3 text-on-primary">
-            <TeedraAvatar className="h-10 w-10 shrink-0 ring-2 ring-white/20" />
+            <TeedraAvatar className="h-10 w-10 shrink-0" active />
             <div className="leading-tight">
               <p className="text-sm font-semibold">{TEEDRA.name}</p>
               <p className="text-[11px] text-on-primary/80">{TEEDRA.tagline}</p>

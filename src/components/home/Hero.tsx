@@ -30,7 +30,7 @@ function ActionButton({
   trackLocation?: string;
 }) {
   const className =
-    "inline-flex h-11 min-w-[8.75rem] items-center gap-2.5 rounded-lg border border-white/90 px-3.5 text-white transition hover:opacity-85";
+    "inline-flex h-11 min-h-[44px] w-full items-center justify-center gap-2.5 rounded-lg border border-white/90 px-3.5 text-white transition hover:opacity-85 sm:min-w-[8.75rem] sm:w-auto";
 
   const trackProps =
     track && trackLocation
@@ -108,11 +108,11 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[72vh] w-full overflow-hidden sm:min-h-[80vh] lg:min-h-screen"
+      className="relative min-h-[62vh] w-full overflow-hidden sm:min-h-[75vh] lg:min-h-screen"
     >
       <HeroBackground />
 
-      <Container className="relative pb-24 pt-32 sm:pb-28 sm:pt-24 lg:pb-32 lg:pt-40">
+      <Container className="relative pb-28 pt-[6.25rem] sm:pb-28 sm:pt-28 lg:pb-32 lg:pt-40">
         <div className="max-w-3xl max-lg:mt-6">
           <h1 className="font-display text-[2rem] leading-[1.02] tracking-tight text-on-dark sm:text-[36px] md:text-[44px] lg:text-[52px] xl:text-[64px] 2xl:text-[78px]">
             African digital infrastructure.
@@ -129,7 +129,7 @@ export function Hero() {
             </span>
           </p>
 
-          <div className="mt-6 flex flex-wrap items-center gap-3 sm:mt-10">
+          <div className="mt-6 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:items-center">
             <ActionButton
               href={`tel:${siteConfig.contact.phone}`}
               label="Quick call"
@@ -151,7 +151,7 @@ export function Hero() {
               href="/contact"
               data-track="get_started_click"
               data-track-location="hero"
-              className="inline-flex h-11 items-center justify-center rounded-lg bg-semantic-up px-6 text-base font-semibold tracking-[-0.005em] text-surface-dark transition hover:brightness-110 sm:h-14 sm:px-8"
+              className="inline-flex h-11 min-h-[44px] w-full items-center justify-center rounded-lg bg-semantic-up px-6 text-base font-semibold tracking-[-0.005em] text-surface-dark transition hover:brightness-110 sm:h-14 sm:w-auto sm:px-8"
             >
               Get a free quote
             </Link>

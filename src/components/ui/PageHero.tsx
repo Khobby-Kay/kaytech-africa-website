@@ -55,15 +55,15 @@ export function PageHero({
   const slides = resolveSlides(image, images);
 
   const ctaClass =
-    "inline-flex h-11 items-center justify-center rounded-lg bg-semantic-up px-6 text-base font-semibold tracking-[-0.005em] text-surface-dark transition hover:brightness-110 sm:h-12 sm:px-8";
+    "inline-flex h-11 min-h-[44px] w-full items-center justify-center rounded-lg bg-semantic-up px-6 text-base font-semibold tracking-[-0.005em] text-surface-dark transition hover:brightness-110 sm:h-12 sm:w-auto sm:px-8";
 
   return (
     <section
       className={cn(
         "relative w-full overflow-hidden border-b border-hairline",
         compact
-          ? "min-h-[58vh] sm:min-h-[62vh]"
-          : "min-h-[72vh] sm:min-h-[80vh] lg:min-h-[85vh]",
+          ? "min-h-[52vh] sm:min-h-[58vh]"
+          : "min-h-[62vh] sm:min-h-[72vh] lg:min-h-[85vh]",
         className,
       )}
     >
@@ -80,8 +80,8 @@ export function PageHero({
         className={cn(
           "relative",
           compact
-            ? "pb-16 pt-28 sm:pb-20 sm:pt-28 lg:pb-24 lg:pt-36"
-            : "pb-20 pt-32 sm:pb-24 sm:pt-28 lg:pb-28 lg:pt-40",
+            ? "pb-16 pt-[6.25rem] sm:pb-20 sm:pt-28 lg:pb-24 lg:pt-36"
+            : "pb-20 pt-[6.25rem] sm:pb-24 sm:pt-28 lg:pb-28 lg:pt-40",
         )}
       >
         <div className="max-w-3xl max-lg:mt-4">
@@ -108,7 +108,7 @@ export function PageHero({
           ) : null}
 
           {actions ? (
-            <div className="mt-6 flex flex-wrap items-center gap-3 sm:mt-10">
+            <div className="mt-6 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:items-center">
               {actions}
             </div>
           ) : cta ? (
