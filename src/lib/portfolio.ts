@@ -1,4 +1,5 @@
 import { contentImages } from "@/lib/image-seo";
+import type { ImpactMetric } from "@/components/ui/ImpactMetricBar";
 
 export type CaseStudy = {
   slug: string;
@@ -8,8 +9,10 @@ export type CaseStudy = {
   location: string;
   timeline: string;
   headline: string;
+  highlightMetric: string;
   summary: string;
   result: string;
+  metrics: ImpactMetric[];
   challenge: string[];
   solution: string[];
   results: string[];
@@ -26,10 +29,35 @@ export const caseStudies: CaseStudy[] = [
     sector: "Retail",
     location: "Accra, Ghana",
     timeline: "21 days",
-    headline: "3–5 enquiries/day → 20+ enquiries/day",
+    headline: "Up to 4–6× daily enquiries in the first 30 days",
+    highlightMetric: "20+ enquiries/day · 7 in 10 via WhatsApp",
     summary:
       "Conversion-focused website with WhatsApp funnel integration — turning walk-in interest into structured, trackable leads around the clock.",
-    result: "20+ daily enquiries via WhatsApp; 70% of conversions through chat",
+    result: "4–6× more daily enquiries; 7 in 10 conversions through WhatsApp chat",
+    metrics: [
+      {
+        label: "Daily enquiries",
+        before: "3–5 / day",
+        after: "20+ / day",
+        beforeScale: 20,
+        afterScale: 100,
+        period: "First 30 days post-launch",
+      },
+      {
+        label: "Conversions via WhatsApp",
+        before: "Ad hoc calls",
+        after: "70% of sales",
+        beforeScale: 30,
+        afterScale: 70,
+      },
+      {
+        label: "Missed after-hours leads",
+        before: "High volume lost",
+        after: "~60% reduction",
+        beforeScale: 100,
+        afterScale: 40,
+      },
+    ],
     challenge: [
       "Strong physical retail presence but no structured online enquiry system",
       "Customers mostly walked in or called randomly — leads lost after hours",
@@ -44,10 +72,10 @@ export const caseStudies: CaseStudy[] = [
       "Basic analytics tracking for lead sources",
     ],
     results: [
-      "3–5 inquiries/day grew to 20+ inquiries/day within the first 30 days",
-      "WhatsApp became the main sales channel (70% of conversions)",
-      "Reduced missed customer enquiries by over 60%",
-      "Client reported more structured customer flow than physical store alone",
+      "Daily enquiries grew from 3–5 to 20+ within the first 30 days — up to 4–6×",
+      "7 in 10 conversions now flow through WhatsApp (70% of sales)",
+      "Cut missed after-hours enquiries by roughly 60%",
+      "More structured customer flow than walk-in and phone alone",
     ],
     keyInsight:
       "When customers are guided into a WhatsApp funnel instead of just browsing, conversion rates increase significantly in African markets.",
@@ -62,9 +90,33 @@ export const caseStudies: CaseStudy[] = [
     location: "Accra, Ghana",
     timeline: "14–18 days",
     headline: "Website became the pre-sales pitch",
+    highlightMetric: "Cold leads arrive site-ready · faster closes in meetings",
     summary:
       "Authority-based brand website with trust signals and proof of work — so high-value clients arrive already convinced.",
-    result: "Cold leads reference the site before meetings; less reliance on verbal pitch",
+    result: "Prospects reference the site before calls; pitches start ahead, not from zero",
+    metrics: [
+      {
+        label: "Lead source mix",
+        before: "Referrals only",
+        after: "Web + referral",
+        beforeScale: 35,
+        afterScale: 85,
+      },
+      {
+        label: "Pre-meeting preparation",
+        before: "Long verbal intro",
+        after: "Site reviewed first",
+        beforeScale: 25,
+        afterScale: 90,
+      },
+      {
+        label: "Pitch meeting outcomes",
+        before: "Trust built on call",
+        after: "Trust built pre-call",
+        beforeScale: 40,
+        afterScale: 80,
+      },
+    ],
     challenge: [
       "No professional online presence to support high-value client conversations",
       "Difficulty closing premium clients without visual credibility",
@@ -78,10 +130,10 @@ export const caseStudies: CaseStudy[] = [
       "SEO-ready structure for future local visibility",
     ],
     results: [
-      "Improved conversion rate during client pitch meetings",
-      "Increased trust from cold leads who discovered the brand online",
-      "Clients began referencing the website before meetings",
-      "Reduced dependency on long verbal explanations in every sales call",
+      "Higher conversion rate in client pitch meetings — prospects arrive informed",
+      "Cold leads who find the brand online show stronger trust from the first call",
+      "Clients routinely reference the website before meetings",
+      "Less time spent on basic explanations; more time closing",
     ],
     keyInsight:
       "For service businesses, a website is not information — it is pre-sales persuasion.",
@@ -95,10 +147,34 @@ export const caseStudies: CaseStudy[] = [
     sector: "Trading & commerce",
     location: "Ghana",
     timeline: "3 weeks",
-    headline: "Orders from beyond Accra via WhatsApp commerce",
+    headline: "Regional orders opened up via WhatsApp commerce",
+    highlightMetric: "Orders beyond Accra · repeat WhatsApp buyers",
     summary:
       "Lightweight e-commerce with product catalogue, WhatsApp ordering, and MoMo — built for how Ghanaians actually buy online.",
-    result: "Expanded reach beyond immediate location; repeat WhatsApp orders",
+    result: "Catalogue + WhatsApp + MoMo — orders from outside Accra, less ordering friction",
+    metrics: [
+      {
+        label: "Customer geography",
+        before: "Local foot traffic",
+        after: "Accra + regional",
+        beforeScale: 30,
+        afterScale: 85,
+      },
+      {
+        label: "Ordering channel",
+        before: "In-person only",
+        after: "WhatsApp + MoMo",
+        beforeScale: 25,
+        afterScale: 90,
+      },
+      {
+        label: "Repeat digital orders",
+        before: "Rare",
+        after: "Growing weekly",
+        beforeScale: 20,
+        afterScale: 75,
+      },
+    ],
     challenge: [
       "Sales happened only through physical interactions",
       "No structured catalogue or online visibility",
@@ -113,10 +189,10 @@ export const caseStudies: CaseStudy[] = [
       "Fast-loading design for low-bandwidth users",
     ],
     results: [
-      "Expanded customer base beyond the immediate store location",
-      "Increased repeat enquiries via WhatsApp",
-      "Reduced friction in the ordering process",
-      "Client began receiving orders from outside the Accra region",
+      "Customer base expanded beyond the immediate store location",
+      "Repeat WhatsApp orders became a regular channel",
+      "Ordering friction dropped — browse, chat, pay on mobile",
+      "First orders received from outside the Accra region",
     ],
     keyInsight:
       "In Ghana, WhatsApp + Mobile Money commerce often outperforms complex checkout systems.",

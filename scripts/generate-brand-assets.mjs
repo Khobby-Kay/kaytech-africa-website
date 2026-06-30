@@ -24,7 +24,7 @@ const BRAND = {
 const LOGO_SOURCE = join(root, "public", "logo.jpg");
 
 /** Keep in sync with src/lib/brand-assets.ts BRAND_ASSET_VERSION */
-const BRAND_ASSET_VERSION = "6";
+const BRAND_ASSET_VERSION = "7";
 
 async function assertLogoSource() {
   const meta = await sharp(LOGO_SOURCE).metadata();
@@ -100,8 +100,8 @@ async function writeManifest(publicDir) {
     background_color: "#1c3f69",
     theme_color: "#1c3f69",
     icons: [
-      { src: "/icon-48.png", sizes: "48x48", type: "image/png", purpose: "any" },
       { src: "/icon-96.png", sizes: "96x96", type: "image/png", purpose: "any" },
+      { src: "/icon-48.png", sizes: "48x48", type: "image/png", purpose: "any" },
       { src: "/icon-192.png", sizes: "192x192", type: "image/png", purpose: "any" },
       { src: "/icon-512.png", sizes: "512x512", type: "image/png", purpose: "any" },
     ],

@@ -9,11 +9,10 @@ import { AiAssistant } from "@/components/assistant/AiAssistant";
 import { siteConfig } from "@/lib/site";
 import {
   APPLE_ICON,
-  FAVICON_96,
   FAVICON_192,
   FAVICON_512,
   FAVICON_ICO,
-  LOGO_JPG,
+  FAVICON_PRIMARY,
   withBrandVersion,
 } from "@/lib/brand-assets";
 import {
@@ -80,14 +79,19 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
   icons: {
     icon: [
-      { url: withBrandVersion(LOGO_JPG), sizes: "1024x1024", type: "image/jpeg" },
-      { url: withBrandVersion(FAVICON_ICO), sizes: "48x48", type: "image/x-icon" },
-      { url: withBrandVersion(FAVICON_96), sizes: "96x96", type: "image/png" },
-      { url: withBrandVersion(FAVICON_192), sizes: "192x192", type: "image/png" },
-      { url: withBrandVersion(FAVICON_512), sizes: "512x512", type: "image/png" },
+      { url: FAVICON_PRIMARY, sizes: "96x96", type: "image/png" },
+      { url: FAVICON_ICO, sizes: "48x48", type: "image/x-icon" },
+      { url: FAVICON_192, sizes: "192x192", type: "image/png" },
+      { url: FAVICON_512, sizes: "512x512", type: "image/png" },
     ],
-    shortcut: [{ url: withBrandVersion(FAVICON_ICO) }],
-    apple: [{ url: withBrandVersion(APPLE_ICON), sizes: "180x180", type: "image/png" }],
+    shortcut: [{ url: FAVICON_ICO }],
+    apple: [
+      {
+        url: withBrandVersion(APPLE_ICON),
+        sizes: "180x180",
+        type: "image/png",
+      },
+    ],
   },
   other: {
     "geo.region": "GH-AA",
@@ -106,17 +110,12 @@ export default function RootLayout({
     <html lang="en-GH">
       <head>
         <JsonLd />
+        {/* Single primary favicon for Google Search — stable URL, square PNG */}
         <link
           rel="icon"
-          href={withBrandVersion(LOGO_JPG)}
-          type="image/jpeg"
-          sizes="1024x1024"
-        />
-        <link
-          rel="icon"
-          href={withBrandVersion(FAVICON_ICO)}
-          type="image/x-icon"
-          sizes="48x48"
+          href={FAVICON_PRIMARY}
+          type="image/png"
+          sizes="96x96"
         />
       </head>
       <body className="min-h-screen bg-canvas pb-[calc(46px+env(safe-area-inset-bottom))] font-sans text-ink antialiased lg:pb-0">

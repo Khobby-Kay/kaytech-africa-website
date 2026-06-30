@@ -74,9 +74,15 @@ function buildLlmsTxt(): string {
   for (const study of caseStudies) {
     lines.push(`### ${study.client} (${study.sector}, ${study.location})`);
     lines.push(`- Headline result: ${study.headline}`);
-    lines.push(`- Summary: ${study.summary}`);
+    lines.push(`- Highlight: ${study.highlightMetric}`);
     lines.push(`- Key outcome: ${study.result}`);
     lines.push(`- Timeline: ${study.timeline}`);
+    lines.push("- Before / after metrics:");
+    for (const metric of study.metrics) {
+      lines.push(
+        `  - ${metric.label}: ${metric.before} → ${metric.after}${metric.period ? ` (${metric.period})` : ""}`,
+      );
+    }
     lines.push(`- Full story: ${siteConfig.url}/portfolio#${study.slug}`);
     lines.push("");
   }

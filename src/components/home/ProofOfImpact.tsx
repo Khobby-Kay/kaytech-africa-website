@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { RevealOnScroll, StaggerReveal } from "@/components/ui/RevealOnScroll";
+import { ImpactMetricBar } from "@/components/ui/ImpactMetricBar";
 import { clientLogos } from "@/lib/client-logos";
 import {
   aggregateImpactMetrics,
@@ -85,7 +86,15 @@ export function ProofOfImpact() {
               <p className="mt-3 rounded-xl bg-surface-accent px-3 py-2 text-sm font-semibold text-ink">
                 {item.headline}
               </p>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
+              {item.topMetric ? (
+                <div className="mt-4">
+                  <ImpactMetricBar metric={item.topMetric} />
+                </div>
+              ) : null}
+              <p className="mt-3 text-xs font-medium text-primary">
+                {item.highlightMetric}
+              </p>
+              <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
                 {item.result}
               </p>
               <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">

@@ -58,11 +58,14 @@ export function Portfolio() {
                 <h3 className="mt-2 font-display text-lg font-semibold text-ink">
                   {study.client}
                 </h3>
+                <p className="mt-2 text-sm font-semibold text-primary">
+                  {study.headline}
+                </p>
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
                   {study.summary}
                 </p>
                 <p className="mt-4 rounded-2xl bg-canvas px-4 py-3 text-sm font-medium text-ink">
-                  {study.result}
+                  {study.highlightMetric}
                 </p>
                 <ul className="mt-4 flex flex-wrap gap-2">
                   {study.tags.map((tag) => (

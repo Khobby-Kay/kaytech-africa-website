@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { ImpactMetricBar } from "@/components/ui/ImpactMetricBar";
 import { caseStudies } from "@/lib/portfolio";
 
 export function CaseStudyStories() {
@@ -53,10 +54,21 @@ export function CaseStudyStories() {
                       </h3>
                     </div>
                   </div>
-                  <p className="rounded-2xl border border-accent/25 bg-surface-accent px-4 py-3 text-sm font-semibold text-ink sm:max-w-xs sm:text-right">
+                  <p className="rounded-2xl border border-accent/25 bg-surface-accent px-4 py-3 text-sm font-semibold text-ink sm:max-w-sm">
                     {study.headline}
                   </p>
+                  <p className="mt-2 text-sm font-medium text-primary sm:text-right sm:max-w-sm">
+                    {study.highlightMetric}
+                  </p>
                 </div>
+
+                {study.metrics.length > 0 ? (
+                  <div className="mt-8 grid gap-4 border-t border-hairline pt-8 sm:grid-cols-3">
+                    {study.metrics.map((metric) => (
+                      <ImpactMetricBar key={metric.label} metric={metric} />
+                    ))}
+                  </div>
+                ) : null}
               </div>
 
               <div className="grid gap-8 px-6 py-8 sm:px-8 lg:grid-cols-2 lg:gap-10 lg:py-10">

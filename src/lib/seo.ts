@@ -1,4 +1,4 @@
-import { ORGANIZATION_LOGO, withBrandVersion } from "@/lib/brand-assets";
+import { getOrganizationLogoSchema } from "@/lib/brand-assets";
 import { faqs as coreFaqs, siteConfig } from "@/lib/site";
 import { ghanaSearchKeywords, seoFaqs } from "@/lib/localized-seo";
 import { getAllServicePages, getServicePath } from "@/lib/service-pages";
@@ -19,6 +19,8 @@ export const siteName =
   "KayTech Africa — Best Web Design Company in Ghana | Web Development & SEO";
 
 export function getOrganizationJsonLd() {
+  const orgLogo = getOrganizationLogoSchema(siteConfig.url);
+
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -34,14 +36,7 @@ export function getOrganizationJsonLd() {
         foundingDate: String(siteConfig.founded),
         email: siteConfig.contact.email,
         telephone: siteConfig.contact.phone,
-        logo: {
-          "@type": "ImageObject",
-          "@id": `${siteConfig.url}${withBrandVersion(ORGANIZATION_LOGO)}#logo`,
-          url: `${siteConfig.url}${withBrandVersion(ORGANIZATION_LOGO)}`,
-          contentUrl: `${siteConfig.url}${withBrandVersion(ORGANIZATION_LOGO)}`,
-          width: 1024,
-          height: 1024,
-        },
+        logo: orgLogo,
         image: `${siteConfig.url}/og.jpg`,
         address: {
           "@type": "PostalAddress",
@@ -106,7 +101,8 @@ export function getOrganizationJsonLd() {
         "@id": `${siteConfig.url}/#localbusiness`,
         name: siteConfig.name,
         description: defaultDescription,
-        image: `${siteConfig.url}/og.jpg?v=5`,
+        image: `${siteConfig.url}/og.jpg`,
+        logo: { "@id": orgLogo["@id"] },
         url: siteConfig.url,
         telephone: siteConfig.contact.phone,
         email: siteConfig.contact.email,
@@ -246,7 +242,7 @@ export function getOrganizationJsonLd() {
 }
 
 export const ogImage = {
-  url: "/og.jpg?v=5",
+  url: "/og.jpg",
   width: 1200,
   height: 630,
   alt: "KayTech Africa — Best Web Design Company in Accra, Ghana",
