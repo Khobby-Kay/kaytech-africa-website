@@ -4,6 +4,7 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Media } from "@/components/ui/Media";
 import { PageHero } from "@/components/ui/PageHero";
+import { CaseStudyStories } from "@/components/portfolio/CaseStudyStories";
 import { portfolioProjects } from "@/lib/portfolio-projects";
 import { portfolioHeroImage } from "@/lib/image-seo";
 import { createPageMetadata } from "@/lib/page-metadata";
@@ -29,12 +30,12 @@ export default function PortfolioPage() {
       <PageHero
         title="Transforming visions into digital success"
         description="We take pride in our clients' success stories. From startups to established enterprises across Ghana, brands trust KayTech Africa to turn digital visions into high-performing websites that deliver real results."
-        cta={{ label: "View projects", href: "#projects" }}
-        secondaryCta={{ label: "Our services", href: "/services" }}
+        cta={{ label: "Client results", href: "#case-studies" }}
+        secondaryCta={{ label: "Featured work", href: "#projects" }}
         image={portfolioHeroImage}
       />
 
-      <section id="projects" className="border-b border-hairline bg-canvas px-5 py-14 lg:px-20 lg:py-20">
+      <section className="border-b border-hairline bg-canvas px-5 py-14 lg:px-20 lg:py-20">
         <Container>
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-2 rounded-pill bg-surface-soft px-4 py-1.5 font-mono text-xs font-semibold uppercase tracking-[0.08em] text-primary ring-1 ring-hairline">
@@ -55,7 +56,12 @@ export default function PortfolioPage() {
         </Container>
       </section>
 
+      <div id="case-studies">
+        <CaseStudyStories />
+      </div>
+
       <section
+        id="projects"
         aria-label="KayTech Africa featured web design and development work"
         className="border-b border-hairline bg-surface-soft px-5 py-14 lg:px-20 lg:py-20"
       >

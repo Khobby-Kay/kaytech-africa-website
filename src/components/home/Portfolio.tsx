@@ -1,7 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { Media } from "@/components/ui/Media";
 import { caseStudies } from "@/lib/portfolio";
 
 export function Portfolio() {
@@ -25,28 +25,32 @@ export function Portfolio() {
             </p>
           </div>
           <Link
-            href="/contact"
+            href="/portfolio"
             className="inline-flex h-11 shrink-0 items-center gap-2 rounded-pill border border-hairline px-5 text-sm font-semibold text-ink transition hover:border-primary/40"
           >
-            Start your project
+            Full case studies
             <ArrowUpRight className="h-4 w-4" />
           </Link>
         </div>
 
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {caseStudies.map((study) => (
-            <article
-              key={`${study.client}-${study.sector}`}
-              className="flex flex-col overflow-hidden rounded-3xl border border-hairline bg-surface-soft"
+            <Link
+              key={study.slug}
+              href={`/portfolio#${study.slug}`}
+              className="group flex flex-col overflow-hidden rounded-3xl border border-hairline bg-surface-soft transition hover:border-primary/30 hover:shadow-card"
             >
-              <Media
-                src={study.image.src}
-                alt={study.image.alt}
-                ratio="16/10"
-                rounded="none"
-                framed={false}
-                sizes="(max-width: 768px) 100vw, 380px"
-              />
+              <div className="flex h-28 items-center justify-center border-b border-hairline bg-canvas px-8">
+                <div className="relative h-12 w-full max-w-[160px]">
+                  <Image
+                    src={study.logo.src}
+                    alt={study.logo.alt}
+                    fill
+                    sizes="160px"
+                    className="object-contain opacity-90 transition group-hover:opacity-100"
+                  />
+                </div>
+              </div>
               <div className="flex flex-1 flex-col p-6">
                 <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-primary">
                   {study.sector} · {study.location}
@@ -71,7 +75,7 @@ export function Portfolio() {
                   ))}
                 </ul>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </Container>
