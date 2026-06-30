@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { Hero } from "@/components/home/Hero";
 import { LeadCaptureStrip } from "@/components/layout/LeadCaptureStrip";
 import { LeadingCompanySection } from "@/components/home/LeadingCompanySection";
+import { ProofOfImpact } from "@/components/home/ProofOfImpact";
 import { HomeMainContent } from "@/components/home/HomeMainContent";
 import { LocalizedSeoSection } from "@/components/home/LocalizedSeoSection";
 import { KeyFacts } from "@/components/home/KeyFacts";
 import { Portfolio } from "@/components/home/Portfolio";
 import { Testimonials } from "@/components/home/Testimonials";
-import { ClientLogoStrip } from "@/components/home/ClientLogoStrip";
 import { createPageMetadata } from "@/lib/page-metadata";
 import { ghanaSearchKeywords, pageSeoCopy } from "@/lib/localized-seo";
 import { leadingCompany } from "@/lib/home-content";
@@ -25,10 +25,10 @@ export default function HomePage() {
       <Hero />
       <LeadCaptureStrip location="homepage" hideOnMobile />
       <LeadingCompanySection />
+      <ProofOfImpact />
       <HomeMainContent />
       <KeyFacts />
       <LocalizedSeoSection />
-      <ClientLogoStrip />
       <Portfolio />
       <Testimonials />
       <noscript>

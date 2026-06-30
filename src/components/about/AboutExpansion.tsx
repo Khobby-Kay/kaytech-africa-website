@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { ClientLogoStrip } from "@/components/home/ClientLogoStrip";
+import { ProofOfImpact } from "@/components/home/ProofOfImpact";
 import { getAllServicePages, getServicePath } from "@/lib/service-pages";
 import { siteConfig, stats } from "@/lib/site";
 
@@ -111,7 +111,7 @@ export function AboutExpansion() {
         </Container>
       </section>
 
-      <ClientLogoStrip />
+      <ProofOfImpact />
 
       <section className="border-b border-hairline bg-canvas px-5 py-14 lg:px-20 lg:py-20">
         <Container>
