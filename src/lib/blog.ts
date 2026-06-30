@@ -679,6 +679,70 @@ export const blogPosts: BlogPost[] = [
     conclusion:
       "A professional real estate website is your hardest-working sales agent. KayTech Africa builds visual, lead-focused property websites for agencies and developers across Ghana. Contact us for a tailored quote.",
   },
+  {
+    slug: "wordpress-vs-custom-vs-shopify-ghana-2026",
+    title: "WordPress vs Custom vs Shopify in Ghana: Which Is Right for Your Business? (2026)",
+    category: "Web Development and Design",
+    author: "KayTech Africa",
+    date: "2026-01-12",
+    dateDisplay: "Jan 12, 2026",
+    readingTime: "8 min read",
+    excerpt:
+      "Choosing a platform in Ghana? Compare WordPress, custom Next.js builds, and Shopify — cost, speed, MoMo payments, and SEO — so you invest in the right foundation.",
+    image: blogImages[5],
+    keywords: [
+      "WordPress vs custom website Ghana",
+      "Shopify Ghana e-commerce",
+      "best website platform Ghana",
+      "custom web development Accra",
+      "WordPress website Ghana cost",
+    ],
+    intro:
+      "Every Ghanaian business owner eventually asks: should I use WordPress, hire a developer for a custom site, or open a Shopify store? The honest answer depends on your budget, how you sell, and how fast you need to grow. Here is a practical comparison from KayTech Africa — a studio that builds all three, depending on what actually fits.",
+    sections: [
+      {
+        heading: "WordPress — flexible and familiar",
+        paragraphs: [
+          "WordPress powers a huge share of Ghanaian business sites. Themes and plugins make it affordable to launch quickly, and many agencies can maintain it. The trade-offs: plugin bloat can slow mobile performance, security needs ongoing updates, and highly custom features often fight the platform instead of flowing with it.",
+        ],
+        bullets: [
+          "Best for: blogs, brochure sites, NGOs, and businesses with frequent content updates",
+          "Typical cost in Ghana: GHS 1,500 – 6,000+ for a professional build",
+          "Watch out for: slow themes, outdated plugins, and cheap hosts on 3G networks",
+        ],
+      },
+      {
+        heading: "Custom development — built for performance and SEO",
+        paragraphs: [
+          "A custom site — often Next.js or similar modern stack — is engineered for your exact workflow: speed scores, local SEO structure, MoMo checkout, and integrations your business actually needs. Upfront cost is higher, but you own the architecture and are not limited by plugins.",
+        ],
+        bullets: [
+          "Best for: brands competing on Google, multi-service companies, and bespoke portals",
+          "Typical cost in Ghana: GHS 3,000 – 50,000+ depending on scope",
+          "KayTech advantage: mobile-first Ghana UX, Paystack/MoMo, and SEO baked in from day one",
+        ],
+      },
+      {
+        heading: "Shopify — product-first e-commerce",
+        paragraphs: [
+          "Shopify is strong when you sell physical or digital products and want inventory, checkout, and apps out of the box. Ghana merchants can accept cards via Shopify Payments partners and configure local workflows — though MoMo-first flows often need custom setup or hybrid approaches.",
+        ],
+        bullets: [
+          "Best for: product brands scaling online sales quickly",
+          "Monthly fees plus transaction costs — factor that into margins",
+          "Consider custom or headless builds when you outgrow templates or need local payment nuance",
+        ],
+      },
+      {
+        heading: "How to decide in Ghana",
+        paragraphs: [
+          "Ask three questions: (1) Are you selling products or generating leads? (2) How important is Google ranking and page speed on mobile data? (3) What is your realistic budget for build plus 12 months of growth? If leads and local SEO matter most, a custom or well-built WordPress site often wins. If inventory and checkout are the core, Shopify or custom e-commerce deserves a serious look.",
+        ],
+      },
+    ],
+    conclusion:
+      "There is no universal winner — only the right fit for your business. KayTech Africa helps Ghanaian brands choose and build WordPress, custom, and e-commerce solutions with honest scoping and MoMo-ready payments. Request a free consultation and we will recommend what actually serves your goals.",
+  },
 ];
 
 export function getAllPosts(): BlogPost[] {

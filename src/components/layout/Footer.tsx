@@ -110,14 +110,41 @@ export function Footer() {
               ))}
             </div>
             <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-on-dark/50">
+              Industries
+            </p>
+            <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-xs">
+              {footerNav.industries.map((item, i) => (
+                <span key={item.href} className="inline-flex items-center">
+                  {i > 0 ? (
+                    <span className="mr-3 text-on-dark/30" aria-hidden>
+                      ·
+                    </span>
+                  ) : null}
+                  <Link
+                    href={item.href}
+                    className="text-on-dark/70 hover:text-semantic-up"
+                  >
+                    {item.label}
+                  </Link>
+                </span>
+              ))}
+            </div>
+            <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-on-dark/50">
               More
             </p>
             <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-xs">
               <Link
-                href="/website-cost-ghana"
+                href="/industry"
                 className="text-on-dark/70 hover:text-semantic-up"
               >
-                Website cost
+                All industries
+              </Link>
+              <span className="text-on-dark/30">·</span>
+              <Link
+                href="/digital-growth-bundle"
+                className="text-on-dark/70 hover:text-semantic-up"
+              >
+                Growth bundle
               </Link>
               <span className="text-on-dark/30">·</span>
               <Link

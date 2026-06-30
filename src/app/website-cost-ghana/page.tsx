@@ -4,6 +4,7 @@ import { CheckCircle2, MessageCircle, Phone } from "lucide-react";
 import { MarketingPageHero } from "@/components/ui/MarketingPageHero";
 import { Container } from "@/components/ui/Container";
 import { LeadCaptureStrip } from "@/components/layout/LeadCaptureStrip";
+import { WebsiteCostCalculator } from "@/components/website/WebsiteCostCalculator";
 import { createPageMetadata } from "@/lib/page-metadata";
 import { ghanaSearchKeywords } from "@/lib/localized-seo";
 import { contentImages } from "@/lib/image-seo";
@@ -99,10 +100,12 @@ export default function WebsiteCostGhanaPage() {
             Typical website tiers in Ghana
           </h2>
           <p className="mt-3 max-w-2xl text-sm text-muted sm:text-base">
-            We do not publish fixed prices — every business is different. These
-            tiers describe scope and value. Request a quote for your exact figure.
+            Market ranges in Ghana (2026). Request a quote for your exact figure —
+            every business is different.
           </p>
-          <div className="mt-10 grid gap-4 lg:grid-cols-3">
+          <div className="mt-10 grid gap-8 lg:grid-cols-[1fr_1.1fr] lg:items-start">
+            <WebsiteCostCalculator />
+            <div className="grid gap-4">
             {websiteCostTiers.map((tier) => (
               <article
                 key={tier.name}
@@ -137,6 +140,7 @@ export default function WebsiteCostGhanaPage() {
                 </ul>
               </article>
             ))}
+            </div>
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link

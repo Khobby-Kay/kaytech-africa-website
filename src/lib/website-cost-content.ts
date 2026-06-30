@@ -59,20 +59,20 @@ export const websiteCostFactors = [
 export const websiteCostTiers = [
   {
     name: "Starter presence",
-    range: "Scoped affordably",
+    range: "GHS 800 – 2,500",
     bestFor: "New businesses, personal brands, simple service pages.",
     includes: ["Mobile-first design", "Core pages", "Contact & WhatsApp", "Basic SEO", "Launch support"],
   },
   {
     name: "Business website",
-    range: "Mid-range investment",
+    range: "GHS 2,500 – 6,000",
     bestFor: "Established companies that need leads and local Google visibility.",
     includes: ["Custom design", "Service/portfolio sections", "Stronger SEO", "Analytics", "Blog option"],
     featured: true,
   },
   {
     name: "E-commerce store",
-    range: "Higher investment",
+    range: "GHS 5,000 – 15,000+",
     bestFor: "Brands selling products online with MoMo and card payments.",
     includes: ["Product catalogue", "MoMo & Paystack checkout", "Order management", "WhatsApp alerts"],
   },

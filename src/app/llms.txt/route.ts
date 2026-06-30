@@ -2,6 +2,8 @@ import { siteConfig, services, academyCourses, stats } from "@/lib/site";
 import { allFaqs } from "@/lib/seo";
 import { getAllServicePages, getServicePath } from "@/lib/service-pages";
 import { getAllCityPages, getCityPath } from "@/lib/city-pages";
+import { getAllAreas, getAreaPath } from "@/lib/area-pages";
+import { getAllIndustries, getIndustryPath } from "@/lib/industry-pages";
 
 export const dynamic = "force-static";
 
@@ -49,7 +51,7 @@ function buildLlmsTxt(): string {
   lines.push(`- WhatsApp: ${siteConfig.contact.whatsappDisplay} (${siteConfig.contact.whatsapp})`);
   lines.push(`- Email: ${siteConfig.contact.email}`);
   lines.push(
-    `- Service areas: Accra, Kumasi, Tema, East Legon, Osu, Takoradi, Cape Coast, and all of Ghana`,
+    `- Service areas: Accra, Kumasi, Tema, East Legon, Osu, Spintex, Tamale, Sunyani, Takoradi, Cape Coast, and all of Ghana`,
   );
   lines.push("");
 
@@ -84,9 +86,23 @@ function buildLlmsTxt(): string {
       `- Web design ${city.cityName}: ${siteConfig.url}${getCityPath(city.slug)}`,
     );
   }
+  for (const area of getAllAreas()) {
+    lines.push(
+      `- Web design ${area.cityName}: ${siteConfig.url}${getAreaPath(area.slug)}`,
+    );
+  }
+  for (const industry of getAllIndustries()) {
+    lines.push(
+      `- ${industry.industryName} website design Ghana: ${siteConfig.url}${getIndustryPath(industry.slug)}`,
+    );
+  }
+  lines.push(`- Industry hub: ${siteConfig.url}/industry`);
   lines.push(`- All capabilities: ${siteConfig.url}/features`);
   lines.push(`- Website cost in Ghana: ${siteConfig.url}/website-cost-ghana`);
   lines.push(`- Pricing approach: ${siteConfig.url}/pricing`);
+  lines.push(`- Digital growth bundle (web + SEO + AI): ${siteConfig.url}/digital-growth-bundle`);
+  lines.push(`- SEO packages Ghana: ${siteConfig.url}/seo-packages-ghana`);
+  lines.push(`- MoMo & Paystack integration: ${siteConfig.url}/momo-paystack-integration-ghana`);
   lines.push(`- AI business automation: ${siteConfig.url}/ai-automation`);
   lines.push(`- Academy: ${siteConfig.url}/academy`);
   lines.push(`- FAQ: ${siteConfig.url}/faq`);

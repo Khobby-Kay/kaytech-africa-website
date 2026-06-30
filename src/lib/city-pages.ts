@@ -445,6 +445,106 @@ export const cityPages: CityPage[] = [
     image: contentImages.whyStudio,
     imageCaption: "Web design for Ho, Hohoe & Volta Region businesses",
   },
+  {
+    slug: "tamale-ghana",
+    cityName: "Tamale",
+    region: "Northern Region",
+    title: "Best Web Design in Tamale, Ghana | Website Developer | KayTech Africa",
+    metaDescription:
+      "Web design in Tamale, Northern Region — business websites, e-commerce, and SEO for Tamale brands. KayTech Africa serves all Ghana. Call 024 840 8154.",
+    keywords: [
+      "web design Tamale",
+      "website designer Tamale Ghana",
+      "web developer Northern Region",
+      "website design Tamale Ghana",
+      "affordable web design Tamale",
+    ],
+    heroTitle: "Web design in Tamale & Northern Region",
+    heroDescription:
+      "Professional websites for Tamale businesses — mobile-first, MoMo-ready, built to rank on Google across Northern Ghana.",
+    intro:
+      "Tamale is the commercial hub of Northern Ghana — agriculture, trade, education, and a fast-growing SME sector. Businesses in Tamale need websites that work on mobile networks, support MoMo, and make it easy for customers to call or WhatsApp. KayTech Africa delivers Tamale websites with the same studio quality we provide in Accra and Kumasi.",
+    areas: ["Tamale", "Sagnarigu", "Northern Region", "Yendi", "Bolgatanga corridor"],
+    whyChoose: [
+      {
+        title: "Northern Region coverage",
+        body: "One trusted studio for Tamale and Northern Ghana — no need to travel south for professional web design.",
+      },
+      {
+        title: "Mobile & MoMo ready",
+        body: "Built for how Northern Region customers browse and pay on everyday smartphones.",
+      },
+      {
+        title: "Agriculture & trade",
+        body: "Catalogues, wholesale listings, and lead capture for agribusiness and retail.",
+      },
+      {
+        title: "Remote-first delivery",
+        body: "WhatsApp, phone, and video — smooth projects from our Accra studio nationwide.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Do you build websites for businesses in Tamale?",
+        answer:
+          "Yes. KayTech serves Tamale and all of Northern Region with web design, e-commerce, SEO, and AI automation.",
+      },
+      {
+        question: "How much does a website cost in Tamale?",
+        answer:
+          "Pricing is scoped per project. See /website-cost-ghana or request a free quote — same transparent process nationwide.",
+      },
+    ],
+    image: contentImages.principleLocal,
+    imageCaption: "Web design for Tamale & Northern Ghana",
+  },
+  {
+    slug: "sunyani-ghana",
+    cityName: "Sunyani",
+    region: "Bono Region",
+    title: "Web Design Sunyani, Ghana | Website Company | KayTech Africa",
+    metaDescription:
+      "Web design in Sunyani, Bono Region — business websites, SEO, and e-commerce for Sunyani and Brong-Ahafo brands. KayTech Africa.",
+    keywords: [
+      "web design Sunyani",
+      "website designer Sunyani Ghana",
+      "web developer Bono Region",
+      "website design Sunyani",
+    ],
+    heroTitle: "Web design in Sunyani & Bono Region",
+    heroDescription:
+      "Credible websites for Sunyani schools, clinics, retailers, and services — mobile-first for Ghana.",
+    intro:
+      "Sunyani anchors the Bono Region's education, health, and retail economy. Local businesses compete for visibility on Google and WhatsApp. KayTech Africa builds Sunyani websites that establish trust, capture leads, and support MoMo payments — delivered remotely with Accra studio quality.",
+    areas: ["Sunyani", "Bono Region", "Techiman", "Dormaa", "Berekum"],
+    whyChoose: [
+      {
+        title: "Bono Region expertise",
+        body: "Web design scoped for Sunyani schools, clinics, NGOs, and growing SMEs.",
+      },
+      {
+        title: "Affordable professional builds",
+        body: "Clear quotes without surprise fees — scoped to your goals and budget.",
+      },
+      {
+        title: "SEO for Sunyani searches",
+        body: "Rank when customers search your service + Sunyani or Bono Region.",
+      },
+      {
+        title: "Nationwide studio",
+        body: "1914+ businesses served — Accra-based team, Ghana-wide delivery.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Can you help Sunyani schools and hospitals?",
+        answer:
+          "Yes — see /industry/school-website-design-ghana and contact us for healthcare-scoped projects.",
+      },
+    ],
+    image: contentImages.principleMomo,
+    imageCaption: "Sunyani business websites",
+  },
 ];
 
 export function getCityBySlug(slug: string): CityPage | undefined {

@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site";
 import { getAllCityPages, getCityPath } from "@/lib/city-pages";
+import { getAllAreas, getAreaPath } from "@/lib/area-pages";
+import { getAllIndustries, getIndustryPath } from "@/lib/industry-pages";
 import { getAllPosts } from "@/lib/blog";
 import { getAllServicePages, getServicePath } from "@/lib/service-pages";
 import { getAllTeamMembers, getTeamPath } from "@/lib/team-pages";
@@ -20,6 +22,10 @@ const staticRoutes: StaticRoute[] = [
   { path: "/features", changeFrequency: "monthly", priority: 0.85 },
   { path: "/website-cost-ghana", changeFrequency: "monthly", priority: 0.9 },
   { path: "/pricing", changeFrequency: "monthly", priority: 0.85 },
+  { path: "/industry", changeFrequency: "monthly", priority: 0.88 },
+  { path: "/digital-growth-bundle", changeFrequency: "monthly", priority: 0.87 },
+  { path: "/seo-packages-ghana", changeFrequency: "monthly", priority: 0.87 },
+  { path: "/momo-paystack-integration-ghana", changeFrequency: "monthly", priority: 0.86 },
   { path: "/about", changeFrequency: "monthly", priority: 0.85 },
   { path: "/contact", changeFrequency: "monthly", priority: 0.85 },
   { path: "/ai-automation", changeFrequency: "monthly", priority: 0.8 },
@@ -74,5 +80,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.88,
   }));
 
-  return [...staticEntries, ...serviceEntries, ...cityEntries, ...teamEntries, ...blogEntries];
+  const areaEntries: MetadataRoute.Sitemap = getAllAreas().map((page) => ({
+    url: `${siteConfig.url}${getAreaPath(page.slug)}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.86,
+  }));
+
+  const industryEntries: MetadataRoute.Sitemap = getAllIndustries().map((page) => ({
+    url: `${siteConfig.url}${getIndustryPath(page.slug)}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.87,
+  }));
+
+  return [
+    ...staticEntries,
+    ...serviceEntries,
+    ...cityEntries,
+    ...areaEntries,
+    ...industryEntries,
+    ...teamEntries,
+    ...blogEntries,
+  ];
 }
