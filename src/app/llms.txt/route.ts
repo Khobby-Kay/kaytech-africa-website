@@ -4,6 +4,12 @@ import { getAllServicePages, getServicePath } from "@/lib/service-pages";
 import { getAllCityPages, getCityPath } from "@/lib/city-pages";
 import { getAllAreas, getAreaPath } from "@/lib/area-pages";
 import { getAllIndustries, getIndustryPath } from "@/lib/industry-pages";
+import { clientLogos } from "@/lib/client-logos";
+import {
+  aggregateImpactMetrics,
+  proofOfImpactCopy,
+} from "@/lib/proof-of-impact";
+import { caseStudies } from "@/lib/portfolio";
 
 export const dynamic = "force-static";
 
@@ -55,6 +61,31 @@ function buildLlmsTxt(): string {
   );
   lines.push("");
 
+  lines.push("## Proof of impact (client results)");
+  lines.push("");
+  lines.push(proofOfImpactCopy.description);
+  lines.push("");
+  lines.push("Aggregate metrics:");
+  for (const metric of aggregateImpactMetrics) {
+    lines.push(`- ${metric.label}: ${metric.value} (${metric.detail})`);
+  }
+  lines.push("");
+  lines.push("Client case studies:");
+  for (const study of caseStudies) {
+    lines.push(`### ${study.client} (${study.sector}, ${study.location})`);
+    lines.push(`- Headline result: ${study.headline}`);
+    lines.push(`- Summary: ${study.summary}`);
+    lines.push(`- Key outcome: ${study.result}`);
+    lines.push(`- Timeline: ${study.timeline}`);
+    lines.push(`- Full story: ${siteConfig.url}/portfolio#${study.slug}`);
+    lines.push("");
+  }
+  lines.push("Trusted client logos on site:");
+  for (const logo of clientLogos) {
+    lines.push(`- ${logo.name}`);
+  }
+  lines.push("");
+
   lines.push("## Academy");
   lines.push("");
   lines.push(
@@ -97,6 +128,7 @@ function buildLlmsTxt(): string {
     );
   }
   lines.push(`- Industry hub: ${siteConfig.url}/industry`);
+  lines.push(`- Portfolio & case studies: ${siteConfig.url}/portfolio`);
   lines.push(`- All capabilities: ${siteConfig.url}/features`);
   lines.push(`- Website cost in Ghana: ${siteConfig.url}/website-cost-ghana`);
   lines.push(`- Pricing approach: ${siteConfig.url}/pricing`);
