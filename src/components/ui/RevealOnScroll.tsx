@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 export type RevealVariant =
@@ -19,6 +19,15 @@ const variantHidden: Record<RevealVariant, string> = {
   "zoom-in": "scale-95 opacity-0",
   fade: "opacity-0",
 };
+
+/** False on server + first HTML payload so crawlers see full content (no opacity-0). */
+function useCanRunScrollAnimation() {
+  return useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  );
+}
 
 type RevealOnScrollProps = {
   children: ReactNode;
@@ -42,11 +51,26 @@ export function RevealOnScroll({
   repeat = false,
 }: RevealOnScrollProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
+  const canAnimate = useCanRunScrollAnimation();
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
+    if (!canAnimate) return;
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion) {
+      setVisible(true);
+      return;
+    }
+
     const node = ref.current;
     if (!node) return;
+
+    const rect = node.getBoundingClientRect();
+    const inViewport = rect.top < window.innerHeight && rect.bottom > 0;
+    if (!inViewport) {
+      setVisible(false);
+    }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -62,7 +86,9 @@ export function RevealOnScroll({
 
     observer.observe(node);
     return () => observer.disconnect();
-  }, [threshold, repeat]);
+  }, [threshold, repeat, canAnimate]);
+
+  const revealed = !canAnimate || visible;
 
   return (
     <div
@@ -70,12 +96,14 @@ export function RevealOnScroll({
       className={cn(
         "motion-reduce:translate-none motion-reduce:scale-100 motion-reduce:opacity-100",
         "transition-[opacity,transform] ease-out will-change-[opacity,transform]",
-        visible ? "translate-x-0 translate-y-0 scale-100 opacity-100" : variantHidden[variant],
+        revealed
+          ? "translate-x-0 translate-y-0 scale-100 opacity-100"
+          : variantHidden[variant],
         className,
       )}
       style={{
         transitionDuration: `${duration}ms`,
-        transitionDelay: visible ? `${delay}ms` : "0ms",
+        transitionDelay: revealed && canAnimate ? `${delay}ms` : "0ms",
       }}
     >
       {children}

@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { RevealOnScroll, StaggerReveal } from "@/components/ui/RevealOnScroll";
 import { ImpactMetricBar } from "@/components/ui/ImpactMetricBar";
 import { clientLogos } from "@/lib/client-logos";
 import {
@@ -20,24 +19,19 @@ export function ProofOfImpact() {
       className="border-b border-hairline bg-gradient-to-br from-primary via-primary-deep to-[#0c2d4a] text-on-primary"
     >
       <Container className="px-5 py-14 lg:px-20 lg:py-20">
-        <RevealOnScroll variant="fade-up">
-          <div className="max-w-3xl">
-            <span className="inline-flex items-center rounded-pill border border-white/20 bg-white/10 px-4 py-1.5 font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-on-primary/90">
-              {proofOfImpactCopy.eyebrow}
-            </span>
-            <h2 className="mt-5 font-display text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl">
-              {proofOfImpactCopy.title}
-            </h2>
-            <p className="mt-4 text-sm leading-relaxed text-on-primary/80 sm:text-base">
-              {proofOfImpactCopy.description}
-            </p>
-          </div>
-        </RevealOnScroll>
+        <div className="max-w-3xl">
+          <span className="inline-flex items-center rounded-pill border border-white/20 bg-white/10 px-4 py-1.5 font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-on-primary/90">
+            {proofOfImpactCopy.eyebrow}
+          </span>
+          <h2 className="mt-5 font-display text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl">
+            {proofOfImpactCopy.title}
+          </h2>
+          <p className="mt-4 text-sm leading-relaxed text-on-primary/80 sm:text-base">
+            {proofOfImpactCopy.description}
+          </p>
+        </div>
 
-        <StaggerReveal
-          className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4"
-          staggerMs={80}
-        >
+        <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {aggregateImpactMetrics.map((metric) => (
             <div
               key={metric.label}
@@ -54,7 +48,7 @@ export function ProofOfImpact() {
               </p>
             </div>
           ))}
-        </StaggerReveal>
+        </div>
 
         <div className="mt-12 grid gap-4 lg:grid-cols-3">
           {clientImpactHighlights.map((item) => (

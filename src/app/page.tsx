@@ -3,6 +3,7 @@ import { Hero } from "@/components/home/Hero";
 import { LeadCaptureStrip } from "@/components/layout/LeadCaptureStrip";
 import { LeadingCompanySection } from "@/components/home/LeadingCompanySection";
 import { ProofOfImpact } from "@/components/home/ProofOfImpact";
+import { CrawlerContentSnapshot } from "@/components/seo/CrawlerContentSnapshot";
 import { HomeMainContent } from "@/components/home/HomeMainContent";
 import { LocalizedSeoSection } from "@/components/home/LocalizedSeoSection";
 import { KeyFacts } from "@/components/home/KeyFacts";
@@ -26,6 +27,7 @@ export default function HomePage() {
       <LeadCaptureStrip location="homepage" hideOnMobile />
       <LeadingCompanySection />
       <ProofOfImpact />
+      <CrawlerContentSnapshot />
       <HomeMainContent />
       <KeyFacts />
       <LocalizedSeoSection />
