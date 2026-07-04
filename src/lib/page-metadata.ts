@@ -5,17 +5,27 @@ import { ogImage } from "@/lib/seo";
 type PageMetaInput = {
   title: string;
   description: string;
+  /** Page path used for Open Graph URL (the page being viewed). */
   path: string;
+  /** Override when this URL should consolidate to another page (duplicate content). */
+  canonicalPath?: string;
   keywords?: string[];
 };
+
+function toAbsoluteCanonical(path: string): string {
+  if (path === "/" || path === "") return siteConfig.url;
+  return `${siteConfig.url}${path.startsWith("/") ? path : `/${path}`}`;
+}
 
 export function createPageMetadata({
   title,
   description,
   path,
+  canonicalPath,
   keywords = [],
 }: PageMetaInput): Metadata {
-  const canonical = path === "/" ? "/" : path;
+  const canonical = toAbsoluteCanonical(canonicalPath ?? path);
+  const ogPath = path === "/" ? "/" : path;
 
   return {
     title,
@@ -27,7 +37,7 @@ export function createPageMetadata({
     openGraph: {
       title,
       description,
-      url: canonical,
+      url: ogPath,
       type: "website",
       locale: "en_GH",
       siteName: siteConfig.name,

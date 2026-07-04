@@ -6,6 +6,7 @@ import { Container } from "@/components/ui/Container";
 import { Media } from "@/components/ui/Media";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import { getOrganizationLogoSchema } from "@/lib/brand-assets";
+import { getIndustryBySlug, getIndustryPath } from "@/lib/industry-pages";
 import { createPageMetadata } from "@/lib/page-metadata";
 import { siteConfig } from "@/lib/site";
 
@@ -29,10 +30,14 @@ export function generateMetadata({
     });
   }
 
+  // Blog guides that mirror /industry/[slug] pages — canonical points to the service landing page.
+  const industryTwin = getIndustryBySlug(post.slug);
+
   return createPageMetadata({
     title: `${post.title} | KayTech Africa`,
     description: post.excerpt,
     path: `/blog/${post.slug}`,
+    canonicalPath: industryTwin ? getIndustryPath(industryTwin.slug) : undefined,
     keywords: post.keywords,
   });
 }

@@ -4,6 +4,7 @@ import { getAllCityPages, getCityPath } from "@/lib/city-pages";
 import { getAllAreas, getAreaPath } from "@/lib/area-pages";
 import { getAllIndustries, getIndustryPath } from "@/lib/industry-pages";
 import { getAllPosts } from "@/lib/blog";
+import { getIndustryBySlug } from "@/lib/industry-pages";
 import { getAllServicePages, getServicePath } from "@/lib/service-pages";
 import { getAllTeamMembers, getTeamPath } from "@/lib/team-pages";
 
@@ -63,7 +64,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.65,
   }));
 
-  const blogEntries: MetadataRoute.Sitemap = getAllPosts().map((post) => ({
+  const blogEntries: MetadataRoute.Sitemap = getAllPosts()
+    .filter((post) => !getIndustryBySlug(post.slug))
+    .map((post) => ({
     url: `${siteConfig.url}/blog/${post.slug}`,
     lastModified: new Date(post.date),
     changeFrequency: "monthly" as const,
