@@ -2,77 +2,38 @@
 
 import { Container } from "@/components/ui/Container";
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
-
-const quotes = [
-  {
-    quote:
-      "KayTech didn't just build us a website — they built a system that actually converts on mobile data.",
-    name: "Adaeze N.",
-    role: "E-commerce founder · Accra",
-    initial: "A",
-  },
-  {
-    quote:
-      "The academy gave me skills I could monetize within weeks. Practical, not theory-heavy.",
-    name: "Tomide A.",
-    role: "Academy graduate · Kumasi",
-    initial: "T",
-  },
-  {
-    quote:
-      "Finally, a tech partner that understands MoMo, WhatsApp, and how Ghana actually does business.",
-    name: "Ifeoma E.",
-    role: "SME owner · Tamale",
-    initial: "I",
-  },
-  {
-    quote:
-      "We shipped our MVP in six weeks. The team was responsive, and it just works.",
-    name: "Kelechi O.",
-    role: "Startup founder · Lagos",
-    initial: "K",
-  },
-];
+import { homepageTestimonials } from "@/lib/testimonials";
 
 export function Testimonials() {
-  const track = [...quotes, ...quotes];
-
   return (
-    <section className="overflow-hidden border-y border-hairline bg-surface-soft py-16 lg:py-24">
+    <section className="border-y border-hairline bg-surface-soft py-16 lg:py-24">
       <Container>
         <RevealOnScroll variant="fade-up">
           <h2 className="max-w-2xl font-display text-3xl tracking-tight text-ink sm:text-4xl">
-            Loved by builders, founders and busy teams
+            What clients and graduates say
           </h2>
           <p className="mt-3 text-muted">
-            Built with Africans who already lived the workaround.
+            Full names shared with permission. no recycled or anonymous quotes.
           </p>
         </RevealOnScroll>
-      </Container>
 
-      <div className="mt-12 overflow-hidden">
-        <div className="marquee-track flex w-max gap-5 px-5 lg:px-12">
-          {track.map((q, i) => (
+        <div className="mt-12 grid gap-5 md:grid-cols-3">
+          {homepageTestimonials.map((q) => (
             <blockquote
-              key={`${q.name}-${i}`}
-              className="w-[320px] shrink-0 rounded-3xl border border-hairline bg-canvas p-6 shadow-card sm:w-[360px]"
+              key={q.name}
+              className="rounded-3xl border border-hairline bg-canvas p-6 shadow-card"
             >
               <p className="text-sm leading-relaxed text-ink">
                 &ldquo;{q.quote}&rdquo;
               </p>
-              <footer className="mt-6 flex items-center gap-3">
-                <span className="grid h-10 w-10 place-items-center rounded-full bg-surface-strong text-sm font-semibold text-ink">
-                  {q.initial}
-                </span>
-                <div>
-                  <p className="text-sm font-medium text-ink">{q.name}</p>
-                  <p className="text-xs text-muted">{q.role}</p>
-                </div>
+              <footer className="mt-6">
+                <p className="text-sm font-medium text-ink">{q.name}</p>
+                <p className="text-xs text-muted">{q.role}</p>
               </footer>
             </blockquote>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

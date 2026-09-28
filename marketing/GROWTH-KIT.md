@@ -1,4 +1,4 @@
-# KayTech Africa — Growth & Launch Kit
+# KayTech Africa. Growth & Launch Kit
 
 Everything off-site that makes the website actually pull in customers and gets
 KayTech cited by Google and AI assistants. Work top to bottom.
@@ -21,7 +21,7 @@ is what builds trust with Google and AI engines.
 
 ---
 
-## 1. Site configuration (do these first — 30 mins)
+## 1. Site configuration (do these first. 30 mins)
 
 In Vercel → Project → Settings → Environment Variables, add:
 
@@ -33,7 +33,7 @@ In Vercel → Project → Settings → Environment Variables, add:
 | `LEAD_INBOX` | your email (default info@kaytechafrica.com) | Where leads are delivered |
 | `LEAD_FROM` | e.g. `KayTech Africa <info@kaytechafrica.com>` (after verifying domain in Resend) | Sender of lead emails |
 
-After adding, redeploy. The site works without these — they just turn features on.
+After adding, redeploy. The site works without these. they just turn features on.
 
 ### Google Search Console (critical for SEO speed)
 1. Add property `https://www.kaytechafrica.com`.
@@ -56,7 +56,7 @@ Create/claim at business.google.com. This is the single most important step for
 **Primary category:** Website designer
 **Additional categories:** Web developer, Software company, Marketing agency, Internet marketing service
 
-**Short description (750 char max — paste this):**
+**Short description (750 char max. paste this):**
 > KayTech Africa is a web design and web development company based in Accra,
 > Ghana. We build fast, mobile-first websites, e-commerce stores, SEO, and AI
 > business automation for businesses across Accra, Kumasi, Tema, Takoradi, and
@@ -70,10 +70,10 @@ Digital marketing, AI automation / chatbots, WhatsApp automation, Website
 maintenance.
 
 **Then:**
-- Add 8–12 photos (logo, team, work screenshots — compressed versions are in `/public/images`).
+- Add 8–12 photos (logo, team, work screenshots. compressed versions are in `/public/images`).
 - Add your real opening hours.
 - Turn on messaging.
-- Post a weekly "Update" (a project, tip, or offer) — keeps the profile active.
+- Post a weekly "Update" (a project, tip, or offer). keeps the profile active.
 
 ---
 
@@ -96,12 +96,12 @@ Get your review link from your Business Profile → "Ask for reviews".
 List KayTech on each of these with the EXACT details from section 0:
 
 - Google Business Profile (section 2)
-- Bing Places — bingplaces.com
-- Apple Business Connect — businessconnect.apple.com (feeds Apple Maps + Siri)
-- LinkedIn Company Page — linkedin.com/company/kaytech-africa (already referenced)
+- Bing Places. bingplaces.com
+- Apple Business Connect. businessconnect.apple.com (feeds Apple Maps + Siri)
+- LinkedIn Company Page. linkedin.com/company/kaytech-africa (already referenced)
 - Ghana business directories: GhanaYello, BusinessGhana, Ghana Business Web, JiJi business
-- Clutch.co and GoodFirms (B2B agency directories — strong for "best agency" queries)
-- Crunchbase (company entity — helps AI knowledge graphs)
+- Clutch.co and GoodFirms (B2B agency directories. strong for "best agency" queries)
+- Crunchbase (company entity. helps AI knowledge graphs)
 
 **One-line description for directories:**
 > Accra-based web design, development, SEO & AI automation company serving
@@ -122,7 +122,7 @@ List KayTech on each of these with the EXACT details from section 0:
 
 ---
 
-## 6. Content that compounds (ongoing — for SEO + AI citation)
+## 6. Content that compounds (ongoing. for SEO + AI citation)
 
 Publish short, useful articles answering what customers ask. Each one is
 something Google ranks and AI can cite:

@@ -1,4 +1,6 @@
-/** Ghana-local search phrases and copy — used in metadata and on-page content. */
+/** Ghana-local search phrases and copy. used in metadata and on-page content. */
+
+import { studioProofLine } from "@/lib/trust-metrics";
 
 export const ghanaSearchKeywords = [
   "best web developer in Ghana",
@@ -77,7 +79,7 @@ export const homepageSearchBlock = {
   eyebrow: "Find us on Google",
   title: "Looking for the best web developer or designer in Ghana?",
   intro:
-    "Thousands of business owners search every month for the best web developer in Ghana, the best web designer in Accra, affordable website design in Kumasi, or a trusted SEO company in Ghana. KayTech Africa is the Accra-based studio they choose — 1914+ businesses served for brands that need real results, not templates.",
+    `Thousands of business owners search every month for the best web developer in Ghana, the best web designer in Accra, affordable website design in Kumasi, or a trusted SEO company in Ghana. KayTech Africa is the Accra-based studio they choose. ${studioProofLine}, with published case studies and transparent GHS pricing.`,
   areas: [
     "Best web design company in Accra",
     "Top web developer in Ghana",
@@ -97,7 +99,7 @@ export const localizedServicePhrases = [
   },
   {
     title: "Best web designer in Accra",
-    body: "Our Accra studio delivers conversion-first UI design, responsive layouts, and brand-aligned pages — whether you are in East Legon, Tema, Osu, or anywhere in Greater Accra.",
+    body: "Our Accra studio delivers conversion-first UI design, responsive layouts, and brand-aligned pages. whether you are in East Legon, Tema, Osu, or anywhere in Greater Accra.",
   },
   {
     title: "Affordable web design in Ghana",
@@ -105,7 +107,7 @@ export const localizedServicePhrases = [
   },
   {
     title: "SEO company in Ghana",
-    body: "Rank for the searches your customers actually type — web design Accra, your industry + Ghana, and local keywords that bring qualified leads to your inbox.",
+    body: "Rank for the searches your customers actually type. web design Accra, your industry + Ghana, and local keywords that bring qualified leads to your inbox.",
   },
 ] as const;
 
@@ -113,7 +115,7 @@ export const seoFaqs = [
   {
     question: "Who is the best web developer in Ghana?",
     answer:
-      "KayTech Africa is one of Ghana's top-rated web development studios, with 1914+ businesses served from our Accra base and an accumulated 30 years experience. We build responsive business websites, e-commerce stores, and SEO-optimized platforms for clients in Accra, Kumasi, Tema, and across the country.",
+      `KayTech Africa is an Accra-based web development studio (${studioProofLine}). We build responsive business websites, e-commerce stores, and SEO-optimized platforms for clients in Accra, Kumasi, Tema, and across the country.`,
   },
   {
     question: "Where can I find the best web designer in Accra?",
@@ -123,7 +125,7 @@ export const seoFaqs = [
   {
     question: "Do you offer affordable web design in Ghana?",
     answer:
-      "Yes. We work with startups, SMEs, and established brands across Ghana with clear proposals and scoped pricing — so you get a professional website without surprise costs.",
+      "Yes. We work with startups, SMEs, and established brands across Ghana with clear proposals and scoped pricing. so you get a professional website without surprise costs.",
   },
   {
     question: "Do you build websites in Kumasi, Tema, and outside Accra?",
@@ -142,48 +144,44 @@ export const pageSeoCopy = {
     title:
       "Best Web Developer in Ghana | Top Web Designer Accra | KayTech Africa",
     description:
-      "KayTech Africa — the best web design company in Ghana. Hire the top web developer or website designer in Accra, Kumasi & nationwide. Affordable SEO, e-commerce & digital marketing. 1914+ businesses served. Call 024 840 8154.",
+      "KayTech Africa. the best web design company in Ghana. Hire the top web developer or website designer in Accra, Kumasi & nationwide. Affordable SEO, e-commerce & digital marketing. Published case studies. Call 024 840 8154.",
   },
   features: {
-    title:
-      "Best Web Design & Development Services in Ghana | SEO Accra | KayTech",
+    title: "Services & Capabilities | KayTech Africa",
     description:
-      "Hire Ghana's best web developers and designers. Custom websites, e-commerce, SEO, and digital marketing in Accra, Kumasi, Tema. Affordable, professional, conversion-focused.",
+      "What KayTech builds for Ghanaian businesses. custom websites, e-commerce, SEO, AI automation, and digital marketing. Accra-based studio serving Kumasi, Tema, and nationwide.",
     heroTitle: "Ghana's trusted web design & development studio",
     heroDescription:
-      "Looking for the best web developer in Ghana or the best web designer in Accra? KayTech delivers SEO, e-commerce, AI automation, and digital marketing — scoped for businesses in Accra, Kumasi, Tema, and nationwide.",
+      "Custom websites, SEO, e-commerce, AI automation, and digital marketing. scoped for businesses in Accra, Kumasi, Tema, and nationwide.",
   },
   about: {
-    title:
-      "About KayTech — Best Web Design Company in Accra, Ghana",
+    title: "About KayTech Africa | Our Team & Story",
     description:
-      "Meet KayTech Africa, Accra's top web design and development studio. 1914+ businesses served, academy-backed talent, and a team Ghanaians trust when they search for the best website designer in Ghana.",
+      `Meet KayTech Africa. Accra-based web design and development studio. ${studioProofLine}, academy-backed talent, and delivery built for Ghanaian markets.`,
     heroTitle: "The web design company Accra & Ghana trusts",
     heroDescription:
-      "KayTech Africa is among the best web developers in Ghana — built in Accra, serving Kumasi, Tema, and brands nationwide with websites, SEO, and growth systems that actually perform.",
+      "Built in Accra, serving Kumasi, Tema, and brands nationwide with websites, SEO, and growth systems that actually perform.",
   },
   contact: {
-    title:
-      "Contact Best Web Designer in Accra | Web Development Quote Ghana",
+    title: "Contact KayTech Africa | Project Quotes & Support",
     description:
-      "Get a quote from Ghana's top web design company. Call 024 840 8154 or WhatsApp 055 992 1979. Affordable website design, SEO, and e-commerce for Accra, Kumasi, and all of Ghana.",
-    heroTitle: "Talk to Ghana's best web design team",
+      "Request a web design or development quote. Call 024 840 8154 or WhatsApp 055 992 1979. KayTech serves Accra, Kumasi, Tema, and all of Ghana.",
+    heroTitle: "Talk to our web design team",
     heroDescription:
-      "Need the best web developer in Ghana or an affordable website designer in Accra? Tell us about your project — we respond within one business day with a clear next step.",
+      "Tell us about your project. we respond within one business day with a clear next step, scope, and timeline.",
   },
   faq: {
-    title:
-      "FAQ — Best Web Developer Ghana, Web Design Accra | KayTech Africa",
+    title: "FAQ | Web Design, Pricing & SEO in Ghana | KayTech Africa",
     description:
-      "Answers about hiring the best web designer in Accra, affordable web design in Ghana, SEO services, Kumasi & Tema projects, and how KayTech delivers results for 1914+ businesses.",
+      "Answers about website costs in Ghana, project timelines, SEO, remote work in Kumasi & Tema, and how KayTech delivers measurable results.",
     heroTitle: "Web design & development questions Ghanaians ask",
     heroDescription:
-      "Who is the best web developer in Ghana? How much does a website cost? Do you work in Kumasi and Accra? Find answers from KayTech Africa's studio team.",
+      "How much does a website cost? Do you work in Kumasi and Accra? Find answers from KayTech Africa's studio team.",
   },
   academy: {
     title: "KayTech Academy | Best Web Design and Development School in Ghana",
     description:
-      "KayTech Academy — Ghana's practical web design, development, digital marketing, and SaaS school in Accra. Job-ready training in 3 months. Online and on-site.",
+      "KayTech Academy. Ghana's practical web design, development, digital marketing, and SaaS school in Accra. Job-ready training in 3 months. Online and on-site.",
     heroDescription:
       "Train with the team behind one of Ghana's best web design companies. Web design, development, SEO, digital marketing, and SaaS courses for students and career switchers.",
   },
@@ -191,7 +189,7 @@ export const pageSeoCopy = {
     title:
       "AI Business Automation in Ghana | Chatbots & WhatsApp Automation | KayTech",
     description:
-      "KayTech Africa builds AI business automation for Ghanaian companies — AI chatbots, WhatsApp automation, lead-capture assistants, and workflow bots that save hours and win more customers. Based in Accra, serving all of Ghana.",
+      "KayTech Africa builds AI business automation for Ghanaian companies. AI chatbots, WhatsApp automation, lead-capture assistants, and workflow bots that save hours and win more customers. Based in Accra, serving all of Ghana.",
     heroTitle: "AI business automation for Ghanaian companies",
     heroDescription:
       "Capture leads 24/7, answer customers instantly, and automate the busywork. KayTech builds AI chatbots, WhatsApp automation, and workflow bots for businesses in Accra, Kumasi, Tema, and across Ghana.",

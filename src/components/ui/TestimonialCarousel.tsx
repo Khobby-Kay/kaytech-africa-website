@@ -16,7 +16,7 @@ type TestimonialCarouselProps = {
   intervalMs?: number;
 };
 
-/** Auto-rotating testimonial block — Barns-style social proof with KayTech copy. */
+/** Auto-rotating testimonial block. Barns-style social proof with KayTech copy. */
 export function TestimonialCarousel({
   items,
   className,

@@ -1,17 +1,18 @@
 import { contentImages } from "@/lib/image-seo";
+import { publicStudioStats, studioProofLine } from "@/lib/trust-metrics";
 
 export const siteConfig = {
   name: "KayTech Africa",
   shortName: "KayTech",
   tagline: "African Digital Infrastructure. Built Different.",
   description:
-    "KayTech Africa is the best web design company in Ghana — AI automation, web development, SEO, e-commerce, and an academy training Africa's next generation of digital talent. Accra-based, serving Kumasi, Tema, and nationwide.",
+    "KayTech Africa is the best web design company in Ghana. AI automation, web development, SEO, e-commerce, and an academy training Africa's next generation of digital talent. Accra-based, serving Kumasi, Tema, and nationwide.",
   url: "https://www.kaytechafrica.com",
   founded: 2020,
   location: {
     line1: "Accra",
     line2: "Greater Accra Region, Ghana",
-    /** Public listings (LinkedIn / Google) — remote-first, Accra-based */
+    /** Public listings (LinkedIn / Google). remote-first, Accra-based */
     mapsUrl: "https://www.google.com/maps/search/KayTech+Africa+Accra+Ghana",
     coordinates: { lat: 5.6037, lng: -0.187 },
   },
@@ -75,7 +76,7 @@ export const services = [
     icon: "Blocks",
     title: "Software As A Services (SAAS)",
     description:
-      "SaaS product design and development — subscription-ready web apps, dashboards, and scalable cloud platforms.",
+      "SaaS product design and development. subscription-ready web apps, dashboards, and scalable cloud platforms.",
     tags: ["SaaS MVP", "Subscriptions", "Web Apps"],
   },
 ] as const;
@@ -87,7 +88,7 @@ export const academyCourses = [
     duration: "8 weeks",
     level: "Beginner",
     description:
-      "Master layout, typography, colour theory, and Figma — design interfaces that convert on any screen.",
+      "Master layout, typography, colour theory, and Figma. design interfaces that convert on any screen.",
     outcomes: ["UI systems", "Responsive layouts", "Design handoff"],
   },
   {
@@ -96,7 +97,7 @@ export const academyCourses = [
     duration: "12 weeks",
     level: "Beginner → Intermediate",
     description:
-      "HTML, CSS, JavaScript, React, and modern web frameworks — build production-ready sites from scratch to deployment.",
+      "HTML, CSS, JavaScript, React, and modern web frameworks. build production-ready sites from scratch to deployment.",
     outcomes: ["Full-stack basics", "APIs", "Deploy to cloud"],
   },
   {
@@ -105,7 +106,7 @@ export const academyCourses = [
     duration: "6 weeks",
     level: "All levels",
     description:
-      "SEO, social media, paid ads, and analytics — grow brands and businesses across African markets.",
+      "SEO, social media, paid ads, and analytics. grow brands and businesses across African markets.",
     outcomes: ["Campaign strategy", "Content systems", "ROI tracking"],
   },
   {
@@ -132,7 +133,7 @@ export const academyCourses = [
     duration: "4 weeks",
     level: "All levels",
     description:
-      "Pricing, proposals, client management, and personal branding — turn skills into sustainable income.",
+      "Pricing, proposals, client management, and personal branding. turn skills into sustainable income.",
     outcomes: ["Portfolio", "Pricing models", "Client systems"],
   },
 ] as const;
@@ -141,7 +142,7 @@ export const leadership = {
   ceo: {
     name: "Aikins Armstrong",
     title: "Founder & CEO",
-    bio: "Certified futurist and keynote speaker architecting African digital infrastructure — from AI middleware to the studio and academy.",
+    bio: "Certified futurist and keynote speaker architecting African digital infrastructure. from AI middleware to the studio and academy.",
     image: contentImages.teamCeo.src,
     linkedin: "https://www.linkedin.com/in/aikins-armstrong",
   },
@@ -163,7 +164,7 @@ export const faqs = [
   {
     question: "What does KayTech Africa do?",
     answer:
-      "We build websites, e-commerce stores, SEO, digital marketing, and AI automation for Ghanaian businesses — and run KayTech Academy for practical web and digital skills training.",
+      "We build websites, e-commerce stores, SEO, digital marketing, and AI automation for Ghanaian businesses. and run KayTech Academy for practical web and digital skills training.",
   },
   {
     question: "Who do you work with?",
@@ -173,7 +174,7 @@ export const faqs = [
   {
     question: "How do projects start?",
     answer:
-      "Reach out on WhatsApp or email. We run a discovery call, scope your goals, and deliver a clear proposal — no cookie-cutter packages.",
+      "Reach out on WhatsApp or email. We run a discovery call, scope your goals, and deliver a clear proposal. no cookie-cutter packages.",
   },
   {
     question: "Do you support MoMo and local payments?",
@@ -183,7 +184,7 @@ export const faqs = [
   {
     question: "What academy programs are available?",
     answer:
-      "Web design, web development, digital marketing, AI automation, UI/UX, and freelance business tracks — practical cohorts taught by working practitioners.",
+      "Web design, web development, digital marketing, AI automation, UI/UX, and freelance business tracks. practical cohorts taught by working practitioners.",
   },
   {
     question: "Where are you based?",
@@ -192,21 +193,18 @@ export const faqs = [
   },
 ] as const;
 
-export const stats = [
-  { value: "1914+", label: "Businesses served" },
-  { value: "30 years", label: "Accumulated experience" },
-  { value: "6+", label: "Academy tracks" },
-  { value: "100%", label: "Afrocentric build ethos" },
-] as const;
+export const stats = publicStudioStats;
+
+export { studioProofLine };
 
 export const principles = [
   {
     title: "Speed as a Feature",
-    body: "Sites that load instantly on 3G — because slow pages kill sales in Africa.",
+    body: "Sites that load instantly on 3G. because slow pages kill sales in Africa.",
   },
   {
     title: "Frictionless Payments",
-    body: "MoMo, Paystack, Flutterwave — built for how Africa actually pays.",
+    body: "MoMo, Paystack, Flutterwave. built for how Africa actually pays.",
   },
   {
     title: "Conversion-First",

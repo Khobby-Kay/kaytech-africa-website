@@ -1,24 +1,75 @@
-/** Official KayTech Academy application form (Google Forms). */
+import { academyCourseFeesGhs, academyProofLine, studioProofLine } from "@/lib/trust-metrics";
+import { academyGraduateTestimonials } from "@/lib/testimonials";
+
+/** On-site application (primary). Legacy Google Form kept as optional backup. */
 export const academyApplicationForm = {
-  url: "https://forms.gle/EaJ4nwLX28AkPDkQ8",
+  href: "/academy#apply",
+  backupUrl: "https://forms.gle/EaJ4nwLX28AkPDkQ8",
   label: "Apply now",
-  note: "Only 10 admissions per cohort — selected applicants receive a call from our admissions team.",
+  note: "Only 10 admissions per cohort. selected applicants receive a call from our admissions team.",
 } as const;
 
+export const academyApplyCourseOptions = [
+  "Web Development 101",
+  "Digital Marketing 101",
+  "Advanced Web Development & Digital Marketing",
+  "SaaS Development",
+  "Not sure. help me choose",
+] as const;
+
+export const academyHubCohorts = [
+  {
+    course: "Web Development 101",
+    label: "Oct 2026 · Online",
+    start: "6 Oct 2026",
+    href: "/academy/web-development-course",
+  },
+  {
+    course: "Web Development 101",
+    label: "Nov 2026 · On-site Accra",
+    start: "3 Nov 2026",
+    href: "/academy/web-development-course",
+  },
+  {
+    course: "Digital Marketing 101",
+    label: "Oct 2026 · Hybrid",
+    start: "14 Oct 2026",
+    href: "/academy/digital-marketing-course",
+  },
+] as const;
+
+export const academyHubOutcomes = [
+  {
+    title: "Portfolio projects",
+    body: "Graduate with 2–3 shipped sites or marketing capstones. see /academy/graduate-outcomes.",
+    href: "/academy/graduate-outcomes",
+  },
+  {
+    title: "Freelance & job readiness",
+    body: "Pricing clinics, CV reviews, and studio-style feedback. not guaranteed placement.",
+    href: "/blog/how-to-become-web-developer-ghana-2026",
+  },
+  {
+    title: "Studio connection",
+    body: `${studioProofLine} Curriculum updates from live client patterns.`,
+    href: "/portfolio",
+  },
+] as const;
+
 export const academyPageMeta = {
-  title: "KayTech Academy | Best Web Design and Development School in Ghana",
+  title: "KayTech Academy | Web Design & Development Training from GHS 2,200 | Ghana",
   description:
-    "KayTech Academy — Ghana's practical web design, development, digital marketing, and SaaS school in Accra. Job-ready training in 3 months. Online and on-site. Apply now.",
+    "KayTech Academy. Ghana's practical web design, development, digital marketing, and SaaS school in Accra. Job-ready training in 3 months. Online and on-site. Apply now.",
   heroSlides: [
     {
       title:
-        "Start a high-paying career in 3 months — master web development & digital marketing in Ghana!",
+        "Start a high-paying career in 3 months. master web development & digital marketing in Ghana!",
       cta: "View all courses",
       href: "#courses",
     },
     {
       title:
-        "Unlock your potential — build websites, create SaaS products, and dominate digital marketing!",
+        "Unlock your potential. build websites, create SaaS products, and dominate digital marketing!",
       cta: "View all courses",
       href: "#courses",
     },
@@ -26,40 +77,40 @@ export const academyPageMeta = {
 } as const;
 
 export const academyStats = [
-  { value: "30", suffix: " years", label: "Accumulated practitioner experience" },
-  { value: "1914", suffix: "+", label: "Studio clients informing real-world curriculum" },
+  { value: "2020", suffix: "", label: "Studio founded · curriculum tied to live work" },
   { value: "6", suffix: "+", label: "Specialized learning tracks" },
+  { value: "10", suffix: "", label: "Students per cohort (max)" },
   { value: "100", suffix: "%", label: "Portfolio-first, hands-on training" },
 ] as const;
 
 export const academyPromise = {
   headline: "Become a job-ready web developer or digital marketer in just 3 months!",
   bullets: [
-    "No tech experience? No problem — start from scratch and become job-ready.",
+    "No tech experience? No problem. start from scratch and become job-ready.",
     "Build real-world projects and graduate with a portfolio that sets you apart.",
     "Choose your path: freelance, launch your own agency, or land a high-paying job.",
   ],
-  urgency: "Applications open for the next cohort — limited seats available.",
+  urgency: "Applications open for the next cohort. limited seats available.",
   ctaLabel: "Apply now",
 } as const;
 
 export const academyWhyChoose = [
   {
     title: "Trusted by builders across Ghana",
-    body: "KayTech Academy is an extension of KayTech Africa — the studio behind 1914+ business projects. You learn what we actually deliver for clients.",
+    body: `KayTech Academy is an extension of KayTech Africa. ${studioProofLine}. You learn what we actually deliver for clients.`,
   },
   {
     title: "Outcomes that matter",
-    body: "Graduate with a professional portfolio, client-ready skills, and career coaching — not theory-heavy slides. Our focus is jobs, freelance income, and real projects.",
+    body: "Graduate with a professional portfolio, client-ready skills, and career coaching. not theory-heavy slides. Our focus is jobs, freelance income, and real projects.",
   },
   {
     title: "Industry-leading instructors",
-    body: "Learn from working practitioners — web developers, marketers, and product builders who earn from the same skills they teach you.",
+    body: "Learn from working practitioners. web developers, marketers, and product builders who earn from the same skills they teach you.",
   },
 ] as const;
 
 export const academyDelivery = {
-  headline: "Online and on-site — learn your way",
+  headline: "Online and on-site. learn your way",
   online: {
     title: "Flexible online classes",
     body: "Study from home with live sessions, recorded lessons, and access to learning materials. Ideal for busy schedules or students outside Accra.",
@@ -79,7 +130,7 @@ export const academySuccessStory = {
 
 export const academyTransform = {
   headline: "Transform your future with KayTech Academy",
-  body: "We are not just teaching skills — we are building careers. Our courses in Web Development, Digital Marketing, Advanced Web & Marketing, and SaaS Development equip you with in-demand skills employers and clients across Ghana and beyond are looking for.",
+  body: "We are not just teaching skills. we are building careers. Our courses in Web Development, Digital Marketing, Advanced Web & Marketing, and SaaS Development equip you with in-demand skills employers and clients across Ghana and beyond are looking for.",
   subhead: "Alumni-ready skills. Courses built for immediate, actionable results.",
 } as const;
 
@@ -88,45 +139,49 @@ export const academyFeaturedCourses = [
     slug: "web-development-101",
     title: "Web Development (101)",
     excerpt:
-      "Your gateway to web development. No experience? No problem. Learn to build and host functional, mobile-friendly websites — from layout to launch.",
-    href: "#pricing",
+      "Your gateway to web development. No experience? No problem. Learn to build and host functional, mobile-friendly websites. from layout to launch.",
+    href: "/academy/web-development-course",
+    feeLabel: `GHS ${academyCourseFeesGhs["web-dev-101"].from.toLocaleString("en-GH")} · ${academyCourseFeesGhs["web-dev-101"].duration}`,
   },
   {
     slug: "digital-marketing-101",
     title: "Digital Marketing (101)",
     excerpt:
-      "Break into digital marketing with SEO, social media, content, and paid ads fundamentals — built for Ghanaian businesses and freelancers.",
-    href: "#pricing",
+      "Break into digital marketing with SEO, social media, content, and paid ads fundamentals. built for Ghanaian businesses and freelancers.",
+    href: "/academy/digital-marketing-course",
+    feeLabel: `GHS ${academyCourseFeesGhs["digital-marketing-101"].from.toLocaleString("en-GH")} · ${academyCourseFeesGhs["digital-marketing-101"].duration}`,
   },
   {
     slug: "advanced-web-digital-marketing",
     title: "Advanced Web Development & Digital Marketing",
     excerpt:
-      "Take your skills further with advanced website builds, conversion optimization, and growth marketing — job-ready or agency-ready.",
+      "Take your skills further with advanced website builds, conversion optimization, and growth marketing. job-ready or agency-ready.",
     href: "#pricing",
+    feeLabel: `GHS ${academyCourseFeesGhs["advanced-web-marketing"].from.toLocaleString("en-GH")} · ${academyCourseFeesGhs["advanced-web-marketing"].duration}`,
   },
   {
     slug: "saas-development",
     title: "SaaS (Software As A Service)",
     excerpt:
-      "Learn to develop scalable cloud-based applications — dashboards, subscriptions, and products that solve real business problems.",
+      "Learn to develop scalable cloud-based applications. dashboards, subscriptions, and products that solve real business problems.",
     href: "#pricing",
+    feeLabel: `GHS ${academyCourseFeesGhs["saas-development"].from.toLocaleString("en-GH")} · ${academyCourseFeesGhs["saas-development"].duration}`,
   },
 ] as const;
 
 export const academyWelcome = {
   headline: "Job-ready training within 3 months of graduating",
   quote:
-    "Picture yourself leading Ghana's digital transformation. Imagine clients or employers reaching out because of the in-demand skills you have mastered. This is not just a course — it is your gateway to freedom, success, and impact.",
+    "Picture yourself leading Ghana's digital transformation. Imagine clients or employers reaching out because of the in-demand skills you have mastered. This is not just a course. it is your gateway to freedom, success, and impact.",
   highlights: [
-    "No prior experience required — start from scratch and become job-ready.",
+    "No prior experience required. start from scratch and become job-ready.",
     "Learn from industry experts with hands-on guidance every step of the way.",
     "Build a portfolio that impresses employers and freelance clients.",
   ],
   stats: [
     {
       title: "Studio-backed learning",
-      body: "Curriculum shaped by 1914+ real client projects and 30 years accumulated practitioner experience across Ghana.",
+      body: `${academyProofLine}. Curriculum is updated from live studio projects. including published case studies on the KayTech site.`,
     },
     {
       title: "No prior experience required",
@@ -138,7 +193,7 @@ export const academyWelcome = {
 export const academyGains = [
   {
     title: "Practical, in-demand skills",
-    body: "Build websites, run digital campaigns, and create SaaS-style products — skills you can monetize immediately.",
+    body: "Build websites, run digital campaigns, and create SaaS-style products. skills you can monetize immediately.",
   },
   {
     title: "Job placement support",
@@ -150,10 +205,10 @@ export const academyPricingPlans = [
   {
     id: "web-dev-101",
     title: "Web Development 101",
-    priceLabel: "Limited introductory cohort",
-    priceNote: "Scholarship seats available — apply early",
+    priceLabel: `GHS ${academyCourseFeesGhs["web-dev-101"].from.toLocaleString("en-GH")} cohort fee`,
+    priceNote: `${academyCourseFeesGhs["web-dev-101"].duration} · scholarship seats when listed on application`,
     description:
-      "Perfect for beginners breaking into web development. Learn to create and host functional, visually appealing websites — mobile-first and client-ready.",
+      "Perfect for beginners breaking into web development. Learn to create and host functional, visually appealing websites. mobile-first and client-ready.",
     features: [
       "Online or on-site class",
       "Hands-on learning",
@@ -169,14 +224,35 @@ export const academyPricingPlans = [
       "Personalized mentorship",
     ],
     featured: false,
+    courseHref: "/academy/web-development-course",
+  },
+  {
+    id: "digital-marketing-101",
+    title: "Digital Marketing 101",
+    priceLabel: `GHS ${academyCourseFeesGhs["digital-marketing-101"].from.toLocaleString("en-GH")} cohort fee`,
+    priceNote: `${academyCourseFeesGhs["digital-marketing-101"].duration} · online or on-site`,
+    description:
+      "SEO, social, content, and paid ads for Ghanaian SMEs. graduate with a strategy capstone and reporting templates.",
+    features: [
+      "Online or on-site class",
+      "Hands-on campaigns (simulated + optional live)",
+      "Expert-led training",
+      "Job-ready skills",
+      "Course materials",
+      "Career services",
+      "Certifications",
+      "Community support",
+    ],
+    featured: false,
+    courseHref: "/academy/digital-marketing-course",
   },
   {
     id: "advanced-web-marketing",
     title: "Advanced Web Development & Digital Marketing",
-    priceLabel: "Comprehensive program",
-    priceNote: "One-time cohort fee — request quote on application",
+    priceLabel: `GHS ${academyCourseFeesGhs["advanced-web-marketing"].from.toLocaleString("en-GH")} cohort fee`,
+    priceNote: `${academyCourseFeesGhs["advanced-web-marketing"].duration} · payment plans on approval`,
     description:
-      "Master advanced website builds and digital marketing strategy. From conversion-focused design to SEO and paid campaigns — built for freelancers and job seekers.",
+      "Master advanced website builds and digital marketing strategy. From conversion-focused design to SEO and paid campaigns. built for freelancers and job seekers.",
     features: [
       "Online or on-site class",
       "Hands-on learning",
@@ -191,14 +267,15 @@ export const academyPricingPlans = [
       "Free access to LMS",
     ],
     featured: true,
+    courseHref: "#apply",
   },
   {
     id: "saas-development",
     title: "SaaS Development (Software As A Service)",
-    priceLabel: "Premium builder track",
-    priceNote: "For aspiring developers and entrepreneurs",
+    priceLabel: `GHS ${academyCourseFeesGhs["saas-development"].from.toLocaleString("en-GH")} cohort fee`,
+    priceNote: `${academyCourseFeesGhs["saas-development"].duration} · builder & entrepreneur track`,
     description:
-      "Learn to develop cloud-based applications for education, healthcare, retail, and more — from school management tools to CRM-style platforms.",
+      "Learn to develop cloud-based applications for education, healthcare, retail, and more. from school management tools to CRM-style platforms.",
     features: [
       "Online or on-site class",
       "Hands-on learning",
@@ -213,35 +290,17 @@ export const academyPricingPlans = [
       "Free access to LMS",
     ],
     featured: false,
+    courseHref: "#apply",
   },
 ] as const;
 
-export const academyTestimonials = [
-  {
-    quote:
-      "I joined KayTech Academy with zero web development experience. Within three months I built a functional e-commerce site and landed my first freelance client. The practical assignments and studio feedback were a game changer.",
-    name: "Emmanuel A.",
-    role: "Academy graduate · Accra",
-  },
-  {
-    quote:
-      "I never thought I could build a career in tech, but KayTech Academy proved me wrong. The courses are clear, the mentorship is strong, and I now work with confidence on digital projects.",
-    name: "Jonathan K.",
-    role: "Digital strategist · Tema",
-  },
-  {
-    quote:
-      "Before KayTech I struggled to find consistent work. Within weeks of finishing the web development track I had a portfolio and started receiving enquiries. The instructor support was invaluable.",
-    name: "Esther K.",
-    role: "Junior web developer · Kumasi",
-  },
-] as const;
+export const academyTestimonials = academyGraduateTestimonials;
 
 export const academyFaqs = [
   {
     question: "Do I need prior experience to join KayTech Academy?",
     answer:
-      "No. Web Development 101 and Digital Marketing 101 are designed for complete beginners. Advanced and SaaS tracks may recommend finishing fundamentals first — we guide you to the right cohort during application.",
+      "No. Web Development 101 and Digital Marketing 101 are designed for complete beginners. Advanced and SaaS tracks may recommend finishing fundamentals first. we guide you to the right cohort during application.",
   },
   {
     question: "Are classes online, on-site, or both?",
@@ -251,11 +310,25 @@ export const academyFaqs = [
   {
     question: "How long does it take to become job-ready?",
     answer:
-      "Most foundational tracks run 8–12 weeks with intensive project work. Graduates leave with portfolio pieces, practical skills, and career support — many start freelancing or applying for roles within the first three months after completion.",
+      "Most foundational tracks run 8–12 weeks with intensive project work. Graduates leave with portfolio pieces, practical skills, and career support. many start freelancing or applying for roles within the first three months after completion.",
   },
   {
     question: "How do I apply?",
     answer:
-      "Complete the KayTech Academy application form on this page — it takes a few minutes. We admit only 10 students per cohort; selected applicants receive a call from our admissions team. You can also WhatsApp us or call 024 840 8154 if you have questions before applying.",
+      "Use the on-site application form at /academy#apply (or on each course page). We admit only 10 students per cohort; selected applicants receive a call from admissions. WhatsApp or call 024 840 8154 for questions before applying.",
+  },
+  {
+    question: "What are the course fees in GHS?",
+    answer: `Web Development 101 is GHS ${academyCourseFeesGhs["web-dev-101"].from.toLocaleString("en-GH")}; Digital Marketing 101 is GHS ${academyCourseFeesGhs["digital-marketing-101"].from.toLocaleString("en-GH")}. Advanced and SaaS tracks are listed on /academy#pricing. See /blog/web-development-course-fees-ghana-2026 for a neutral comparison with other providers.`,
+  },
+  {
+    question: "Are scholarship seats available?",
+    answer:
+      "Yes. a limited number of partial scholarship seats open each cohort. Details, payment plans, and free alternatives are on /academy/scholarships-payment-plans.",
+  },
+  {
+    question: "Can I study online if I am not in Accra?",
+    answer:
+      "Yes. Live online cohorts include recordings and the same syllabus. Read /academy/online-courses for how online delivery works.",
   },
 ] as const;

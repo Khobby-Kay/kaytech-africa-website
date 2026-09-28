@@ -14,12 +14,12 @@ const cards = [
   },
   {
     title: "Web & product builds",
-    body: "Professional web development in Accra — fast, mobile-first sites for Ghana.",
+    body: "Professional web development in Accra. fast, mobile-first sites for Ghana.",
     image: servicePreviewImages[1],
   },
   {
     title: "KayTech Academy",
-    body: "Cohort-based training in web, marketing, and AI — portfolio-ready projects.",
+    body: "Cohort-based training in web, marketing, and AI. portfolio-ready projects.",
     image: contentImages.academyLearning,
   },
 ];
@@ -33,7 +33,7 @@ export function AppShowcase() {
             Everything in one studio
           </h2>
           <p className="mt-3 text-sm text-muted sm:mt-4 sm:text-lg">
-            A dev shop, a growth team, and an academy — all under one roof.
+            A dev shop, a growth team, and an academy. all under one roof.
             Based in Accra, ready for Africa.
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3 sm:mt-8">

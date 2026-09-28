@@ -19,14 +19,14 @@ function contentSrc(folder: "sections" | "team", index: number): string {
   return `/images/${folder}/${SEO_IMAGE_SLUG}-${index}.jpg`;
 }
 
-/** Home carousel — hero 1–3 */
+/** Home carousel. hero 1–3 */
 export const homeHeroSlides = [
   { src: heroSrc("hero", 1), alt: seoHeroAlt(1), caption: "Leadership" },
   { src: heroSrc("hero", 2), alt: seoHeroAlt(2), caption: "Vision" },
   { src: heroSrc("hero", 3), alt: seoHeroAlt(3), caption: "Excellence" },
 ] as const;
 
-/** Page hero images — hero 4–13 */
+/** Page hero images. hero 4–13 */
 export const pageHeroImages = {
   security: { src: heroSrc("pages", 4), alt: seoHeroAlt(4) },
   support: { src: heroSrc("pages", 5), alt: seoHeroAlt(5) },
@@ -40,7 +40,7 @@ export const pageHeroImages = {
   aiAutomation: { src: contentSrc("sections", 4), alt: seoHeroAlt(13) },
 } as const;
 
-/** Content images — numbered 1–20 (non-hero alt when not in PageHero) */
+/** Content images. numbered 1–20 (non-hero alt when not in PageHero) */
 export const contentImages = {
   serviceWeb: { src: contentSrc("sections", 1), alt: seoImageAlt(1) },
   whyPayments: { src: contentSrc("sections", 2), alt: seoImageAlt(2) },
@@ -64,7 +64,7 @@ export const contentImages = {
   teamAcademy: { src: contentSrc("team", 20), alt: seoImageAlt(20) },
 } as const;
 
-/** Blog images — fresh, topic-specific photography for the blog pages. */
+/** Blog images. fresh, topic-specific photography for the blog pages. */
 function blogSrc(index: number): string {
   return `/images/blog/${SEO_IMAGE_SLUG}-blog-${index}.jpg`;
 }

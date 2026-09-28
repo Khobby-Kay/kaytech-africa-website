@@ -14,7 +14,6 @@ import { LeadCaptureStrip } from "@/components/layout/LeadCaptureStrip";
 import { PageHero } from "@/components/ui/PageHero";
 import { Container } from "@/components/ui/Container";
 import { RevealOnScroll, StaggerReveal } from "@/components/ui/RevealOnScroll";
-import { TestimonialCarousel } from "@/components/ui/TestimonialCarousel";
 import {
   webDevComprehensive,
   webDevFaqs,
@@ -27,36 +26,37 @@ import {
 } from "@/lib/web-development-service-content";
 import { getAllServicePages, getServicePath } from "@/lib/service-pages";
 import { siteConfig } from "@/lib/site";
+import { formatPriceFromGhs, servicePriceFromGhs } from "@/lib/trust-metrics";
 import { cn } from "@/lib/utils";
 
 const sidebarServices = [
   {
     label: "Web Development & Design",
-    slug: "best-web-development-design-accra-ghana",
+    href: getServicePath("best-web-development-design-ghana"),
     active: true,
   },
   {
     label: "E-Commerce Development",
-    slug: "best-ecommerce-development-accra-ghana",
+    href: getServicePath("best-ecommerce-development-accra-ghana"),
   },
   {
     label: "Search Engine Optimization",
-    slug: "best-seo-services-accra-ghana",
+    href: "/seo-packages-ghana",
   },
   {
     label: "Digital Marketing & PPC Ads",
-    slug: "best-digital-marketing-accra-ghana",
+    href: getServicePath("best-digital-marketing-accra-ghana"),
   },
   {
     label: "Software As A Services (SAAS)",
-    slug: "best-software-as-a-services-saas-accra-ghana",
+    href: getServicePath("best-software-as-a-services-saas-accra-ghana"),
   },
 ] as const;
 
 export function WebDevelopmentServicePage() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const related = getAllServicePages().filter(
-    (p) => p.slug !== "best-web-development-design-accra-ghana",
+    (p) => p.slug !== "best-web-development-design-ghana",
   );
 
   return (
@@ -72,6 +72,18 @@ export function WebDevelopmentServicePage() {
       </RevealOnScroll>
 
       <LeadCaptureStrip location="service_web_dev" compact />
+
+      <section className="border-b border-hairline bg-canvas px-5 py-6 lg:px-20">
+        <Container>
+          <p className="text-sm font-semibold text-primary">
+            {formatPriceFromGhs(
+              servicePriceFromGhs["best-web-development-design-ghana"].from,
+              "project",
+            )}{" "}
+            · {servicePriceFromGhs["best-web-development-design-ghana"].label}
+          </p>
+        </Container>
+      </section>
 
       <section className="border-b border-hairline bg-surface-soft px-5 py-12 lg:px-20 lg:py-16">
         <Container>
@@ -93,9 +105,9 @@ export function WebDevelopmentServicePage() {
                 </p>
                 <ul className="mt-3 space-y-2">
                   {sidebarServices.map((s) => (
-                    <li key={s.slug}>
+                    <li key={s.href}>
                       <Link
-                        href={getServicePath(s.slug)}
+                        href={s.href}
                         className={cn(
                           "block rounded-xl px-3 py-2 text-sm transition hover:bg-surface-soft",
                           "active" in s && s.active
@@ -191,7 +203,7 @@ export function WebDevelopmentServicePage() {
               Custom web development in Accra for unmatched business growth
             </h2>
             <p className="mt-5 max-w-3xl text-base leading-relaxed text-muted sm:text-lg">
-              Your website is more than a digital presence — it is a tool for
+              Your website is more than a digital presence. it is a tool for
               traffic, conversions, and sales. KayTech Africa specialises in
               custom websites that are visually strong, fast on mobile networks,
               and optimised for search engines across Accra, Kumasi, Tema, and
@@ -239,17 +251,13 @@ export function WebDevelopmentServicePage() {
               What our customers say
             </h2>
             <p className="mt-2 text-sm text-muted">
-              Trusted by businesses across Ghana — with 1914+ served and 30 years
-              accumulated experience.
+              Client quotes shared with permission. see portfolio case studies for
+              measurable outcomes.
             </p>
           </RevealOnScroll>
 
-          <div className="mt-10 lg:hidden">
-            <TestimonialCarousel items={webDevTestimonials} />
-          </div>
-
           <StaggerReveal
-            className="mt-10 hidden gap-4 lg:grid lg:grid-cols-2"
+            className="mt-10 grid gap-4 sm:grid-cols-2"
             staggerMs={120}
           >
             {webDevTestimonials.map((t) => (
@@ -303,7 +311,7 @@ export function WebDevelopmentServicePage() {
         <Container>
           <RevealOnScroll variant="fade-up">
             <h2 className="font-display text-2xl tracking-tight text-ink sm:text-3xl">
-              Web development services in Ghana — drive traffic, conversions, and
+              Web development services in Ghana. drive traffic, conversions, and
               growth
             </h2>
           </RevealOnScroll>

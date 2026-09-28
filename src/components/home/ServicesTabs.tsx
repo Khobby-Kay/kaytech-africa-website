@@ -12,7 +12,7 @@ const tabs = [
     label: "AI",
     title: "Automate workflows that eat your week.",
     description:
-      "Chatbots, intelligent assistants, and business process automation — scoped for African operators who need results, not demos.",
+      "Chatbots, intelligent assistants, and business process automation. scoped for African operators who need results, not demos.",
     cta: "Try KayTech now",
     features: [
       {
@@ -64,7 +64,7 @@ const tabs = [
     label: "Web3",
     title: "Blockchain with real utility, not hype.",
     description:
-      "Smart contracts, tokenized systems, and dApps — security-first builds for teams exploring Web3 in African markets.",
+      "Smart contracts, tokenized systems, and dApps. security-first builds for teams exploring Web3 in African markets.",
     cta: "Try KayTech now",
     features: [
       {
@@ -90,7 +90,7 @@ const tabs = [
     label: "Growth",
     title: "Turn attention into measurable revenue.",
     description:
-      "Performance campaigns, brand strategy, and growth funnels built for African markets — SEO, paid media, and analytics.",
+      "Performance campaigns, brand strategy, and growth funnels built for African markets. SEO, paid media, and analytics.",
     cta: "Try KayTech now",
     features: [
       {

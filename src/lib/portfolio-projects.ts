@@ -20,7 +20,7 @@ export type PortfolioProject = {
 function shot(index: number, name: string) {
   return {
     src: `/images/portfolio/${SEO_IMAGE_SLUG}-portfolio-${index}.jpg`,
-    alt: `${name} website preview — ${SEO_IMAGE_PHRASE} portfolio ${index}`,
+    alt: `${name} website preview. ${SEO_IMAGE_PHRASE} portfolio ${index}`,
   };
 }
 

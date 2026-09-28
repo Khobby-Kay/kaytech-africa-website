@@ -9,9 +9,9 @@ import { getAllIndustries, getIndustryPath } from "@/lib/industry-pages";
 import { contentImages } from "@/lib/image-seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Industry Website Design Ghana — Churches, Schools, Hotels & More | KayTech Africa",
+  title: "Industry Website Design Ghana. Churches, Schools, Hotels & More | KayTech Africa",
   description:
-    "Industry-specific website design in Ghana — churches, schools, restaurants, real estate, hotels, and NGOs. KayTech Africa builds mobile-first, SEO-ready sites nationwide.",
+    "Industry-specific website design in Ghana. churches, schools, restaurants, real estate, hotels, and NGOs. KayTech Africa builds mobile-first, SEO-ready sites nationwide.",
   path: "/industry",
   keywords: [
     "industry website design Ghana",
@@ -29,7 +29,7 @@ export default function IndustryHubPage() {
     <>
       <PageHero
         title="Website design for your industry in Ghana"
-        description="Every sector has different goals — enrolment, bookings, donations, or sales. KayTech builds industry-specific websites with the features Ghana businesses actually need."
+        description="Every sector has different goals. enrolment, bookings, donations, or sales. KayTech builds industry-specific websites with the features Ghana businesses actually need."
         cta={{ label: "See our work", href: "/portfolio" }}
         secondaryCta={{ label: "Website cost guide", href: "/website-cost-ghana" }}
         image={contentImages.serviceWeb}

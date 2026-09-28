@@ -1,4 +1,4 @@
-/** KayTech GA4 measurement ID — public, safe to ship in client bundle. */
+/** KayTech GA4 measurement ID. public, safe to ship in client bundle. */
 export const GA_MEASUREMENT_ID = "G-LGL9G3SYVY";
 
 /**

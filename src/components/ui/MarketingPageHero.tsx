@@ -9,7 +9,7 @@ type MarketingPageHeroProps = {
   location: string;
 };
 
-/** Full-bleed hero — same image treatment as the homepage, with page-specific copy. */
+/** Full-bleed hero. same image treatment as the homepage, with page-specific copy. */
 export function MarketingPageHero({
   title,
   description,
@@ -29,7 +29,7 @@ export function MarketingPageHero({
       footnote={
         <span className="inline-flex items-center gap-2">
           <CircleCheck className="h-4 w-4 text-semantic-up" />
-          1914+ projects delivered · {location}
+          Studio-backed delivery · {location}
         </span>
       }
     />

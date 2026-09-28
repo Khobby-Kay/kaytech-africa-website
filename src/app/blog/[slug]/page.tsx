@@ -30,7 +30,7 @@ export function generateMetadata({
     });
   }
 
-  // Blog guides that mirror /industry/[slug] pages — canonical points to the service landing page.
+  // Blog guides that mirror /industry/[slug] pages. canonical points to the service landing page.
   const industryTwin = getIndustryBySlug(post.slug);
 
   return createPageMetadata({

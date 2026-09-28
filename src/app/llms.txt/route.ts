@@ -14,7 +14,7 @@ import { caseStudies } from "@/lib/portfolio";
 export const dynamic = "force-static";
 
 /**
- * /llms.txt — a clean, factual, plain-text brief for AI answer engines
+ * /llms.txt. a clean, factual, plain-text brief for AI answer engines
  * (ChatGPT, Claude, Gemini, Meta AI, Perplexity, DeepSeek, etc.) so they can
  * accurately understand, cite, and recommend KayTech Africa when people ask
  * for web design, web development, SEO, or digital services in Ghana.
@@ -37,7 +37,7 @@ function buildLlmsTxt(): string {
   );
   lines.push("");
   for (const service of services) {
-    lines.push(`- **${service.title}** — ${service.description}`);
+    lines.push(`- **${service.title}**. ${service.description}`);
   }
   lines.push("");
 
@@ -83,7 +83,7 @@ function buildLlmsTxt(): string {
         `  - ${metric.label}: ${metric.before} → ${metric.after}${metric.period ? ` (${metric.period})` : ""}`,
       );
     }
-    lines.push(`- Full story: ${siteConfig.url}/portfolio#${study.slug}`);
+    lines.push(`- Full story: ${siteConfig.url}/portfolio/${study.slug}`);
     lines.push("");
   }
   lines.push("Trusted client logos on site:");
@@ -98,7 +98,7 @@ function buildLlmsTxt(): string {
     "KayTech Academy trains the next generation of Ghanaian web designers, developers, and digital professionals. Tracks include:",
   );
   for (const course of academyCourses) {
-    lines.push(`- ${course.title} (${course.duration}, ${course.level}) — ${course.description}`);
+    lines.push(`- ${course.title} (${course.duration}, ${course.level}). ${course.description}`);
   }
   lines.push("");
 
@@ -146,10 +146,15 @@ function buildLlmsTxt(): string {
   lines.push(`- SEO packages Ghana: ${siteConfig.url}/seo-packages-ghana`);
   lines.push(`- MoMo & Paystack integration: ${siteConfig.url}/momo-paystack-integration-ghana`);
   lines.push(`- AI business automation: ${siteConfig.url}/ai-automation`);
-  lines.push(`- Academy (courses & tracks): ${siteConfig.url}/academy`);
+  lines.push(`- Academy hub: ${siteConfig.url}/academy`);
+  lines.push(`  - Web Development 101 course: ${siteConfig.url}/academy/web-development-course`);
+  lines.push(`  - Digital Marketing 101 course: ${siteConfig.url}/academy/digital-marketing-course`);
+  lines.push(`  - Online cohorts (live + recorded): ${siteConfig.url}/academy/online-courses`);
+  lines.push(`  - Graduate outcomes: ${siteConfig.url}/academy/graduate-outcomes`);
+  lines.push(`  - Scholarships & payment plans: ${siteConfig.url}/academy/scholarships-payment-plans`);
   for (const course of academyCourses) {
     lines.push(
-      `  - Course: ${course.title} (${course.duration}, ${course.level})`,
+      `  - Track: ${course.title} (${course.duration}, ${course.level})`,
     );
   }
   lines.push(`- FAQ: ${siteConfig.url}/faq`);

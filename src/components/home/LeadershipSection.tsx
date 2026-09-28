@@ -25,8 +25,7 @@ export function LeadershipSection() {
             Built by African builders.
           </h2>
           <p className="mt-4 text-lg text-muted">
-            KayTech is led from Accra by practitioners shipping real systems —
-            not slide decks.
+            KayTech is led from Accra by practitioners shipping real systems.             not slide decks.
           </p>
         </div>
 

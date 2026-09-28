@@ -17,9 +17,9 @@ const keywords = [
 ];
 
 export const metadata: Metadata = createPageMetadata({
-  title: "SEO Packages in Ghana — Local Search & Google Rankings | KayTech Africa",
+  title: "SEO Packages in Ghana. From GHS 800/mo | KayTech Africa",
   description:
-    "SEO packages for Ghana businesses — local search, on-page optimisation, and content strategy for Accra, Kumasi, and nationwide. KayTech Africa helps you rank on Google.",
+    "SEO packages for Ghana businesses. local search, on-page optimisation, and content strategy for Accra, Kumasi, and nationwide. KayTech Africa helps you rank on Google.",
   path: "/seo-packages-ghana",
   keywords: [...keywords, ...ghanaSearchKeywords],
 });
@@ -28,6 +28,7 @@ const packages = [
   {
     name: "SEO foundation",
     range: "GHS 800 – 2,000 / month",
+    timeline: "Month 1: audit & fixes · Months 2–3: on-page rollout",
     bestFor: "New sites or businesses starting local visibility.",
     includes: [
       "Technical SEO audit & fixes",
@@ -39,6 +40,7 @@ const packages = [
   {
     name: "Local growth",
     range: "GHS 2,000 – 5,000 / month",
+    timeline: "Month 1: strategy · Months 2–6: content & local signals",
     bestFor: "Accra & Kumasi businesses competing for local leads.",
     includes: [
       "Everything in Foundation",
@@ -52,6 +54,7 @@ const packages = [
   {
     name: "Scale & dominate",
     range: "GHS 5,000+ / month",
+    timeline: "Quarterly roadmap · ongoing content & link building",
     bestFor: "Brands targeting multiple cities or aggressive growth.",
     includes: [
       "Everything in Local growth",
@@ -72,12 +75,12 @@ const faqs = [
   {
     question: "Do I need a new website for SEO?",
     answer:
-      "Not always — we can optimise existing sites. If your site is slow, outdated, or not mobile-friendly, a rebuild often delivers better ROI. See /website-cost-ghana.",
+      "Not always. we can optimise existing sites. If your site is slow, outdated, or not mobile-friendly, a rebuild often delivers better ROI. See /website-cost-ghana.",
   },
   {
     question: "Do you guarantee #1 on Google?",
     answer:
-      "No ethical agency guarantees rankings. We focus on sustainable visibility, qualified traffic, and leads — with transparent reporting.",
+      "No ethical agency guarantees rankings. We focus on sustainable visibility, qualified traffic, and leads. with transparent reporting.",
   },
 ];
 
@@ -101,8 +104,8 @@ export default function SeoPackagesGhanaPage() {
 
       <PageHero
         title="SEO packages for Ghana businesses"
-        description="Rank when customers search your service + Accra, Kumasi, or your city. Local SEO, content, and technical foundations — scoped to your market."
-        cta={{ label: "Full SEO service", href: "/services/best-seo-services-accra-ghana" }}
+        description="Rank when customers search your service + Accra, Kumasi, or your city. Local SEO, content, and technical foundations. scoped to your market."
+        cta={{ label: "Web design + SEO", href: "/web-design/accra-ghana" }}
         secondaryCta={{ label: "Digital growth bundle", href: "/digital-growth-bundle" }}
         image={contentImages.serviceGrowth}
       />
@@ -116,7 +119,7 @@ export default function SeoPackagesGhanaPage() {
               SEO that matches how Ghanaians search
             </h2>
             <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg">
-              Your customers search on phones — often with city names, WhatsApp
+              Your customers search on phones. often with city names, WhatsApp
               follow-ups, and &quot;near me&quot; intent. KayTech SEO packages combine
               technical health, local visibility, and content that earns trust in
               Ghana&apos;s competitive markets.
@@ -142,6 +145,7 @@ export default function SeoPackagesGhanaPage() {
                   {pkg.name}
                 </h3>
                 <p className="mt-1 text-sm font-medium text-accent">{pkg.range}</p>
+                <p className="mt-2 text-xs font-medium text-muted">{pkg.timeline}</p>
                 <p className="mt-3 text-sm text-muted">{pkg.bestFor}</p>
                 <ul className="mt-4 space-y-2">
                   {pkg.includes.map((item) => (
@@ -188,7 +192,7 @@ export default function SeoPackagesGhanaPage() {
       <section className="border-b border-hairline bg-surface-soft px-5 py-16 lg:px-20 lg:py-24">
         <Container>
           <h2 className="font-display text-2xl font-bold tracking-tight text-ink sm:text-3xl">
-            FAQs — SEO in Ghana
+            FAQs. SEO in Ghana
           </h2>
           <div className="mt-8 space-y-4">
             {faqs.map((faq) => (

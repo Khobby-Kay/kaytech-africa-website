@@ -13,10 +13,10 @@ export const defaultTitle =
   "Best Web Developer in Ghana | Top Web Designer Accra | KayTech Africa";
 
 export const defaultDescription =
-  "KayTech Africa — the best web design company in Ghana. Hire the top web developer or website designer in Accra, Kumasi & nationwide. Affordable SEO, e-commerce & digital marketing. 1914+ businesses served with remarkable results.";
+  "KayTech Africa. the best web design company in Ghana. Hire the top web developer or website designer in Accra, Kumasi & nationwide. Affordable SEO, e-commerce & digital marketing. Published client case studies.";
 
 export const siteName =
-  "KayTech Africa — Best Web Design Company in Ghana | Web Development & SEO";
+  "KayTech Africa. Best Web Design Company in Ghana | Web Development & SEO";
 
 export function getOrganizationJsonLd() {
   const orgLogo = getOrganizationLogoSchema(siteConfig.url);
@@ -203,12 +203,12 @@ export function getOrganizationJsonLd() {
       {
         "@type": "ItemList",
         "@id": `${siteConfig.url}/#sitenavigation`,
-        name: "KayTech Africa — Main Navigation",
+        name: "KayTech Africa. Main Navigation",
         itemListElement: [
           { "@type": "SiteLinksSearchBox", target: { "@type": "EntryPoint", urlTemplate: `${siteConfig.url}/faq?q={search_term_string}` } },
           ...[
-            { name: "Web Design & Development", url: `${siteConfig.url}/services/best-web-development-design-accra-ghana`, description: "Custom websites and web apps built for Ghana" },
-            { name: "SEO Services", url: `${siteConfig.url}/services/best-seo-services-accra-ghana`, description: "Search engine optimisation for Ghanaian businesses" },
+            { name: "Web Design & Development", url: `${siteConfig.url}/services/best-web-development-design-ghana`, description: "Custom websites and web apps built for Ghana" },
+            { name: "SEO Services", url: `${siteConfig.url}/seo-packages-ghana`, description: "Search engine optimisation for Ghanaian businesses" },
             { name: "E-Commerce Development", url: `${siteConfig.url}/services/best-ecommerce-development-accra-ghana`, description: "Online stores with MoMo and card payment integration" },
             { name: "Digital Marketing & PPC", url: `${siteConfig.url}/services/best-digital-marketing-accra-ghana`, description: "Paid ads, content, and growth campaigns" },
             { name: "KayTech Academy", url: `${siteConfig.url}/academy`, description: "Practical web and digital marketing training in Ghana" },
@@ -228,7 +228,7 @@ export function getOrganizationJsonLd() {
   };
 }
 
-/** Homepage-only FAQ schema (TECH-03 — not injected site-wide). */
+/** Homepage-only FAQ schema (TECH-03. not injected site-wide). */
 export function getHomepageFaqJsonLd() {
   return {
     "@context": "https://schema.org",
@@ -249,5 +249,5 @@ export const ogImage = {
   url: "/og.jpg",
   width: 1200,
   height: 630,
-  alt: "KayTech Africa — Best Web Design Company in Accra, Ghana",
+  alt: "KayTech Africa. Best Web Design Company in Accra, Ghana",
 };

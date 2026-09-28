@@ -1,6 +1,6 @@
 # KayTech Africa
 
-Official website for **KayTech Africa** — AI automation, web development, Web3, robotics, and the KayTech Academy.
+Official website for **KayTech Africa**: AI automation, web development, Web3, robotics, and KayTech Academy.
 
 ## Stack
 

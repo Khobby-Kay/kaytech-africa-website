@@ -5,6 +5,7 @@ import { Container } from "@/components/ui/Container";
 import { Media } from "@/components/ui/Media";
 import { PageHero } from "@/components/ui/PageHero";
 import { CaseStudyStories } from "@/components/portfolio/CaseStudyStories";
+import { PortfolioHashRedirect } from "@/components/portfolio/PortfolioHashRedirect";
 import { portfolioProjects } from "@/lib/portfolio-projects";
 import { portfolioHeroImage } from "@/lib/image-seo";
 import { createPageMetadata } from "@/lib/page-metadata";
@@ -12,9 +13,9 @@ import { ghanaSearchKeywords } from "@/lib/localized-seo";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Portfolio — Best Web Design Projects in Accra, Ghana | KayTech Africa",
+  title: "Portfolio. Best Web Design Projects in Accra, Ghana | KayTech Africa",
   description:
-    "See KayTech Africa's web design and development portfolio — high-performing websites, e-commerce stores, and digital experiences built for brands across Accra and Ghana.",
+    "See KayTech Africa's web design and development portfolio. high-performing websites, e-commerce stores, and digital experiences built for brands across Accra and Ghana.",
   path: "/portfolio",
   keywords: [
     ...ghanaSearchKeywords,
@@ -27,6 +28,7 @@ export const metadata: Metadata = createPageMetadata({
 export default function PortfolioPage() {
   return (
     <>
+      <PortfolioHashRedirect />
       <PageHero
         title="Transforming visions into digital success"
         description="We take pride in our clients' success stories. From startups to established enterprises across Ghana, brands trust KayTech Africa to turn digital visions into high-performing websites that deliver real results."
@@ -45,7 +47,7 @@ export default function PortfolioPage() {
               Results-driven web design &amp; development projects
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
-              At KayTech Africa, we don&apos;t just design websites — we create
+              At KayTech Africa, we don&apos;t just design websites. we create
               high-performance, conversion-driven digital experiences that help
               businesses grow. As a leading web design company in Ghana, we
               specialise in user-centric websites, e-commerce platforms, and

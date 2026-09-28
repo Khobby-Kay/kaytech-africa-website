@@ -17,9 +17,9 @@ const keywords = [
 ];
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Digital Growth Bundle — Web Design + SEO + AI | KayTech Africa Ghana",
+  title: "Digital Growth Bundle. Web Design + SEO + AI | KayTech Africa Ghana",
   description:
-    "One integrated package: professional website, local SEO, and AI automation for Ghana businesses. KayTech Africa — web design, search visibility, and smart lead capture in Accra and nationwide.",
+    "One integrated package: professional website, local SEO, and AI automation for Ghana businesses. KayTech Africa. web design, search visibility, and smart lead capture in Accra and nationwide.",
   path: "/digital-growth-bundle",
   keywords: [...keywords, ...ghanaSearchKeywords],
 });
@@ -28,7 +28,7 @@ const bundleItems = [
   {
     icon: Globe,
     title: "Professional website",
-    body: "Mobile-first, fast, MoMo-ready — built to convert visitors into calls and WhatsApp enquiries.",
+    body: "Mobile-first, fast, MoMo-ready. built to convert visitors into calls and WhatsApp enquiries.",
   },
   {
     icon: Search,
@@ -38,12 +38,12 @@ const bundleItems = [
   {
     icon: Sparkles,
     title: "AI lead capture",
-    body: "Smart chat or WhatsApp automation so you never miss an enquiry — even after hours.",
+    body: "Smart chat or WhatsApp automation so you never miss an enquiry. even after hours.",
   },
   {
     icon: TrendingUp,
     title: "Growth roadmap",
-    body: "Clear next steps — analytics, content, and campaigns — so your digital presence compounds over time.",
+    body: "Clear next steps. analytics, content, and campaigns. so your digital presence compounds over time.",
   },
 ];
 
@@ -51,7 +51,7 @@ const faqs = [
   {
     question: "Who is the digital growth bundle for?",
     answer:
-      "SMEs, clinics, agencies, and growing brands in Ghana that want a credible website plus search visibility and automated lead capture — without juggling three separate vendors.",
+      "SMEs, clinics, agencies, and growing brands in Ghana that want a credible website plus search visibility and automated lead capture. without juggling three separate vendors.",
   },
   {
     question: "How is pricing handled?",
@@ -61,7 +61,7 @@ const faqs = [
   {
     question: "Do you serve businesses outside Accra?",
     answer:
-      "Yes — KayTech delivers nationwide from our Accra studio via phone, WhatsApp, and video.",
+      "Yes. KayTech delivers nationwide from our Accra studio via phone, WhatsApp, and video.",
   },
 ];
 
@@ -85,7 +85,7 @@ export default function DigitalGrowthBundlePage() {
 
       <PageHero
         title="Digital growth bundle for Ghana businesses"
-        description="Website + SEO + AI in one coordinated package — so you launch fast, get found on Google, and capture leads around the clock."
+        description="Website + SEO + AI in one coordinated package. so you launch fast, get found on Google, and capture leads around the clock."
         cta={{ label: "See our work", href: "/portfolio" }}
         secondaryCta={{ label: "Website cost guide", href: "/website-cost-ghana" }}
         image={contentImages.serviceGrowth}
@@ -102,7 +102,7 @@ export default function DigitalGrowthBundlePage() {
             <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg">
               Most Ghanaian businesses buy a website, then struggle with SEO, then
               wonder why leads slip through the cracks. KayTech&apos;s digital growth
-              bundle aligns design, search, and automation from day one — the same
+              bundle aligns design, search, and automation from day one. the same
               studio that builds your site also structures it to rank and captures
               enquiries with AI.
             </p>
@@ -150,7 +150,7 @@ export default function DigitalGrowthBundlePage() {
               Request bundle quote
             </Link>
             <Link
-              href="/services/best-seo-services-accra-ghana"
+              href="/seo-packages-ghana"
               className="inline-flex h-11 items-center rounded-pill border border-hairline bg-canvas px-6 text-sm font-semibold text-ink"
             >
               SEO services

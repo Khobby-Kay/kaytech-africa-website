@@ -11,7 +11,7 @@ export type HeroImageSlide = {
 
 type HeroImageBackgroundProps = {
   slides: readonly HeroImageSlide[];
-  /** Controlled active slide — when set, parent owns carousel timing */
+  /** Controlled active slide. when set, parent owns carousel timing */
   active?: number;
   intervalMs?: number;
   overlayClassName?: string;

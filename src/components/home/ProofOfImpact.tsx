@@ -4,6 +4,7 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { ImpactMetricBar } from "@/components/ui/ImpactMetricBar";
 import { clientLogos } from "@/lib/client-logos";
+import { getCaseStudyPath } from "@/lib/portfolio";
 import {
   aggregateImpactMetrics,
   clientImpactHighlights,
@@ -15,7 +16,7 @@ export function ProofOfImpact() {
 
   return (
     <section
-      aria-label="KayTech Africa proof of impact — client results and metrics"
+      aria-label="KayTech Africa proof of impact. client results and metrics"
       className="border-b border-hairline bg-gradient-to-br from-primary via-primary-deep to-[#0c2d4a] text-on-primary"
     >
       <Container className="px-5 py-14 lg:px-20 lg:py-20">
@@ -54,7 +55,7 @@ export function ProofOfImpact() {
           {clientImpactHighlights.map((item) => (
             <Link
               key={item.slug}
-              href={`/portfolio#${item.slug}`}
+              href={getCaseStudyPath(item.slug)}
               className="group flex flex-col rounded-3xl border border-white/15 bg-canvas p-6 text-ink transition hover:border-accent/40 hover:shadow-glow"
             >
               <div className="flex items-center justify-between gap-4">

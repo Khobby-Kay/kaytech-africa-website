@@ -7,8 +7,11 @@ import { RevealOnScroll, StaggerReveal } from "@/components/ui/RevealOnScroll";
 import type { ServicePage } from "@/lib/service-pages";
 import { getServicePath } from "@/lib/service-pages";
 import { siteConfig } from "@/lib/site";
+import { formatPriceFromGhs, servicePriceFromGhs } from "@/lib/trust-metrics";
 
 export function ServiceLanding({ page }: { page: ServicePage }) {
+  const pricing = servicePriceFromGhs[page.slug];
+
   return (
     <>
       <RevealOnScroll variant="fade-down" duration={800}>
@@ -27,6 +30,11 @@ export function ServiceLanding({ page }: { page: ServicePage }) {
         <Container>
           <RevealOnScroll variant="fade-up">
             <div className="max-w-3xl">
+              {pricing ? (
+                <p className="mb-4 inline-flex rounded-pill bg-surface-accent px-4 py-2 text-sm font-semibold text-primary">
+                  {formatPriceFromGhs(pricing.from, pricing.unit)} · {pricing.label}
+                </p>
+              ) : null}
               <p className="text-base leading-relaxed text-muted sm:text-lg">
                 {page.intro}
               </p>
@@ -93,7 +101,7 @@ export function ServiceLanding({ page }: { page: ServicePage }) {
               Ready to start your project?
             </h2>
             <p className="mt-3 max-w-xl text-sm text-on-primary/85 sm:text-base">
-              Talk to KayTech Africa — Accra-based, serving Kumasi, Tema, and all
+              Talk to KayTech Africa. Accra-based, serving Kumasi, Tema, and all
               of Ghana. Call {siteConfig.contact.phoneDisplay} or WhatsApp{" "}
               {siteConfig.contact.whatsappDisplay} for a clear, tailored quote.
             </p>
@@ -142,7 +150,7 @@ export function ServiceLanding({ page }: { page: ServicePage }) {
   );
 }
 
-/** Related services block — import at page level to avoid unused vars in component */
+/** Related services block. import at page level to avoid unused vars in component */
 export function ServiceRelatedLinks({
   currentSlug,
   pages,

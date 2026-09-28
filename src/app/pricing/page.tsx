@@ -27,12 +27,12 @@ const pricingKeywords = [
 export const metadata: Metadata = createPageMetadata({
   title: "Web Design Pricing in Ghana | What a Website Costs | KayTech Africa",
   description:
-    "How much does a website cost in Ghana? KayTech Africa prices around value, not templates — clear, scoped quotes for business sites, e-commerce, SEO, and AI automation in Accra and nationwide. Request a tailored quote.",
+    "How much does a website cost in Ghana? KayTech Africa prices around value, not templates. clear, scoped quotes for business sites, e-commerce, SEO, and AI automation in Accra and nationwide. Request a tailored quote.",
   path: "/pricing",
   keywords: [...pricingKeywords, ...ghanaSearchKeywords],
 });
 
-/** Value tiers described by outcome and scope — no fixed prices, since every
+/** Value tiers described by outcome and scope. no fixed prices, since every
  *  project is scoped to the client. Each links to a tailored quote. */
 const tiers = [
   {
@@ -70,7 +70,7 @@ const tiers = [
     name: "E-commerce store",
     bestFor: "Brands selling products or services online across Ghana.",
     value:
-      "A storefront built around how Ghanaians pay — MoMo, Paystack, Flutterwave — so more visits become real orders.",
+      "A storefront built around how Ghanaians pay. MoMo, Paystack, Flutterwave. so more visits become real orders.",
     includes: [
       "Everything in Business",
       "Product catalogue & checkout",
@@ -126,7 +126,7 @@ const alwaysIncluded = [
   "Mobile-first design that loads fast on Ghanaian networks",
   "On-page SEO so customers can find you on Google",
   "Secure SSL and reliable hosting guidance",
-  "Clear, itemised proposal — no hidden costs",
+  "Clear, itemised proposal. no hidden costs",
   "Training and handover so you stay in control",
   "Honest advice on what you do and don't need",
 ];
@@ -140,7 +140,7 @@ const pricingFaqs = [
   {
     question: "Why don't you list fixed prices?",
     answer:
-      "Because honest pricing depends on scope. Two businesses asking for 'a website' often need very different things. We scope each project to your goals so you get real value — not an inflated package or a cheap site that never performs.",
+      "Because honest pricing depends on scope. Two businesses asking for 'a website' often need very different things. We scope each project to your goals so you get real value. not an inflated package or a cheap site that never performs.",
   },
   {
     question: "Do you offer payment plans?",
@@ -167,6 +167,17 @@ const pricingJsonLd = {
 export default function PricingPage() {
   return (
     <>
+      <section className="border-b border-hairline bg-surface-accent px-5 py-8 lg:px-20">
+        <Container>
+          <p className="max-w-3xl text-sm leading-relaxed text-ink sm:text-base">
+            Looking for 2026 GHS figures and example quotes? Use our{" "}
+            <Link href="/website-cost-ghana" className="font-semibold text-primary hover:underline">
+              website cost in Ghana guide
+            </Link>
+            . This page explains how KayTech scopes value-based proposals. not a duplicate price table.
+          </p>
+        </Container>
+      </section>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingJsonLd) }}
@@ -174,7 +185,7 @@ export default function PricingPage() {
 
       <PageHero
         title="Pricing built around value, not templates"
-        description="Wondering how much a website costs in Ghana? The honest answer is: it depends on what will actually grow your business. We scope every project clearly and price around the value it delivers — so you invest in results, not a guess."
+        description="Wondering how much a website costs in Ghana? The honest answer is: it depends on what will actually grow your business. We scope every project clearly and price around the value it delivers. so you invest in results, not a guess."
         cta={{ label: "Compare plans", href: "#plans" }}
         secondaryCta={{ label: "See our work", href: "/portfolio" }}
         image={contentImages.serviceGrowth}
@@ -187,7 +198,7 @@ export default function PricingPage() {
               A website is an investment, not an expense
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base lg:text-lg">
-              The best-performing websites in Ghana pay for themselves — bringing
+              The best-performing websites in Ghana pay for themselves. bringing
               in enquiries, orders, and customers around the clock. Our job is to
               build you that kind of asset and scope it to your budget, so the
               price always maps to real business value.
@@ -331,7 +342,7 @@ export default function PricingPage() {
               </h2>
               <p className="mt-3 text-sm text-on-primary/85 sm:text-base">
                 Tell us about your business and goals. We&apos;ll scope a website
-                that fits your budget and pays for itself — with a transparent,
+                that fits your budget and pays for itself. with a transparent,
                 itemised proposal and no surprise costs.
               </p>
             </div>

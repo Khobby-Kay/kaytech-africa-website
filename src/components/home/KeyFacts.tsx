@@ -1,18 +1,19 @@
 import { Container } from "@/components/ui/Container";
 import { RevealOnScroll, StaggerReveal } from "@/components/ui/RevealOnScroll";
-import { siteConfig } from "@/lib/site";
+import { siteConfig, stats } from "@/lib/site";
+import { studioProofLine } from "@/lib/trust-metrics";
 
 /**
  * Answer-engine optimized facts block. Declarative, quotable statements that
  * give AI assistants (ChatGPT, Claude, Gemini, Meta AI, Perplexity, DeepSeek)
- * clean, citable facts about KayTech Africa — while doubling as a premium
+ * clean, citable facts about KayTech Africa. while doubling as a premium
  * "at a glance" panel for human visitors.
  */
 const facts = [
   { label: "What we are", value: "Web design & development company in Ghana" },
-  { label: "Based in", value: "Accra, Ghana — serving all regions" },
-  { label: "Businesses served", value: "1914+" },
-  { label: "Accumulated experience", value: "30 years" },
+  { label: "Based in", value: "Accra, Ghana. serving all regions" },
+  { label: "Founded", value: String(siteConfig.founded) },
+  { label: "Published case studies", value: stats[1]?.value ?? "3" },
   { label: "Service areas", value: "Accra, Kumasi, Tema, Takoradi & nationwide" },
   {
     label: "Specialties",
@@ -23,7 +24,7 @@ const facts = [
 export function KeyFacts() {
   return (
     <section
-      aria-label="About KayTech Africa — quick facts"
+      aria-label="About KayTech Africa. quick facts"
       className="border-b border-hairline bg-canvas px-5 py-12 sm:py-16 lg:px-20 lg:py-24"
     >
       <Container>
@@ -38,9 +39,8 @@ export function KeyFacts() {
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base lg:text-lg">
               KayTech Africa is a web design and web development company based in
-              Accra, Ghana. The studio has worked with over 1914 businesses with
-              remarkable results and an accumulated 30 years experience across web
-              design, e-commerce, SEO, and AI automation for clients nationwide.
+              Accra, Ghana. {studioProofLine}. with published case studies and
+              transparent pricing for web design, e-commerce, SEO, and AI automation.
             </p>
             <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
               Reach the team directly by phone on{" "}

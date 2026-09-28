@@ -1,4 +1,5 @@
 import { contentImages } from "@/lib/image-seo";
+import { formatPriceFromGhs, servicePriceFromGhs, studioProofLine } from "@/lib/trust-metrics";
 
 export type ServiceSection = {
   heading: string;
@@ -22,63 +23,10 @@ export type ServicePage = {
 
 export const servicePages: ServicePage[] = [
   {
-    slug: "best-seo-services-accra-ghana",
-    title: "Best SEO Services in Accra, Ghana | KayTech Africa",
-    metaDescription:
-      "KayTech Africa delivers SEO services in Accra and across Ghana — keyword research, on-page SEO, technical optimization, and local search visibility for Ghanaian businesses.",
-    keywords: [
-      "SEO company in Ghana",
-      "SEO services Accra",
-      "best SEO Accra Ghana",
-      "search engine optimization Ghana",
-      "local SEO Accra",
-    ],
-    eyebrow: "SEO Ghana",
-    heroTitle: "SEO services in Ghana that bring qualified leads",
-    heroDescription:
-      "Rank when customers search for your service in Accra, Kumasi, and nationwide. KayTech integrates SEO into every build — and offers dedicated search optimization for businesses ready to grow organic traffic.",
-    intro:
-      "Search engine optimization in Ghana is not about stuffing keywords into a template. It is about showing up when someone types “best web designer in Accra”, “plumber Kumasi”, or your industry plus Ghana — and earning the click with a fast, trustworthy site. KayTech Africa is an Accra-based SEO company helping businesses across Ghana rank higher and convert that visibility into enquiries.",
-    image: contentImages.serviceGrowth,
-    benefits: [
-      "Keyword research for how Ghanaians actually search",
-      "On-page SEO on every page we ship",
-      "Technical SEO — speed, structure, crawlability",
-      "Local SEO for Accra, Kumasi, Tema & beyond",
-      "Analytics so you see what ranks and converts",
-    ],
-    sections: [
-      {
-        heading: "SEO built into web development",
-        paragraphs: [
-          "Every KayTech website includes SEO fundamentals: clean headings, meta titles, internal links, and mobile performance. Dedicated SEO projects go further — auditing your current site, fixing technical issues, and building content around the terms your customers use.",
-        ],
-      },
-      {
-        heading: "Local search across Ghana",
-        paragraphs: [
-          "We optimize for city and service combinations — web design Accra, your trade + Kumasi, affordable website Ghana — so you appear when buyers search locally, not only for generic national terms.",
-        ],
-      },
-      {
-        heading: "What our SEO work includes",
-        paragraphs: ["Typical SEO engagements cover:"],
-        bullets: [
-          "Site audit and competitor review",
-          "On-page optimization (titles, headings, content)",
-          "Technical fixes (speed, indexing, schema)",
-          "Google Business Profile alignment guidance",
-          "Content recommendations and landing pages",
-        ],
-      },
-    ],
-  },
-  {
     slug: "best-ecommerce-development-accra-ghana",
-    title:
-      "Top E-Commerce & Online Store Development in Accra, Ghana | KayTech Africa",
+    title: "E-Commerce Development in Ghana. From GHS 8,000 | KayTech Africa",
     metaDescription:
-      "KayTech Africa builds affordable, mobile-first e-commerce stores in Accra and Ghana — MoMo, Paystack, WhatsApp orders, SEO product pages, and secure checkout.",
+      "From GHS 8,000. mobile-first e-commerce in Accra and Ghana with MoMo, Paystack, WhatsApp orders, and SEO product pages.",
     keywords: [
       "e-commerce website developer Ghana",
       "online store development Accra",
@@ -90,7 +38,7 @@ export const servicePages: ServicePage[] = [
     eyebrow: "E-commerce · Accra, Ghana",
     heroTitle: "Helping you sell more online in Ghana",
     heroDescription:
-      "Custom online store development with MoMo, Paystack, and mobile-first checkout — built for Ghanaian buyers.",
+      "Custom online store development with MoMo, Paystack, and mobile-first checkout. built for Ghanaian buyers.",
     intro:
       "KayTech Africa develops e-commerce websites and custom online stores for brands in Accra, Kumasi, Tema, and nationwide.",
     image: contentImages.whyPayments,
@@ -98,13 +46,12 @@ export const servicePages: ServicePage[] = [
     sections: [],
   },
   {
-    slug: "best-web-development-design-accra-ghana",
-    title: "Best Web Development & Design in Accra, Ghana | KayTech Africa",
+    slug: "best-web-development-design-ghana",
+    title: `Web Development & Design in Ghana. ${formatPriceFromGhs(servicePriceFromGhs["best-web-development-design-ghana"].from, "project")} | KayTech`,
     metaDescription:
-      "KayTech Africa — top web development company in Accra. Custom websites for growth, sales, and conversions — mobile-first, SEO-ready, 1914+ businesses served across Ghana.",
+      `${formatPriceFromGhs(servicePriceFromGhs["best-web-development-design-ghana"].from, "project")}. custom websites nationwide, mobile-first and SEO-ready. ${studioProofLine}.`,
     keywords: [
-      "best web developer in Ghana",
-      "web development company Accra",
+      "web development company Ghana",
       "hire web developer Ghana",
       "custom web development Ghana",
       "web app developer Ghana",
@@ -112,20 +59,20 @@ export const servicePages: ServicePage[] = [
     ],
     eyebrow: "Web development & design Ghana",
     heroTitle:
-      "Web design services in Ghana — custom solutions for growth, sales, and conversions",
+      "Web design services in Ghana. custom solutions for growth, sales, and conversions",
     heroDescription:
-      "More than developers — we are your growth partners. KayTech Africa builds websites that look great, load fast on mobile data, and turn visitors into calls, WhatsApp chats, and paying customers.",
+      "More than developers. we are your growth partners. KayTech Africa builds websites that look great, load fast on mobile data, and turn visitors into calls, WhatsApp chats, and paying customers.",
     intro:
-      "KayTech Africa is an Accra-based web development studio with 1914+ businesses served nationwide.",
+      `${studioProofLine}. See published case studies for Melcom, Voltic, and The Alfred.`,
     image: contentImages.serviceWeb,
     benefits: [],
     sections: [],
   },
   {
     slug: "best-digital-marketing-accra-ghana",
-    title: "Best Digital Marketing & PPC Ads in Accra, Ghana | KayTech Africa",
+    title: `Digital Marketing in Ghana. ${formatPriceFromGhs(servicePriceFromGhs["best-digital-marketing-accra-ghana"].from, "month")} | KayTech`,
     metaDescription:
-      "Digital marketing agency in Accra, Ghana — SEO, paid media, content, and growth funnels that generate leads and sales for Ghanaian businesses.",
+      `${formatPriceFromGhs(servicePriceFromGhs["best-digital-marketing-accra-ghana"].from, "month")}. SEO, paid media, content, and growth funnels for Ghanaian businesses.`,
     keywords: [
       "digital marketing agency Accra",
       "digital marketing Ghana",
@@ -136,9 +83,9 @@ export const servicePages: ServicePage[] = [
     eyebrow: "Digital marketing & PPC Ghana",
     heroTitle: "Digital marketing & PPC ads that deliver measurable results",
     heroDescription:
-      "Performance marketing, content systems, and funnels for Accra, Kumasi, Tema, and nationwide — tied to leads and revenue, not vanity metrics.",
+      "Performance marketing, content systems, and funnels for Accra, Kumasi, Tema, and nationwide. tied to leads and revenue, not vanity metrics.",
     intro:
-      "Digital marketing in Ghana works when it respects how people discover, trust, and buy — search, social, WhatsApp, and mobile. KayTech Africa helps businesses grow visibility and turn attention into enquiries through SEO, paid campaigns, landing pages, and analytics you can act on.",
+      "Digital marketing in Ghana works when it respects how people discover, trust, and buy. search, social, WhatsApp, and mobile. KayTech Africa helps businesses grow visibility and turn attention into enquiries through SEO, paid campaigns, landing pages, and analytics you can act on.",
     image: contentImages.serviceGrowth,
     benefits: [
       "Campaigns aligned to Ghanaian audiences",
@@ -151,29 +98,40 @@ export const servicePages: ServicePage[] = [
       {
         heading: "Growth systems, not one-off posts",
         paragraphs: [
-          "We connect your website, ads, and follow-up paths so a click can become a conversation on WhatsApp or a booked call — the way many Ghanaian businesses actually close sales.",
+          "We connect your website, ads, and follow-up paths so a click can become a conversation on WhatsApp or a booked call. the way many Ghanaian businesses actually close sales.",
         ],
       },
       {
         heading: "Paid media and PPC",
         paragraphs: [
-          "Google and social ads need landing pages that match the promise in the ad. We build both — so spend goes toward qualified leads, not bounced traffic.",
+          "Google and social ads need landing pages that match the promise in the ad. We build both. so spend goes toward qualified leads, not bounced traffic.",
         ],
       },
       {
         heading: "Content and SEO as long-term assets",
         paragraphs: [
-          "Blog posts, service pages, and FAQs compound over time — ranking for searches your customers type month after month without paying per click.",
+          "Blog posts, service pages, and FAQs compound over time. ranking for searches your customers type month after month without paying per click.",
+        ],
+      },
+      {
+        heading: "Reporting you can act on",
+        paragraphs: [
+          "We tie campaigns to calls, form fills, and WhatsApp starts. not vanity impressions. Monthly summaries show what worked, what we are testing next, and how spend maps to leads in Accra, Kumasi, and your target cities.",
+        ],
+      },
+      {
+        heading: "Channels that fit Ghana",
+        paragraphs: [
+          "Search, Meta, and YouTube behave differently here than in US playbooks. KayTech adjusts creative, language, and landing pages for mobile data, local trust signals, and the follow-up paths Ghanaians actually use after they click.",
         ],
       },
     ],
   },
   {
     slug: "best-software-as-a-services-saas-accra-ghana",
-    title:
-      "Best Software As A Services (SAAS) in Accra, Ghana | KayTech Africa",
+    title: `SaaS Development in Ghana. ${formatPriceFromGhs(servicePriceFromGhs["best-software-as-a-services-saas-accra-ghana"].from, "project")} | KayTech`,
     metaDescription:
-      "KayTech Africa builds Software as a Service (SaaS) platforms in Accra and Ghana — product strategy, web app development, subscriptions, dashboards, and scalable cloud deployment.",
+      `${formatPriceFromGhs(servicePriceFromGhs["best-software-as-a-services-saas-accra-ghana"].from, "project")}. SaaS MVP builds in Accra and Ghana: product strategy, subscriptions, dashboards, and cloud deployment.`,
     keywords: [
       "SaaS development Ghana",
       "software as a service Accra",
@@ -184,7 +142,7 @@ export const servicePages: ServicePage[] = [
     eyebrow: "Software As A Services (SAAS)",
     heroTitle: "SaaS development in Ghana for scalable digital products",
     heroDescription:
-      "From MVP to production SaaS platforms — subscription billing, dashboards, and cloud-ready web apps built for growth.",
+      "From MVP to production SaaS platforms. subscription billing, dashboards, and cloud-ready web apps built for growth.",
     intro:
       "Software as a Service is one of the fastest ways to build recurring digital revenue. KayTech Africa helps founders and businesses in Accra and across Ghana design, build, and launch SaaS products that are secure, scalable, and easy for users to adopt.",
     image: contentImages.serviceAi,
@@ -199,7 +157,7 @@ export const servicePages: ServicePage[] = [
       {
         heading: "From idea to launch-ready SaaS",
         paragraphs: [
-          "We translate your product idea into a clear build roadmap — user roles, key workflows, monetization, and milestones — then ship in iterative phases so you validate with real users quickly.",
+          "We translate your product idea into a clear build roadmap. user roles, key workflows, monetization, and milestones. then ship in iterative phases so you validate with real users quickly.",
         ],
       },
       {
@@ -219,56 +177,16 @@ export const servicePages: ServicePage[] = [
           "Performance, security, and maintainability are designed in from day one. We deploy to reliable cloud environments and provide ongoing support so your platform grows without constant rewrites.",
         ],
       },
-    ],
-  },
-  {
-    slug: "best-web-design-company-accra-ghana",
-    title: "Best Web Design Company in Accra, Ghana | KayTech Africa",
-    metaDescription:
-      "KayTech Africa — best web design company in Accra and Ghana. Conversion-first UI, mobile-first layouts, and brand-aligned websites for businesses nationwide.",
-    keywords: [
-      "best web designer in Accra",
-      "best web design company in Ghana",
-      "website designer Accra",
-      "affordable web design Ghana",
-      "professional website design Ghana",
-    ],
-    eyebrow: "Web design Accra",
-    heroTitle: "Web design in Accra that turns visitors into customers",
-    heroDescription:
-      "The best web designer in Accra builds for mobile, trust, and conversion — not just aesthetics. KayTech delivers brand-aligned sites for Ghanaian businesses.",
-    intro:
-      "When business owners search for the best web designer in Accra or the best web design company in Ghana, they need a partner who understands local buyers: mobile-first, impatient on slow data, and ready to WhatsApp or call when convinced. KayTech Africa designs websites that look credible, load fast, and guide visitors toward action.",
-    image: contentImages.courseDesign,
-    benefits: [
-      "Custom UI aligned to your brand",
-      "Mobile-first responsive layouts",
-      "Clear visual hierarchy and CTAs",
-      "Accessible, readable typography",
-      "Design handoff ready for development",
-    ],
-    sections: [
       {
-        heading: "Design for conversion, not portfolios alone",
+        heading: "Monetization and billing",
         paragraphs: [
-          "Pretty homepages that never generate leads are expensive decorations. We design around your offer, proof, and next step — so visitors know what you do and how to reach you within seconds.",
+          "Subscription tiers, trials, and MoMo or card billing can be wired into your MVP when revenue validation matters. We document plan logic and admin tools so your team can adjust pricing without rebuilding the core app.",
         ],
       },
       {
-        heading: "Built for Ghanaian screens",
+        heading: "Post-launch iteration",
         paragraphs: [
-          "Large tap targets, compressed imagery, and layouts that work on common phone sizes and network conditions — because that is how your customers will experience your brand.",
-        ],
-      },
-      {
-        heading: "From logo to full site",
-        paragraphs: ["Design engagements can include:"],
-        bullets: [
-          "Homepage and core page layouts",
-          "Service and about page systems",
-          "E-commerce product and catalogue UI",
-          "Brand colour and type direction",
-          "Developer-ready assets and specs",
+          "SaaS products evolve after real users arrive. KayTech ships in phases. auth and core workflow first, then analytics, notifications, and integrations. so you learn quickly without overbuilding v1.",
         ],
       },
     ],

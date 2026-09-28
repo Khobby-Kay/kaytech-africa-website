@@ -8,21 +8,21 @@ const pages = [
     eyebrow: "Services",
     title: "All services",
     description:
-      "Web development, SEO, e-commerce, digital marketing, and AI automation — each with a dedicated Ghana-focused landing page.",
+      "Web development, SEO, e-commerce, digital marketing, and AI automation. each with a dedicated Ghana-focused landing page.",
   },
   {
     href: "/pricing",
     eyebrow: "Pricing",
     title: "How we price projects",
     description:
-      "Value-focused proposals scoped to your goals — no surprise add-ons. See our approach before you request a quote.",
+      "Value-focused proposals scoped to your goals. no surprise add-ons. See our approach before you request a quote.",
   },
   {
     href: "/features",
     eyebrow: "Studio",
     title: "Features & capabilities",
     description:
-      "AI automation, web development, Web3, robotics, and growth systems — scoped for African operators.",
+      "AI automation, web development, Web3, robotics, and growth systems. scoped for African operators.",
   },
   {
     href: "/about",
@@ -81,7 +81,7 @@ export function HomeOverview() {
           </h2>
           <p className="mt-4 text-muted">
             Browse services, meet the team, enroll in the academy, or reach out
-            — each section has its own page.
+           . each section has its own page.
           </p>
         </div>
 

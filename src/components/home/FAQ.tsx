@@ -93,7 +93,7 @@ export function FAQ({
               Still have questions?
             </h3>
             <p className="mt-3 text-muted">
-              Our team is one message away. WhatsApp us or email — we reply fast.
+              Our team is one message away. WhatsApp us or email. we reply fast.
             </p>
             <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <a

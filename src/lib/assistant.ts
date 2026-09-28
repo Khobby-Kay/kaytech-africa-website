@@ -37,7 +37,7 @@ function buildKnowledge(): KnowledgeEntry[] {
 
   const academyAnswer = `KayTech Academy runs practical, cohort-based tracks: ${academyCourses
     .map((c) => c.title)
-    .join(", ")}. Apply on ${siteConfig.url}/academy or use the application form: ${academyApplicationForm.url}. Only 10 seats per cohort.`;
+    .join(", ")}. Apply on ${siteConfig.url}${academyApplicationForm.href}. Web Development course: ${siteConfig.url}/academy/web-development-course. Only 10 seats per cohort.`;
 
   const extras: KnowledgeEntry[] = [
     {
@@ -45,7 +45,7 @@ function buildKnowledge(): KnowledgeEntry[] {
         "price pricing cost quote budget how much affordable cheap rate fee package",
       ),
       answer:
-        "Pricing is scoped per project — no fixed packages. Most business websites start affordably, and we send a clear proposal after a quick discovery chat. Tell me what you need or tap “Get a quote” and the team will give you a figure.",
+        "Pricing is scoped per project. no fixed packages. Most business websites start affordably, and we send a clear proposal after a quick discovery chat. Tell me what you need or tap “Get a quote” and the team will give you a figure.",
     },
     {
       keywords: tokenize(
@@ -59,14 +59,14 @@ function buildKnowledge(): KnowledgeEntry[] {
     },
     {
       keywords: tokenize("contact reach phone call whatsapp email talk human speak person"),
-      answer: `You can reach the team directly — call ${siteConfig.contact.phoneDisplay}, WhatsApp ${siteConfig.contact.whatsappDisplay}, or email ${siteConfig.contact.email}.`,
+      answer: `You can reach the team directly. call ${siteConfig.contact.phoneDisplay}, WhatsApp ${siteConfig.contact.whatsappDisplay}, or email ${siteConfig.contact.email}.`,
     },
     {
       keywords: tokenize(
         "ai automation chatbot bot workflow automate business assistant agent whatsapp",
       ),
       answer:
-        "Yes — AI business automation is one of our specialties: chatbots, WhatsApp automation, workflow bots, and Teedra-style assistants on your site that capture leads and save your team hours. See /ai-automation or ask for a quote.",
+        "Yes. AI business automation is one of our specialties: chatbots, WhatsApp automation, workflow bots, and Teedra-style assistants on your site that capture leads and save your team hours. See /ai-automation or ask for a quote.",
     },
     {
       keywords: tokenize("time long timeline deliver fast how soon weeks duration build"),
@@ -86,12 +86,12 @@ export type AssistantReply = {
   escalate: boolean;
 };
 
-/** Retrieval matcher — returns the best knowledge answer for a user message. */
+/** Retrieval matcher. returns the best knowledge answer for a user message. */
 export function getAssistantReply(message: string): AssistantReply {
   const words = tokenize(message);
   if (words.length === 0) {
     return {
-      text: "I'm Teedra — ask me about KayTech's services, pricing, the academy, timelines, or how to get a quote.",
+      text: "I'm Teedra. ask me about KayTech's services, pricing, the academy, timelines, or how to get a quote.",
       escalate: false,
     };
   }
@@ -114,7 +114,7 @@ export function getAssistantReply(message: string): AssistantReply {
   }
 
   return {
-    text: `Good question — I'll connect you with our team. Tap "Chat on WhatsApp" below, or call ${siteConfig.contact.phoneDisplay}.`,
+    text: `Good question. I'll connect you with our team. Tap "Chat on WhatsApp" below, or call ${siteConfig.contact.phoneDisplay}.`,
     escalate: true,
   };
 }

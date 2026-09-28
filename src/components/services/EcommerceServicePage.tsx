@@ -8,10 +8,14 @@ import { PageHero } from "@/components/ui/PageHero";
 import { Container } from "@/components/ui/Container";
 import {
   ecommerceComprehensive,
+  ecommerceDemoLink,
   ecommerceFaqs,
+  ecommercePackages,
   ecommercePageMeta,
   ecommerceSpotlight,
   ecommerceTestimonials,
+  ecommerceWhatsAppFlow,
+  ecommerceWallets,
   ecommerceWhyChoose,
 } from "@/lib/ecommerce-service-content";
 import { getAllServicePages, getServicePath } from "@/lib/service-pages";
@@ -39,6 +43,72 @@ export function EcommerceServicePage() {
 
       <LeadCaptureStrip location="service_ecommerce" compact />
 
+      <section className="border-b border-hairline bg-canvas px-5 py-12 lg:px-20 lg:py-16">
+        <Container>
+          <h2 className="font-display text-2xl tracking-tight text-ink sm:text-3xl">
+            E-commerce packages (GHS)
+          </h2>
+          <div className="mt-8 grid gap-4 lg:grid-cols-3">
+            {ecommercePackages.map((pkg) => (
+              <article
+                key={pkg.name}
+                className={`rounded-3xl border p-6 ${
+                  "featured" in pkg && pkg.featured
+                    ? "border-accent/40 bg-surface-accent"
+                    : "border-hairline bg-surface-soft"
+                }`}
+              >
+                <h3 className="font-display text-lg font-semibold text-ink">{pkg.name}</h3>
+                <p className="mt-2 font-bold text-primary">{pkg.price}</p>
+                <p className="text-xs text-muted">Timeline: {pkg.timeline}</p>
+                <ul className="mt-4 space-y-2">
+                  {pkg.includes.map((item) => (
+                    <li key={item} className="text-sm text-ink">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+          <Link
+            href={ecommerceDemoLink.href}
+            className="mt-6 inline-flex text-sm font-semibold text-primary hover:underline"
+          >
+            {ecommerceDemoLink.label} →
+          </Link>
+        </Container>
+      </section>
+
+      <section className="border-b border-hairline bg-surface-soft px-5 py-12 lg:px-20 lg:py-16">
+        <Container className="grid gap-10 lg:grid-cols-2">
+          <div>
+            <h2 className="font-display text-xl font-semibold text-ink">WhatsApp order flow</h2>
+            <ol className="mt-4 list-decimal space-y-2 pl-5 text-sm text-muted">
+              {ecommerceWhatsAppFlow.map((step) => (
+                <li key={step}>{step}</li>
+              ))}
+            </ol>
+          </div>
+          <div>
+            <h2 className="font-display text-xl font-semibold text-ink">Supported wallets</h2>
+            <ul className="mt-4 space-y-2">
+              {ecommerceWallets.map((w) => (
+                <li key={w} className="text-sm text-ink">
+                  {w}
+                </li>
+              ))}
+            </ul>
+            <Link
+              href="/whatsapp-ordering-website-ghana"
+              className="mt-4 inline-block text-sm font-semibold text-primary hover:underline"
+            >
+              WhatsApp ordering service page →
+            </Link>
+          </div>
+        </Container>
+      </section>
+
       <section className="border-b border-hairline bg-surface-soft px-5 py-12 lg:px-20 lg:py-16">
         <Container>
           <RevealOnScroll variant="fade-up">
@@ -47,7 +117,7 @@ export function EcommerceServicePage() {
               &ldquo;{ecommerceSpotlight.quote}&rdquo;
             </p>
             <footer className="mt-6 text-sm text-muted">
-              — {ecommerceSpotlight.name}, {ecommerceSpotlight.role}
+             . {ecommerceSpotlight.name}, {ecommerceSpotlight.role}
             </footer>
             </blockquote>
           </RevealOnScroll>
@@ -90,7 +160,7 @@ export function EcommerceServicePage() {
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base lg:text-lg">
               Whether you run a B2C shop, wholesale catalogue, or service business
-              taking orders online — KayTech Africa builds e-commerce platforms
+              taking orders online. KayTech Africa builds e-commerce platforms
               that match how Ghana shops: mobile-first, MoMo-ready, and built to
               convert browsers into buyers.
             </p>

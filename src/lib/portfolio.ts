@@ -32,7 +32,7 @@ export const caseStudies: CaseStudy[] = [
     headline: "Up to 4–6× daily enquiries in the first 30 days",
     highlightMetric: "20+ enquiries/day · 7 in 10 via WhatsApp",
     summary:
-      "Conversion-focused website with WhatsApp funnel integration — turning walk-in interest into structured, trackable leads around the clock.",
+      "Conversion-focused website with WhatsApp funnel integration. turning walk-in interest into structured, trackable leads around the clock.",
     result: "4–6× more daily enquiries; 7 in 10 conversions through WhatsApp chat",
     metrics: [
       {
@@ -60,7 +60,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     challenge: [
       "Strong physical retail presence but no structured online enquiry system",
-      "Customers mostly walked in or called randomly — leads lost after hours",
+      "Customers mostly walked in or called randomly. leads lost after hours",
       "No tracking of where enquiries came from",
     ],
     solution: [
@@ -72,7 +72,7 @@ export const caseStudies: CaseStudy[] = [
       "Basic analytics tracking for lead sources",
     ],
     results: [
-      "Daily enquiries grew from 3–5 to 20+ within the first 30 days — up to 4–6×",
+      "Daily enquiries grew from 3–5 to 20+ within the first 30 days. up to 4–6×",
       "7 in 10 conversions now flow through WhatsApp (70% of sales)",
       "Cut missed after-hours enquiries by roughly 60%",
       "More structured customer flow than walk-in and phone alone",
@@ -92,7 +92,7 @@ export const caseStudies: CaseStudy[] = [
     headline: "Website became the pre-sales pitch",
     highlightMetric: "Cold leads arrive site-ready · faster closes in meetings",
     summary:
-      "Authority-based brand website with trust signals and proof of work — so high-value clients arrive already convinced.",
+      "Authority-based brand website with trust signals and proof of work. so high-value clients arrive already convinced.",
     result: "Prospects reference the site before calls; pitches start ahead, not from zero",
     metrics: [
       {
@@ -124,19 +124,19 @@ export const caseStudies: CaseStudy[] = [
     ],
     solution: [
       "Professional landing page focused on trust signals",
-      "Service breakdown structured for clarity — not confusion",
+      "Service breakdown structured for clarity. not confusion",
       "Proof-of-work section for instant credibility",
       "Linked contact system: email, WhatsApp, and booking flow",
       "SEO-ready structure for future local visibility",
     ],
     results: [
-      "Higher conversion rate in client pitch meetings — prospects arrive informed",
+      "Higher conversion rate in client pitch meetings. prospects arrive informed",
       "Cold leads who find the brand online show stronger trust from the first call",
       "Clients routinely reference the website before meetings",
       "Less time spent on basic explanations; more time closing",
     ],
     keyInsight:
-      "For service businesses, a website is not information — it is pre-sales persuasion.",
+      "For service businesses, a website is not information. it is pre-sales persuasion.",
     tags: ["Web design", "Credibility", "SEO-ready", "Lead capture"],
     image: contentImages.serviceGrowth,
   },
@@ -150,8 +150,8 @@ export const caseStudies: CaseStudy[] = [
     headline: "Regional orders opened up via WhatsApp commerce",
     highlightMetric: "Orders beyond Accra · repeat WhatsApp buyers",
     summary:
-      "Lightweight e-commerce with product catalogue, WhatsApp ordering, and MoMo — built for how Ghanaians actually buy online.",
-    result: "Catalogue + WhatsApp + MoMo — orders from outside Accra, less ordering friction",
+      "Lightweight e-commerce with product catalogue, WhatsApp ordering, and MoMo. built for how Ghanaians actually buy online.",
+    result: "Catalogue + WhatsApp + MoMo. orders from outside Accra, less ordering friction",
     metrics: [
       {
         label: "Customer geography",
@@ -182,7 +182,7 @@ export const caseStudies: CaseStudy[] = [
       "Could not scale beyond local foot traffic",
     ],
     solution: [
-      "Simple product catalogue — no unnecessary checkout friction",
+      "Simple product catalogue. no unnecessary checkout friction",
       "Mobile-first browsing experience for everyday smartphones",
       "WhatsApp ordering system instead of complex checkout flows",
       "Mobile Money payment integration options",
@@ -191,7 +191,7 @@ export const caseStudies: CaseStudy[] = [
     results: [
       "Customer base expanded beyond the immediate store location",
       "Repeat WhatsApp orders became a regular channel",
-      "Ordering friction dropped — browse, chat, pay on mobile",
+      "Ordering friction dropped. browse, chat, pay on mobile",
       "First orders received from outside the Accra region",
     ],
     keyInsight:
@@ -203,4 +203,12 @@ export const caseStudies: CaseStudy[] = [
 
 export function getCaseStudyBySlug(slug: string): CaseStudy | undefined {
   return caseStudies.find((study) => study.slug === slug);
+}
+
+export function getAllCaseStudies(): CaseStudy[] {
+  return caseStudies;
+}
+
+export function getCaseStudyPath(slug: string): string {
+  return `/portfolio/${slug}`;
 }

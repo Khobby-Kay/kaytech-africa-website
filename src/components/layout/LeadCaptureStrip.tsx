@@ -4,7 +4,7 @@ import { siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 type LeadCaptureStripProps = {
-  /** Where this strip appears — used for analytics */
+  /** Where this strip appears. used for analytics */
   location: string;
   className?: string;
   compact?: boolean;
@@ -12,7 +12,7 @@ type LeadCaptureStripProps = {
   hideOnMobile?: boolean;
 };
 
-/** Always-visible conversion strip — call, WhatsApp, quote. */
+/** Always-visible conversion strip. call, WhatsApp, quote. */
 export function LeadCaptureStrip({
   location,
   className,

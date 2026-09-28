@@ -23,12 +23,12 @@ type PageHeroProps = {
   secondaryCta?: HeroCtaConfig;
   /** Single hero background image */
   image?: HeroImageSlide;
-  /** Optional carousel — overrides `image` when provided */
+  /** Optional carousel. overrides `image` when provided */
   images?: readonly HeroImageSlide[];
   /** Optional overlay caption (desktop, bottom-right) */
   imageCaption?: string;
   imageCaptionMeta?: string;
-  /** Custom action row — replaces default CTA when set */
+  /** Custom action row. replaces default CTA when set */
   actions?: ReactNode;
   /** Trust line under actions */
   footnote?: ReactNode;

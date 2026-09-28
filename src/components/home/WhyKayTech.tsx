@@ -1,4 +1,5 @@
 import { Container } from "@/components/ui/Container";
+import { stats } from "@/lib/site";
 
 const lines = [
   { text: "Africa runs on ambition.", muted: false },
@@ -7,7 +8,7 @@ const lines = [
     muted: true,
   },
   {
-    text: "KayTech turns ideas into live infrastructure — inside a studio built for how African businesses actually grow.",
+    text: "KayTech turns ideas into live infrastructure. inside a studio built for how African businesses actually grow.",
     muted: false,
   },
   {
@@ -42,12 +43,7 @@ export function WhyKayTech() {
             Studio snapshot
           </p>
           <dl className="mt-6 space-y-5">
-            {[
-              ["Businesses served", "1914+"],
-              ["Experience", "30 years"],
-              ["Academy tracks", "6+"],
-              ["Build ethos", "100% Africa-first"],
-            ].map(([label, value]) => (
+            {stats.map(({ label, value }) => (
               <div
                 key={label}
                 className="flex items-center justify-between border-b border-hairline pb-5 last:border-0 last:pb-0"

@@ -6,9 +6,9 @@ import { createPageMetadata } from "@/lib/page-metadata";
 import { ghanaSearchKeywords } from "@/lib/localized-seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Security & Delivery Standards | Best Web Developer Ghana | KayTech",
+  title: "Security & Delivery Standards | KayTech Africa",
   description:
-    "Studio-grade security and delivery from one of Ghana's best web development companies. Professional websites for Accra, Kumasi, Tema, and nationwide clients.",
+    "How KayTech protects payments, data, and launches. studio-grade security and delivery for clients in Accra, Kumasi, Tema, and nationwide.",
   path: "/security",
   keywords: [...ghanaSearchKeywords],
 });

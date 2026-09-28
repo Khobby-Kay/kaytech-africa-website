@@ -2,7 +2,7 @@ import { contentImages } from "@/lib/image-seo";
 
 export const ecommerceSpotlight = {
   quote:
-    "KayTech didn't just teach theory — within two months I built my first client store with MoMo checkout and started earning from it. The hands-on support made all the difference.",
+    "KayTech didn't just teach theory. within two months I built my first client store with MoMo checkout and started earning from it. The hands-on support made all the difference.",
   name: "Ama K.",
   role: "Online store builder · Tema",
 } as const;
@@ -10,11 +10,11 @@ export const ecommerceSpotlight = {
 export const ecommerceWhyChoose = [
   {
     title: "Proven results that drive sales",
-    body: "Clients report stronger conversion after launch — clearer product pages, faster checkout, and fewer abandoned carts on mobile.",
+    body: "Clients report stronger conversion after launch. clearer product pages, faster checkout, and fewer abandoned carts on mobile.",
   },
   {
     title: "Ghana-specific optimization",
-    body: "MoMo, Paystack, Flutterwave, and WhatsApp ordering — built for how Ghanaians browse, pay, and buy on everyday networks.",
+    body: "MoMo, Paystack, Flutterwave, and WhatsApp ordering. built for how Ghanaians browse, pay, and buy on everyday networks.",
   },
   {
     title: "Mobile-first design philosophy",
@@ -30,7 +30,7 @@ export const ecommerceComprehensive = [
   {
     num: "01",
     title: "Custom e-commerce platforms for Ghanaian businesses",
-    body: "Your store should stand out — not look like a generic template. We design catalogues, categories, and product pages that load fast and guide buyers to checkout.",
+    body: "Your store should stand out. not look like a generic template. We design catalogues, categories, and product pages that load fast and guide buyers to checkout.",
     bullets: [
       "Sleek, brand-aligned storefront design",
       "Intuitive navigation and search",
@@ -63,7 +63,7 @@ export const ecommerceComprehensive = [
   {
     num: "04",
     title: "AI, automation & next-level e-commerce",
-    body: "Stay ahead with tools that capture leads and support customers around the clock — including Teedra-style assistants on your own site.",
+    body: "Stay ahead with tools that capture leads and support customers around the clock. including Teedra-style assistants on your own site.",
     bullets: [
       "AI chatbots for product questions and lead capture",
       "WhatsApp automation for orders and support",
@@ -76,7 +76,7 @@ export const ecommerceComprehensive = [
 export const ecommerceTestimonials = [
   {
     quote:
-      "Our online store went live with MoMo checkout in weeks. Orders on mobile data jumped immediately — customers finally complete payment without calling us first.",
+      "Our online store went live with MoMo checkout in weeks. Orders on mobile data jumped immediately. customers finally complete payment without calling us first.",
     name: "Efua M.",
     role: "Retail founder · Accra",
   },
@@ -88,7 +88,7 @@ export const ecommerceTestimonials = [
   },
   {
     quote:
-      "We needed Paystack, delivery zones, and a site that loads on slow networks. KayTech delivered all three — and our repeat customers noticed the difference.",
+      "We needed Paystack, delivery zones, and a site that loads on slow networks. KayTech delivered all three. and our repeat customers noticed the difference.",
     name: "Naomi L.",
     role: "Fashion brand · Cape Coast",
   },
@@ -98,7 +98,7 @@ export const ecommerceFaqs = [
   {
     question: "What is an e-commerce solution?",
     answer:
-      "An e-commerce solution is a platform that lets you sell products or services online — typically including a storefront, payment integration, product management, and tools to track orders. KayTech builds custom stores tailored to Ghanaian businesses, not one-size-fits-all templates.",
+      "An e-commerce solution is a platform that lets you sell products or services online. typically including a storefront, payment integration, product management, and tools to track orders. KayTech builds custom stores tailored to Ghanaian businesses, not one-size-fits-all templates.",
   },
   {
     question: "Why do I need an online store in Ghana?",
@@ -108,12 +108,22 @@ export const ecommerceFaqs = [
   {
     question: "How can KayTech Africa help my business grow online?",
     answer:
-      "We design and develop mobile-first stores with local payments, SEO-friendly product pages, WhatsApp flows, and optional AI assistants — so more visitors become paying customers. We scope every project to your products, delivery model, and budget.",
+      "We design and develop mobile-first stores with local payments, SEO-friendly product pages, WhatsApp flows, and optional AI assistants. so more visitors become paying customers. We scope every project to your products, delivery model, and budget.",
   },
   {
     question: "How much does an e-commerce site cost in Ghana?",
     answer:
-      "Cost depends on catalogue size, payment integrations, custom features, and design depth. KayTech sends a clear, itemised proposal after discovery — no surprise add-ons. See our pricing approach at /pricing or request a quote.",
+      "KayTech packages start around GHS 8,000 for WhatsApp catalogue stores and GHS 12,000+ for MoMo/Paystack checkout. Custom catalogues cost more. See /website-cost-ghana for the full 2026 table or request a quote.",
+  },
+  {
+    question: "Which mobile wallets do you support?",
+    answer:
+      "MTN MoMo, Telecel Cash, and AirtelTigo Money through Paystack or Flutterwave, plus cards. We design checkout so MoMo appears first for Ghanaian buyers.",
+  },
+  {
+    question: "Can customers order on WhatsApp instead of cart checkout?",
+    answer:
+      "Yes. many Ghana shops use catalogue + WhatsApp first. See /whatsapp-ordering-website-ghana and our Voltic case study at /portfolio/voltic.",
   },
   {
     question: "Can you integrate Mobile Money and Paystack?",
@@ -133,27 +143,84 @@ export const ecommerceFaqs = [
   {
     question: "Do you help market my online store?",
     answer:
-      "Yes. We offer SEO, digital marketing, and landing pages as part of our growth services — so your store can rank on Google and convert paid traffic, not just sit online.",
+      "Yes. We offer SEO, digital marketing, and landing pages as part of our growth services. so your store can rank on Google and convert paid traffic, not just sit online.",
   },
   {
     question: "Do you offer support after launch?",
     answer:
-      "Yes. KayTech provides post-launch support via WhatsApp, phone, and email — training your team, fixing issues, and helping you add products or features as you grow.",
+      "Yes. KayTech provides post-launch support via WhatsApp, phone, and email. training your team, fixing issues, and helping you add products or features as you grow.",
   },
   {
     question: "How do I get started with KayTech Africa?",
     answer:
-      "Call 024 840 8154, WhatsApp 055 992 1979, or use our contact form at /contact. Tell us what you sell, how you deliver, and how you want customers to pay — we'll reply with a clear next step.",
+      "Call 024 840 8154, WhatsApp 055 992 1979, or use our contact form at /contact. Tell us what you sell, how you deliver, and how you want customers to pay. we'll reply with a clear next step.",
   },
 ] as const;
 
+export const ecommercePackages = [
+  {
+    name: "WhatsApp catalogue",
+    price: "From GHS 8,000",
+    timeline: "3–5 weeks",
+    includes: [
+      "Mobile product catalogue",
+      "WhatsApp order messages",
+      "Up to ~50 SKUs",
+      "Basic SEO",
+    ],
+  },
+  {
+    name: "MoMo checkout store",
+    price: "From GHS 12,000",
+    timeline: "6–9 weeks",
+    featured: true,
+    includes: [
+      "Paystack MoMo + cards",
+      "MTN · Telecel · AT wallets",
+      "Order admin & alerts",
+      "Product SEO templates",
+    ],
+  },
+  {
+    name: "Custom growth store",
+    price: "From GHS 18,000",
+    timeline: "8–12 weeks",
+    includes: [
+      "Larger catalogues",
+      "Delivery zones & B2B enquiry",
+      "Inventory & analytics",
+      "AI / automation add-ons",
+    ],
+  },
+] as const;
+
+export const ecommerceWallets = [
+  "MTN Mobile Money (MoMo)",
+  "Telecel Cash",
+  "AirtelTigo Money",
+  "Visa & Mastercard via Paystack / Flutterwave",
+] as const;
+
+export const ecommerceWhatsAppFlow = [
+  "Shopper browses products on mobile data",
+  "Taps Buy on WhatsApp. chat opens with item details",
+  "Your team confirms total & delivery",
+  "Customer pays MoMo link or in-store pickup",
+  "Optional instant Paystack checkout for repeat buyers",
+] as const;
+
+export const ecommerceDemoLink = {
+  label: "See Voltic case study (WhatsApp + MoMo commerce)",
+  href: "/portfolio/voltic",
+} as const;
+
 export const ecommercePageMeta = {
   title:
-    "Top E-Commerce & Online Store Development in Accra, Ghana | KayTech Africa",
+    "E-Commerce Development in Ghana. From GHS 8,000 | KayTech Africa",
   metaDescription:
-    "KayTech Africa builds affordable, mobile-first e-commerce stores in Accra and Ghana — MoMo, Paystack, WhatsApp orders, SEO product pages, and secure checkout. Helping you sell more online.",
+    "Online stores from GHS 8,000. MoMo, Telecel Cash, AirtelTigo, Paystack, WhatsApp orders. Packages, demo case study, and FAQs. KayTech Africa, Accra.",
   heroTitle: "Helping you sell more online in Ghana",
   heroDescription:
-    "Custom online store development in Accra — Mobile Money checkout, Paystack, fast mobile UX, and platforms built for Ghanaian buyers on 3G and 4G.",
+    "Custom online store development in Accra. Mobile Money checkout, Paystack, fast mobile UX, and platforms built for Ghanaian buyers on 3G and 4G.",
   image: contentImages.whyPayments,
 };

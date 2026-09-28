@@ -12,8 +12,15 @@ import { PageHero } from "@/components/ui/PageHero";
 import { Container } from "@/components/ui/Container";
 import { pageImages } from "@/lib/page-images";
 import { createPageMetadata } from "@/lib/page-metadata";
-import { ghanaSearchKeywords, pageSeoCopy } from "@/lib/localized-seo";
+import { ghanaSearchKeywords } from "@/lib/localized-seo";
 import { siteConfig } from "@/lib/site";
+import {
+  aiAutomationDemo,
+  aiAutomationExpandedMeta,
+  aiAutomationFaqs,
+  aiAutomationPricing,
+  aiAutomationUseCases,
+} from "@/lib/ai-automation-content";
 
 const automationKeywords = [
   "AI business automation Ghana",
@@ -25,8 +32,8 @@ const automationKeywords = [
 ];
 
 export const metadata: Metadata = createPageMetadata({
-  title: pageSeoCopy.aiAutomation.title,
-  description: pageSeoCopy.aiAutomation.description,
+  title: aiAutomationExpandedMeta.title,
+  description: aiAutomationExpandedMeta.description,
   path: "/ai-automation",
   keywords: [...automationKeywords, ...ghanaSearchKeywords],
 });
@@ -35,12 +42,12 @@ const capabilities = [
   {
     icon: MessageCircle,
     title: "AI chatbots & WhatsApp automation",
-    body: "Answer customers instantly on your website and WhatsApp — qualify leads, book appointments, and never miss an enquiry, day or night.",
+    body: "Answer customers instantly on your website and WhatsApp. qualify leads, book appointments, and never miss an enquiry, day or night.",
   },
   {
     icon: Bot,
     title: "Lead-capture assistants",
-    body: "Teedra-style smart assistants that greet visitors, answer questions, and push hot leads straight to your sales team — on your website 24/7.",
+    body: "Teedra-style smart assistants that greet visitors, answer questions, and push hot leads straight to your sales team. on your website 24/7.",
   },
   {
     icon: Workflow,
@@ -50,7 +57,7 @@ const capabilities = [
   {
     icon: Sparkles,
     title: "Custom AI integrations",
-    body: "Connect AI to your existing tools — CRM, sheets, payments, and messaging — with secure, reliable integrations built for African businesses.",
+    body: "Connect AI to your existing tools. CRM, sheets, payments, and messaging. with secure, reliable integrations built for African businesses.",
   },
 ];
 
@@ -71,27 +78,30 @@ export default function AiAutomationPage() {
   return (
     <>
       <PageHero
-        title={pageSeoCopy.aiAutomation.heroTitle}
-        description={pageSeoCopy.aiAutomation.heroDescription}
-        cta={{ label: "See our work", href: "/portfolio" }}
+        title={aiAutomationExpandedMeta.heroTitle}
+        description={aiAutomationExpandedMeta.heroDescription}
+        cta={{ label: aiAutomationDemo.ctaLabel, href: aiAutomationDemo.ctaHref }}
         secondaryCta={{ label: "What we automate", href: "#capabilities" }}
         image={pageImages.aiAutomation}
       />
 
+      <section className="border-b border-hairline bg-surface-accent px-5 py-10 lg:px-20">
+        <Container>
+          <div className="grid gap-4 sm:grid-cols-3">
+            {aiAutomationPricing.map((p) => (
+              <div key={p.name} className="rounded-2xl border border-hairline bg-canvas p-4">
+                <p className="font-semibold text-ink">{p.name}</p>
+                <p className="mt-1 text-sm font-medium text-primary">{p.range}</p>
+                <p className="mt-1 text-xs text-muted">{p.note}</p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
       <section id="capabilities" className="border-b border-hairline bg-canvas px-5 py-16 lg:px-20 lg:py-24">
         <Container>
-          <div className="max-w-2xl">
-            <h2 className="font-display text-2xl tracking-tight text-ink sm:text-3xl lg:text-4xl">
-              What we automate for Ghanaian businesses
-            </h2>
-            <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base lg:text-lg">
-              KayTech Africa is an Accra-based AI automation company helping
-              businesses across Ghana win more customers and cut manual work with
-              practical, reliable AI — not hype.
-            </p>
-          </div>
-
-          <div className="mt-10 grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-4 sm:grid-cols-2">
             {capabilities.map((item) => (
               <article
                 key={item.title}
@@ -132,10 +142,7 @@ export default function AiAutomationPage() {
           </div>
 
           <div className="mt-12 max-w-2xl">
-            <h2 className="font-display text-2xl tracking-tight text-ink sm:text-3xl">
-              Real ways businesses use KayTech automation
-            </h2>
-            <ul className="mt-6 space-y-3">
+            <ul className="space-y-3">
               {useCases.map((u) => (
                 <li
                   key={u}
@@ -150,6 +157,36 @@ export default function AiAutomationPage() {
         </Container>
       </section>
 
+      <section className="border-b border-hairline bg-canvas px-5 py-16 lg:px-20 lg:py-24">
+        <Container>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {aiAutomationUseCases.map((u) => (
+              <article key={u.title} className="rounded-2xl border border-hairline bg-surface-soft p-5">
+                <h3 className="font-semibold text-ink">{u.title}</h3>
+                <p className="mt-2 text-sm text-muted">{u.body}</p>
+              </article>
+            ))}
+          </div>
+          <div className="mt-10 rounded-2xl border border-accent/30 bg-surface-accent p-6">
+            <h3 className="font-display text-lg font-semibold text-ink">{aiAutomationDemo.headline}</h3>
+            <p className="mt-2 text-sm text-muted">{aiAutomationDemo.body}</p>
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-b border-hairline bg-surface-soft px-5 py-16 lg:px-20 lg:py-24">
+        <Container>
+          <div className="space-y-4">
+            {aiAutomationFaqs.map((faq) => (
+              <article key={faq.question} className="rounded-2xl border border-hairline bg-canvas p-5">
+                <h3 className="font-semibold text-ink">{faq.question}</h3>
+                <p className="mt-2 text-sm text-muted">{faq.answer}</p>
+              </article>
+            ))}
+          </div>
+        </Container>
+      </section>
+
       <section className="bg-canvas px-5 py-16 lg:px-20 lg:py-24">
         <Container>
           <div className="flex flex-col items-start gap-6 rounded-3xl border border-hairline bg-primary p-8 text-on-primary sm:p-12 lg:flex-row lg:items-center lg:justify-between">
@@ -159,7 +196,7 @@ export default function AiAutomationPage() {
               </h2>
               <p className="mt-3 text-sm text-on-primary/85 sm:text-base">
                 Tell us what&apos;s slowing your team down. We&apos;ll scope an
-                automation that pays for itself — and you can start with Teedra,
+                automation that pays for itself. and you can start with Teedra,
                 our on-site assistant, right now.
               </p>
             </div>

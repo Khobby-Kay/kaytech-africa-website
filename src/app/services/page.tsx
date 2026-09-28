@@ -11,7 +11,7 @@ import { contentImages } from "@/lib/image-seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Web Design & Digital Services in Ghana | KayTech Africa",
   description:
-    "KayTech Africa services in Accra and Ghana — SEO, e-commerce, web development, web design, and digital marketing. Dedicated landing pages for each service nationwide.",
+    "KayTech Africa services in Accra and Ghana. SEO, e-commerce, web development, web design, and digital marketing. Dedicated landing pages for each service nationwide.",
   path: "/services",
   keywords: [...ghanaSearchKeywords],
 });
@@ -23,11 +23,37 @@ export default function ServicesHubPage() {
     <>
       <PageHero
         title="Web design & digital services across Ghana"
-        description="Dedicated pages for SEO, e-commerce, web development, web design, and digital marketing — built for Accra, Kumasi, Tema, and nationwide."
+        description="Dedicated pages for SEO, e-commerce, web development, web design, and digital marketing. built for Accra, Kumasi, Tema, and nationwide."
         cta={{ label: "See our work", href: "/portfolio" }}
         secondaryCta={{ label: "Browse services", href: "#services-list" }}
         image={contentImages.serviceWeb}
       />
+
+      <section className="border-b border-hairline bg-surface-soft px-5 py-12 lg:px-20 lg:py-16">
+        <Container>
+          <div className="max-w-3xl">
+            <h2 className="font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
+              How we scope projects in Ghana
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg">
+              Each service below has its own page with deliverables and FAQs. Accra
+              businesses can start at{" "}
+              <Link href="/web-design/accra-ghana" className="font-medium text-primary hover:underline">
+                our Accra hub
+              </Link>{" "}
+              for local pricing and reviews. SEO retainers are listed on{" "}
+              <Link href="/seo-packages-ghana" className="font-medium text-primary hover:underline">
+                SEO packages Ghana
+              </Link>
+              . Not sure where to begin?{" "}
+              <Link href="/contact" className="font-medium text-primary hover:underline">
+                Contact us
+              </Link>{" "}
+              for a free discovery call.
+            </p>
+          </div>
+        </Container>
+      </section>
 
       <section id="services-list" className="border-b border-hairline bg-canvas px-5 py-16 lg:px-20 lg:py-24">
         <Container>

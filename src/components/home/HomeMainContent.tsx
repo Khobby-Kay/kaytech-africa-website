@@ -19,7 +19,7 @@ export function HomeMainContent() {
             </h2>
             <p className="mt-3 text-sm text-muted sm:text-base">
               The best website designer in Accra for SEO, e-commerce, and
-              affordable business websites — serving Accra, Kumasi, Tema, and all
+              affordable business websites. serving Accra, Kumasi, Tema, and all
               of Ghana.
             </p>
             </div>
@@ -79,7 +79,7 @@ export function HomeMainContent() {
               <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
                 When you search for the best web designer in Accra or an
                 affordable website design company in Ghana, you need a partner
-                who delivers leads and sales — not just a pretty homepage.
+                who delivers leads and sales. not just a pretty homepage.
               </p>
               <Link
                 href="/about"
@@ -116,11 +116,12 @@ export function HomeMainContent() {
               Revenue-generating service
             </p>
             <h2 className="mt-3 font-display text-2xl tracking-tight sm:text-3xl lg:text-4xl">
-              Worked with over 1914 businesses with remarkable results
+              Case studies with measurable client results
             </h2>
             <p className="mt-4 max-w-xl text-sm text-on-primary/85 sm:text-base">
-              With an accumulated 30 years experience, KayTech supports brands in
-              Accra, Kumasi, Tema, and nationwide with websites built to convert.
+              KayTech publishes challenge, solution, and outcome stories. Melcom,
+              Voltic, The Alfred, and more. for brands in Accra, Kumasi, Tema, and
+              nationwide.
             </p>
             <Link
               href="/about"

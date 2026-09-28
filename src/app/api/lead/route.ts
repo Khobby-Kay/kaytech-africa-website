@@ -9,7 +9,7 @@ type LeadPayload = {
   phone?: string;
   message?: string;
   service?: string;
-  // honeypot — bots fill this, humans don't
+  // honeypot. bots fill this, humans don't
   company?: string;
 };
 
@@ -51,7 +51,7 @@ export async function POST(request: Request) {
   const to = process.env.LEAD_INBOX || siteConfig.contact.email;
   const from = process.env.LEAD_FROM || "KayTech Africa <info@kaytechafrica.com>";
 
-  // No mail provider configured — accept the lead so the client can fall back
+  // No mail provider configured. accept the lead so the client can fall back
   // to WhatsApp/email without showing an error.
   if (!apiKey) {
     console.error("[lead] Missing RESEND_API_KEY in environment.");
@@ -86,7 +86,7 @@ export async function POST(request: Request) {
         from,
         to: [to],
         reply_to: email || undefined,
-        subject: `New lead: ${name}${service ? ` — ${service}` : ""}`,
+        subject: `New lead: ${name}${service ? `. ${service}` : ""}`,
         html,
       }),
     });

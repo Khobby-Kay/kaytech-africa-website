@@ -35,7 +35,7 @@ export function WhyKayTechHome() {
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-muted sm:mt-4 sm:text-lg">
             KayTech is the best web design company in Accra for brands that need
-            results — trusted as one of the top web developers in Ghana for
+            results. trusted as one of the top web developers in Ghana for
             business websites, SEO, e-commerce, and growth across Accra, Kumasi,
             and nationwide.
           </p>

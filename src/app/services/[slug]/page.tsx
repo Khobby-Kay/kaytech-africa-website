@@ -52,7 +52,7 @@ export default function ServicePage({ params }: { params: Params }) {
   if (!page) notFound();
 
   const isEcommerce = params.slug === "best-ecommerce-development-accra-ghana";
-  const isWebDev = params.slug === "best-web-development-design-accra-ghana";
+  const isWebDev = params.slug === "best-web-development-design-ghana";
   const allPages = getAllServicePages();
 
   const enhancedMeta = isEcommerce

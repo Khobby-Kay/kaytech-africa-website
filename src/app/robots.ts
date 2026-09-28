@@ -7,17 +7,17 @@ import { siteConfig } from "@/lib/site";
  * Meta AI, Perplexity, DeepSeek via Common Crawl, and more).
  */
 const aiCrawlers = [
-  // OpenAI — ChatGPT, GPT search, training
+  // OpenAI. ChatGPT, GPT search, training
   "GPTBot",
   "OAI-SearchBot",
   "ChatGPT-User",
-  // Anthropic — Claude / Claude.ai
+  // Anthropic. Claude / Claude.ai
   "ClaudeBot",
   "Claude-Web",
   "anthropic-ai",
   "Claude-SearchBot",
   "Claude-User",
-  // Google — Gemini / Vertex / AI Overviews
+  // Google. Gemini / Vertex / AI Overviews
   "Google-Extended",
   "GoogleOther",
   // Microsoft Copilot / Bing
@@ -35,7 +35,7 @@ const aiCrawlers = [
   "Applebot-Extended",
   // Amazon
   "Amazonbot",
-  // Common Crawl — feeds DeepSeek, Mistral, and many open LLMs
+  // Common Crawl. feeds DeepSeek, Mistral, and many open LLMs
   "CCBot",
   // Cohere, You.com, Diffbot, DuckAssist and others
   "cohere-ai",

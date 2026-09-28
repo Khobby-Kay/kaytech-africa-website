@@ -6,7 +6,7 @@ import { caseStudies } from "@/lib/portfolio";
 
 /**
  * Plain HTML snapshot for crawlers, AI fetchers, and no-JS clients.
- * Mirrors visible Proof of Impact content — not hidden or cloaked.
+ * Mirrors visible Proof of Impact content. not hidden or cloaked.
  */
 export function CrawlerContentSnapshot() {
   return (
@@ -18,7 +18,7 @@ export function CrawlerContentSnapshot() {
         <ul>
           {aggregateImpactMetrics.map((metric) => (
             <li key={metric.label}>
-              {metric.label}: {metric.value} — {metric.detail}
+              {metric.label}: {metric.value}. {metric.detail}
             </li>
           ))}
         </ul>

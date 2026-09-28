@@ -120,7 +120,7 @@ type StaggerRevealProps = {
   as?: "div" | "ul";
 };
 
-/** Stagger child reveals — Doctor Barns-style sequential fade-up on cards. */
+/** Stagger child reveals. Doctor Barns-style sequential fade-up on cards. */
 export function StaggerReveal({
   children,
   className,

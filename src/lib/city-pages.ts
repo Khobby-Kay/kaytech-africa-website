@@ -22,9 +22,10 @@ export const cityPages: CityPage[] = [
     slug: "accra-ghana",
     cityName: "Accra",
     region: "Greater Accra Region",
-    title: "Best Web Design & Website Developer in Accra, Ghana | KayTech Africa",
+    title:
+      "Web Design Company in Accra, Ghana | Prices, Reviews & Map | KayTech Africa",
     metaDescription:
-      "KayTech Africa is Accra's trusted web design company — custom websites, e-commerce, SEO, and AI automation for businesses in East Legon, Tema, Osu, and Greater Accra. Call 024 840 8154.",
+      "KayTech Africa. web design company in Accra with transparent pricing, client reviews, and local SEO. Osu, Spintex, East Legon, Adenta & Greater Accra. Call 024 840 8154.",
     keywords: [
       "web design Accra",
       "web designer Accra Ghana",
@@ -35,11 +36,11 @@ export const cityPages: CityPage[] = [
       "web design Osu Accra",
       "web design Tema Ghana",
     ],
-    heroTitle: "Top web design company in Accra, Ghana",
+    heroTitle: "Web design company in Accra, Ghana",
     heroDescription:
-      "Custom websites that rank on Google, load fast on mobile data, and turn visitors into calls and WhatsApp enquiries — built for Accra businesses.",
+      "Custom websites that rank on Google, load fast on mobile data, and turn visitors into calls and WhatsApp enquiries. with clear pricing and Accra-area delivery.",
     intro:
-      "Accra is Ghana's most competitive digital market. Whether you run a shop in Osu, a clinic in East Legon, or a corporate brand in Airport City, your website must look professional, work on every phone, and make it easy to contact you. KayTech Africa is an Accra-based web design and development studio serving Greater Accra and nationwide — 1914+ businesses served with remarkable results.",
+      "Accra is Ghana's most competitive digital market. Whether you run a shop in Osu, a clinic in East Legon, or a corporate brand in Airport City, your website must look professional, work on every phone, and make it easy to contact you. KayTech Africa is an Accra-based web design and development studio serving Greater Accra and nationwide since 2020. This page is our single Accra hub: typical price ranges, client feedback, sectors we serve, and how to book an office or WhatsApp consultation.",
     areas: [
       "East Legon",
       "Osu",
@@ -55,7 +56,7 @@ export const cityPages: CityPage[] = [
     whyChoose: [
       {
         title: "Accra-based, Accra-focused",
-        body: "We understand how Accra customers search, browse on mobile, and pay — MoMo, Paystack, and WhatsApp built in from day one.",
+        body: "We understand how Accra customers search, browse on mobile, and pay. MoMo, Paystack, and WhatsApp built in from day one.",
       },
       {
         title: "SEO that ranks locally",
@@ -63,23 +64,23 @@ export const cityPages: CityPage[] = [
       },
       {
         title: "Conversion-first design",
-        body: "Clear calls to action, click-to-call, WhatsApp buttons, and fast checkout — not brochure sites that look pretty but never generate leads.",
+        body: "Clear calls to action, click-to-call, WhatsApp buttons, and fast checkout. not brochure sites that look pretty but never generate leads.",
       },
       {
         title: "Fast delivery",
-        body: "Most marketing sites launch in 2–4 weeks with milestones agreed upfront — so you start getting enquiries sooner.",
+        body: "Most marketing sites launch in 2–4 weeks with milestones agreed upfront. so you start getting enquiries sooner.",
       },
     ],
     faqs: [
       {
         question: "How much does a website cost in Accra?",
         answer:
-          "Cost depends on pages, features, and design depth. KayTech sends a clear proposal after a free discovery call — see our pricing approach or request a quote. Most Accra business sites are scoped affordably with no hidden fees.",
+          "Cost depends on pages, features, and design depth. KayTech sends a clear proposal after a free discovery call. see our pricing approach or request a quote. Most Accra business sites are scoped affordably with no hidden fees.",
       },
       {
         question: "Do you meet clients in Accra?",
         answer:
-          "Yes. We're Accra-based and can meet in person or work remotely via WhatsApp and video call — whichever suits your schedule.",
+          "Yes. We're Accra-based and can meet in person or work remotely via WhatsApp and video call. whichever suits your schedule.",
       },
       {
         question: "Can you integrate Mobile Money for my Accra business?",
@@ -113,9 +114,9 @@ export const cityPages: CityPage[] = [
     ],
     heroTitle: "Professional web design in Kumasi, Ghana",
     heroDescription:
-      "Mobile-first websites and online stores for Kumasi and Ashanti Region businesses — built to rank on Google and convert on everyday Ghanaian networks.",
+      "Mobile-first websites and online stores for Kumasi and Ashanti Region businesses. built to rank on Google and convert on everyday Ghanaian networks.",
     intro:
-      "Kumasi's economy runs on trade, services, and growing digital adoption. From Kejetia market traders going online to professional firms in Ahodwo and Asokwa, businesses need websites that work on mobile and reflect real trust. KayTech Africa serves Kumasi and the Ashanti Region remotely and on-site — with the same quality we deliver for Accra clients.",
+      "Kumasi's economy runs on trade, services, and growing digital adoption. From Kejetia market traders going online to professional firms in Ahodwo and Asokwa, businesses need websites that work on mobile and reflect real trust. KayTech Africa serves Kumasi and the Ashanti Region remotely and on-site. with the same quality we deliver for Accra clients.",
     areas: [
       "Ahodwo",
       "Asokwa",
@@ -131,7 +132,7 @@ export const cityPages: CityPage[] = [
     whyChoose: [
       {
         title: "Built for Kumasi buyers",
-        body: "Fast-loading pages on 3G/4G, MoMo checkout, and WhatsApp ordering — how Ashanti Region customers actually buy online.",
+        body: "Fast-loading pages on 3G/4G, MoMo checkout, and WhatsApp ordering. how Ashanti Region customers actually buy online.",
       },
       {
         title: "Affordable, transparent pricing",
@@ -143,19 +144,19 @@ export const cityPages: CityPage[] = [
       },
       {
         title: "Remote + responsive support",
-        body: "WhatsApp, phone, and video support from our Accra studio — serving Kumasi clients daily.",
+        body: "WhatsApp, phone, and video support from our Accra studio. serving Kumasi clients daily.",
       },
     ],
     faqs: [
       {
         question: "Do you work with businesses in Kumasi?",
         answer:
-          "Yes. We serve Kumasi, Ahodwo, Asokwa, and all of Ashanti Region — with the same web design, e-commerce, and SEO services we offer in Accra.",
+          "Yes. We serve Kumasi, Ahodwo, Asokwa, and all of Ashanti Region. with the same web design, e-commerce, and SEO services we offer in Accra.",
       },
       {
         question: "Can I pay in instalments?",
         answer:
-          "We agree payment milestones per project — typically deposit, design approval, and launch. Discuss options on your free consultation call.",
+          "We agree payment milestones per project. typically deposit, design approval, and launch. Discuss options on your free consultation call.",
       },
       {
         question: "Will my site work on cheap Android phones?",
@@ -183,9 +184,9 @@ export const cityPages: CityPage[] = [
     ],
     heroTitle: "Web design & development in Tema, Ghana",
     heroDescription:
-      "Industrial, logistics, retail, and service businesses in Tema get modern websites with local payments, SEO, and lead capture — from Ghana's trusted studio.",
+      "Industrial, logistics, retail, and service businesses in Tema get modern websites with local payments, SEO, and lead capture. from Ghana's trusted studio.",
     intro:
-      "Tema powers Ghana's port, logistics, and a fast-growing residential and retail corridor. Businesses in Community 25, Tema New Town, and Harbour City need websites that look credible to corporate clients and simple enough for local customers to use on a phone. KayTech Africa builds conversion-focused sites for Tema brands — with MoMo, Paystack, and WhatsApp built in.",
+      "Tema powers Ghana's port, logistics, and a fast-growing residential and retail corridor. Businesses in Community 25, Tema New Town, and Harbour City need websites that look credible to corporate clients and simple enough for local customers to use on a phone. KayTech Africa builds conversion-focused sites for Tema brands. with MoMo, Paystack, and WhatsApp built in.",
     areas: [
       "Community 25",
       "Tema New Town",
@@ -201,7 +202,7 @@ export const cityPages: CityPage[] = [
     whyChoose: [
       {
         title: "Tema business expertise",
-        body: "From logistics and import/export to retail and services — we design sites that speak to B2B and B2C buyers in the Tema corridor.",
+        body: "From logistics and import/export to retail and services. we design sites that speak to B2B and B2C buyers in the Tema corridor.",
       },
       {
         title: "Lead generation built in",
@@ -213,7 +214,7 @@ export const cityPages: CityPage[] = [
       },
       {
         title: "Close to Tema",
-        body: "Accra-based studio — quick to meet, fast to respond, serving Tema clients every week.",
+        body: "Accra-based studio. quick to meet, fast to respond, serving Tema clients every week.",
       },
     ],
     faqs: [
@@ -252,9 +253,9 @@ export const cityPages: CityPage[] = [
     ],
     heroTitle: "Web design company serving Takoradi, Ghana",
     heroDescription:
-      "Professional websites for Takoradi, Sekondi, and Western Region businesses — mobile-first, MoMo-ready, and built to rank on Google.",
+      "Professional websites for Takoradi, Sekondi, and Western Region businesses. mobile-first, MoMo-ready, and built to rank on Google.",
     intro:
-      "Takoradi and the wider Western Region are hubs for oil, gas, logistics, retail, and services. Businesses here need websites that look credible to corporate partners and work flawlessly on mobile for everyday customers. KayTech Africa serves Takoradi remotely from our Accra studio with the same quality we deliver nationwide — 1914+ businesses served with remarkable results.",
+      "Takoradi and the wider Western Region are hubs for oil, gas, logistics, retail, and services. Businesses here need websites that look credible to corporate partners and work flawlessly on mobile for everyday customers. KayTech Africa serves Takoradi remotely from our Accra studio with the same quality we deliver nationwide. see published case studies for sample outcomes.",
     areas: [
       "Sekondi-Takoradi",
       "Takoradi Central",
@@ -268,11 +269,11 @@ export const cityPages: CityPage[] = [
     whyChoose: [
       {
         title: "Western Region expertise",
-        body: "Sites for logistics, energy, hospitality, and retail — scoped for how Takoradi businesses sell and serve clients.",
+        body: "Sites for logistics, energy, hospitality, and retail. scoped for how Takoradi businesses sell and serve clients.",
       },
       {
         title: "Remote-first, responsive support",
-        body: "WhatsApp, phone, and video calls — we serve Takoradi clients daily without you needing to travel to Accra.",
+        body: "WhatsApp, phone, and video calls. we serve Takoradi clients daily without you needing to travel to Accra.",
       },
       {
         title: "Mobile & MoMo ready",
@@ -287,7 +288,7 @@ export const cityPages: CityPage[] = [
       {
         question: "Do you work with businesses in Takoradi?",
         answer:
-          "Yes. We build websites for Takoradi, Sekondi-Takoradi, and the Western Region — with full web design, e-commerce, and SEO services.",
+          "Yes. We build websites for Takoradi, Sekondi-Takoradi, and the Western Region. with full web design, e-commerce, and SEO services.",
       },
       {
         question: "Can we meet in person?",
@@ -297,7 +298,7 @@ export const cityPages: CityPage[] = [
       {
         question: "How much does a website cost in Takoradi?",
         answer:
-          "Pricing is scoped per project. See our website cost guide or request a free quote — we send clear proposals with no hidden fees.",
+          "Pricing is scoped per project. See our website cost guide or request a free quote. we send clear proposals with no hidden fees.",
       },
     ],
     image: contentImages.serviceGrowth,
@@ -319,9 +320,9 @@ export const cityPages: CityPage[] = [
     ],
     heroTitle: "Web design in Cape Coast, Ghana",
     heroDescription:
-      "Websites for Cape Coast tourism, education, retail, and services — built to attract visitors, capture leads, and work on every phone.",
+      "Websites for Cape Coast tourism, education, retail, and services. built to attract visitors, capture leads, and work on every phone.",
     intro:
-      "Cape Coast blends tourism, universities, fishing, and a growing SME sector. Hotels, schools, restaurants, and local brands need websites that inspire trust and make booking or contacting you effortless. KayTech Africa builds conversion-focused sites for Cape Coast and Central Region businesses — with SEO, WhatsApp, and MoMo built in.",
+      "Cape Coast blends tourism, universities, fishing, and a growing SME sector. Hotels, schools, restaurants, and local brands need websites that inspire trust and make booking or contacting you effortless. KayTech Africa builds conversion-focused sites for Cape Coast and Central Region businesses. with SEO, WhatsApp, and MoMo built in.",
     areas: [
       "Cape Coast Central",
       "University of Cape Coast area",
@@ -343,7 +344,7 @@ export const cityPages: CityPage[] = [
       },
       {
         title: "Affordable for SMEs",
-        body: "Transparent, scoped pricing — starter sites to full e-commerce without surprise add-ons.",
+        body: "Transparent, scoped pricing. starter sites to full e-commerce without surprise add-ons.",
       },
       {
         title: "Central Region SEO",
@@ -388,9 +389,9 @@ export const cityPages: CityPage[] = [
     ],
     heroTitle: "Web design in Ho, Hohoe & Volta Region",
     heroDescription:
-      "Professional websites for Ho, Hohoe, and businesses across Volta Region — mobile-first, MoMo-ready, and built to rank on Google.",
+      "Professional websites for Ho, Hohoe, and businesses across Volta Region. mobile-first, MoMo-ready, and built to rank on Google.",
     intro:
-      "The Volta Region — from Ho municipal capital to Hohoe and surrounding districts — is home to agriculture, trade, education, hospitality, and a growing SME sector. Businesses in Ho and Hohoe need websites that work on mobile, accept MoMo, and make it easy for customers to call or WhatsApp. KayTech Africa serves Volta Region clients remotely from our Accra studio with the same quality we deliver nationwide.",
+      "The Volta Region. from Ho municipal capital to Hohoe and surrounding districts. is home to agriculture, trade, education, hospitality, and a growing SME sector. Businesses in Ho and Hohoe need websites that work on mobile, accept MoMo, and make it easy for customers to call or WhatsApp. KayTech Africa serves Volta Region clients remotely from our Accra studio with the same quality we deliver nationwide.",
     areas: [
       "Ho",
       "Hohoe",
@@ -405,11 +406,11 @@ export const cityPages: CityPage[] = [
     whyChoose: [
       {
         title: "Ho & Hohoe coverage",
-        body: "One trusted studio for Ho municipal, Hohoe, and Volta districts — web design, e-commerce, and SEO without travelling to Accra.",
+        body: "One trusted studio for Ho municipal, Hohoe, and Volta districts. web design, e-commerce, and SEO without travelling to Accra.",
       },
       {
         title: "Built for Volta buyers",
-        body: "Fast pages on everyday networks, WhatsApp ordering, and MoMo checkout — how Volta Region customers browse and pay.",
+        body: "Fast pages on everyday networks, WhatsApp ordering, and MoMo checkout. how Volta Region customers browse and pay.",
       },
       {
         title: "Agriculture & local trade",
@@ -424,22 +425,22 @@ export const cityPages: CityPage[] = [
       {
         question: "Do you build websites for businesses in Ho and Hohoe?",
         answer:
-          "Yes. KayTech serves Ho, Hohoe, and all of Volta Region — with web design, e-commerce, SEO, and AI automation. Most projects run smoothly via WhatsApp and phone from our Accra studio.",
+          "Yes. KayTech serves Ho, Hohoe, and all of Volta Region. with web design, e-commerce, SEO, and AI automation. Most projects run smoothly via WhatsApp and phone from our Accra studio.",
       },
       {
         question: "Can you help Volta Region businesses sell online?",
         answer:
-          "Absolutely. We build online stores with Mobile Money, Paystack, product catalogues, and WhatsApp order alerts — ideal for retailers and traders in Ho, Hohoe, and beyond.",
+          "Absolutely. We build online stores with Mobile Money, Paystack, product catalogues, and WhatsApp order alerts. ideal for retailers and traders in Ho, Hohoe, and beyond.",
       },
       {
         question: "How much does a website cost in Volta Region?",
         answer:
-          "Pricing is scoped per project. See our website cost guide at /website-cost-ghana or request a free quote — we send clear proposals with no hidden fees.",
+          "Pricing is scoped per project. See our website cost guide at /website-cost-ghana or request a free quote. we send clear proposals with no hidden fees.",
       },
       {
         question: "How do I get started?",
         answer:
-          "Call 024 840 8154, WhatsApp 055 992 1979, or use our contact form. Tell us what you sell and where you operate in Volta Region — we'll reply with a clear next step.",
+          "Call 024 840 8154, WhatsApp 055 992 1979, or use our contact form. Tell us what you sell and where you operate in Volta Region. we'll reply with a clear next step.",
       },
     ],
     image: contentImages.whyStudio,
@@ -451,7 +452,7 @@ export const cityPages: CityPage[] = [
     region: "Northern Region",
     title: "Best Web Design in Tamale, Ghana | Website Developer | KayTech Africa",
     metaDescription:
-      "Web design in Tamale, Northern Region — business websites, e-commerce, and SEO for Tamale brands. KayTech Africa serves all Ghana. Call 024 840 8154.",
+      "Web design in Tamale, Northern Region. business websites, e-commerce, and SEO for Tamale brands. KayTech Africa serves all Ghana. Call 024 840 8154.",
     keywords: [
       "web design Tamale",
       "website designer Tamale Ghana",
@@ -461,14 +462,14 @@ export const cityPages: CityPage[] = [
     ],
     heroTitle: "Web design in Tamale & Northern Region",
     heroDescription:
-      "Professional websites for Tamale businesses — mobile-first, MoMo-ready, built to rank on Google across Northern Ghana.",
+      "Professional websites for Tamale businesses. mobile-first, MoMo-ready, built to rank on Google across Northern Ghana.",
     intro:
-      "Tamale is the commercial hub of Northern Ghana — agriculture, trade, education, and a fast-growing SME sector. Businesses in Tamale need websites that work on mobile networks, support MoMo, and make it easy for customers to call or WhatsApp. KayTech Africa delivers Tamale websites with the same studio quality we provide in Accra and Kumasi.",
+      "Tamale is the commercial hub of Northern Ghana. agriculture, trade, education, and a fast-growing SME sector. Businesses in Tamale need websites that work on mobile networks, support MoMo, and make it easy for customers to call or WhatsApp. KayTech Africa delivers Tamale websites with the same studio quality we provide in Accra and Kumasi.",
     areas: ["Tamale", "Sagnarigu", "Northern Region", "Yendi", "Bolgatanga corridor"],
     whyChoose: [
       {
         title: "Northern Region coverage",
-        body: "One trusted studio for Tamale and Northern Ghana — no need to travel south for professional web design.",
+        body: "One trusted studio for Tamale and Northern Ghana. no need to travel south for professional web design.",
       },
       {
         title: "Mobile & MoMo ready",
@@ -480,7 +481,7 @@ export const cityPages: CityPage[] = [
       },
       {
         title: "Remote-first delivery",
-        body: "WhatsApp, phone, and video — smooth projects from our Accra studio nationwide.",
+        body: "WhatsApp, phone, and video. smooth projects from our Accra studio nationwide.",
       },
     ],
     faqs: [
@@ -492,7 +493,7 @@ export const cityPages: CityPage[] = [
       {
         question: "How much does a website cost in Tamale?",
         answer:
-          "Pricing is scoped per project. See /website-cost-ghana or request a free quote — same transparent process nationwide.",
+          "Pricing is scoped per project. See /website-cost-ghana or request a free quote. same transparent process nationwide.",
       },
     ],
     image: contentImages.principleLocal,
@@ -504,7 +505,7 @@ export const cityPages: CityPage[] = [
     region: "Bono Region",
     title: "Web Design Sunyani, Ghana | Website Company | KayTech Africa",
     metaDescription:
-      "Web design in Sunyani, Bono Region — business websites, SEO, and e-commerce for Sunyani and Brong-Ahafo brands. KayTech Africa.",
+      "Web design in Sunyani, Bono Region. business websites, SEO, and e-commerce for Sunyani and Brong-Ahafo brands. KayTech Africa.",
     keywords: [
       "web design Sunyani",
       "website designer Sunyani Ghana",
@@ -513,9 +514,9 @@ export const cityPages: CityPage[] = [
     ],
     heroTitle: "Web design in Sunyani & Bono Region",
     heroDescription:
-      "Credible websites for Sunyani schools, clinics, retailers, and services — mobile-first for Ghana.",
+      "Credible websites for Sunyani schools, clinics, retailers, and services. mobile-first for Ghana.",
     intro:
-      "Sunyani anchors the Bono Region's education, health, and retail economy. Local businesses compete for visibility on Google and WhatsApp. KayTech Africa builds Sunyani websites that establish trust, capture leads, and support MoMo payments — delivered remotely with Accra studio quality.",
+      "Sunyani anchors the Bono Region's education, health, and retail economy. Local businesses compete for visibility on Google and WhatsApp. KayTech Africa builds Sunyani websites that establish trust, capture leads, and support MoMo payments. delivered remotely with Accra studio quality.",
     areas: ["Sunyani", "Bono Region", "Techiman", "Dormaa", "Berekum"],
     whyChoose: [
       {
@@ -524,7 +525,7 @@ export const cityPages: CityPage[] = [
       },
       {
         title: "Affordable professional builds",
-        body: "Clear quotes without surprise fees — scoped to your goals and budget.",
+        body: "Clear quotes without surprise fees. scoped to your goals and budget.",
       },
       {
         title: "SEO for Sunyani searches",
@@ -532,14 +533,14 @@ export const cityPages: CityPage[] = [
       },
       {
         title: "Nationwide studio",
-        body: "1914+ businesses served — Accra-based team, Ghana-wide delivery.",
+        body: "Accra-based team, Ghana-wide delivery. with published client case studies.",
       },
     ],
     faqs: [
       {
         question: "Can you help Sunyani schools and hospitals?",
         answer:
-          "Yes — see /industry/school-website-design-ghana and contact us for healthcare-scoped projects.",
+          "Yes. see /industry/school-website-design-ghana and contact us for healthcare-scoped projects.",
       },
     ],
     image: contentImages.principleMomo,
@@ -559,7 +560,7 @@ export function getCityPath(slug: string): string {
   return `/web-design/${slug}`;
 }
 
-/** Flat SEO URLs — redirects to canonical /web-design/[slug] */
+/** Flat SEO URLs. redirects to canonical /web-design/[slug] */
 export function getCityFlatPath(slug: string): string {
   return `/web-design-${slug}`;
 }

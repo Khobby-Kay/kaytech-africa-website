@@ -33,8 +33,8 @@ export function generateMetadata({
   }
 
   return createPageMetadata({
-    title: `${member.name} — ${member.title} | KayTech Africa`,
-    description: `${member.name}, ${member.title} at KayTech Africa — ${member.bio.slice(0, 140)}…`,
+    title: `${member.name}. ${member.title} | KayTech Africa`,
+    description: `${member.name}, ${member.title} at KayTech Africa. ${member.bioParagraphs[0].slice(0, 140)}…`,
     path: getTeamPath(member.slug),
     keywords: [
       "KayTech Africa team",
@@ -54,7 +54,7 @@ export default function TeamMemberPage({ params }: { params: Params }) {
     "@type": "Person",
     name: member.name,
     jobTitle: member.title,
-    description: member.bio,
+    description: member.bioParagraphs.join(" "),
     image: `${siteConfig.url}${member.image.src}`,
     worksFor: {
       "@type": "Organization",
@@ -93,9 +93,20 @@ export default function TeamMemberPage({ params }: { params: Params }) {
               <p className="mt-2 text-lg font-semibold text-primary">
                 {member.title}
               </p>
-              <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg">
-                {member.bio}
-              </p>
+              <div className="mt-4 space-y-4 text-base leading-relaxed text-muted sm:text-lg">
+                {member.bioParagraphs.map((paragraph) => (
+                  <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+                ))}
+              </div>
+              {member.credentials?.length ? (
+                <ul className="mt-6 space-y-2 border-t border-hairline pt-6">
+                  {member.credentials.map((item) => (
+                    <li key={item} className="text-sm font-medium text-ink">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
               <div className="mt-8 flex flex-wrap gap-4">
                 {member.linkedin ? (
                   <Link

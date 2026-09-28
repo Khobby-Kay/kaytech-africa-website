@@ -26,7 +26,7 @@ type MediaProps = {
   imageClassName?: string;
   /** Subtle zoom-on-hover. Default true for an interactive, premium feel. */
   zoom?: boolean;
-  /** Dark gradient scrim from the bottom — use when overlaying text/badges. */
+  /** Dark gradient scrim from the bottom. use when overlaying text/badges. */
   scrim?: boolean;
   /** Hairline ring + soft shadow framing. Default true. */
   framed?: boolean;

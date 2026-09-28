@@ -41,7 +41,7 @@ export function WebsiteCostCalculator() {
         Estimate your website budget
       </h3>
       <p className="mt-2 text-sm text-muted">
-        Market ranges in Ghana (2026). Your exact quote depends on features — we
+        Market ranges in Ghana (2026). Your exact quote depends on features. we
         scope every project individually.
       </p>
 

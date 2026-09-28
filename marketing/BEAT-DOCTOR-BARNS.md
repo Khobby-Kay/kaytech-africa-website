@@ -1,4 +1,4 @@
-# Beat Doctor Barns — Revenue & Search Playbook
+# Beat Doctor Barns. Revenue & Search Playbook
 
 How KayTech Africa wins more calls, quotes, and paid projects than doctorbarns.com.
 
@@ -20,12 +20,12 @@ How KayTech Africa wins more calls, quotes, and paid projects than doctorbarns.c
 
 ## Where KayTech can beat them (your edge)
 
-1. **Teedra** — 24/7 AI assistant on every page. Doctor Barns has no equivalent. Captures leads after hours.
-2. **Speed & UX** — Next.js site loads faster than typical WordPress. Google rewards Core Web Vitals; mobile users convert more.
-3. **Academy** — Second revenue stream + trust signal (“they train developers, not just sell websites”).
-4. **AI automation positioning** — Own “AI chatbot Ghana”, “WhatsApp automation Accra” before they do.
-5. **MoMo-first e-commerce** — Dedicated e-commerce page with Ghana payment story (already built).
-6. **Conversion design** — Sticky call/WhatsApp bar, lead strip on every money page, phone in navbar (implemented).
+1. **Teedra**. 24/7 AI assistant on every page. Doctor Barns has no equivalent. Captures leads after hours.
+2. **Speed & UX**. Next.js site loads faster than typical WordPress. Google rewards Core Web Vitals; mobile users convert more.
+3. **Academy**. Second revenue stream + trust signal (“they train developers, not just sell websites”).
+4. **AI automation positioning**. Own “AI chatbot Ghana”, “WhatsApp automation Accra” before they do.
+5. **MoMo-first e-commerce**. Dedicated e-commerce page with Ghana payment story (already built).
+6. **Conversion design**. Sticky call/WhatsApp bar, lead strip on every money page, phone in navbar (implemented).
 
 ---
 
@@ -47,7 +47,7 @@ Discovery call → Proposal → Deposit → Delivery → Review request
 
 ---
 
-## Week 1 — Do these yourself (highest ROI)
+## Week 1. Do these yourself (highest ROI)
 
 ### 1. Google Business Profile (non-negotiable)
 - Claim at [business.google.com](https://business.google.com)
@@ -75,17 +75,17 @@ Doctor Barns’ biggest moat is review count. You need 10, then 50, then 100.
 | `RESEND_API_KEY` + `LEAD_INBOX` | Contact form → your inbox |
 
 ### 5. Directory citations (same NAP everywhere)
-GhanaYello, BusinessGhana, Clutch, Bing Places, Apple Business Connect — use exact details from `GROWTH-KIT.md`.
+GhanaYello, BusinessGhana, Clutch, Bing Places, Apple Business Connect. use exact details from `GROWTH-KIT.md`.
 
 ---
 
-## Month 1–3 — Content that ranks AND sells
+## Month 1–3. Content that ranks AND sells
 
 Publish one article per week answering **buyer intent** questions:
 
 - How much does a website cost in Ghana? (2026)
 - Best e-commerce setup with MoMo + Paystack
-- Web designer Accra vs Kumasi — what to expect
+- Web designer Accra vs Kumasi. what to expect
 - How AI chatbots get more leads for Ghana businesses
 - Church / school / restaurant website checklist Ghana
 
@@ -93,7 +93,7 @@ Each post should end with: **Call 024 840 8154 · WhatsApp · Get a quote**
 
 ---
 
-## Month 2–6 — Pages to add (we can build these)
+## Month 2–6. Pages to add (we can build these)
 
 City + service combos Doctor Barns ranks for:
 
@@ -101,7 +101,7 @@ City + service combos Doctor Barns ranks for:
 - `/web-design-kumasi-ghana`
 - `/web-design-tema-ghana`
 - `/website-cost-ghana` (pricing intent)
-- Industry pages: church, school, restaurant (partially in blog — need dedicated URLs)
+- Industry pages: church, school, restaurant (partially in blog. need dedicated URLs)
 
 Each page = one Google entry point → lead strip → call/WhatsApp.
 

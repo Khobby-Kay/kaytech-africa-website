@@ -11,9 +11,9 @@ import { ghanaSearchKeywords } from "@/lib/localized-seo";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Blog — Web Design, SEO & E-Commerce Tips Ghana | KayTech Africa",
+  title: "Blog. Web Design, SEO & E-Commerce Tips Ghana | KayTech Africa",
   description:
-    "Insights on web design, web development, SEO, and e-commerce in Ghana from KayTech Africa — the Accra studio brands trust. Practical guides for 2026 and beyond.",
+    "Insights on web design, web development, SEO, and e-commerce in Ghana from KayTech Africa. the Accra studio brands trust. Practical guides for 2026 and beyond.",
   path: "/blog",
   keywords: [
     ...ghanaSearchKeywords,
@@ -31,7 +31,7 @@ export default function BlogPage() {
     <>
       <PageHero
         title="Web design, SEO & growth insights for Ghana"
-        description="Practical guides on building, ranking, and growing a business website in Accra, Kumasi, Tema, and across Ghana — written by the KayTech Africa studio team."
+        description="Practical guides on building, ranking, and growing a business website in Accra, Kumasi, Tema, and across Ghana. written by the KayTech Africa studio team."
         cta={{ label: "Browse articles", href: "#articles" }}
         secondaryCta={{ label: "Our services", href: "/services" }}
         image={blogHeroImage}
@@ -115,7 +115,7 @@ export default function BlogPage() {
                 Ready to build a website that ranks and sells?
               </h2>
               <p className="mt-2 text-sm leading-relaxed text-muted">
-                Talk to KayTech Africa — Ghana&apos;s trusted web design and
+                Talk to KayTech Africa. Ghana&apos;s trusted web design and
                 development studio. Call {siteConfig.contact.phoneDisplay} or
                 start a project online.
               </p>

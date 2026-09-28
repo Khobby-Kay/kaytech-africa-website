@@ -14,12 +14,14 @@ import { HeroHeadlineDots } from "@/components/ui/HeroHeadlineDots";
 import { HeroCta, HeroCtaRow } from "@/components/ui/HeroCta";
 import { Media } from "@/components/ui/Media";
 import { RevealOnScroll, StaggerReveal } from "@/components/ui/RevealOnScroll";
-import { TestimonialCarousel } from "@/components/ui/TestimonialCarousel";
 import {
   academyApplicationForm,
   academyDelivery,
+  academyFaqs,
   academyFeaturedCourses,
   academyGains,
+  academyHubCohorts,
+  academyHubOutcomes,
   academyPageMeta,
   academyPricingPlans,
   academyPromise,
@@ -30,6 +32,7 @@ import {
   academyWelcome,
   academyWhyChoose,
 } from "@/lib/academy-content";
+import { AcademyApplicationForm } from "@/components/academy/AcademyApplicationForm";
 import { getAllPosts } from "@/lib/blog";
 import { contentImages } from "@/lib/image-seo";
 import { pageImages } from "@/lib/page-images";
@@ -41,12 +44,8 @@ function applyWhatsApp(message: string) {
   return `${siteConfig.contact.whatsapp}?text=${encodeURIComponent(message)}`;
 }
 
-function applyFormProps() {
-  return {
-    href: academyApplicationForm.url,
-    target: "_blank" as const,
-    rel: "noopener noreferrer",
-  };
+function applyHrefProps() {
+  return { href: academyApplicationForm.href };
 }
 
 function AcademyApplyBanner() {
@@ -61,12 +60,12 @@ function AcademyApplyBanner() {
             Admissions open
           </p>
           <p className="mt-1 font-display text-lg font-semibold text-ink sm:text-xl">
-            Apply to KayTech Academy — 10 seats per cohort
+            Apply to KayTech Academy. 10 seats per cohort
           </p>
           <p className="mt-1 text-sm text-muted">{academyApplicationForm.note}</p>
         </div>
         <a
-          {...applyFormProps()}
+          {...applyHrefProps()}
           data-track="academy_apply_click"
           data-track-location="apply_banner"
           className="inline-flex h-12 min-h-[44px] w-full shrink-0 items-center justify-center gap-2 rounded-pill bg-accent px-7 text-sm font-bold text-white shadow-glow transition hover:bg-accent-bright sm:w-auto sm:text-base"
@@ -110,14 +109,13 @@ function AcademyHeroSlider() {
           />
 
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-on-dark/85 sm:mt-6 sm:text-lg lg:text-xl">
-            Ghana&apos;s practical web design and development school — studio-backed
+            Ghana&apos;s practical web design and development school. studio-backed
             training for students, career switchers, and aspiring freelancers.
           </p>
 
           <HeroCtaRow className="sm:mt-8">
             <HeroCta
-              href={academyApplicationForm.url}
-              external
+              href={academyApplicationForm.href}
               track="academy_apply_click"
               trackLocation="hero_primary"
             >
@@ -134,7 +132,7 @@ function AcademyHeroSlider() {
           <div className="absolute bottom-[18%] right-12 max-w-sm animate-float">
             <div className="rounded-2xl border border-white/15 bg-surface-dark/35 px-5 py-4 backdrop-blur-sm">
               <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-on-dark/75">
-                Top awarded academy · Ghana
+                Studio-backed academy · Ghana
               </p>
               <p className="mt-2 font-display text-xl font-semibold text-on-dark">
                 Global career opportunities start here
@@ -203,7 +201,7 @@ export function AcademyPageContent() {
               {academyPromise.urgency}
             </p>
             <a
-              {...applyFormProps()}
+              {...applyHrefProps()}
               data-track="academy_apply_click"
               data-track-location="promise"
               className="mt-6 inline-flex h-11 items-center gap-2 rounded-pill bg-gradient-to-r from-primary to-primary-light px-6 text-sm font-semibold text-on-primary shadow-card transition hover:brightness-110"
@@ -282,7 +280,7 @@ export function AcademyPageContent() {
                 Call today: {siteConfig.contact.phoneDisplay}
               </a>
               <a
-                {...applyFormProps()}
+                {...applyHrefProps()}
                 data-track="academy_apply_click"
                 data-track-location="delivery"
                 className="inline-flex h-11 items-center gap-2 rounded-pill bg-accent px-5 text-sm font-semibold text-white shadow-glow transition hover:bg-accent-bright"
@@ -367,13 +365,16 @@ export function AcademyPageContent() {
                   <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
                     {course.excerpt}
                   </p>
-                  <a
+                  {"feeLabel" in course && course.feeLabel ? (
+                    <p className="mt-3 text-sm font-semibold text-primary">{course.feeLabel}</p>
+                  ) : null}
+                  <Link
                     href={course.href}
                     className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
                   >
                     Read more
                     <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
-                  </a>
+                  </Link>
                 </div>
               </article>
             ))}
@@ -463,7 +464,7 @@ export function AcademyPageContent() {
               Our courses
             </a>
             <a
-              {...applyFormProps()}
+              {...applyHrefProps()}
               data-track="academy_apply_click"
               data-track-location="gains"
               className="inline-flex h-11 items-center gap-2 rounded-pill bg-primary px-6 text-sm font-semibold text-on-primary"
@@ -485,7 +486,7 @@ export function AcademyPageContent() {
               Affordable pricing plans
             </h2>
             <p className="mt-3 max-w-2xl text-sm text-muted sm:text-base">
-              Choose your preferred course — online and on-site options, hands-on
+              Choose your preferred course. online and on-site options, hands-on
               learning, and career support included.
             </p>
             <div className="mt-4 flex flex-wrap gap-2">
@@ -534,20 +535,31 @@ export function AcademyPageContent() {
                     </li>
                   ))}
                 </ul>
-                <a
-                  {...applyFormProps()}
-                  data-track="academy_apply_click"
-                  data-track-location={`pricing_${plan.id}`}
-                  className={cn(
-                    "mt-6 inline-flex h-11 items-center justify-center gap-2 rounded-pill px-5 text-sm font-semibold transition",
-                    plan.featured
-                      ? "bg-primary text-on-primary hover:brightness-110"
-                      : "border border-hairline bg-canvas text-ink hover:border-accent/40",
-                  )}
-                >
-                  <ClipboardList className="h-4 w-4" />
-                  Apply for this course
-                </a>
+                <div className="mt-6 flex flex-col gap-2">
+                  {"courseHref" in plan && plan.courseHref?.startsWith("/") ? (
+                    <Link
+                      href={plan.courseHref}
+                      className="inline-flex h-11 items-center justify-center gap-2 rounded-pill border border-hairline bg-canvas px-5 text-sm font-semibold text-ink hover:border-accent/40"
+                    >
+                      Course details
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  ) : null}
+                  <a
+                    {...applyHrefProps()}
+                    data-track="academy_apply_click"
+                    data-track-location={`pricing_${plan.id}`}
+                    className={cn(
+                      "inline-flex h-11 items-center justify-center gap-2 rounded-pill px-5 text-sm font-semibold transition",
+                      plan.featured
+                        ? "bg-primary text-on-primary hover:brightness-110"
+                        : "border border-hairline bg-canvas text-ink hover:border-accent/40",
+                    )}
+                  >
+                    <ClipboardList className="h-4 w-4" />
+                    Apply for this course
+                  </a>
+                </div>
               </article>
             ))}
           </StaggerReveal>
@@ -561,11 +573,8 @@ export function AcademyPageContent() {
               What our students say
             </h2>
           </RevealOnScroll>
-          <div className="mt-10 lg:hidden">
-            <TestimonialCarousel items={academyTestimonials} />
-          </div>
           <StaggerReveal
-            className="mt-10 hidden gap-4 lg:grid lg:grid-cols-3"
+            className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
             staggerMs={100}
           >
             {academyTestimonials.map((t) => (
@@ -583,6 +592,87 @@ export function AcademyPageContent() {
               </blockquote>
             ))}
           </StaggerReveal>
+        </Container>
+      </section>
+
+      <section className="border-b border-hairline bg-canvas px-5 py-16 lg:px-20 lg:py-24">
+        <Container>
+          <StaggerReveal className="grid gap-4 md:grid-cols-3" staggerMs={80}>
+            {academyHubCohorts.map((c) => (
+              <article key={c.label} className="rounded-3xl border border-hairline bg-surface-soft p-6">
+                <p className="text-xs font-semibold uppercase tracking-wider text-accent">{c.course}</p>
+                <h3 className="mt-2 font-display font-semibold text-ink">{c.label}</h3>
+                <p className="mt-2 text-sm text-muted">Starts {c.start}</p>
+                <Link href={c.href} className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline">
+                  Syllabus & fees
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </article>
+            ))}
+          </StaggerReveal>
+          <RevealOnScroll variant="fade-up" className="mt-6 flex flex-wrap gap-3">
+            <Link href="/academy/online-courses" className="text-sm font-semibold text-primary hover:underline">
+              Online cohorts (live + recorded)
+            </Link>
+            <Link href="/academy/scholarships-payment-plans" className="text-sm font-semibold text-primary hover:underline">
+              Scholarships & payment plans
+            </Link>
+            <Link href="/academy/graduate-outcomes" className="text-sm font-semibold text-primary hover:underline">
+              Graduate outcomes
+            </Link>
+          </RevealOnScroll>
+        </Container>
+      </section>
+
+      <section className="border-b border-hairline bg-surface-soft px-5 py-16 lg:px-20 lg:py-24">
+        <Container>
+          <StaggerReveal className="grid gap-4 md:grid-cols-3" staggerMs={90}>
+            {academyHubOutcomes.map((item) => (
+              <article key={item.title} className="rounded-3xl border border-hairline bg-canvas p-6">
+                <h3 className="font-display font-semibold text-ink">{item.title}</h3>
+                <p className="mt-2 text-sm text-muted">{item.body}</p>
+                <Link href={item.href} className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline">
+                  Learn more
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </article>
+            ))}
+          </StaggerReveal>
+        </Container>
+      </section>
+
+      <section
+        id="apply"
+        className="border-b border-hairline bg-surface-accent px-5 py-16 lg:px-20 lg:py-24 scroll-mt-28"
+      >
+        <Container className="max-w-xl lg:max-w-2xl">
+          <RevealOnScroll variant="fade-up">
+            <p className="mb-6 text-sm text-muted">
+              Ten seats per cohort. Add scholarship or payment-plan notes in your message.{" "}
+              <a
+                href={academyApplicationForm.backupUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-primary hover:underline"
+              >
+                Google Form backup
+              </a>
+            </p>
+            <AcademyApplicationForm location="academy_hub" compact />
+          </RevealOnScroll>
+        </Container>
+      </section>
+
+      <section className="border-b border-hairline bg-canvas px-5 py-16 lg:px-20 lg:py-24">
+        <Container>
+          <dl className="max-w-3xl space-y-6">
+            {academyFaqs.map((faq) => (
+              <div key={faq.question}>
+                <dt className="font-semibold text-ink">{faq.question}</dt>
+                <dd className="mt-2 text-sm leading-relaxed text-muted">{faq.answer}</dd>
+              </div>
+            ))}
+          </dl>
         </Container>
       </section>
 
@@ -653,13 +743,13 @@ export function AcademyPageContent() {
                 Ready to join KayTech Academy?
               </h2>
               <p className="mt-4 text-sm text-on-primary/85 sm:text-base">
-                Complete the application form to secure your seat — only 10 admissions
+                Complete the application form to secure your seat. only 10 admissions
                 per cohort. Questions? Call {siteConfig.contact.phoneDisplay} or
                 WhatsApp {siteConfig.contact.whatsappDisplay}.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <a
-                  {...applyFormProps()}
+                  {...applyHrefProps()}
                   data-track="academy_apply_click"
                   data-track-location="footer_cta"
                   className="inline-flex h-11 items-center gap-2 rounded-pill bg-on-primary px-6 text-sm font-semibold text-primary"

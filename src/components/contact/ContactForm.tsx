@@ -99,7 +99,7 @@ export function ContactForm() {
 
   return (
     <form onSubmit={onSubmit} className="space-y-4">
-      {/* Honeypot — visually hidden, kept out of tab order */}
+      {/* Honeypot. visually hidden, kept out of tab order */}
       <input
         type="text"
         name="company"

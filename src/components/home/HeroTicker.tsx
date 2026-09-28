@@ -3,7 +3,7 @@ const items = [
   { label: "Web development" },
   { label: "E-commerce builds" },
   { label: "Accra-based studio" },
-  { label: "1914+ businesses served" },
+  { label: "Accra-based since 2020" },
   { label: "Academy cohorts" },
   { label: "Africa-first design" },
   { label: "3G-optimised delivery" },

@@ -1,4 +1,10 @@
 import { blogImages } from "@/lib/image-seo";
+import { chooseDeveloperGhana2026 } from "@/lib/blog-choose-developer-ghana-2026";
+import {
+  freelancerVsAgencyGhana2026,
+  topWebDesignCompaniesGhana2026,
+} from "@/lib/blog-agency-guides";
+import { academyBlogPosts } from "@/lib/blog-academy-guides";
 
 export type BlogSection = {
   heading?: string;
@@ -47,7 +53,7 @@ export const blogPosts: BlogPost[] = [
       "modern website design Ghana",
     ],
     intro:
-      "In a market where most of your customers meet you on a phone screen before they ever meet you in person, web design is no longer a luxury — it is the storefront. As we move through 2026 and toward 2027, the studios winning work in Accra, Kumasi, and Tema are the ones designing for speed, trust, and mobile money. Below are the ten trends KayTech Africa is building into every new project this year.",
+      "In a market where most of your customers meet you on a phone screen before they ever meet you in person, web design is no longer a luxury. it is the storefront. As we move through 2026 and toward 2027, the studios winning work in Accra, Kumasi, and Tema are the ones designing for speed, trust, and mobile money. Below are the ten trends KayTech Africa is building into every new project this year.",
     sections: [
       {
         heading: "1. Mobile-first, data-light design",
@@ -64,7 +70,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "3. Conversion-focused layouts",
         paragraphs: [
-          "Pretty is no longer the goal — profitable is. Clear calls to action, sticky WhatsApp and call buttons, and frictionless forms turn casual visitors into real enquiries.",
+          "Pretty is no longer the goal. profitable is. Clear calls to action, sticky WhatsApp and call buttons, and frictionless forms turn casual visitors into real enquiries.",
         ],
       },
       {
@@ -76,7 +82,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "5. Local SEO baked into the design",
         paragraphs: [
-          "Designing with search in mind — structured headings, local keywords, and schema — helps you rank for terms like best web designer in Accra and your service plus your city.",
+          "Designing with search in mind. structured headings, local keywords, and schema. helps you rank for terms like best web designer in Accra and your service plus your city.",
         ],
       },
       {
@@ -94,7 +100,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "8. Accessibility and readability",
         paragraphs: [
-          "Larger tap targets, strong contrast, and clear typography make sites usable for everyone — and they happen to improve SEO too.",
+          "Larger tap targets, strong contrast, and clear typography make sites usable for everyone. and they happen to improve SEO too.",
         ],
       },
       {
@@ -111,7 +117,7 @@ export const blogPosts: BlogPost[] = [
       },
     ],
     conclusion:
-      "These trends share one theme: design that respects how Ghanaians actually browse, pay, and decide. If you want a website built around them, KayTech Africa can help — talk to our Accra studio about a build that is ready for 2026 and beyond.",
+      "These trends share one theme: design that respects how Ghanaians actually browse, pay, and decide. If you want a website built around them, KayTech Africa can help. talk to our Accra studio about a build that is ready for 2026 and beyond.",
   },
   {
     slug: "ecommerce-website-features-ghana-2026",
@@ -172,7 +178,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "7. WhatsApp and live support",
         paragraphs: [
-          "A visible WhatsApp button lets customers ask before they buy — the way commerce really happens in Ghana.",
+          "A visible WhatsApp button lets customers ask before they buy. the way commerce really happens in Ghana.",
         ],
       },
       {
@@ -206,7 +212,7 @@ export const blogPosts: BlogPost[] = [
     dateDisplay: "Jan 4, 2026",
     readingTime: "6 min read",
     excerpt:
-      "Worried about balancing cost and quality? Here is how to get a professional, effective website in Ghana without overpaying — and how to spot real value from cheap shortcuts.",
+      "Worried about balancing cost and quality? Here is how to get a professional, effective website in Ghana without overpaying. and how to spot real value from cheap shortcuts.",
     image: blogImages[3],
     keywords: [
       "affordable web design Ghana",
@@ -240,7 +246,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "How to avoid overpaying",
         paragraphs: [
-          "Ask for a clear, itemised proposal. Reputable studios scope your project so you know exactly what you are paying for — no vague packages and no surprise add-ons later.",
+          "Ask for a clear, itemised proposal. Reputable studios scope your project so you know exactly what you are paying for. no vague packages and no surprise add-ons later.",
         ],
       },
       {
@@ -253,216 +259,9 @@ export const blogPosts: BlogPost[] = [
     conclusion:
       "Affordable and professional are not opposites. KayTech Africa scopes every project clearly so SMEs and growing brands across Ghana get a website that fits their budget and their goals. Request a transparent quote today.",
   },
-  {
-    slug: "best-web-developer-in-accra-ghana-2026",
-    title: "Discover the Best Web Development Company in Accra, Ghana for 2026 & 2027",
-    category: "Web Development and Design",
-    author: "KayTech Africa",
-    date: "2026-01-03",
-    dateDisplay: "Jan 3, 2026",
-    readingTime: "7 min read",
-    excerpt:
-      "Accra's digital scene is crowded with web companies. Here is how to identify a studio with real expertise, strong support, and a track record of delivering results.",
-    image: blogImages[4],
-    keywords: [
-      "best web development company Accra",
-      "web development company Ghana",
-      "top web developer Accra",
-      "hire web developer Ghana",
-    ],
-    intro:
-      "There is no shortage of web companies in Accra, but expertise, service, and proven results vary widely. If you want a partner who delivers top-quality web and software solutions, here is what separates the best from the rest — and why brands across Ghana choose KayTech Africa.",
-    sections: [
-      {
-        heading: "A proven track record",
-        paragraphs: [
-          "Look for a studio with delivered projects you can actually see. KayTech Africa has shipped websites, e-commerce stores, and automations for businesses across Accra, Kumasi, Tema, and beyond.",
-        ],
-      },
-      {
-        heading: "End-to-end capability",
-        paragraphs: [
-          "The best companies handle strategy, design, development, and launch under one roof, so you avoid the lost context and finger-pointing of multiple vendors.",
-        ],
-      },
-      {
-        heading: "Results, not just aesthetics",
-        paragraphs: [
-          "Great development is measured in load times, search rankings, and conversions — not just how a homepage looks. Ask any studio how they measure success.",
-        ],
-      },
-      {
-        heading: "Support you can reach",
-        paragraphs: [
-          "Reliable post-launch support by WhatsApp, phone, and email matters as much as the build itself. Your website is a living asset, not a one-off delivery.",
-        ],
-      },
-      {
-        heading: "Local market understanding",
-        paragraphs: [
-          "A company that understands MoMo, WhatsApp commerce, and how Ghanaians browse and buy will always outperform a generic template shop.",
-        ],
-      },
-    ],
-    conclusion:
-      "When you weigh expertise, service, and results, KayTech Africa stands out as one of the best web development companies in Accra for 2026 and 2027. Reach out for a discovery call and a clear proposal.",
-  },
-  {
-    slug: "best-web-designer-in-accra-ghana-2026",
-    title: "Unlocking Your Business Potential: The Best Web Design Company in Accra, Ghana 2026",
-    category: "Web Development and Design",
-    author: "KayTech Africa",
-    date: "2026-01-02",
-    dateDisplay: "Jan 2, 2026",
-    readingTime: "6 min read",
-    excerpt:
-      "A strong online presence is essential for business success today. Here is how the right web design partner in Accra helps you capture attention and turn it into revenue.",
-    image: blogImages[5],
-    keywords: [
-      "best web design company Accra",
-      "best web design company in Ghana",
-      "business website Ghana",
-      "web design Accra",
-    ],
-    intro:
-      "In today's digital landscape, a robust online presence is crucial for the success of any business. If you are struggling to capture the attention of your target audience, you are not alone — and the right web design partner can change that. Here is how a leading Accra studio unlocks your growth.",
-    sections: [
-      {
-        heading: "Your website is your hardest-working salesperson",
-        paragraphs: [
-          "A well-designed site works around the clock — informing, reassuring, and converting visitors even while you sleep. Poor design quietly turns customers away before they ever contact you.",
-        ],
-      },
-      {
-        heading: "Design that builds trust",
-        paragraphs: [
-          "Clean layouts, fast load times, and consistent branding signal that your business is credible and professional, which is half the battle in winning new customers online.",
-        ],
-      },
-      {
-        heading: "Built for conversion",
-        paragraphs: [
-          "The best web design company does not just make things look good — it engineers each page to guide visitors toward enquiries, calls, and sales.",
-        ],
-      },
-      {
-        heading: "Tailored to your market",
-        paragraphs: [
-          "Whether you serve customers in East Legon, Tema, Kumasi, or nationwide, your site should speak to your specific audience and the way they search and shop.",
-        ],
-      },
-    ],
-    conclusion:
-      "Unlocking your business potential starts with a website that performs. KayTech Africa is the Accra-based partner Ghanaian brands trust to design, build, and grow their online presence in 2026.",
-  },
-  {
-    slug: "best-web-design-companies-accra-guide-2026",
-    title: "Best Web Design Companies in Accra: Your Guide to Finding Top Talent 2026",
-    category: "Web Development and Design",
-    author: "KayTech Africa",
-    date: "2026-01-01",
-    dateDisplay: "Jan 1, 2026",
-    readingTime: "6 min read",
-    excerpt:
-      "Overwhelmed by choices? Here is how to tell top-tier web design firms in Accra apart from the rest — and choose a partner who truly understands your vision.",
-    image: blogImages[6],
-    keywords: [
-      "best web design companies Accra",
-      "web design company Ghana",
-      "top web designers Accra",
-      "choosing a web designer Ghana",
-    ],
-    intro:
-      "Searching for the best web design company in Accra can feel overwhelming. There are many options, and it is not always easy to tell which firms truly deliver. This guide walks you through what to look for so you can choose with confidence.",
-    sections: [
-      {
-        heading: "Review their portfolio",
-        paragraphs: [
-          "A strong portfolio shows range and quality. Look for real, live projects across different industries — not just mockups.",
-        ],
-      },
-      {
-        heading: "Check results and testimonials",
-        paragraphs: [
-          "The best firms can point to outcomes: faster sites, higher rankings, more enquiries. Genuine client feedback tells you what working with them is really like.",
-        ],
-      },
-      {
-        heading: "Assess communication",
-        paragraphs: [
-          "A good partner listens, scopes clearly, and keeps you informed. If communication is slow before you pay, it rarely improves after.",
-        ],
-      },
-      {
-        heading: "Confirm ongoing support",
-        paragraphs: [
-          "Websites need maintenance. Make sure your chosen company offers support, updates, and someone you can actually reach.",
-        ],
-      },
-      {
-        heading: "Look for local expertise",
-        paragraphs: [
-          "A studio that understands the Ghanaian market — payments, mobile habits, and local SEO — will deliver far more value than a one-size-fits-all provider.",
-        ],
-      },
-    ],
-    conclusion:
-      "Use these criteria and the right choice becomes clear. KayTech Africa combines a proven portfolio, real results, and dedicated support to rank among the best web design companies in Accra for 2026.",
-  },
-  {
-    slug: "web-design-services-ghana-ultimate-guide-2026",
-    title: "Web Design Services in Ghana: Your Ultimate Guide to Finding the Best 2026",
-    category: "Web Development and Design",
-    author: "KayTech Africa",
-    date: "2025-12-30",
-    dateDisplay: "Dec 30, 2025",
-    readingTime: "7 min read",
-    excerpt:
-      "Wondering what it takes to get a professional website in Ghana — and whether it's worth it? This guide covers costs, quality, and how to find the right partner.",
-    image: blogImages[7],
-    keywords: [
-      "web design services Ghana",
-      "professional website Ghana",
-      "website cost Ghana",
-      "best web design Ghana",
-    ],
-    intro:
-      "Ever wondered what it takes to get a professional website for your business in Ghana? Maybe you are weighing whether the investment is worth it, or worried about cost, quality, and finding a company that understands your needs. This guide walks you through everything that matters.",
-    sections: [
-      {
-        heading: "Is a professional website worth it?",
-        paragraphs: [
-          "For almost every business, yes. A professional site builds credibility, reaches customers searching on Google, and creates a sales channel that works 24/7 — usually paying for itself many times over.",
-        ],
-      },
-      {
-        heading: "What good web design services include",
-        paragraphs: ["A complete service goes beyond a pretty homepage:"],
-        bullets: [
-          "Discovery and planning around your goals",
-          "Mobile-first, responsive design",
-          "SEO so customers can find you",
-          "Secure, fast hosting setup",
-          "Content and imagery support",
-          "Training, handover, and ongoing support",
-        ],
-      },
-      {
-        heading: "Understanding cost in Ghana",
-        paragraphs: [
-          "Pricing varies with scope. A simple business site costs less than a full e-commerce platform with payments and inventory. The key is a clear, written proposal so you know what you are paying for.",
-        ],
-      },
-      {
-        heading: "How to choose the right partner",
-        paragraphs: [
-          "Look for a proven portfolio, transparent pricing, local market knowledge, and reliable support. The cheapest quote is rarely the best value — focus on results.",
-        ],
-      },
-    ],
-    conclusion:
-      "A professional website is one of the best investments a Ghanaian business can make. KayTech Africa offers clear, results-driven web design services across Accra, Kumasi, Tema, and nationwide — get in touch for a free consultation.",
-  },
+  chooseDeveloperGhana2026,
+  topWebDesignCompaniesGhana2026,
+  freelancerVsAgencyGhana2026,
   {
     slug: "church-website-design-ghana",
     title: "Church Website Design in Ghana: A Practical Guide for 2026",
@@ -486,7 +285,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Make service times and location obvious",
         paragraphs: [
-          "Visitors want one thing first: when and where to come. Put service times, the address, and a map link where they cannot be missed — ideally on the homepage and on mobile.",
+          "Visitors want one thing first: when and where to come. Put service times, the address, and a map link where they cannot be missed. ideally on the homepage and on mobile.",
         ],
       },
       {
@@ -498,7 +297,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Sermons, events, and announcements",
         paragraphs: [
-          "A simple way to share sermon recordings, upcoming events, and weekly announcements keeps the congregation engaged through the week — not just on Sunday.",
+          "A simple way to share sermon recordings, upcoming events, and weekly announcements keeps the congregation engaged through the week. not just on Sunday.",
         ],
       },
       {
@@ -594,7 +393,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "A mouth-watering, up-to-date menu",
         paragraphs: [
-          "Your menu is the star. Clear categories, appetising photos, and current prices in cedis help customers decide fast — and an easy-to-update menu keeps it accurate.",
+          "Your menu is the star. Clear categories, appetising photos, and current prices in cedis help customers decide fast. and an easy-to-update menu keeps it accurate.",
         ],
       },
       {
@@ -654,7 +453,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Strong visuals and virtual tours",
         paragraphs: [
-          "Property sells on imagery. High-quality photos, galleries, and optional video or virtual tours help buyers picture themselves in the space — crucial for diaspora clients who cannot visit in person.",
+          "Property sells on imagery. High-quality photos, galleries, and optional video or virtual tours help buyers picture themselves in the space. crucial for diaspora clients who cannot visit in person.",
         ],
       },
       {
@@ -666,7 +465,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Trust and credibility",
         paragraphs: [
-          "An about section, testimonials, and clear contact details reassure clients they are dealing with a legitimate, professional agency — vital in a market where trust matters.",
+          "An about section, testimonials, and clear contact details reassure clients they are dealing with a legitimate, professional agency. vital in a market where trust matters.",
         ],
       },
       {
@@ -688,7 +487,7 @@ export const blogPosts: BlogPost[] = [
     dateDisplay: "Jan 12, 2026",
     readingTime: "8 min read",
     excerpt:
-      "Choosing a platform in Ghana? Compare WordPress, custom Next.js builds, and Shopify — cost, speed, MoMo payments, and SEO — so you invest in the right foundation.",
+      "Choosing a platform in Ghana? Compare WordPress, custom Next.js builds, and Shopify. cost, speed, MoMo payments, and SEO. so you invest in the right foundation.",
     image: blogImages[5],
     keywords: [
       "WordPress vs custom website Ghana",
@@ -698,10 +497,10 @@ export const blogPosts: BlogPost[] = [
       "WordPress website Ghana cost",
     ],
     intro:
-      "Every Ghanaian business owner eventually asks: should I use WordPress, hire a developer for a custom site, or open a Shopify store? The honest answer depends on your budget, how you sell, and how fast you need to grow. Here is a practical comparison from KayTech Africa — a studio that builds all three, depending on what actually fits.",
+      "Every Ghanaian business owner eventually asks: should I use WordPress, hire a developer for a custom site, or open a Shopify store? The honest answer depends on your budget, how you sell, and how fast you need to grow. Here is a practical comparison from KayTech Africa. a studio that builds all three, depending on what actually fits.",
     sections: [
       {
-        heading: "WordPress — flexible and familiar",
+        heading: "WordPress. flexible and familiar",
         paragraphs: [
           "WordPress powers a huge share of Ghanaian business sites. Themes and plugins make it affordable to launch quickly, and many agencies can maintain it. The trade-offs: plugin bloat can slow mobile performance, security needs ongoing updates, and highly custom features often fight the platform instead of flowing with it.",
         ],
@@ -712,9 +511,9 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
-        heading: "Custom development — built for performance and SEO",
+        heading: "Custom development. built for performance and SEO",
         paragraphs: [
-          "A custom site — often Next.js or similar modern stack — is engineered for your exact workflow: speed scores, local SEO structure, MoMo checkout, and integrations your business actually needs. Upfront cost is higher, but you own the architecture and are not limited by plugins.",
+          "A custom site. often Next.js or similar modern stack. is engineered for your exact workflow: speed scores, local SEO structure, MoMo checkout, and integrations your business actually needs. Upfront cost is higher, but you own the architecture and are not limited by plugins.",
         ],
         bullets: [
           "Best for: brands competing on Google, multi-service companies, and bespoke portals",
@@ -723,34 +522,58 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
-        heading: "Shopify — product-first e-commerce",
+        heading: "Shopify. product-first e-commerce",
         paragraphs: [
-          "Shopify is strong when you sell physical or digital products and want inventory, checkout, and apps out of the box. Ghana merchants can accept cards via Shopify Payments partners and configure local workflows — though MoMo-first flows often need custom setup or hybrid approaches.",
+          "Shopify is strong when you sell physical or digital products and want inventory, checkout, and apps out of the box. Ghana merchants can accept cards via Shopify Payments partners and configure local workflows. though MoMo-first flows often need custom setup or hybrid approaches.",
         ],
         bullets: [
           "Best for: product brands scaling online sales quickly",
-          "Monthly fees plus transaction costs — factor that into margins",
+          "Monthly fees plus transaction costs. factor that into margins",
           "Consider custom or headless builds when you outgrow templates or need local payment nuance",
+        ],
+      },
+      {
+        heading: "WooCommerce on WordPress in Ghana",
+        paragraphs: [
+          "WooCommerce is the default when you already run WordPress and need a product catalogue with local gateways. Paystack and Flutterwave plugins enable MoMo and cards. but you must budget for hosting, SSL, plugin updates, and speed tuning. Cheap shared hosting often cripples WooCommerce on mobile data.",
+        ],
+        bullets: [
+          "Typical WooCommerce build in Ghana: GHS 4,000 – 12,000+",
+          "Ongoing: hosting, plugin licenses, maintenance retainers",
+          "Strength: familiar admin for non-technical staff",
+          "Risk: plugin conflicts and slow checkout if not optimised",
+        ],
+      },
+      {
+        heading: "Speed and mobile data. the Ghana filter",
+        paragraphs: [
+          "Platform choice matters less than implementation. A bloated WordPress theme loses to a lean custom Next.js site on 3G. Test on real phones, not office Wi‑Fi. Compress images, limit third-party scripts, and measure Largest Contentful Paint before you launch.",
+        ],
+      },
+      {
+        heading: "MoMo support by platform",
+        paragraphs: [
+          "Custom builds and WooCommerce (via Paystack) offer the most control for MoMo-first UX. Shopify can work with partners but may need workarounds for Ghana-specific flows. Always confirm Telecel Cash and AirtelTigo availability on your merchant account. not only MTN.",
         ],
       },
       {
         heading: "How to decide in Ghana",
         paragraphs: [
-          "Ask three questions: (1) Are you selling products or generating leads? (2) How important is Google ranking and page speed on mobile data? (3) What is your realistic budget for build plus 12 months of growth? If leads and local SEO matter most, a custom or well-built WordPress site often wins. If inventory and checkout are the core, Shopify or custom e-commerce deserves a serious look.",
+          "Ask three questions: (1) Are you selling products or generating leads? (2) How important is Google ranking and page speed on mobile data? (3) What is your realistic budget for build plus 12 months of growth? If leads and local SEO matter most, a custom or well-built WordPress site often wins. If inventory and checkout are the core, WooCommerce, Shopify, or custom e-commerce deserves a serious look.",
         ],
       },
     ],
     conclusion:
-      "There is no universal winner — only the right fit for your business. KayTech Africa helps Ghanaian brands choose and build WordPress, custom, and e-commerce solutions with honest scoping and MoMo-ready payments. Request a free consultation and we will recommend what actually serves your goals.",
+      "There is no universal winner. only the right fit for your business. KayTech Africa helps Ghanaian brands choose and build WordPress, WooCommerce, custom, and e-commerce solutions with honest scoping and MoMo-ready payments. See /website-cost-ghana for 2026 GHS ranges.",
   },
 ];
 
 export function getAllPosts(): BlogPost[] {
-  return [...blogPosts].sort((a, b) => (a.date < b.date ? 1 : -1));
+  return [...academyBlogPosts, ...blogPosts].sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
-  return blogPosts.find((post) => post.slug === slug);
+  return getAllPosts().find((post) => post.slug === slug);
 }
 
 export const blogCategories = Array.from(

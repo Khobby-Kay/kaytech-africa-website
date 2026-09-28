@@ -20,7 +20,7 @@ export function Footer() {
               {siteConfig.shortName}
             </Link>
             <p className="mt-2 max-w-xs text-xs leading-relaxed text-on-dark/65">
-              Web design, development, SEO &amp; AI automation — Accra-based,
+              Web design, development, SEO &amp; AI automation. Accra-based,
               serving all Ghana.
             </p>
             <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs">

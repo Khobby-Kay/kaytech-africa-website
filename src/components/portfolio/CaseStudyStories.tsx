@@ -1,13 +1,13 @@
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { ImpactMetricBar } from "@/components/ui/ImpactMetricBar";
-import { caseStudies } from "@/lib/portfolio";
+import { caseStudies, getCaseStudyPath } from "@/lib/portfolio";
 
 export function CaseStudyStories() {
   return (
     <section
+      id="case-studies"
       aria-label="KayTech Africa client success stories"
       className="border-b border-hairline bg-surface-soft px-5 py-14 lg:px-20 lg:py-20"
     >
@@ -20,135 +20,45 @@ export function CaseStudyStories() {
             Success stories from brands we&apos;ve built for
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
-            Real outcomes from Ghanaian businesses — WhatsApp funnels, Mobile
-            Money, and mobile-first design that turns interest into enquiries
-            and sales.
+            Each project has a dedicated case study with challenge, solution, and
+            measurable results. built for Ghanaian mobile users, WhatsApp, and MoMo.
           </p>
         </div>
 
-        <div className="mt-12 space-y-8">
-          {caseStudies.map((study, index) => (
+        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+          {caseStudies.map((study) => (
             <article
               key={study.slug}
-              id={study.slug}
-              className="scroll-mt-28 overflow-hidden rounded-3xl border border-hairline bg-canvas"
+              className="flex flex-col rounded-3xl border border-hairline bg-canvas p-6 transition hover:border-primary/25 hover:shadow-card"
             >
-              <div className="border-b border-hairline bg-surface-soft px-6 py-8 sm:px-8 sm:py-10">
-                <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-                  <div className="flex items-center gap-5">
-                    <div className="relative h-14 w-[140px] shrink-0 sm:h-16 sm:w-[160px]">
-                      <Image
-                        src={study.logo.src}
-                        alt={study.logo.alt}
-                        fill
-                        sizes="160px"
-                        className="object-contain object-left"
-                      />
-                    </div>
-                    <div>
-                      <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-primary">
-                        {study.sector} · {study.location} · {study.timeline}
-                      </p>
-                      <h3 className="mt-1 font-display text-xl font-semibold text-ink sm:text-2xl">
-                        {study.client}
-                      </h3>
-                    </div>
-                  </div>
-                  <p className="rounded-2xl border border-accent/25 bg-surface-accent px-4 py-3 text-sm font-semibold text-ink sm:max-w-sm">
-                    {study.headline}
-                  </p>
-                  <p className="mt-2 text-sm font-medium text-primary sm:text-right sm:max-w-sm">
-                    {study.highlightMetric}
-                  </p>
-                </div>
-
-                {study.metrics.length > 0 ? (
-                  <div className="mt-8 grid gap-4 border-t border-hairline pt-8 sm:grid-cols-3">
-                    {study.metrics.map((metric) => (
-                      <ImpactMetricBar key={metric.label} metric={metric} />
-                    ))}
-                  </div>
-                ) : null}
+              <div className="relative h-12 w-32">
+                <Image
+                  src={study.logo.src}
+                  alt={study.logo.alt}
+                  fill
+                  sizes="128px"
+                  className="object-contain object-left"
+                />
               </div>
-
-              <div className="grid gap-8 px-6 py-8 sm:px-8 lg:grid-cols-2 lg:gap-10 lg:py-10">
-                <div>
-                  <h4 className="font-display text-sm font-semibold uppercase tracking-wider text-muted">
-                    The challenge
-                  </h4>
-                  <ul className="mt-3 space-y-2">
-                    {study.challenge.map((item) => (
-                      <li
-                        key={item}
-                        className="flex gap-2 text-sm leading-relaxed text-ink"
-                      >
-                        <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <h4 className="mt-8 font-display text-sm font-semibold uppercase tracking-wider text-muted">
-                    What we built
-                  </h4>
-                  <ul className="mt-3 space-y-2">
-                    {study.solution.map((item) => (
-                      <li
-                        key={item}
-                        className="flex items-start gap-2 text-sm leading-relaxed text-ink"
-                      >
-                        <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 className="font-display text-sm font-semibold uppercase tracking-wider text-muted">
-                    Results
-                  </h4>
-                  <ul className="mt-3 space-y-2">
-                    {study.results.map((item) => (
-                      <li
-                        key={item}
-                        className="flex items-start gap-2 text-sm leading-relaxed text-ink"
-                      >
-                        <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <blockquote className="mt-8 rounded-2xl border border-hairline bg-surface-soft p-5">
-                    <p className="text-sm font-medium leading-relaxed text-ink">
-                      &ldquo;{study.keyInsight}&rdquo;
-                    </p>
-                    <footer className="mt-2 text-xs text-muted">
-                      — KayTech insight from the {study.client} project
-                    </footer>
-                  </blockquote>
-
-                  <ul className="mt-6 flex flex-wrap gap-2">
-                    {study.tags.map((tag) => (
-                      <li
-                        key={tag}
-                        className="rounded-pill border border-hairline bg-surface-soft px-3 py-1 text-xs text-muted"
-                      >
-                        {tag}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              {index < caseStudies.length - 1 ? (
-                <div className="border-t border-hairline px-6 py-4 sm:px-8">
-                  <p className="text-center text-xs text-muted">
-                    Case study {index + 1} of {caseStudies.length}
-                  </p>
-                </div>
-              ) : null}
+              <p className="mt-4 font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-primary">
+                {study.sector} · {study.timeline}
+              </p>
+              <h3 className="mt-2 font-display text-lg font-semibold text-ink">
+                {study.client}
+              </h3>
+              <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
+                {study.headline}
+              </p>
+              <p className="mt-2 text-xs font-medium text-accent">
+                {study.highlightMetric}
+              </p>
+              <Link
+                href={getCaseStudyPath(study.slug)}
+                className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
+              >
+                Read full case study
+                <ArrowRight className="h-4 w-4" />
+              </Link>
             </article>
           ))}
         </div>

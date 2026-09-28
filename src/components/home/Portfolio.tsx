@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { caseStudies } from "@/lib/portfolio";
+import { caseStudies, getCaseStudyPath } from "@/lib/portfolio";
 
 export function Portfolio() {
   return (
@@ -37,7 +37,7 @@ export function Portfolio() {
           {caseStudies.map((study) => (
             <Link
               key={study.slug}
-              href={`/portfolio#${study.slug}`}
+              href={getCaseStudyPath(study.slug)}
               className="group flex flex-col overflow-hidden rounded-3xl border border-hairline bg-surface-soft transition hover:border-primary/30 hover:shadow-card"
             >
               <div className="flex h-28 items-center justify-center border-b border-hairline bg-canvas px-8">

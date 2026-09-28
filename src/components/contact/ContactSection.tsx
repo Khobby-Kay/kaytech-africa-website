@@ -19,7 +19,7 @@ export function ContactSection() {
               Start a conversation
             </h3>
             <p className="mt-4 text-sm leading-relaxed text-muted">
-              Tell us about your project — whether you need the best web designer
+              Tell us about your project. whether you need the best web designer
               in Accra, affordable website design in Ghana, or SEO that ranks.
               We typically respond within one business day.
             </p>

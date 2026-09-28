@@ -4,13 +4,13 @@ import { cn } from "@/lib/utils";
 
 type TeedraAvatarProps = {
   className?: string;
-  /** Floating pulse + glow — use on the chat launcher button */
+  /** Floating pulse + glow. use on the chat launcher button */
   animated?: boolean;
-  /** Subtle breathe — use in chat header while open */
+  /** Subtle breathe. use in chat header while open */
   active?: boolean;
 };
 
-/** Teedra avatar — Aikins Armstrong, KayTech founder & on-site assistant. */
+/** Teedra avatar. Aikins Armstrong, KayTech founder & on-site assistant. */
 export function TeedraAvatar({
   className = "h-9 w-9",
   animated = false,
@@ -38,7 +38,7 @@ export function TeedraAvatar({
       >
         <Image
           src={leadership.ceo.image}
-          alt={`${leadership.ceo.name} — Teedra, KayTech assistant`}
+          alt={`${leadership.ceo.name}. Teedra, KayTech assistant`}
           fill
           sizes="56px"
           className="object-cover object-top"

@@ -7,9 +7,9 @@ import { siteConfig } from "@/lib/site";
 import { ghanaSearchKeywords } from "@/lib/localized-seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Client Support | Best Web Design Company Accra | KayTech Ghana",
+  title: "Client Support | KayTech Africa",
   description:
-    "Support for KayTech web design and development clients in Ghana. WhatsApp, phone, and email from Accra's trusted website design company.",
+    "Support for KayTech web design and development clients in Ghana. WhatsApp, phone, and email for active projects and academy enrolments.",
   path: "/support",
   keywords: [...ghanaSearchKeywords],
 });
@@ -19,7 +19,7 @@ export default function SupportPage() {
     <>
       <PageHero
         title="Help when you need it"
-        description="Active project or academy enrollment — our team is one message away on WhatsApp, phone, or email."
+        description="Active project or academy enrollment. our team is one message away on WhatsApp, phone, or email."
         cta={{
           label: "Chat on WhatsApp",
           href: siteConfig.contact.whatsapp,

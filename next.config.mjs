@@ -64,12 +64,67 @@ const nextConfig = {
       },
       {
         source: "/service/best-web-development-and-design-in-accra-ghana",
-        destination: "/services/best-web-development-design-accra-ghana",
+        destination: "/web-design/accra-ghana",
         permanent: true,
       },
       {
         source: "/best-web-development-and-design-in-accra-ghana",
-        destination: "/services/best-web-development-design-accra-ghana",
+        destination: "/web-design/accra-ghana",
+        permanent: true,
+      },
+      {
+        source: "/services/best-web-design-company-accra-ghana",
+        destination: "/web-design/accra-ghana",
+        permanent: true,
+      },
+      {
+        source: "/services/best-web-development-design-accra-ghana",
+        destination: "/web-design/accra-ghana",
+        permanent: true,
+      },
+      {
+        source: "/services/best-seo-services-accra-ghana",
+        destination: "/seo-packages-ghana",
+        permanent: true,
+      },
+      {
+        source: "/blog/best-web-developer-in-accra-ghana-2026",
+        destination: "/blog/how-to-choose-best-web-developer-ghana-2026",
+        permanent: true,
+      },
+      {
+        source: "/blog/best-web-designer-in-accra-ghana-2026",
+        destination: "/blog/how-to-choose-best-web-developer-ghana-2026",
+        permanent: true,
+      },
+      {
+        source: "/blog/best-web-design-companies-accra-guide-2026",
+        destination: "/blog/how-to-choose-best-web-developer-ghana-2026",
+        permanent: true,
+      },
+      {
+        source: "/blog/web-design-services-ghana-ultimate-guide-2026",
+        destination: "/blog/how-to-choose-best-web-developer-ghana-2026",
+        permanent: true,
+      },
+      {
+        source: "/web-design/areas/osu-accra-ghana",
+        destination: "/web-design/accra-ghana",
+        permanent: true,
+      },
+      {
+        source: "/web-design/areas/spintex-accra-ghana",
+        destination: "/web-design/accra-ghana",
+        permanent: true,
+      },
+      {
+        source: "/web-design/areas/adenta-accra-ghana",
+        destination: "/web-design/accra-ghana",
+        permanent: true,
+      },
+      {
+        source: "/web-design/areas/labone-accra-ghana",
+        destination: "/web-design/accra-ghana",
         permanent: true,
       },
       {
@@ -134,22 +189,22 @@ const nextConfig = {
       },
       {
         source: "/web-design-osu-accra",
-        destination: "/web-design/areas/osu-accra-ghana",
+        destination: "/web-design/accra-ghana",
         permanent: true,
       },
       {
         source: "/web-design-spintex-accra",
-        destination: "/web-design/areas/spintex-accra-ghana",
+        destination: "/web-design/accra-ghana",
         permanent: true,
       },
       {
         source: "/web-design-adenta-accra",
-        destination: "/web-design/areas/adenta-accra-ghana",
+        destination: "/web-design/accra-ghana",
         permanent: true,
       },
       {
         source: "/web-design-labone-accra",
-        destination: "/web-design/areas/labone-accra-ghana",
+        destination: "/web-design/accra-ghana",
         permanent: true,
       },
       {

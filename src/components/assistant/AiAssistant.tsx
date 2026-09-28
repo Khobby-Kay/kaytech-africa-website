@@ -73,7 +73,7 @@ export function AiAssistant() {
       {open ? (
         <div
           role="dialog"
-          aria-label="Teedra — KayTech assistant"
+          aria-label="Teedra. KayTech assistant"
           className="fixed bottom-[calc(118px+env(safe-area-inset-bottom,0px))] right-3 z-[55] flex h-[min(68vh,520px)] w-[min(calc(100vw-1.5rem),380px)] flex-col overflow-hidden rounded-3xl border border-hairline bg-canvas shadow-2xl sm:right-4 lg:bottom-24 lg:right-6"
         >
           <header className="flex items-center gap-3 border-b border-hairline bg-primary px-4 py-3 text-on-primary">

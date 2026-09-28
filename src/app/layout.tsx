@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
     default: defaultTitle,
-    // Page titles already include "| KayTech Africa" — no extra suffix (TECH-01).
+    // Page titles already include "| KayTech Africa". no extra suffix (TECH-01).
     template: "%s",
   },
   description: defaultDescription,
@@ -108,7 +108,7 @@ export default function RootLayout({
     <html lang="en-GH">
       <head>
         <JsonLd />
-        {/* Single primary favicon for Google Search — stable URL, square PNG */}
+        {/* Single primary favicon for Google Search. stable URL, square PNG */}
         <link
           rel="icon"
           href={FAVICON_PRIMARY}

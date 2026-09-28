@@ -48,7 +48,7 @@ export function SupportSection() {
             },
             {
               title: "Hands-on delivery",
-              body: "Practitioners who ship — not account managers reading from a script.",
+              body: "Practitioners who ship. not account managers reading from a script.",
             },
           ].map((item) => (
             <div

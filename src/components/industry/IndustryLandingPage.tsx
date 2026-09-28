@@ -9,9 +9,9 @@ import type { IndustryPage } from "@/lib/industry-pages";
 import { getServicePath } from "@/lib/service-pages";
 
 const industryServices = [
-  { title: "Web Development & Design", slug: "best-web-development-design-accra-ghana" },
-  { title: "E-Commerce Development", slug: "best-ecommerce-development-accra-ghana" },
-  { title: "SEO Services", slug: "best-seo-services-accra-ghana" },
+  { title: "Web Development & Design", href: getServicePath("best-web-development-design-ghana") },
+  { title: "E-Commerce Development", href: getServicePath("best-ecommerce-development-accra-ghana") },
+  { title: "SEO Services", href: "/seo-packages-ghana" },
 ] as const;
 
 export function IndustryLandingPage({ page }: { page: IndustryPage }) {
@@ -107,9 +107,9 @@ export function IndustryLandingPage({ page }: { page: IndustryPage }) {
           </h2>
           <ul className="mt-8 grid gap-3 sm:grid-cols-3">
             {industryServices.map((s) => (
-              <li key={s.slug}>
+              <li key={s.href}>
                 <Link
-                  href={getServicePath(s.slug)}
+                  href={s.href}
                   className="group flex items-center justify-between rounded-2xl border border-hairline bg-surface-soft px-5 py-4 transition hover:border-accent/30"
                 >
                   <span className="text-sm font-semibold text-ink">{s.title}</span>
@@ -133,7 +133,7 @@ export function IndustryLandingPage({ page }: { page: IndustryPage }) {
       <section className="border-b border-hairline bg-surface-soft px-5 py-16 lg:px-20 lg:py-24">
         <Container>
           <h2 className="font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
-            FAQs — {page.industryName.toLowerCase()} websites in Ghana
+            FAQs. {page.industryName.toLowerCase()} websites in Ghana
           </h2>
           <div className="mt-8 space-y-4">
             {page.faqs.map((faq) => (
@@ -156,8 +156,8 @@ export function IndustryLandingPage({ page }: { page: IndustryPage }) {
               Ready to build your {page.industryName.toLowerCase()} website?
             </h2>
             <p className="mt-4 text-sm text-on-primary/85 sm:text-base">
-              Free consultation — scoped quote within one business day. 1914+ businesses
-              served across Ghana and West Africa.
+              Free consultation. scoped quote within one business day. See published
+              case studies from brands across Ghana and West Africa.
             </p>
             <HeroCtaRow className="mt-8 [&_a]:border-white/25 [&_a.bg-semantic-up]:text-surface-dark">
               <HeroCta href="/contact">Start your project</HeroCta>

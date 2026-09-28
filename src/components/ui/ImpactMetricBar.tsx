@@ -4,7 +4,7 @@ export type ImpactMetric = {
   label: string;
   before: string;
   after: string;
-  /** Relative bar scale 0–100 (visual only — from approved before/after ranges). */
+  /** Relative bar scale 0–100 (visual only. from approved before/after ranges). */
   beforeScale?: number;
   afterScale?: number;
   period?: string;

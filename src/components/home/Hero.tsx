@@ -107,7 +107,7 @@ export function Hero() {
             </span>
             <span className="inline-flex items-center gap-2">
               <CircleCheck className="h-4 w-4 text-semantic-up" />
-              1914+ businesses served · Accra since {siteConfig.founded}
+              Accra since {siteConfig.founded} · published client case studies
             </span>
           </div>
         </div>

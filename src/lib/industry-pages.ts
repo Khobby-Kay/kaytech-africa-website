@@ -24,7 +24,7 @@ export const industryPages: IndustryPage[] = [
     industryName: "Churches",
     title: "Church Website Design Company in Ghana | KayTech Africa",
     metaDescription:
-      "Professional church website design in Ghana — sermons, events, online giving, and mobile-first layouts for ministries in Accra, Kumasi, and nationwide. KayTech Africa.",
+      "Professional church website design in Ghana. sermons, events, online giving, and mobile-first layouts for ministries in Accra, Kumasi, and nationwide. KayTech Africa.",
     keywords: [
       "church website design Ghana",
       "church web design Accra",
@@ -34,7 +34,7 @@ export const industryPages: IndustryPage[] = [
     ],
     heroTitle: "Church website design in Ghana that grows your ministry",
     heroDescription:
-      "Reach more souls online — sermons, events, giving, and WhatsApp contact built for Ghanaian congregations on mobile data.",
+      "Reach more souls online. sermons, events, giving, and WhatsApp contact built for Ghanaian congregations on mobile data.",
     intro:
       "Ghanaian churches need more than a basic homepage. Members and visitors search on phones, expect WhatsApp contact, and want sermon archives, event calendars, and secure online giving. KayTech Africa builds church websites that look trustworthy, load fast on 3G, and help your ministry stay connected between Sundays.",
     features: [
@@ -50,15 +50,15 @@ export const industryPages: IndustryPage[] = [
     whyChoose: [
       {
         title: "Built for Ghanaian congregations",
-        body: "MoMo-friendly giving, WhatsApp enquiry buttons, and layouts that work on everyday smartphones — not desktop-only templates.",
+        body: "MoMo-friendly giving, WhatsApp enquiry buttons, and layouts that work on everyday smartphones. not desktop-only templates.",
       },
       {
         title: "Ministry-focused structure",
-        body: "Clear navigation for sermons, branches, departments, and outreach — so visitors find what they need in seconds.",
+        body: "Clear navigation for sermons, branches, departments, and outreach. so visitors find what they need in seconds.",
       },
       {
-        title: "1914+ project experience",
-        body: "KayTech brings studio-grade design and SEO to churches of every size — from single assemblies to multi-branch ministries.",
+        title: "Studio-backed delivery",
+        body: "KayTech brings studio-grade design and SEO to churches of every size. from single assemblies to multi-branch ministries.",
       },
       {
         title: "Ongoing support",
@@ -69,7 +69,7 @@ export const industryPages: IndustryPage[] = [
       {
         question: "How much does a church website cost in Ghana?",
         answer:
-          "Most church websites range from GHS 2,000 to GHS 6,000+ depending on pages, sermon archive, online giving, and custom design. KayTech provides a clear quote after a free discovery call — no hidden fees.",
+          "Most church websites range from GHS 2,000 to GHS 6,000+ depending on pages, sermon archive, online giving, and custom design. KayTech provides a clear quote after a free discovery call. no hidden fees.",
       },
       {
         question: "Can you integrate Mobile Money for tithes and offerings?",
@@ -79,7 +79,7 @@ export const industryPages: IndustryPage[] = [
       {
         question: "Do you build websites for churches outside Accra?",
         answer:
-          "Absolutely. We serve churches in Kumasi, Tema, Takoradi, Cape Coast, and nationwide — most projects run smoothly via WhatsApp and video calls.",
+          "Absolutely. We serve churches in Kumasi, Tema, Takoradi, Cape Coast, and nationwide. most projects run smoothly via WhatsApp and video calls.",
       },
     ],
     relatedBlogSlug: "church-website-design-ghana",
@@ -91,7 +91,7 @@ export const industryPages: IndustryPage[] = [
     industryName: "Schools",
     title: "School Website Design Company in Ghana | KayTech Africa",
     metaDescription:
-      "School website design in Ghana — admissions, portals, news, and SEO for basic schools, SHS, and private academies in Accra, Kumasi, and nationwide.",
+      "School website design in Ghana. admissions, portals, news, and SEO for basic schools, SHS, and private academies in Accra, Kumasi, and nationwide.",
     keywords: [
       "school website design Ghana",
       "school website Accra",
@@ -101,7 +101,7 @@ export const industryPages: IndustryPage[] = [
     ],
     heroTitle: "School website design in Ghana that drives enrolment",
     heroDescription:
-      "Professional school sites with admissions, news, galleries, and parent communication — built for Ghanaian institutions.",
+      "Professional school sites with admissions, news, galleries, and parent communication. built for Ghanaian institutions.",
     intro:
       "Parents compare schools online before they visit campus. A professional school website with clear admissions info, academic programmes, and contact options builds trust and fills seats. KayTech Africa designs school websites for basic schools, SHS, private academies, and training centres across Ghana.",
     features: [
@@ -117,7 +117,7 @@ export const industryPages: IndustryPage[] = [
     whyChoose: [
       {
         title: "Enrolment-focused design",
-        body: "Clear CTAs for admissions, campus tours, and WhatsApp enquiries — so interested parents convert while motivation is high.",
+        body: "Clear CTAs for admissions, campus tours, and WhatsApp enquiries. so interested parents convert while motivation is high.",
       },
       {
         title: "Mobile-first for Ghana parents",
@@ -125,11 +125,11 @@ export const industryPages: IndustryPage[] = [
       },
       {
         title: "Secure & maintainable",
-        body: "Easy content updates for news and events — your admin team stays in control after launch.",
+        body: "Easy content updates for news and events. your admin team stays in control after launch.",
       },
       {
         title: "Nationwide delivery",
-        body: "Accra, Kumasi, Tema, and regional schools — same quality from our studio-backed team.",
+        body: "Accra, Kumasi, Tema, and regional schools. same quality from our studio-backed team.",
       },
     ],
     faqs: [
@@ -146,7 +146,7 @@ export const industryPages: IndustryPage[] = [
       {
         question: "Do you work with international schools in Ghana?",
         answer:
-          "Yes — we design for private academies, international curricula, and multi-campus institutions.",
+          "Yes. we design for private academies, international curricula, and multi-campus institutions.",
       },
     ],
     relatedBlogSlug: "school-website-design-ghana",
@@ -158,7 +158,7 @@ export const industryPages: IndustryPage[] = [
     industryName: "Restaurants",
     title: "Restaurant Website Design in Ghana | KayTech Africa",
     metaDescription:
-      "Restaurant website design in Ghana — menus, online ordering, MoMo payments, and WhatsApp ordering for Accra, Kumasi, and nationwide food brands.",
+      "Restaurant website design in Ghana. menus, online ordering, MoMo payments, and WhatsApp ordering for Accra, Kumasi, and nationwide food brands.",
     keywords: [
       "restaurant website design Ghana",
       "food website Accra",
@@ -168,7 +168,7 @@ export const industryPages: IndustryPage[] = [
     ],
     heroTitle: "Restaurant website design in Ghana that fills tables",
     heroDescription:
-      "Appetising menus, online ordering, MoMo checkout, and WhatsApp — built for Ghana's food businesses.",
+      "Appetising menus, online ordering, MoMo checkout, and WhatsApp. built for Ghana's food businesses.",
     intro:
       "Hungry customers search on Google and order via WhatsApp. A restaurant website with mouth-watering visuals, clear menus, and one-tap ordering turns browsers into diners. KayTech builds restaurant and catering sites optimised for mobile, local SEO, and Ghana payment methods.",
     features: [
@@ -184,11 +184,11 @@ export const industryPages: IndustryPage[] = [
     whyChoose: [
       {
         title: "Built for Ghana ordering habits",
-        body: "WhatsApp-first ordering, MoMo payments, and fast mobile pages — how Ghanaian customers actually order food.",
+        body: "WhatsApp-first ordering, MoMo payments, and fast mobile pages. how Ghanaian customers actually order food.",
       },
       {
         title: "Visual storytelling",
-        body: "Photography-led layouts that showcase your dishes and atmosphere — because food sells with images.",
+        body: "Photography-led layouts that showcase your dishes and atmosphere. because food sells with images.",
       },
       {
         title: "Local SEO",
@@ -220,7 +220,7 @@ export const industryPages: IndustryPage[] = [
     industryName: "Real Estate",
     title: "Real Estate Website Design in Ghana | KayTech Africa",
     metaDescription:
-      "Real estate website design in Ghana — searchable property listings, lead capture, and SEO for agencies in Accra, Kumasi, and nationwide.",
+      "Real estate website design in Ghana. searchable property listings, lead capture, and SEO for agencies in Accra, Kumasi, and nationwide.",
     keywords: [
       "real estate website design Ghana",
       "property website Accra",
@@ -230,7 +230,7 @@ export const industryPages: IndustryPage[] = [
     ],
     heroTitle: "Real estate website design in Ghana that generates leads",
     heroDescription:
-      "Searchable listings, strong visuals, WhatsApp enquiries — for agencies and developers across Ghana.",
+      "Searchable listings, strong visuals, WhatsApp enquiries. for agencies and developers across Ghana.",
     intro:
       "Property buyers and diaspora investors start online. A real estate website with filterable listings, high-quality galleries, and instant enquiry capture positions your agency as professional and trustworthy. KayTech builds property sites for agencies, developers, and brokers in Accra, Kumasi, and nationwide.",
     features: [
@@ -246,7 +246,7 @@ export const industryPages: IndustryPage[] = [
     whyChoose: [
       {
         title: "Lead capture built in",
-        body: "Every listing drives calls, WhatsApp messages, and viewing requests — not just pretty photos.",
+        body: "Every listing drives calls, WhatsApp messages, and viewing requests. not just pretty photos.",
       },
       {
         title: "Diaspora-ready",
@@ -282,7 +282,7 @@ export const industryPages: IndustryPage[] = [
     industryName: "Hotels & Hospitality",
     title: "Hotel Website Design in Ghana | KayTech Africa",
     metaDescription:
-      "Hotel and hospitality website design in Ghana — booking enquiry, galleries, SEO for Accra, Kumasi, Cape Coast, and tourist destinations nationwide.",
+      "Hotel and hospitality website design in Ghana. booking enquiry, galleries, SEO for Accra, Kumasi, Cape Coast, and tourist destinations nationwide.",
     keywords: [
       "hotel website design Ghana",
       "guest house website Ghana",
@@ -312,7 +312,7 @@ export const industryPages: IndustryPage[] = [
       },
       {
         title: "Tourism & events ready",
-        body: "Showcase conferences, weddings, and tour packages — key revenue for Ghana hospitality.",
+        body: "Showcase conferences, weddings, and tour packages. key revenue for Ghana hospitality.",
       },
       {
         title: "Mobile-first travellers",
@@ -332,7 +332,7 @@ export const industryPages: IndustryPage[] = [
       {
         question: "Do you design for guest houses and B&Bs?",
         answer:
-          "Yes — from boutique guest houses to full-service hotels and resorts.",
+          "Yes. from boutique guest houses to full-service hotels and resorts.",
       },
     ],
     image: contentImages.serviceWeb,
@@ -343,7 +343,7 @@ export const industryPages: IndustryPage[] = [
     industryName: "NGOs & Non-profits",
     title: "NGO Website Design in Ghana | KayTech Africa",
     metaDescription:
-      "NGO and non-profit website design in Ghana — donations, impact stories, volunteer sign-up, and grant-ready credibility for organisations nationwide.",
+      "NGO and non-profit website design in Ghana. donations, impact stories, volunteer sign-up, and grant-ready credibility for organisations nationwide.",
     keywords: [
       "NGO website design Ghana",
       "nonprofit website Ghana",
@@ -353,7 +353,7 @@ export const industryPages: IndustryPage[] = [
     ],
     heroTitle: "NGO website design in Ghana that builds trust & donations",
     heroDescription:
-      "Impact stories, transparent reporting, donation flows, and volunteer sign-up — for Ghanaian NGOs and CSOs.",
+      "Impact stories, transparent reporting, donation flows, and volunteer sign-up. for Ghanaian NGOs and CSOs.",
     intro:
       "Donors, partners, and grant makers evaluate your organisation online before they fund you. An NGO website with clear mission, impact metrics, donation options, and downloadable reports builds credibility. KayTech Africa designs sites for NGOs, foundations, and social enterprises across Ghana.",
     features: [
@@ -369,7 +369,7 @@ export const industryPages: IndustryPage[] = [
     whyChoose: [
       {
         title: "Grant-ready credibility",
-        body: "Professional structure that partners and funders expect — clear governance, contact, and impact evidence.",
+        body: "Professional structure that partners and funders expect. clear governance, contact, and impact evidence.",
       },
       {
         title: "Donation-ready",
@@ -377,7 +377,7 @@ export const industryPages: IndustryPage[] = [
       },
       {
         title: "Story-driven design",
-        body: "Showcase beneficiaries and outcomes without clutter — empathy and clarity combined.",
+        body: "Showcase beneficiaries and outcomes without clutter. empathy and clarity combined.",
       },
       {
         title: "Affordable scoping",

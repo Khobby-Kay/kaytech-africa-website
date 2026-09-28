@@ -2,7 +2,7 @@ export const mainNav = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
   {
-    href: "/services/best-web-development-design-accra-ghana",
+    href: "/web-design/accra-ghana",
     label: "Service",
   },
   { href: "/portfolio", label: "Portfolio" },
@@ -31,13 +31,16 @@ export const secondaryNav = [
   { href: "/pricing", label: "Pricing" },
   { href: "/faq", label: "FAQ" },
   { href: "/support", label: "Support" },
+  { href: "/academy/web-development-course", label: "Web Development Course" },
+  { href: "/academy/online-courses", label: "Academy Online" },
+  { href: "/academy/graduate-outcomes", label: "Academy Graduate Outcomes" },
 ] as const;
 
 export const footerNav = {
   services: [
     { href: "/services", label: "All Services" },
     {
-      href: "/services/best-web-development-design-accra-ghana",
+      href: "/web-design/accra-ghana",
       label: "Web Development",
     },
     {
@@ -50,7 +53,7 @@ export const footerNav = {
     },
     { href: "/ai-automation", label: "AI Automation" },
     {
-      href: "/services/best-seo-services-accra-ghana",
+      href: "/seo-packages-ghana",
       label: "SEO Services",
     },
     {

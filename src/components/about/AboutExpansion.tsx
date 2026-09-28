@@ -18,7 +18,7 @@ const whyChoose = [
   },
   {
     title: "Proven track record",
-    body: "Trusted by 1914+ businesses with measurable growth outcomes.",
+    body: "Published case studies with measurable growth outcomes.",
   },
   {
     title: "All-inclusive services",
