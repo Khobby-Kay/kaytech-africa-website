@@ -36,7 +36,7 @@ const teamPages: TeamMemberPage[] = [
     email: siteConfig.contact.email,
   },
   {
-    slug: "kwame-ante",
+    slug: "kwame-asante",
     name: leadership.team[1].name,
     title: leadership.team[1].title,
     bio: "Directs KayTech Academy — practical cohorts in web design, development, and digital skills for Ghana's next generation of builders.",

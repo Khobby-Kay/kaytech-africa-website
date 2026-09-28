@@ -60,7 +60,6 @@ export function getOrganizationJsonLd() {
           "E-commerce development",
           "Digital marketing",
           "AI automation",
-          "Web3 development",
           "Mobile Money integration",
           "Paystack integration",
           "Flutterwave integration",
@@ -225,19 +224,24 @@ export function getOrganizationJsonLd() {
           })),
         ],
       },
-      {
-        "@type": "FAQPage",
-        "@id": `${siteConfig.url}/#faq`,
-        mainEntity: allFaqs.map((faq) => ({
-          "@type": "Question",
-          name: faq.question,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: faq.answer,
-          },
-        })),
-      },
     ],
+  };
+}
+
+/** Homepage-only FAQ schema (TECH-03 — not injected site-wide). */
+export function getHomepageFaqJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": `${siteConfig.url}/#faq`,
+    mainEntity: allFaqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
   };
 }
 

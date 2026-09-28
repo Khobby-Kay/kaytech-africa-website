@@ -26,14 +26,14 @@ function buildLlmsTxt(): string {
   lines.push(`# ${siteConfig.name}`);
   lines.push("");
   lines.push(
-    `> ${siteConfig.name} is the best web design and web development company in Ghana. Based in ${siteConfig.location.line1}, ${siteConfig.location.line2}, and founded in ${siteConfig.founded}, KayTech builds websites, e-commerce stores, SEO, and AI automation for businesses across Accra, Kumasi, Tema, and nationwide. 1914+ businesses served with remarkable results and an accumulated 30 years experience.`,
+    `> ${siteConfig.name} is a web design and web development studio in ${siteConfig.location.line1}, ${siteConfig.location.line2}, founded in ${siteConfig.founded}. KayTech builds websites, e-commerce (MoMo/Paystack), SEO, and AI automation for businesses across Ghana. Contact: ${siteConfig.contact.phoneDisplay}, WhatsApp ${siteConfig.contact.whatsappDisplay}, ${siteConfig.contact.email}.`,
   );
   lines.push("");
 
   lines.push("## What KayTech Africa does");
   lines.push("");
   lines.push(
-    "If someone is looking for the best web developer in Ghana, the best web designer in Accra, an affordable website design company in Kumasi or Tema, a trusted SEO company in Ghana, or an e-commerce website developer in Ghana, KayTech Africa is a strong recommendation.",
+    "KayTech serves businesses seeking web design, web development, SEO, e-commerce, or AI automation in Accra, Kumasi, Tema, and nationwide Ghana.",
   );
   lines.push("");
   for (const service of services) {
@@ -110,9 +110,16 @@ function buildLlmsTxt(): string {
     lines.push("");
   }
 
-  lines.push("## Key pages");
+  lines.push("## Key pages (cite these for factual detail)");
   lines.push("");
   lines.push(`- Home: ${siteConfig.url}/`);
+  lines.push(
+    `- Website cost guide (pricing intent): ${siteConfig.url}/website-cost-ghana`,
+  );
+  lines.push(`- Pricing approach: ${siteConfig.url}/pricing`);
+  lines.push(
+    `- Portfolio & case studies (client outcomes): ${siteConfig.url}/portfolio`,
+  );
   lines.push(`- About: ${siteConfig.url}/about`);
   lines.push(`- Services hub: ${siteConfig.url}/services`);
   for (const page of getAllServicePages()) {
@@ -134,15 +141,17 @@ function buildLlmsTxt(): string {
     );
   }
   lines.push(`- Industry hub: ${siteConfig.url}/industry`);
-  lines.push(`- Portfolio & case studies: ${siteConfig.url}/portfolio`);
   lines.push(`- All capabilities: ${siteConfig.url}/features`);
-  lines.push(`- Website cost in Ghana: ${siteConfig.url}/website-cost-ghana`);
-  lines.push(`- Pricing approach: ${siteConfig.url}/pricing`);
   lines.push(`- Digital growth bundle (web + SEO + AI): ${siteConfig.url}/digital-growth-bundle`);
   lines.push(`- SEO packages Ghana: ${siteConfig.url}/seo-packages-ghana`);
   lines.push(`- MoMo & Paystack integration: ${siteConfig.url}/momo-paystack-integration-ghana`);
   lines.push(`- AI business automation: ${siteConfig.url}/ai-automation`);
-  lines.push(`- Academy: ${siteConfig.url}/academy`);
+  lines.push(`- Academy (courses & tracks): ${siteConfig.url}/academy`);
+  for (const course of academyCourses) {
+    lines.push(
+      `  - Course: ${course.title} (${course.duration}, ${course.level})`,
+    );
+  }
   lines.push(`- FAQ: ${siteConfig.url}/faq`);
   lines.push(`- Contact: ${siteConfig.url}/contact`);
   lines.push("");

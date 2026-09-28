@@ -40,6 +40,7 @@ After adding, redeploy. The site works without these — they just turn features
 2. Verify with the `GOOGLE_SITE_VERIFICATION` token (above) or via DNS.
 3. Submit sitemap: `https://www.kaytechafrica.com/sitemap.xml`.
 4. Use "URL Inspection" → "Request indexing" for the homepage and key pages.
+5. If a brand search shows only LinkedIn: confirm the homepage URL is **Indexed** (not "Discovered – currently not indexed"), re-submit `https://www.kaytechafrica.com/sitemap.xml`, and on [LinkedIn Company Page](https://www.linkedin.com/company/kaytech-africa) set **Website** to `https://www.kaytechafrica.com` (must match exactly).
 
 ### Bing Webmaster Tools (powers Copilot + some AI search)
 1. Sign in at bing.com/webmasters, import from Search Console.

@@ -4,6 +4,8 @@ import { FAQ } from "@/components/home/FAQ";
 import { pageImages } from "@/lib/page-images";
 import { createPageMetadata } from "@/lib/page-metadata";
 import { ghanaSearchKeywords, pageSeoCopy } from "@/lib/localized-seo";
+import { getHomepageFaqJsonLd } from "@/lib/seo";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: pageSeoCopy.faq.title,
@@ -13,8 +15,17 @@ export const metadata: Metadata = createPageMetadata({
 });
 
 export default function FAQPage() {
+  const faqJsonLd = {
+    ...getHomepageFaqJsonLd(),
+    "@id": `${siteConfig.url}/faq#faq`,
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <PageHero
         title={pageSeoCopy.faq.heroTitle}
         description={pageSeoCopy.faq.heroDescription}

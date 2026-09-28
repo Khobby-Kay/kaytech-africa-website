@@ -12,17 +12,30 @@ import { Testimonials } from "@/components/home/Testimonials";
 import { createPageMetadata } from "@/lib/page-metadata";
 import { ghanaSearchKeywords, pageSeoCopy } from "@/lib/localized-seo";
 import { leadingCompany } from "@/lib/home-content";
+import { getHomepageFaqJsonLd } from "@/lib/seo";
+import { siteConfig } from "@/lib/site";
 
-export const metadata: Metadata = createPageMetadata({
-  title: pageSeoCopy.home.title,
-  description: pageSeoCopy.home.description,
-  path: "/",
-  keywords: [...ghanaSearchKeywords],
-});
+export const metadata: Metadata = {
+  ...createPageMetadata({
+    title: pageSeoCopy.home.title,
+    description: pageSeoCopy.home.description,
+    path: "/",
+    keywords: [...ghanaSearchKeywords],
+  }),
+  alternates: {
+    canonical: siteConfig.url,
+  },
+};
 
 export default function HomePage() {
+  const homepageFaqJsonLd = getHomepageFaqJsonLd();
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageFaqJsonLd) }}
+      />
       <Hero />
       <LeadCaptureStrip location="homepage" hideOnMobile />
       <LeadingCompanySection />

@@ -70,7 +70,7 @@ export function LeadershipSection() {
 
           <div className="grid gap-5">
             {team.map((member, i) => {
-              const slugs = ["amara-okonkwo", "kwame-ante"] as const;
+              const slugs = ["amara-okonkwo", "kwame-asante"] as const;
               return (
               <article
                 key={member.name}

@@ -34,7 +34,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
     default: defaultTitle,
-    template: `%s · ${siteConfig.shortName}`,
+    // Page titles already include "| KayTech Africa" — no extra suffix (TECH-01).
+    template: "%s",
   },
   description: defaultDescription,
   keywords: [...seoKeywords],

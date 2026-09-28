@@ -152,6 +152,16 @@ const nextConfig = {
         destination: "/web-design/areas/labone-accra-ghana",
         permanent: true,
       },
+      {
+        source: "/sitemap_index.xml",
+        destination: "/sitemap.xml",
+        permanent: true,
+      },
+      {
+        source: "/team/kwame-ante",
+        destination: "/team/kwame-asante",
+        permanent: true,
+      },
     ];
   },
 };

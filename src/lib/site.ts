@@ -163,7 +163,7 @@ export const faqs = [
   {
     question: "What does KayTech Africa do?",
     answer:
-      "We build AI automation, websites, Web3 systems, robotics, and growth infrastructure for African businesses — and run an academy training the next generation of digital talent.",
+      "We build websites, e-commerce stores, SEO, digital marketing, and AI automation for Ghanaian businesses — and run KayTech Academy for practical web and digital skills training.",
   },
   {
     question: "Who do you work with?",
