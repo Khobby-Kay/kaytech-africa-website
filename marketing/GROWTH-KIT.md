@@ -46,6 +46,22 @@ After adding, redeploy. The site works without these. they just turn features on
 1. Sign in at bing.com/webmasters, import from Search Console.
 2. Submit the same sitemap.
 
+### New pages to request indexing (after each big deploy)
+Use Search Console → URL Inspection → **Request indexing** for these (already in `sitemap.xml`):
+
+- Academy: `/academy`, `/academy/web-development-course`, `/academy/digital-marketing-course`, `/academy/online-courses`, `/academy/graduate-outcomes`, `/academy/scholarships-payment-plans`
+- Agency guides: `/website-cost-ghana`, `/website-cost-ghana/kumasi`, `/website-cost-ghana/tema`, `/website-cost-ghana/takoradi`, `/whatsapp-ordering-website-ghana`, `/website-hosting-maintenance-ghana`, `/momo-paystack-integration-ghana`, `/ai-automation`
+- New blog posts under `/blog/` (fees, bootcamps, salary, top companies, freelancer vs agency, how to choose developer, WordPress vs custom)
+- Human site map: `/site-map` (helps crawlers see the full hierarchy)
+
+### GEO & AEO (already on the site)
+- **`/llms.txt`** and **`/ai.txt`**. plain-text facts for ChatGPT, Claude, Gemini, Perplexity, etc.
+- **`robots.txt`**. allows major AI crawlers (GPTBot, ClaudeBot, Google-Extended, PerplexityBot, …).
+- **JSON-LD**. Organization, LocalBusiness, FAQPage, Service, SiteNavigationElement on every page via layout + homepage.
+- **Optional IndexNow**. set `INDEXNOW_KEY` + `INDEXNOW_API_SECRET`, place `{key}.txt` in `/public`, POST `/api/indexnow` after deploy for faster Bing/Copilot pickup.
+
+**Brand sitelinks** (Google showing Services, Portfolio, Academy, etc. under “KayTech Africa”): Google chooses these automatically. You cannot pick exact links. What helps: consistent nav/footer, `/site-map`, strong brand searches, and Search Console showing those URLs as indexed.
+
 ---
 
 ## 2. Google Business Profile (biggest local + AI lever)

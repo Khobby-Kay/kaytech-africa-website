@@ -40,6 +40,7 @@ const staticRoutes: StaticRoute[] = [
   { path: "/academy/online-courses", changeFrequency: "monthly", priority: 0.85 },
   { path: "/academy/graduate-outcomes", changeFrequency: "monthly", priority: 0.84 },
   { path: "/academy/scholarships-payment-plans", changeFrequency: "monthly", priority: 0.83 },
+  { path: "/site-map", changeFrequency: "monthly", priority: 0.55 },
   { path: "/faq", changeFrequency: "monthly", priority: 0.75 },
   { path: "/support", changeFrequency: "monthly", priority: 0.7 },
   { path: "/security", changeFrequency: "yearly", priority: 0.5 },

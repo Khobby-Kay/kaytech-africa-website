@@ -115,6 +115,12 @@ export default function RootLayout({
           type="image/png"
           sizes="96x96"
         />
+        <link
+          rel="alternate"
+          type="text/plain"
+          href="/llms.txt"
+          title="LLM-readable site summary"
+        />
       </head>
       <body className="min-h-screen pb-[calc(72px+env(safe-area-inset-bottom))] font-sans text-ink antialiased lg:pb-0">
         <Navbar />

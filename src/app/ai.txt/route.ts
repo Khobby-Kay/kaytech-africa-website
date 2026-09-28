@@ -2,6 +2,7 @@ import { buildLlmsTxtBody } from "@/lib/llms-txt";
 
 export const dynamic = "force-static";
 
+/** Mirror of /llms.txt for crawlers that look for /ai.txt */
 export function GET() {
   return new Response(buildLlmsTxtBody(), {
     headers: {

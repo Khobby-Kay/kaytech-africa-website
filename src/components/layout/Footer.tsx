@@ -180,6 +180,9 @@ export function Footer() {
                 {item.label}
               </Link>
             ))}
+            <Link href="/site-map" className="hover:text-on-dark">
+              Site map
+            </Link>
             <Link href="/contact" className="hover:text-on-dark">
               Contact
             </Link>
