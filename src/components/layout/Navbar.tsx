@@ -44,9 +44,9 @@ export function Navbar() {
           "fixed inset-x-0 top-0 z-50 w-full transition-all duration-300",
           lightHeaderText
             ? "max-lg:bg-surface-dark/45 max-lg:backdrop-blur-md lg:bg-transparent"
-            : "border-b border-hairline bg-canvas/95 backdrop-blur-xl",
+            : "border-b border-white/60 bg-white/60 backdrop-blur-2xl backdrop-saturate-150",
           scrolled &&
-            "border-b border-hairline bg-canvas/95 shadow-sm backdrop-blur-xl",
+            "border-b border-white/60 bg-white/60 shadow-[0_8px_30px_-12px_rgba(15,23,42,0.18)] backdrop-blur-2xl backdrop-saturate-150",
         )}
       >
         <Container className="flex h-14 items-center justify-between gap-2 sm:h-16 sm:gap-3 lg:h-20">
@@ -122,7 +122,7 @@ export function Navbar() {
                 "inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border transition",
                 lightHeaderText && !scrolled
                   ? "border-white/40 bg-white/10 text-on-dark"
-                  : "border-hairline bg-canvas text-ink",
+                  : "border-white/70 bg-white/50 text-ink backdrop-blur-xl",
               )}
               onClick={() => setOpen((v) => !v)}
               aria-label={open ? "Close menu" : "Open menu"}
@@ -136,7 +136,7 @@ export function Navbar() {
 
       <div
         className={cn(
-          "fixed inset-0 z-[60] bg-surface-dark/50 backdrop-blur-sm transition-opacity lg:hidden",
+          "fixed inset-0 z-[60] bg-surface-dark/30 backdrop-blur-md transition-opacity lg:hidden",
           open ? "opacity-100" : "pointer-events-none opacity-0",
         )}
         onClick={() => setOpen(false)}
@@ -145,7 +145,7 @@ export function Navbar() {
 
       <aside
         className={cn(
-          "fixed inset-y-0 right-0 z-[70] flex w-full max-w-[min(100vw,380px)] flex-col bg-canvas shadow-float transition-transform duration-300 ease-out lg:hidden",
+          "fixed inset-y-0 right-0 z-[70] flex w-full max-w-[min(100vw,380px)] flex-col rounded-l-3xl border-l border-white/60 bg-white/75 shadow-float backdrop-blur-2xl backdrop-saturate-150 transition-transform duration-300 ease-out lg:hidden",
           open ? "translate-x-0" : "translate-x-full",
         )}
         aria-hidden={!open}
@@ -219,7 +219,7 @@ export function Navbar() {
             <div className="mt-3 flex items-start gap-3 border-t border-hairline pt-3">
               <Clock className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wider text-muted">
+                <p className="text-xs font-semibold text-muted">
                   Office hours
                 </p>
                 <p className="mt-0.5 text-sm text-ink">

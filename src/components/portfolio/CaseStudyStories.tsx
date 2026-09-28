@@ -13,10 +13,7 @@ export function CaseStudyStories() {
     >
       <Container>
         <div className="max-w-3xl">
-          <span className="inline-flex items-center gap-2 rounded-pill bg-canvas px-4 py-1.5 font-mono text-xs font-semibold uppercase tracking-[0.08em] text-primary ring-1 ring-hairline">
-            Client results
-          </span>
-          <h2 className="mt-5 font-display text-2xl tracking-tight text-ink sm:text-3xl lg:text-4xl">
+          <h2 className="font-display text-2xl tracking-tight text-ink sm:text-3xl lg:text-4xl">
             Success stories from brands we&apos;ve built for
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
@@ -40,7 +37,7 @@ export function CaseStudyStories() {
                   className="object-contain object-left"
                 />
               </div>
-              <p className="mt-4 font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-primary">
+              <p className="mt-4 text-xs font-semibold text-primary">
                 {study.sector} · {study.timeline}
               </p>
               <h3 className="mt-2 font-display text-lg font-semibold text-ink">

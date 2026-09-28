@@ -114,7 +114,7 @@ export function CityLandingPage({ page }: { page: CityPage }) {
             <div className="rounded-3xl border border-hairline bg-surface-accent p-6 sm:p-8">
               <div className="flex items-center gap-2 text-accent">
                 <MapPin className="h-5 w-5" />
-                <p className="text-sm font-semibold uppercase tracking-wider">
+                <p className="text-sm font-semibold">
                   Areas we serve in {page.cityName}
                 </p>
               </div>
@@ -183,7 +183,7 @@ export function CityLandingPage({ page }: { page: CityPage }) {
                       {tier.name}
                     </h3>
                     <p className="mt-2 text-sm font-medium text-accent">{tier.range}</p>
-                    <p className="mt-1 text-xs font-medium uppercase tracking-wide text-muted">
+                    <p className="mt-1 text-xs font-medium text-muted">
                       Timeline: {tier.timeline}
                     </p>
                     <p className="mt-3 text-sm leading-relaxed text-muted">

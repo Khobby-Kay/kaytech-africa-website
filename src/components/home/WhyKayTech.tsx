@@ -22,9 +22,6 @@ export function WhyKayTech() {
     <section id="why" className="bg-surface-soft px-5 py-16 lg:px-20 lg:py-32">
       <Container className="grid grid-cols-1 items-end gap-12 lg:grid-cols-[1.2fr_1fr] lg:gap-20">
         <div className="min-w-0">
-          <span className="mb-8 inline-flex items-center gap-2 rounded-pill bg-surface-strong px-4 py-1.5 font-mono text-xs font-semibold uppercase tracking-[0.08em] text-ink">
-            Why KayTech
-          </span>
           <div className="max-w-2xl font-display text-[24px] tracking-tight sm:text-[28px] md:text-4xl lg:text-[44px]">
             {lines.map((line) => (
               <p
@@ -39,7 +36,7 @@ export function WhyKayTech() {
           </div>
         </div>
         <div className="rounded-3xl border border-hairline bg-canvas p-8 shadow-card lg:p-10">
-          <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-muted">
+          <p className="text-xs text-muted">
             Studio snapshot
           </p>
           <dl className="mt-6 space-y-5">

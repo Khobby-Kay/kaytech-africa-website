@@ -63,7 +63,7 @@ export default function ServicesHubPage() {
                 key={page.slug}
                 className="group rounded-3xl border border-hairline bg-surface-soft p-6 transition hover:border-primary/25 hover:shadow-card"
               >
-                <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-primary">
+                <p className="text-xs text-primary">
                   {page.eyebrow}
                 </p>
                 <h2 className="mt-3 font-display text-xl font-semibold text-ink">

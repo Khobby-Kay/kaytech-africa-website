@@ -15,7 +15,7 @@ export const webDevPageMeta = {
 
 export const webDevGrowth = {
   headline: "Grow your business and get visibility in just 1 month",
-  body: "KayTech Africa is recognised among the best web development companies in Ghana. We design platforms that do not just look professional. they deliver measurable results. Whether you need more traffic, qualified leads, higher conversions, or direct sales, our web design services are built for startups, SMEs, and established organisations nationwide.",
+  body: "We build websites and web platforms for startups, SMEs and established organisations across Ghana. Each one is scoped around a number you care about: traffic, qualified leads, conversions or direct sales.",
 } as const;
 
 export const webDevWhyChooseShort = [

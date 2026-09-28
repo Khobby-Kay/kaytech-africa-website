@@ -9,10 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        canvas: "#ffffff",
+        canvas: "rgba(255, 255, 255, 0.62)",
         ink: "#0f172a",
         muted: "#64748b",
-        hairline: "#e2e8f0",
+        hairline: "rgba(15, 23, 42, 0.08)",
         primary: {
           DEFAULT: "#1a4971",
           deep: "#123556",
@@ -23,17 +23,17 @@ const config: Config = {
           bright: "#14b8a6",
           soft: "#ccfbf1",
         },
-        "surface-soft": "#f1f5f9",
-        "surface-strong": "#e8eef4",
-        "surface-accent": "#ecfdf5",
+        "surface-soft": "rgba(255, 255, 255, 0.42)",
+        "surface-strong": "rgba(226, 232, 240, 0.55)",
+        "surface-accent": "rgba(204, 251, 241, 0.45)",
         "surface-dark": "#0a0b0d",
         "on-dark": "#ffffff",
         "on-primary": "#ffffff",
         "semantic-up": "#10b981",
         "semantic-up-deep": "#059669",
         mist: "#71717a",
-        line: "#e8eaed",
-        surface: "#f4f6f8",
+        line: "rgba(15, 23, 42, 0.08)",
+        surface: "rgba(255, 255, 255, 0.5)",
       },
       fontFamily: {
         display: ["var(--font-display)", "system-ui", "sans-serif"],
@@ -42,14 +42,15 @@ const config: Config = {
       },
       borderRadius: {
         pill: "9999px",
+        "3xl": "1.75rem",
       },
       maxWidth: {
         site: "1440px",
       },
       boxShadow: {
-        card: "0 12px 40px rgba(26,73,113,0.12)",
-        float: "0 20px 50px -12px rgba(0,0,0,0.18)",
-        glow: "0 8px 32px rgba(13,148,136,0.15)",
+        card: "inset 0 1px 0 rgba(255,255,255,0.8), 0 1px 2px rgba(15,23,42,0.04), 0 18px 40px -16px rgba(26,73,113,0.22)",
+        float: "inset 0 1px 0 rgba(255,255,255,0.7), 0 24px 60px -16px rgba(15,23,42,0.28)",
+        glow: "inset 0 1px 0 rgba(255,255,255,0.8), 0 12px 36px -8px rgba(13,148,136,0.28)",
       },
       animation: {
         marquee: "marquee 28s linear infinite",

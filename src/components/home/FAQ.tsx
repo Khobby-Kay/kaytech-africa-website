@@ -27,10 +27,7 @@ export function FAQ({
       <Container>
         {showHeading ? (
           <div className="max-w-2xl">
-            <span className="inline-flex items-center gap-2 rounded-pill bg-surface-strong px-4 py-1.5 font-mono text-xs font-semibold uppercase tracking-[0.08em] text-ink">
-              FAQ
-            </span>
-            <h2 className="mt-6 font-display text-3xl tracking-tight text-ink sm:text-4xl lg:text-5xl">
+            <h2 className="font-display text-3xl tracking-tight text-ink sm:text-4xl lg:text-5xl">
               Questions, answered.
             </h2>
           </div>

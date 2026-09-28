@@ -1,18 +1,18 @@
 /** Homepage hero headlines. synced with background carousel (Doctor Barns–style). */
 export const homeHeroHeadlines = [
   {
-    title: "Best web design company in Ghana. results you can measure",
+    title: "Websites that bring in customers",
     description:
-      "From stunning designs to powerful features, we build websites tailored to maximize your ROI and elevate your online presence across Accra and Ghana.",
+      "Custom sites and online stores for Ghanaian businesses, built fast on mobile and tracked from the first enquiry.",
   },
   {
-    title: "Get websites that rank higher and sell more",
+    title: "Found on Google. Chosen on WhatsApp.",
     description:
-      "Our SEO-optimized websites not only look great. they deliver measurable results: higher rankings, increased leads, and more revenue for your business.",
+      "Search-ready pages, clear pricing and one-tap WhatsApp contact, so visitors turn into conversations.",
   },
   {
-    title: "Top web design services in Ghana to grow your sales",
+    title: "Pay with MoMo. Checkout in seconds.",
     description:
-      "We craft visually stunning, mobile-first websites designed to drive traffic, boost conversions, and help Ghanaian businesses scale with confidence.",
+      "Paystack and Mobile Money built in, with order alerts that reach you wherever you are.",
   },
 ] as const;

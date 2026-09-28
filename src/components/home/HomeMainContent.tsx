@@ -11,16 +11,12 @@ export function HomeMainContent() {
         <Container>
           <RevealOnScroll variant="fade-up">
             <div className="max-w-2xl">
-            <span className="inline-flex items-center gap-2 rounded-pill bg-canvas px-4 py-1.5 font-mono text-xs font-semibold uppercase tracking-[0.08em] text-ink ring-1 ring-hairline">
-              Tailored services
-            </span>
-            <h2 className="mt-4 font-display text-2xl tracking-tight text-ink sm:text-3xl lg:text-4xl">
-              Professional web design &amp; development services in Ghana
+            <h2 className="font-display text-2xl tracking-tight text-ink sm:text-3xl lg:text-4xl">
+              What we can build for you
             </h2>
             <p className="mt-3 text-sm text-muted sm:text-base">
-              The best website designer in Accra for SEO, e-commerce, and
-              affordable business websites. serving Accra, Kumasi, Tema, and all
-              of Ghana.
+              Six services, one team. Pick one or combine them into a single
+              project.
             </p>
             </div>
           </RevealOnScroll>
@@ -70,16 +66,12 @@ export function HomeMainContent() {
         <Container>
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <div>
-              <span className="inline-flex items-center gap-2 rounded-pill bg-surface-strong px-4 py-1.5 font-mono text-xs font-semibold uppercase tracking-[0.08em] text-ink">
-                Why partner with us
-              </span>
-              <h2 className="mt-4 font-display text-2xl tracking-tight text-ink sm:text-3xl lg:text-4xl">
-                Why hire the best web developer in Ghana?
+              <h2 className="font-display text-2xl tracking-tight text-ink sm:text-3xl lg:text-4xl">
+                A website should pay for itself
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
-                When you search for the best web designer in Accra or an
-                affordable website design company in Ghana, you need a partner
-                who delivers leads and sales. not just a pretty homepage.
+                We judge a launch by the enquiries and sales that follow, not by
+                how the homepage looks in a screenshot.
               </p>
               <Link
                 href="/about"
@@ -112,16 +104,12 @@ export function HomeMainContent() {
       <section className="bg-primary px-5 py-12 text-on-primary sm:py-16 lg:px-20 lg:py-20">
         <Container className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-on-primary/70">
-              Revenue-generating service
-            </p>
-            <h2 className="mt-3 font-display text-2xl tracking-tight sm:text-3xl lg:text-4xl">
+            <h2 className="font-display text-2xl tracking-tight sm:text-3xl lg:text-4xl">
               Case studies with measurable client results
             </h2>
             <p className="mt-4 max-w-xl text-sm text-on-primary/85 sm:text-base">
-              KayTech publishes challenge, solution, and outcome stories. Melcom,
-              Voltic, The Alfred, and more. for brands in Accra, Kumasi, Tema, and
-              nationwide.
+              Read how we worked with Melcom, Voltic, The Alfred and others: the
+              problem, what we built and what changed.
             </p>
             <Link
               href="/about"

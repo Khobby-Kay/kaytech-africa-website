@@ -26,10 +26,9 @@ export const aggregateImpactMetrics = [
 ] as const;
 
 export const proofOfImpactCopy = {
-  eyebrow: "Proof of impact",
-  title: "Measurable outcomes. not just pretty websites",
+  title: "What changed after launch",
   description:
-    "KayTech Africa builds for Ghanaian reality: WhatsApp funnels, Mobile Money, mobile-first speed, and lead systems that show up in your inbox. with before-and-after results you can track.",
+    "Numbers from client projects: WhatsApp funnels, Mobile Money checkouts, faster mobile pages and lead forms that land in the right inbox.",
 } as const;
 
 /** Client outcome cards. sourced from case studies for a single proof layer. */

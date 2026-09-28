@@ -53,7 +53,7 @@ export function Footer() {
           </div>
 
           <div className="lg:col-span-2">
-            <p className="text-xs font-semibold uppercase tracking-wider text-on-dark/50">
+            <p className="text-xs font-semibold text-on-dark/50">
               Services
             </p>
             <ul className="mt-2 columns-2 gap-x-3 space-y-1 text-xs">
@@ -71,7 +71,7 @@ export function Footer() {
           </div>
 
           <div className="lg:col-span-2">
-            <p className="text-xs font-semibold uppercase tracking-wider text-on-dark/50">
+            <p className="text-xs font-semibold text-on-dark/50">
               Company
             </p>
             <ul className="mt-2 columns-2 gap-x-3 space-y-1 text-xs">
@@ -89,7 +89,7 @@ export function Footer() {
           </div>
 
           <div className="lg:col-span-4">
-            <p className="text-xs font-semibold uppercase tracking-wider text-on-dark/50">
+            <p className="text-xs font-semibold text-on-dark/50">
               Locations
             </p>
             <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-xs">
@@ -109,7 +109,7 @@ export function Footer() {
                 </span>
               ))}
             </div>
-            <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-on-dark/50">
+            <p className="mt-4 text-xs font-semibold text-on-dark/50">
               Industries
             </p>
             <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-xs">
@@ -129,7 +129,7 @@ export function Footer() {
                 </span>
               ))}
             </div>
-            <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-on-dark/50">
+            <p className="mt-4 text-xs font-semibold text-on-dark/50">
               More
             </p>
             <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-xs">

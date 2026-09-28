@@ -84,10 +84,7 @@ export default function TeamMemberPage({ params }: { params: Params }) {
               className="mx-auto w-full max-w-md lg:max-w-none"
             />
             <div>
-              <span className="inline-flex items-center gap-2 rounded-pill bg-canvas px-4 py-1.5 font-mono text-xs font-semibold uppercase tracking-[0.08em] text-ink">
-                KayTech team
-              </span>
-              <h1 className="mt-5 font-display text-3xl tracking-tight text-ink sm:text-4xl lg:text-5xl">
+              <h1 className="font-display text-3xl tracking-tight text-ink sm:text-4xl lg:text-5xl">
                 {member.name}
               </h1>
               <p className="mt-2 text-lg font-semibold text-primary">

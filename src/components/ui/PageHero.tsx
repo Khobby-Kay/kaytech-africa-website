@@ -106,14 +106,14 @@ export function PageHero({
       >
         <div className="max-w-3xl max-lg:mt-4">
           {eyebrow ? (
-            <span className="inline-flex items-center gap-2 rounded-pill bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-on-dark/90">
+            <span className="text-sm font-medium text-on-dark/70">
               {eyebrow}
             </span>
           ) : null}
           <h1
             className={cn(
               "font-display leading-[1.02] tracking-tight text-on-dark",
-              eyebrow ? "mt-5" : "mt-0",
+              eyebrow ? "mt-3" : "mt-0",
               compact
                 ? "text-[1.75rem] sm:text-[32px] lg:text-[40px]"
                 : "text-[2rem] sm:text-[36px] md:text-[44px] lg:text-[52px] xl:text-[58px]",
@@ -146,9 +146,9 @@ export function PageHero({
         {imageCaption ? (
           <div className="pointer-events-none absolute inset-0 hidden lg:block">
             <div className="absolute bottom-[18%] right-12 max-w-sm animate-float">
-              <div className="rounded-2xl border border-white/15 bg-surface-dark/35 px-5 py-4 backdrop-blur-sm">
+              <div className="glass-dark rounded-3xl px-5 py-4">
                 {imageCaptionMeta ? (
-                  <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-on-dark/75">
+                  <p className="text-xs text-on-dark/75">
                     {imageCaptionMeta}
                   </p>
                 ) : null}

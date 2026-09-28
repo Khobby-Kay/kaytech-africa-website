@@ -29,7 +29,7 @@ export function HeroTicker() {
                       ·
                     </span>
                   )}
-                  <span className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.18em]">
+                  <span className="inline-flex items-center gap-2 text-xs">
                     {item.live && (
                       <span
                         className="size-1.5 shrink-0 animate-pulse rounded-full bg-semantic-up shadow-[0_0_8px_rgba(18,215,92,0.85)]"

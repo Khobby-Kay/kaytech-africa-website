@@ -27,17 +27,12 @@ export function WhyKayTechHome() {
     >
       <Container>
         <div className="max-w-3xl">
-          <span className="inline-flex items-center gap-2 rounded-pill bg-surface-strong px-4 py-1.5 font-mono text-xs font-semibold uppercase tracking-[0.08em] text-ink">
-            Why KayTech
-          </span>
-          <h2 className="mt-4 font-display text-2xl tracking-tight text-ink sm:mt-6 sm:text-4xl lg:text-5xl">
+          <h2 className="font-display text-2xl tracking-tight text-ink sm:text-4xl lg:text-5xl">
             Africa runs on ambition. Your stack should keep up.
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-muted sm:mt-4 sm:text-lg">
-            KayTech is the best web design company in Accra for brands that need
-            results. trusted as one of the top web developers in Ghana for
-            business websites, SEO, e-commerce, and growth across Accra, Kumasi,
-            and nationwide.
+            Business websites, SEO, online stores and automation from one
+            Accra team, built to keep working long after launch day.
           </p>
         </div>
 

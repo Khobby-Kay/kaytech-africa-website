@@ -5,10 +5,7 @@ export function SupportSection() {
   return (
     <section id="support" className="bg-surface-dark px-5 py-16 text-on-dark lg:px-20 lg:py-32">
       <Container>
-        <span className="inline-flex items-center gap-2 rounded-pill bg-white/10 px-4 py-1.5 font-mono text-xs font-semibold uppercase tracking-[0.08em] text-on-dark">
-          Client support
-        </span>
-        <h2 className="mt-6 max-w-2xl font-display text-3xl tracking-tight sm:text-4xl lg:text-5xl">
+        <h2 className="max-w-2xl font-display text-3xl tracking-tight sm:text-4xl lg:text-5xl">
           Need help mid-project? We&apos;ve got you covered.
         </h2>
         <p className="mt-4 max-w-2xl text-lg text-on-dark/75">

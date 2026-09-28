@@ -52,11 +52,11 @@ function AcademyApplyBanner() {
   return (
     <section
       id="apply"
-      className="sticky top-[calc(3.75rem+env(safe-area-inset-top,0px))] z-30 border-b border-accent/25 bg-gradient-to-r from-accent/20 via-surface-accent to-accent/20 px-4 py-3 shadow-sm backdrop-blur-sm sm:px-5 sm:py-4 lg:top-[4.5rem] lg:px-20"
+      className="sticky top-[calc(3.75rem+env(safe-area-inset-top,0px))] z-30 border-b border-accent/25 bg-gradient-to-r from-accent/20 via-surface-accent to-accent/20 px-4 py-3 shadow-sm backdrop-blur-xl backdrop-saturate-150 sm:px-5 sm:py-4 lg:top-[4.5rem] lg:px-20"
     >
       <Container className="flex flex-col items-stretch justify-between gap-3 sm:flex-row sm:items-center">
         <div className="min-w-0">
-          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-accent">
+          <p className="text-xs font-semibold text-accent">
             Admissions open
           </p>
           <p className="mt-1 font-display text-lg font-semibold text-ink sm:text-xl">
@@ -131,7 +131,7 @@ function AcademyHeroSlider() {
         <div className="pointer-events-none absolute inset-0 hidden lg:block">
           <div className="absolute bottom-[18%] right-12 max-w-sm animate-float">
             <div className="rounded-2xl border border-white/15 bg-surface-dark/35 px-5 py-4 backdrop-blur-sm">
-              <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-on-dark/75">
+              <p className="text-xs text-on-dark/75">
                 Studio-backed academy · Ghana
               </p>
               <p className="mt-2 font-display text-xl font-semibold text-on-dark">
@@ -180,7 +180,7 @@ export function AcademyPageContent() {
       <section className="border-b border-hairline bg-surface-soft px-5 py-16 lg:px-20 lg:py-24">
         <Container>
           <RevealOnScroll variant="fade-up">
-            <span className="text-xs font-semibold uppercase tracking-[0.12em] text-accent">
+            <span className="text-xs font-semibold text-accent">
               Our promise
             </span>
             <h2 className="mt-3 max-w-3xl font-display text-2xl font-bold tracking-tight text-ink sm:text-3xl lg:text-4xl">
@@ -305,7 +305,7 @@ export function AcademyPageContent() {
       <section className="border-b border-hairline bg-canvas px-5 py-16 lg:px-20 lg:py-24">
         <Container>
           <RevealOnScroll variant="fade-up">
-            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-accent">
+            <p className="text-xs font-semibold text-accent">
               {academySuccessStory.label}
             </p>
             <blockquote className="mt-4 max-w-4xl rounded-3xl border border-hairline bg-surface-soft p-6 sm:p-8">
@@ -395,7 +395,7 @@ export function AcademyPageContent() {
             </RevealOnScroll>
             <RevealOnScroll variant="fade-left" delay={100}>
               <div>
-                <span className="text-xs font-semibold uppercase tracking-[0.12em] text-accent">
+                <span className="text-xs font-semibold text-accent">
                   Welcome to KayTech Academy
                 </span>
                 <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-ink sm:text-3xl">
@@ -600,7 +600,7 @@ export function AcademyPageContent() {
           <StaggerReveal className="grid gap-4 md:grid-cols-3" staggerMs={80}>
             {academyHubCohorts.map((c) => (
               <article key={c.label} className="rounded-3xl border border-hairline bg-surface-soft p-6">
-                <p className="text-xs font-semibold uppercase tracking-wider text-accent">{c.course}</p>
+                <p className="text-xs font-semibold text-accent">{c.course}</p>
                 <h3 className="mt-2 font-display font-semibold text-ink">{c.label}</h3>
                 <p className="mt-2 text-sm text-muted">Starts {c.start}</p>
                 <Link href={c.href} className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline">
@@ -703,7 +703,7 @@ export function AcademyPageContent() {
                     sizes="(max-width: 768px) 100vw, 320px"
                   />
                   <div className="p-5">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-accent">
+                    <p className="text-xs font-semibold text-accent">
                       {post.category}
                     </p>
                     <h3 className="mt-2 font-display text-base font-semibold text-ink">

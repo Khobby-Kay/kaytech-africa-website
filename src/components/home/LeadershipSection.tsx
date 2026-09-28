@@ -18,10 +18,7 @@ export function LeadershipSection() {
     <section id="leadership" className="border-y border-hairline bg-canvas px-5 py-16 lg:px-20 lg:py-32">
       <Container>
         <div className="max-w-2xl">
-          <span className="inline-flex items-center gap-2 rounded-pill bg-surface-strong px-4 py-1.5 font-mono text-xs font-semibold uppercase tracking-[0.08em] text-ink">
-            Leadership
-          </span>
-          <h2 className="mt-6 font-display text-3xl tracking-tight text-ink sm:text-4xl lg:text-5xl">
+          <h2 className="font-display text-3xl tracking-tight text-ink sm:text-4xl lg:text-5xl">
             Built by African builders.
           </h2>
           <p className="mt-4 text-lg text-muted">
@@ -45,7 +42,7 @@ export function LeadershipSection() {
                 className="min-h-[280px] md:min-h-[360px]"
               />
               <div className="flex flex-col justify-center p-8 lg:p-10">
-                <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-primary">
+                <p className="text-xs text-primary">
                   {ceo.title}
                 </p>
                 <h3 className="mt-3 font-display text-3xl font-semibold tracking-tight text-ink">

@@ -36,7 +36,7 @@ export function CaseStudyArticle({
               />
             </div>
             <div>
-              <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-primary">
+              <p className="text-xs font-semibold text-primary">
                 {study.sector} · {study.location} · {study.timeline}
               </p>
               <h1 className="mt-1 font-display text-xl font-semibold text-ink sm:text-3xl">
@@ -66,7 +66,7 @@ export function CaseStudyArticle({
 
       <div className="grid gap-8 px-6 py-8 sm:px-8 lg:grid-cols-2 lg:gap-10 lg:py-10">
         <div>
-          <h2 className="font-display text-sm font-semibold uppercase tracking-wider text-muted">
+          <h2 className="font-display text-sm font-semibold text-muted">
             The challenge
           </h2>
           <ul className="mt-3 space-y-2">
@@ -79,7 +79,7 @@ export function CaseStudyArticle({
           </ul>
         </div>
         <div>
-          <h2 className="font-display text-sm font-semibold uppercase tracking-wider text-muted">
+          <h2 className="font-display text-sm font-semibold text-muted">
             What KayTech delivered
           </h2>
           <ul className="mt-3 space-y-2">
@@ -94,7 +94,7 @@ export function CaseStudyArticle({
       </div>
 
       <div className="border-t border-hairline px-6 py-8 sm:px-8 lg:py-10">
-        <h2 className="font-display text-sm font-semibold uppercase tracking-wider text-muted">
+        <h2 className="font-display text-sm font-semibold text-muted">
           Results
         </h2>
         <ul className="mt-4 grid gap-3 sm:grid-cols-2">

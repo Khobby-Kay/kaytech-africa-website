@@ -116,7 +116,7 @@ export default function RootLayout({
           sizes="96x96"
         />
       </head>
-      <body className="min-h-screen bg-canvas pb-[calc(46px+env(safe-area-inset-bottom))] font-sans text-ink antialiased lg:pb-0">
+      <body className="min-h-screen pb-[calc(72px+env(safe-area-inset-bottom))] font-sans text-ink antialiased lg:pb-0">
         <Navbar />
         <main>{children}</main>
         <Footer />

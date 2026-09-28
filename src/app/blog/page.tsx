@@ -53,7 +53,7 @@ export default function BlogPage() {
                 sizes="(max-width: 1024px) 100vw, 600px"
               />
               <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-10">
-                <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-primary">
+                <p className="text-xs font-semibold text-primary">
                   {featured.category} · {featured.dateDisplay}
                 </p>
                 <h2 className="mt-3 font-display text-2xl tracking-tight text-ink sm:text-3xl">
@@ -86,7 +86,7 @@ export default function BlogPage() {
                     sizes="(max-width: 768px) 100vw, 380px"
                   />
                   <div className="flex flex-1 flex-col p-6">
-                    <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-primary">
+                    <p className="text-xs font-semibold text-primary">
                       {post.category} · {post.dateDisplay}
                     </p>
                     <h3 className="mt-2 font-display text-lg font-semibold leading-snug text-ink">

@@ -8,7 +8,7 @@ export function ClientLogoStrip() {
   return (
     <section className="overflow-hidden border-y border-hairline bg-surface-soft py-8 sm:py-10">
       <Container>
-        <p className="text-center font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-muted">
+        <p className="text-center text-xs font-semibold text-muted">
           Trusted by leading brands we have worked with
         </p>
       </Container>

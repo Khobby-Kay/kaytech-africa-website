@@ -158,7 +158,7 @@ export default function WebsiteCostGhanaPage() {
                 key={step.phase}
                 className="rounded-2xl border border-hairline bg-canvas p-5"
               >
-                <p className="text-xs font-semibold uppercase tracking-wide text-primary">
+                <p className="text-xs font-semibold text-primary">
                   {step.duration}
                 </p>
                 <h3 className="mt-2 font-semibold text-ink">{step.phase}</h3>

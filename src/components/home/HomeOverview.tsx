@@ -73,10 +73,7 @@ export function HomeOverview() {
     <section className="border-b border-hairline bg-canvas px-5 py-16 lg:px-20 lg:py-24">
       <Container>
         <div className="max-w-2xl">
-          <span className="inline-flex items-center gap-2 rounded-pill bg-surface-strong px-4 py-1.5 font-mono text-xs font-semibold uppercase tracking-[0.08em] text-ink">
-            Explore
-          </span>
-          <h2 className="mt-6 font-display text-3xl tracking-tight text-ink sm:text-4xl">
+          <h2 className="font-display text-3xl tracking-tight text-ink sm:text-4xl">
             Everything KayTech, in one place
           </h2>
           <p className="mt-4 text-muted">
@@ -92,7 +89,7 @@ export function HomeOverview() {
               href={page.href}
               className="group flex flex-col rounded-3xl border border-hairline bg-surface-soft p-6 transition hover:border-primary/30 hover:shadow-card"
             >
-              <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-primary">
+              <span className="text-xs font-semibold text-primary">
                 {page.eyebrow}
               </span>
               <h3 className="mt-3 font-display text-xl font-semibold text-ink">

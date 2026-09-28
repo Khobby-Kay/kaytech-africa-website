@@ -89,7 +89,7 @@ export default function BlogPostPage({ params }: { params: Params }) {
                 <ArrowLeft className="h-4 w-4" />
                 Back to blog
               </Link>
-              <p className="mt-6 font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-primary">
+              <p className="mt-6 text-xs font-semibold text-primary">
                 {post.category}
               </p>
               <h1 className="mt-3 font-display text-3xl tracking-tight text-ink sm:text-4xl lg:text-5xl">
@@ -194,7 +194,7 @@ export default function BlogPostPage({ params }: { params: Params }) {
                       sizes="(max-width: 768px) 100vw, 380px"
                     />
                     <div className="flex flex-1 flex-col p-6">
-                      <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-primary">
+                      <p className="text-xs font-semibold text-primary">
                         {rel.dateDisplay}
                       </p>
                       <h3 className="mt-2 font-display text-base font-semibold leading-snug text-ink">

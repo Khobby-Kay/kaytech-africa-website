@@ -9,10 +9,7 @@ export function SecuritySection() {
   return (
     <section id="security" className="bg-canvas px-5 py-12 sm:py-16 lg:px-20 lg:py-32">
       <Container>
-        <span className="inline-flex items-center gap-2 rounded-pill bg-surface-strong px-4 py-1.5 font-mono text-xs font-semibold uppercase tracking-[0.08em] text-ink">
-          Security
-        </span>
-        <h2 className="mt-4 max-w-2xl font-display text-2xl tracking-tight text-ink sm:mt-6 sm:text-4xl lg:text-5xl">
+        <h2 className="max-w-2xl font-display text-2xl tracking-tight text-ink sm:text-4xl lg:text-5xl">
           Studio-grade delivery for African markets.
         </h2>
         <p className="mt-3 max-w-2xl text-sm text-muted sm:mt-4 sm:text-lg">
@@ -24,7 +21,7 @@ export function SecuritySection() {
           {badges.map((tag) => (
             <span
               key={tag}
-              className="rounded-pill border border-hairline bg-surface-soft px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-muted sm:px-4 sm:py-2 sm:text-xs"
+              className="rounded-pill border border-hairline bg-surface-soft px-3 py-1.5 text-xs font-semibold text-muted sm:px-4 sm:py-2 sm:text-xs"
             >
               {tag}
             </span>

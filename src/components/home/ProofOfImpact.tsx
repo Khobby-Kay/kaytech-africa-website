@@ -21,10 +21,7 @@ export function ProofOfImpact() {
     >
       <Container className="px-5 py-14 lg:px-20 lg:py-20">
         <div className="max-w-3xl">
-          <span className="inline-flex items-center rounded-pill border border-white/20 bg-white/10 px-4 py-1.5 font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-on-primary/90">
-            {proofOfImpactCopy.eyebrow}
-          </span>
-          <h2 className="mt-5 font-display text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl">
+          <h2 className="font-display text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl">
             {proofOfImpactCopy.title}
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-on-primary/80 sm:text-base">
@@ -68,11 +65,11 @@ export function ProofOfImpact() {
                     className="object-contain object-left"
                   />
                 </div>
-                <span className="font-mono text-[10px] font-semibold uppercase tracking-wider text-muted">
+                <span className="text-xs font-semibold text-muted">
                   {item.timeline}
                 </span>
               </div>
-              <p className="mt-4 font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-primary">
+              <p className="mt-4 text-xs font-semibold text-primary">
                 {item.sector}
               </p>
               <h3 className="mt-2 font-display text-lg font-semibold text-ink">
@@ -120,7 +117,7 @@ export function ProofOfImpact() {
       </Container>
 
       <div className="border-t border-white/10 py-8">
-        <p className="text-center font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-on-primary/55">
+        <p className="text-center text-xs font-semibold text-on-primary/55">
           Trusted by leading brands we have worked with
         </p>
         <div className="hero-ticker-mask mt-6">

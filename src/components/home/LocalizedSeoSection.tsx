@@ -17,10 +17,7 @@ export function LocalizedSeoSection() {
     >
       <Container>
         <div className="max-w-3xl">
-          <span className="inline-flex items-center gap-2 rounded-pill bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-accent">
-            {homepageSearchBlock.eyebrow}
-          </span>
-          <h2 className="mt-5 font-display text-2xl font-bold tracking-tight text-ink sm:text-3xl lg:text-4xl">
+          <h2 className="font-display text-2xl font-bold tracking-tight text-ink sm:text-3xl lg:text-4xl">
             {homepageSearchBlock.title}
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg">

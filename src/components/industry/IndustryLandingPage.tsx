@@ -54,7 +54,7 @@ export function IndustryLandingPage({ page }: { page: IndustryPage }) {
 
             <RevealOnScroll variant="fade-left" delay={100}>
               <div className="rounded-3xl border border-hairline bg-surface-soft p-6 sm:p-8">
-                <p className="text-sm font-semibold uppercase tracking-wider text-accent">
+                <p className="text-sm font-semibold text-accent">
                   What we build
                 </p>
                 <ul className="mt-5 space-y-3">

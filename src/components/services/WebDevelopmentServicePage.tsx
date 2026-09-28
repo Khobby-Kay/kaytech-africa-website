@@ -90,7 +90,7 @@ export function WebDevelopmentServicePage() {
           <div className="grid gap-10 lg:grid-cols-[240px_1fr] lg:gap-16">
             <RevealOnScroll variant="fade-right" className="lg:sticky lg:top-28 lg:self-start">
               <div className="rounded-3xl border border-hairline bg-canvas p-5 shadow-card">
-                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">
+                <p className="text-xs font-semibold text-muted">
                   Consultation
                 </p>
                 <a
@@ -100,7 +100,7 @@ export function WebDevelopmentServicePage() {
                   <Phone className="h-4 w-4" />
                   {siteConfig.contact.phoneDisplay}
                 </a>
-                <p className="mt-6 text-xs font-semibold uppercase tracking-[0.12em] text-muted">
+                <p className="mt-6 text-xs font-semibold text-muted">
                   Services
                 </p>
                 <ul className="mt-3 space-y-2">
@@ -328,7 +328,7 @@ export function WebDevelopmentServicePage() {
                   <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">
                     {block.body}
                   </p>
-                  <p className="mt-4 text-xs font-semibold uppercase tracking-[0.1em] text-muted">
+                  <p className="mt-4 text-xs font-semibold text-muted">
                     Key features
                   </p>
                   <ul className="mt-3 space-y-2">
@@ -367,7 +367,7 @@ export function WebDevelopmentServicePage() {
                   <button
                     type="button"
                     onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                    className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left transition hover:bg-canvas/60 sm:px-6 sm:py-5"
+                    className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left transition hover:bg-white/60 sm:px-6 sm:py-5"
                   >
                     <span className="text-sm font-semibold text-ink sm:text-base">
                       {faq.question}
@@ -405,7 +405,7 @@ export function WebDevelopmentServicePage() {
           <RevealOnScroll variant="zoom-in">
             <div className="max-w-2xl">
               <h2 className="font-display text-2xl font-semibold sm:text-3xl">
-                Get started with the best web development in Ghana
+                Tell us what you want to build
               </h2>
               <p className="mt-4 text-sm text-on-primary/85 sm:text-base">
                 Accra-based, serving all of Ghana. Call{" "}

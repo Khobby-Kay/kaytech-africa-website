@@ -13,10 +13,7 @@ export function Portfolio() {
       <Container>
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-2xl">
-            <span className="inline-flex items-center gap-2 rounded-pill bg-surface-soft px-4 py-1.5 font-mono text-xs font-semibold uppercase tracking-[0.08em] text-primary ring-1 ring-hairline">
-              Our work
-            </span>
-            <h2 className="mt-5 font-display text-2xl tracking-tight text-ink sm:text-3xl lg:text-4xl">
+            <h2 className="font-display text-2xl tracking-tight text-ink sm:text-3xl lg:text-4xl">
               Web design &amp; development projects across Ghana
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
@@ -52,7 +49,7 @@ export function Portfolio() {
                 </div>
               </div>
               <div className="flex flex-1 flex-col p-6">
-                <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-primary">
+                <p className="text-xs font-semibold text-primary">
                   {study.sector} · {study.location}
                 </p>
                 <h3 className="mt-2 font-display text-lg font-semibold text-ink">

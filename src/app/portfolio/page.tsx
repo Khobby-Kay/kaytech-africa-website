@@ -13,7 +13,7 @@ import { ghanaSearchKeywords } from "@/lib/localized-seo";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Portfolio. Best Web Design Projects in Accra, Ghana | KayTech Africa",
+  title: "Portfolio | Web Design Projects in Accra, Ghana | KayTech Africa",
   description:
     "See KayTech Africa's web design and development portfolio. high-performing websites, e-commerce stores, and digital experiences built for brands across Accra and Ghana.",
   path: "/portfolio",
@@ -40,10 +40,7 @@ export default function PortfolioPage() {
       <section className="border-b border-hairline bg-canvas px-5 py-14 lg:px-20 lg:py-20">
         <Container>
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 rounded-pill bg-surface-soft px-4 py-1.5 font-mono text-xs font-semibold uppercase tracking-[0.08em] text-primary ring-1 ring-hairline">
-              Our portfolio
-            </span>
-            <h2 className="mt-5 font-display text-2xl tracking-tight text-ink sm:text-3xl lg:text-4xl">
+            <h2 className="font-display text-2xl tracking-tight text-ink sm:text-3xl lg:text-4xl">
               Results-driven web design &amp; development projects
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
@@ -98,7 +95,7 @@ export default function PortfolioPage() {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
                 />
                 <div className="flex flex-1 flex-col p-5">
-                  <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-primary">
+                  <p className="text-xs font-semibold text-primary">
                     {project.sector} · {project.location}
                   </p>
                   <h3 className="mt-2 font-display text-lg font-semibold tracking-tight text-ink">
@@ -129,7 +126,7 @@ export default function PortfolioPage() {
         <Container>
           <div className="flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:justify-between">
             <div className="max-w-xl">
-              <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-semantic-up">
+              <p className="text-xs font-semibold text-semantic-up">
                 Let us bring your website to life
               </p>
               <h2 className="mt-3 font-display text-2xl tracking-tight text-on-dark sm:text-3xl">

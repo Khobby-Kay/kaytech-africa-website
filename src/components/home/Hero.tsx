@@ -31,13 +31,13 @@ function FloatingCard({
   valueClass?: string;
 }) {
   return (
-    <div className="flex min-w-[260px] items-center gap-3 rounded-2xl border border-hairline bg-canvas px-4 py-3 shadow-card">
-      <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-full bg-surface-strong text-primary">
+    <div className="glass flex min-w-[260px] items-center gap-3 rounded-3xl px-4 py-3">
+      <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-2xl bg-white/80 text-primary shadow-sm">
         {icon}
       </span>
       <div className="min-w-0 flex-1">
         <p className="truncate text-sm font-semibold text-ink">{title}</p>
-        <p className="truncate font-mono text-[11px] uppercase tracking-[0.12em] text-muted">
+        <p className="truncate text-xs text-muted">
           {subtitle}
         </p>
       </div>

@@ -64,7 +64,7 @@ export function WebsiteCostCalculator() {
       </div>
 
       <div className="mt-6 rounded-2xl border border-accent/25 bg-canvas p-5">
-        <p className="font-mono text-xs uppercase tracking-wider text-accent">
+        <p className="text-xs text-accent">
           Typical range
         </p>
         <p className="mt-1 font-display text-2xl font-bold text-ink">{active.range}</p>

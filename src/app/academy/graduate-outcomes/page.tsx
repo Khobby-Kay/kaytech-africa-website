@@ -50,7 +50,7 @@ export default function GraduateOutcomesPage() {
           <div className="grid gap-6 lg:grid-cols-3">
             {academyGraduateProjects.map((p) => (
               <article key={p.graduate} className="rounded-3xl border border-hairline bg-canvas p-6">
-                <p className="text-xs font-semibold uppercase tracking-wider text-accent">Capstone</p>
+                <p className="text-xs font-semibold text-accent">Capstone</p>
                 <h3 className="mt-2 font-display font-semibold text-ink">{p.projectTitle}</h3>
                 <p className="mt-2 text-sm text-muted">{p.description}</p>
                 <p className="mt-3 text-xs text-muted">{p.stack.join(" · ")}</p>

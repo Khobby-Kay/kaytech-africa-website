@@ -100,7 +100,7 @@ export const cityPages: CityPage[] = [
     slug: "kumasi-ghana",
     cityName: "Kumasi",
     region: "Ashanti Region",
-    title: "Best Web Design & Website Developer in Kumasi, Ghana | KayTech Africa",
+    title: "Web Design & Website Development in Kumasi, Ghana | KayTech Africa",
     metaDescription:
       "Affordable web design in Kumasi, Ghana. KayTech Africa builds mobile-first business websites, online stores, and SEO for Ashanti Region brands. WhatsApp 055 992 1979.",
     keywords: [
@@ -171,7 +171,7 @@ export const cityPages: CityPage[] = [
     slug: "tema-ghana",
     cityName: "Tema",
     region: "Greater Accra Region",
-    title: "Best Web Design & Website Developer in Tema, Ghana | KayTech Africa",
+    title: "Web Design & Website Development in Tema, Ghana | KayTech Africa",
     metaDescription:
       "Web design company serving Tema, Community 25, Harbour City & Tema New Town. Business websites, e-commerce & SEO from KayTech Africa. Call 024 840 8154.",
     keywords: [
@@ -241,7 +241,7 @@ export const cityPages: CityPage[] = [
     slug: "takoradi-ghana",
     cityName: "Takoradi",
     region: "Western Region",
-    title: "Best Web Design & Website Developer in Takoradi, Ghana | KayTech Africa",
+    title: "Web Design & Website Development in Takoradi, Ghana | KayTech Africa",
     metaDescription:
       "Web design in Takoradi and Sekondi-Takoradi, Ghana. KayTech Africa builds mobile-first business websites, e-commerce, and SEO for Western Region brands. Call 024 840 8154.",
     keywords: [
@@ -308,7 +308,7 @@ export const cityPages: CityPage[] = [
     slug: "cape-coast-ghana",
     cityName: "Cape Coast",
     region: "Central Region",
-    title: "Best Web Design & Website Developer in Cape Coast, Ghana | KayTech Africa",
+    title: "Web Design & Website Development in Cape Coast, Ghana | KayTech Africa",
     metaDescription:
       "Affordable web design in Cape Coast, Ghana. Business websites, e-commerce & SEO for Central Region tourism, education, and retail. WhatsApp 055 992 1979.",
     keywords: [
@@ -376,7 +376,7 @@ export const cityPages: CityPage[] = [
     cityName: "Ho & Hohoe",
     region: "Volta Region",
     title:
-      "Best Web Design in Ho, Hohoe & Volta Region, Ghana | KayTech Africa",
+      "Web Design in Ho, Hohoe & Volta Region, Ghana | KayTech Africa",
     metaDescription:
       "Web design in Ho, Hohoe, and Volta Region, Ghana. KayTech Africa builds mobile-first business websites, e-commerce, and SEO for Volta brands. Call 024 840 8154.",
     keywords: [
@@ -450,7 +450,7 @@ export const cityPages: CityPage[] = [
     slug: "tamale-ghana",
     cityName: "Tamale",
     region: "Northern Region",
-    title: "Best Web Design in Tamale, Ghana | Website Developer | KayTech Africa",
+    title: "Web Design in Tamale, Ghana | Website Developer | KayTech Africa",
     metaDescription:
       "Web design in Tamale, Northern Region. business websites, e-commerce, and SEO for Tamale brands. KayTech Africa serves all Ghana. Call 024 840 8154.",
     keywords: [

@@ -38,7 +38,7 @@ export function ImpactMetricBar({
       <div className="flex items-baseline justify-between gap-2">
         <p
           className={cn(
-            "text-xs font-semibold uppercase tracking-wider",
+            "text-xs font-semibold",
             labelClass,
           )}
         >

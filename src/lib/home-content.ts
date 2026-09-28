@@ -1,24 +1,22 @@
 export const leadingCompany = {
-  eyebrow: "Best web design company in Ghana",
-  title:
-    "The Best Web Developer & Website Designer in Accra, Ghana",
+  title: "A web studio in Accra that builds for how Ghana buys",
   intro:
-    "Welcome to KayTech Africa. the best web design company in Ghana and a top choice when you search for the best web developer in Accra, affordable website design in Kumasi, or a professional SEO company in Ghana. We craft custom websites, e-commerce stores, and digital marketing systems that drive traffic, leads, and sales.",
+    "We design and build websites, online stores and search campaigns for businesses in Accra, Kumasi, Tema and beyond. Every build is set up for mobile data, WhatsApp enquiries and Mobile Money from day one.",
   secondary:
-    "Whether you need the best web designer in Accra for a startup, a business website in Tema or East Legon, or an e-commerce developer in Ghana who understands local customers. KayTech delivers high-performance, SEO-optimized builds with published case studies nationwide.",
+    "Startups, schools, churches and established brands work with us because we publish our results and quote in cedis. You talk to the people who build your site.",
 } as const;
 
 export const numberedServices = [
   {
     num: "01",
     title: "Search Engine Optimization (SEO)",
-    body: "As Ghana's trusted SEO company, we integrate keyword research, on-page optimization, and technical SEO into every project. helping you rank for searches like best web designer in Accra and your industry across Ghana.",
+    body: "Keyword research, on-page fixes and technical SEO built into the site, so people searching for what you sell in your city find you first.",
     href: "/seo-packages-ghana",
   },
   {
     num: "02",
     title: "E-Commerce Development",
-    body: "Hire Ghana's best e-commerce website developers. online stores with intuitive product pages and checkout flows built for Ghanaian customers in Accra, Kumasi, and nationwide.",
+    body: "Online stores with clear product pages, MoMo and card checkout, and delivery options that match how your customers order.",
     href: "/services/best-ecommerce-development-accra-ghana",
   },
   {
@@ -36,25 +34,25 @@ export const numberedServices = [
   {
     num: "05",
     title: "Software As A Services (SAAS)",
-    body: "SaaS product development for founders and businesses. dashboards, subscriptions, and scalable cloud-ready web apps.",
+    body: "Dashboards, subscription billing and web apps for founders turning an idea into a product people pay for.",
     href: "/services/best-software-as-a-services-saas-accra-ghana",
   },
   {
     num: "06",
     title: "Web Development & Design",
-    body: "Work with the best web developer in Ghana. we create high-conversion business websites engineered for mobile-first users, fast load times, and brands in Accra, Tema, Kumasi, and beyond.",
+    body: "Business websites designed for phones first, quick to load on mobile data and easy for your team to update.",
     href: "/web-design/accra-ghana",
   },
 ] as const;
 
 export const whyPartner = [
   {
-    title: "Best web design in Ghana",
-    body: "Your site should convert, not just look good. As a top website design company in Accra, we optimize layouts so visitors become paying customers.",
+    title: "Layouts that sell",
+    body: "Every page has one job. We design around the action you want visitors to take and test it on real phones.",
   },
   {
-    title: "Top SEO company in Ghana",
-    body: "Rank when people search best web developer Ghana, your service + Accra, or affordable website design Kumasi. we build visibility that brings real leads.",
+    title: "Search built in",
+    body: "Pages are structured for the terms your customers type, so Google traffic turns into calls and WhatsApp messages.",
   },
   {
     title: "High-impact conversions",

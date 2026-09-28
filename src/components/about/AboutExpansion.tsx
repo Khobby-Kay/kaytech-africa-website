@@ -53,11 +53,8 @@ export function AboutExpansion() {
       <section className="border-b border-hairline bg-canvas px-5 py-14 lg:px-20 lg:py-20">
         <Container className="grid gap-10 lg:grid-cols-2">
           <div>
-            <span className="inline-flex items-center rounded-pill bg-surface-strong px-4 py-1.5 font-mono text-xs font-semibold uppercase tracking-[0.08em] text-primary">
-              Welcome to KayTech Africa
-            </span>
-            <h2 className="mt-5 font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
-              Leading web development and digital marketing agency in Accra, Ghana
+            <h2 className="font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
+              A web and marketing studio from Accra
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
               We are a results-driven web development and digital marketing agency

@@ -14,10 +14,7 @@ export function LeadingCompanySection() {
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-16">
           <RevealOnScroll variant="fade-right">
             <div>
-            <span className="inline-flex items-center gap-2 rounded-pill bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-accent">
-              {leadingCompany.eyebrow}
-            </span>
-            <h2 className="mt-5 font-display text-2xl font-bold leading-tight tracking-tight text-ink sm:text-3xl lg:text-4xl">
+            <h2 className="font-display text-2xl font-bold leading-tight tracking-tight text-ink sm:text-3xl lg:text-4xl">
               {leadingCompany.title}
             </h2>
             <p className="mt-5 text-sm leading-relaxed text-muted sm:text-base lg:text-lg">
@@ -57,7 +54,7 @@ export function LeadingCompanySection() {
               className="pointer-events-none absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/30 to-transparent"
             />
             <div className="absolute bottom-0 left-0 right-0 p-6 text-on-dark">
-              <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-on-dark/80">
+              <p className="text-xs text-on-dark/80">
                 Accra · Ghana
               </p>
               <p className="mt-2 font-display text-xl font-semibold sm:text-2xl">

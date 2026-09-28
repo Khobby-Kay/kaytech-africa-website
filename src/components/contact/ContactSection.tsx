@@ -19,16 +19,15 @@ export function ContactSection() {
               Start a conversation
             </h3>
             <p className="mt-4 text-sm leading-relaxed text-muted">
-              Tell us about your project. whether you need the best web designer
-              in Accra, affordable website design in Ghana, or SEO that ranks.
-              We typically respond within one business day.
+              A new site, a redesign, an online store or better Google rankings:
+              tell us what you need and we will reply within one business day.
             </p>
 
             <div className="mt-6">
               <ContactForm />
             </div>
 
-            <p className="mt-8 text-xs font-semibold uppercase tracking-wider text-muted">
+            <p className="mt-8 text-xs font-semibold text-muted">
               Prefer to talk now?
             </p>
 
@@ -45,7 +44,7 @@ export function ContactSection() {
                   <MessageCircle className="h-5 w-5" />
                 </span>
                 <div>
-                  <p className="text-xs uppercase tracking-wider text-muted">
+                  <p className="text-xs text-muted">
                     WhatsApp
                   </p>
                   <p className="font-semibold text-ink">
@@ -64,7 +63,7 @@ export function ContactSection() {
                   <Phone className="h-5 w-5" />
                 </span>
                 <div>
-                  <p className="text-xs uppercase tracking-wider text-muted">
+                  <p className="text-xs text-muted">
                     Call us
                   </p>
                   <p className="font-semibold text-ink">
@@ -83,7 +82,7 @@ export function ContactSection() {
                   <Mail className="h-5 w-5" />
                 </span>
                 <div>
-                  <p className="text-xs uppercase tracking-wider text-muted">
+                  <p className="text-xs text-muted">
                     Email
                   </p>
                   <p className="font-semibold text-ink">
@@ -119,7 +118,7 @@ export function ContactSection() {
             <div className="flex items-start gap-3">
               <MapPin className="mt-1 h-5 w-5 shrink-0 text-primary" />
               <div>
-                <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-primary">
+                <p className="text-xs font-semibold text-primary">
                   Location
                 </p>
                 <p className="mt-2 font-display text-lg font-semibold text-ink">
@@ -142,7 +141,7 @@ export function ContactSection() {
             </div>
 
             <div className="mt-8 rounded-2xl border border-hairline bg-canvas p-4">
-              <p className="text-xs uppercase tracking-wider text-muted">
+              <p className="text-xs text-muted">
                 Office hours
               </p>
               <p className="mt-2 text-sm text-ink">Mon – Fri · 9:00 – 18:00 GMT</p>

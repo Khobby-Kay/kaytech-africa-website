@@ -44,7 +44,7 @@ export default function IndustryHubPage() {
                 href={getIndustryPath(item.slug)}
                 className="group rounded-3xl border border-hairline bg-surface-soft p-6 transition hover:border-accent/30 hover:shadow-card"
               >
-                <p className="font-mono text-[11px] uppercase tracking-wider text-accent">
+                <p className="text-xs text-accent">
                   {item.industryName}
                 </p>
                 <h2 className="mt-2 font-display text-lg font-semibold text-ink group-hover:text-primary">

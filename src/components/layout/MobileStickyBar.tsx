@@ -6,39 +6,37 @@ import { siteConfig } from "@/lib/site";
 
 export function MobileStickyBar() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-50 border-t border-hairline bg-canvas/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-lg lg:hidden">
-      <div className="grid grid-cols-3 divide-x divide-hairline">
+    <div className="fixed inset-x-3 bottom-[calc(0.5rem+env(safe-area-inset-bottom))] z-50 lg:hidden">
+      <div className="glass grid grid-cols-3 items-center gap-1 rounded-full p-1.5">
         <a
           href={`tel:${siteConfig.contact.phone}`}
-          className="flex min-h-[46px] flex-col items-center justify-center gap-0.5 px-2 py-1.5 text-center"
+          className="flex h-11 items-center justify-center gap-1.5 rounded-full text-center transition active:scale-95 active:bg-white/60"
           aria-label="Call KayTech Africa"
           data-track="call_click"
           data-track-location="mobile_sticky_bar"
         >
-          <Phone className="h-3.5 w-3.5 text-primary" />
-          <span className="text-[9px] font-semibold text-ink">Call</span>
+          <Phone className="h-4 w-4 text-primary" />
+          <span className="text-xs font-semibold text-ink">Call</span>
         </a>
         <a
           href={siteConfig.contact.whatsapp}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex min-h-[46px] flex-col items-center justify-center gap-0.5 px-2 py-1.5 text-center"
+          className="flex h-11 items-center justify-center gap-1.5 rounded-full text-center transition active:scale-95 active:bg-white/60"
           aria-label="WhatsApp KayTech Africa"
           data-track="whatsapp_click"
           data-track-location="mobile_sticky_bar"
         >
-          <MessageCircle className="h-3.5 w-3.5 text-semantic-up-deep" />
-          <span className="text-[9px] font-semibold text-ink">WhatsApp</span>
+          <MessageCircle className="h-4 w-4 text-semantic-up-deep" />
+          <span className="text-xs font-semibold text-ink">WhatsApp</span>
         </a>
         <Link
           href="/contact"
-          className="flex min-h-[46px] flex-col items-center justify-center gap-0.5 bg-primary px-2 py-1.5 text-center"
+          className="flex h-11 items-center justify-center rounded-full bg-primary text-center shadow-[0_6px_16px_-6px_rgba(26,73,113,0.6)] transition active:scale-95"
           data-track="get_started_click"
           data-track-location="mobile_sticky_bar"
         >
-          <span className="text-[9px] font-bold uppercase tracking-wide text-on-primary">
-            Get quote
-          </span>
+          <span className="text-xs font-semibold text-on-primary">Get quote</span>
         </Link>
       </div>
     </div>

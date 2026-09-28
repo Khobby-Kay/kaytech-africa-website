@@ -221,7 +221,7 @@ export default function PricingPage() {
                 <h3 className="mt-4 font-display text-lg font-semibold text-ink">
                   {tier.name}
                 </h3>
-                <p className="mt-2 text-xs font-medium uppercase tracking-wide text-primary">
+                <p className="mt-2 text-xs font-medium text-primary">
                   {tier.bestFor}
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-muted">

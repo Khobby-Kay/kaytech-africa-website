@@ -33,9 +33,9 @@ export function HeroCtaRow({
 
 const variantClass = {
   primary:
-    "bg-semantic-up text-surface-dark hover:brightness-110",
+    "bg-white text-ink shadow-[0_8px_24px_-8px_rgba(0,0,0,0.45)] hover:bg-white/90",
   secondary:
-    "border border-white/90 text-white hover:opacity-85",
+    "border border-white/25 bg-white/10 text-white backdrop-blur-xl hover:bg-white/20",
 } as const;
 
 export function HeroCta({
@@ -48,7 +48,7 @@ export function HeroCta({
   className,
 }: HeroCtaProps) {
   const cls = cn(
-    "inline-flex h-10 items-center justify-center gap-1.5 rounded-lg px-4 text-sm font-semibold tracking-tight transition",
+    "inline-flex h-11 items-center justify-center gap-1.5 rounded-full px-5 text-sm font-semibold tracking-tight transition",
     variantClass[variant],
     className,
   );

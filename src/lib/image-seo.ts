@@ -1,5 +1,5 @@
 /** Shared SEO phrase for every image alt text and filename on the site. */
-export const SEO_IMAGE_PHRASE = "KayTech Africa the best web design in Accra" as const;
+export const SEO_IMAGE_PHRASE = "KayTech Africa web design, Accra" as const;
 
 export const SEO_IMAGE_SLUG = "kaytech-africa-the-best-web-design-in-accra" as const;
 

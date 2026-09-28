@@ -10,13 +10,12 @@ export const seoKeywords = [
 ] as const;
 
 export const defaultTitle =
-  "Best Web Developer in Ghana | Top Web Designer Accra | KayTech Africa";
+  "KayTech Africa | Web Design & Development Studio in Accra, Ghana";
 
 export const defaultDescription =
-  "KayTech Africa. the best web design company in Ghana. Hire the top web developer or website designer in Accra, Kumasi & nationwide. Affordable SEO, e-commerce & digital marketing. Published client case studies.";
+  "Websites, online stores, SEO and AI automation for businesses in Accra, Kumasi and across Ghana. Published case studies and pricing in cedis.";
 
-export const siteName =
-  "KayTech Africa. Best Web Design Company in Ghana | Web Development & SEO";
+export const siteName = "KayTech Africa";
 
 export function getOrganizationJsonLd() {
   const orgLogo = getOrganizationLogoSchema(siteConfig.url);
@@ -249,5 +248,5 @@ export const ogImage = {
   url: "/og.jpg",
   width: 1200,
   height: 630,
-  alt: "KayTech Africa. Best Web Design Company in Accra, Ghana",
+  alt: "KayTech Africa web design studio, Accra, Ghana",
 };

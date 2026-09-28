@@ -31,10 +31,7 @@ export function KeyFacts() {
         <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:gap-16">
           <RevealOnScroll variant="fade-right">
             <div className="max-w-2xl">
-            <span className="inline-flex items-center gap-2 rounded-pill bg-surface-soft px-4 py-1.5 font-mono text-xs font-semibold uppercase tracking-[0.08em] text-primary ring-1 ring-hairline">
-              About KayTech Africa
-            </span>
-            <h2 className="mt-5 font-display text-2xl tracking-tight text-ink sm:text-3xl lg:text-4xl">
+            <h2 className="font-display text-2xl tracking-tight text-ink sm:text-3xl lg:text-4xl">
               The web design &amp; development company Ghana trusts
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base lg:text-lg">
@@ -68,7 +65,7 @@ export function KeyFacts() {
           >
             {facts.map((fact) => (
               <div key={fact.label} className="bg-surface-soft p-5 sm:p-6">
-                <p className="font-mono text-xs font-semibold uppercase tracking-[0.08em] text-muted">
+                <p className="text-xs font-semibold text-muted">
                   {fact.label}
                 </p>
                 <p className="mt-2 text-sm font-medium leading-relaxed text-ink sm:text-base">

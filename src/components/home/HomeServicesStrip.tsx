@@ -13,10 +13,7 @@ export function HomeServicesStrip() {
       <Container>
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-xl">
-            <span className="inline-flex items-center gap-2 rounded-pill bg-canvas px-4 py-1.5 font-mono text-xs font-semibold uppercase tracking-[0.08em] text-ink ring-1 ring-hairline">
-              Studio
-            </span>
-            <h2 className="mt-3 font-display text-2xl tracking-tight text-ink sm:mt-4 sm:text-4xl">
+            <h2 className="font-display text-2xl tracking-tight text-ink sm:text-4xl">
               What we build
             </h2>
           </div>
