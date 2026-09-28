@@ -60,6 +60,9 @@ export const brandSitelinks: DiscoverLink[] = [
 export const indexPriorityPaths: string[] = [
   "/",
   "/services",
+  "/services/mobile-app-development-ghana",
+  "/services/erp-systems-ghana",
+  "/services/crm-development-ghana",
   "/portfolio",
   "/academy",
   "/academy/web-development-course",

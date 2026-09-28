@@ -1,3 +1,5 @@
+import { coreServices } from "@/lib/core-services";
+
 export const leadingCompany = {
   title: "A web studio in Accra that builds for how Ghana buys",
   intro:
@@ -6,44 +8,17 @@ export const leadingCompany = {
     "Startups, schools, churches and established brands work with us because we publish our results and quote in cedis. You talk to the people who build your site.",
 } as const;
 
-export const numberedServices = [
-  {
-    num: "01",
-    title: "Search Engine Optimization (SEO)",
-    body: "Keyword research, on-page fixes and technical SEO built into the site, so people searching for what you sell in your city find you first.",
-    href: "/seo-packages-ghana",
-  },
-  {
-    num: "02",
-    title: "E-Commerce Development",
-    body: "Online stores with clear product pages, MoMo and card checkout, and delivery options that match how your customers order.",
-    href: "/services/best-ecommerce-development-accra-ghana",
-  },
-  {
-    num: "03",
-    title: "AI & Automation",
-    body: "Workflow bots, intelligent assistants, and automation systems that save hours every week for African operators.",
-    href: "/ai-automation",
-  },
-  {
-    num: "04",
-    title: "Digital Marketing & PPC Ads",
-    body: "Performance marketing, paid search campaigns, content systems, and funnels designed to create tangible leads, sales, and engagement.",
-    href: "/services/best-digital-marketing-accra-ghana",
-  },
-  {
-    num: "05",
-    title: "Software As A Services (SAAS)",
-    body: "Dashboards, subscription billing and web apps for founders turning an idea into a product people pay for.",
-    href: "/services/best-software-as-a-services-saas-accra-ghana",
-  },
-  {
-    num: "06",
-    title: "Web Development & Design",
-    body: "Business websites designed for phones first, quick to load on mobile data and easy for your team to update.",
-    href: "/web-design/accra-ghana",
-  },
-] as const;
+export const numberedServices = coreServices.map((service, index) => ({
+  num: String(index + 1).padStart(2, "0"),
+  title: service.title,
+  body: service.description,
+  href: service.href,
+})) as readonly {
+  num: string;
+  title: string;
+  body: string;
+  href: string;
+}[];
 
 export const whyPartner = [
   {
@@ -62,18 +37,6 @@ export const whyPartner = [
     title: "Custom solutions for every industry",
     body: "Startup or established brand, we tailor every build to your goals, your market, and your growth timeline.",
   },
-] as const;
-
-export const footerServices = [
-  { href: "/services", label: "All Services" },
-  { href: "/services/best-web-development-design-ghana", label: "Web Development" },
-  { href: "/services/best-digital-marketing-accra-ghana", label: "Digital Marketing & PPC Ads" },
-  { href: "/services/best-software-as-a-services-saas-accra-ghana", label: "Software As A Services (SAAS)" },
-  { href: "/ai-automation", label: "AI & Automation" },
-  { href: "/seo-packages-ghana", label: "Search Engine Optimization" },
-  { href: "/services/best-ecommerce-development-accra-ghana", label: "E-Commerce Development" },
-  { href: "/features", label: "All Capabilities" },
-  { href: "/pricing", label: "Pricing" },
 ] as const;
 
 export const workingHours = {

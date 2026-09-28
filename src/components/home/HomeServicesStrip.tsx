@@ -2,10 +2,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { services } from "@/lib/site";
+import { coreServices } from "@/lib/core-services";
 import { servicePreviewImages } from "@/lib/page-images";
 
-const previews = services.slice(0, 3);
+const previews = coreServices.slice(0, 3);
 
 export function HomeServicesStrip() {
   return (
@@ -18,7 +18,7 @@ export function HomeServicesStrip() {
             </h2>
           </div>
           <Link
-            href="/features"
+            href="/services"
             className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
           >
             All services
@@ -29,8 +29,8 @@ export function HomeServicesStrip() {
         <div className="mt-8 grid gap-4 sm:mt-10 sm:gap-5 md:grid-cols-3">
           {previews.map((service, i) => (
             <Link
-              key={service.title}
-              href="/features"
+              key={service.id}
+              href={service.href}
               className="group overflow-hidden rounded-3xl border border-hairline bg-canvas shadow-card transition hover:-translate-y-1 hover:shadow-float"
             >
               <div className="relative aspect-[5/4] overflow-hidden">

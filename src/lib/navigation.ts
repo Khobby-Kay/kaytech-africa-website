@@ -40,31 +40,30 @@ export const footerNav = {
   services: [
     { href: "/services", label: "All Services" },
     {
-      href: "/web-design/accra-ghana",
-      label: "Web Development",
-    },
-    {
-      href: "/services/best-digital-marketing-accra-ghana",
-      label: "Digital Marketing & PPC Ads",
-    },
-    {
-      href: "/services/best-software-as-a-services-saas-accra-ghana",
-      label: "Software As A Services (SAAS)",
+      href: "/services/best-web-development-design-ghana",
+      label: "Web Design & Development",
     },
     { href: "/ai-automation", label: "AI Automation" },
-    {
-      href: "/seo-packages-ghana",
-      label: "SEO Services",
-    },
     {
       href: "/services/best-ecommerce-development-accra-ghana",
       label: "E-Commerce",
     },
+    {
+      href: "/services/best-digital-marketing-accra-ghana",
+      label: "Digital Marketing",
+    },
+    {
+      href: "/services/mobile-app-development-ghana",
+      label: "Mobile Apps",
+    },
+    { href: "/services/erp-systems-ghana", label: "ERP Systems" },
+    { href: "/services/crm-development-ghana", label: "CRM Development" },
+    {
+      href: "/momo-paystack-integration-ghana",
+      label: "Payment Integration",
+    },
     { href: "/features", label: "All Capabilities" },
     { href: "/pricing", label: "Pricing" },
-    { href: "/seo-packages-ghana", label: "SEO Packages" },
-    { href: "/digital-growth-bundle", label: "Digital Growth Bundle" },
-    { href: "/momo-paystack-integration-ghana", label: "MoMo & Paystack" },
   ],
   company: [
     { href: "/about", label: "About Us" },

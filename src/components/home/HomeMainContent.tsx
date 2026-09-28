@@ -15,7 +15,7 @@ export function HomeMainContent() {
               What we can build for you
             </h2>
             <p className="mt-3 text-sm text-muted sm:text-base">
-              Six services, one team. Pick one or combine them into a single
+              Eight services, one team. Pick one or combine them into a single
               project.
             </p>
             </div>

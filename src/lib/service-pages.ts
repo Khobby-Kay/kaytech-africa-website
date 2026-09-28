@@ -35,7 +35,7 @@ export const servicePages: ServicePage[] = [
       "Mobile Money checkout website Ghana",
       "affordable e-commerce Ghana",
     ],
-    eyebrow: "E-commerce · Accra, Ghana",
+    eyebrow: "E-Commerce · Ghana",
     heroTitle: "Helping you sell more online in Ghana",
     heroDescription:
       "Custom online store development with MoMo, Paystack, and mobile-first checkout. built for Ghanaian buyers.",
@@ -57,9 +57,8 @@ export const servicePages: ServicePage[] = [
       "web app developer Ghana",
       "web design services Ghana",
     ],
-    eyebrow: "Web development & design Ghana",
-    heroTitle:
-      "Web design services in Ghana. custom solutions for growth, sales, and conversions",
+    eyebrow: "Web design & development · Ghana",
+    heroTitle: "Web design & development built for Ghanaian customers",
     heroDescription:
       "More than developers. we are your growth partners. KayTech Africa builds websites that look great, load fast on mobile data, and turn visitors into calls, WhatsApp chats, and paying customers.",
     intro:
@@ -80,8 +79,8 @@ export const servicePages: ServicePage[] = [
       "online marketing company Ghana",
       "growth marketing Accra",
     ],
-    eyebrow: "Digital marketing & PPC Ghana",
-    heroTitle: "Digital marketing & PPC ads that deliver measurable results",
+    eyebrow: "Digital marketing · Ghana",
+    heroTitle: "Digital marketing that delivers measurable leads and sales",
     heroDescription:
       "Performance marketing, content systems, and funnels for Accra, Kumasi, Tema, and nationwide. tied to leads and revenue, not vanity metrics.",
     intro:
@@ -123,6 +122,132 @@ export const servicePages: ServicePage[] = [
         heading: "Channels that fit Ghana",
         paragraphs: [
           "Search, Meta, and YouTube behave differently here than in US playbooks. KayTech adjusts creative, language, and landing pages for mobile data, local trust signals, and the follow-up paths Ghanaians actually use after they click.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "mobile-app-development-ghana",
+    title: "Mobile App Development in Ghana | KayTech Africa",
+    metaDescription:
+      "Android and iOS app development in Accra and Ghana. customer apps, field tools, and APIs linked to your website and MoMo payments.",
+    keywords: [
+      "mobile app developer Ghana",
+      "Android app development Accra",
+      "iOS app Ghana",
+      "hire app developer Ghana",
+    ],
+    eyebrow: "Mobile apps · Ghana",
+    heroTitle: "Mobile apps for customers and teams in Ghana",
+    heroDescription:
+      "Native and cross-platform apps with secure APIs, push notifications, and payment hooks where you need them.",
+    intro:
+      "When your audience lives on phones, a website alone is not enough. KayTech builds Android and iOS apps for retail, logistics, services, and internal teams across Ghana.",
+    image: contentImages.serviceWeb,
+    benefits: [
+      "Product scoping and UX for Ghanaian users",
+      "Android and iOS builds from one codebase when it fits",
+      "APIs tied to your website, CRM, or ERP",
+      "App store submission support",
+      "Post-launch fixes and feature sprints",
+    ],
+    sections: [
+      {
+        heading: "Customer-facing apps",
+        paragraphs: [
+          "Ordering, bookings, loyalty, and account portals that feel fast on everyday Android devices and common mobile data speeds.",
+        ],
+      },
+      {
+        heading: "Field and operations apps",
+        paragraphs: [
+          "Capture sales, deliveries, or inspections offline-friendly, then sync when connectivity returns.",
+        ],
+      },
+      {
+        heading: "Integrated with your stack",
+        paragraphs: [
+          "Apps share login, payments, and data with the websites and dashboards we already build for you.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "erp-systems-ghana",
+    title: "ERP Systems for Ghanaian Businesses | KayTech Africa",
+    metaDescription:
+      "Custom ERP development in Ghana: inventory, finance, HR, and operations dashboards scoped to your workflows.",
+    keywords: [
+      "ERP development Ghana",
+      "ERP software Accra",
+      "inventory system Ghana",
+      "business management software Ghana",
+    ],
+    eyebrow: "ERP systems · Ghana",
+    heroTitle: "ERP systems that match how your business actually runs",
+    heroDescription:
+      "Replace scattered spreadsheets with role-based dashboards for stock, finance, and operations.",
+    intro:
+      "Off-the-shelf ERP rarely fits Ghanaian SMEs. KayTech designs modular systems around your branches, currencies, and approval flows.",
+    image: contentImages.serviceAi,
+    benefits: [
+      "Inventory and procurement tracking",
+      "Sales and invoicing in GHS",
+      "Role-based access for branches",
+      "Reports your accountant can use",
+      "Phased rollout so teams adopt gradually",
+    ],
+    sections: [
+      {
+        heading: "Start with the pain point",
+        paragraphs: [
+          "We usually begin with the module that saves the most time today. stock, invoicing, or payroll. then expand.",
+        ],
+      },
+      {
+        heading: "Cloud-ready and mobile-friendly",
+        paragraphs: [
+          "Managers approve purchases from their phone. staff update stock from the warehouse. data stays in sync.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "crm-development-ghana",
+    title: "CRM Development in Ghana | KayTech Africa",
+    metaDescription:
+      "Custom CRM builds in Accra and Ghana: lead tracking, WhatsApp follow-ups, pipelines, and support tickets for sales teams.",
+    keywords: [
+      "CRM development Ghana",
+      "custom CRM Accra",
+      "sales pipeline software Ghana",
+      "WhatsApp CRM Ghana",
+    ],
+    eyebrow: "CRM development · Ghana",
+    heroTitle: "CRM development with WhatsApp-aware follow-up",
+    heroDescription:
+      "Track every lead from first click to closed deal, with assignments, reminders, and history your team trusts.",
+    intro:
+      "Generic CRMs force Ghanaian sales teams into awkward workflows. We build pipelines around how you actually close. calls, WhatsApp, and site forms in one place.",
+    image: contentImages.serviceGrowth,
+    benefits: [
+      "Lead capture from web, ads, and WhatsApp",
+      "Pipeline stages you define",
+      "Task reminders and ownership",
+      "Simple reports for managers",
+      "Integrations with email and SMS",
+    ],
+    sections: [
+      {
+        heading: "Built for local sales motion",
+        paragraphs: [
+          "Most deals still move on WhatsApp. Your CRM should log those conversations without copy-paste.",
+        ],
+      },
+      {
+        heading: "Grows with your team",
+        paragraphs: [
+          "Add branches, products, or support queues without migrating to a new tool every year.",
         ],
       },
     ],

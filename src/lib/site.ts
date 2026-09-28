@@ -1,3 +1,4 @@
+import { coreServices } from "@/lib/core-services";
 import { contentImages } from "@/lib/image-seo";
 import { publicStudioStats, studioProofLine } from "@/lib/trust-metrics";
 
@@ -6,7 +7,7 @@ export const siteConfig = {
   shortName: "KayTech",
   tagline: "African Digital Infrastructure. Built Different.",
   description:
-    "KayTech Africa is a web design and development studio in Accra. AI automation, web development, SEO, e-commerce, and an academy training Africa's next generation of digital talent. Accra-based, serving Kumasi, Tema, and nationwide.",
+    "KayTech Africa is a web design and development studio in Accra. Web design, AI automation, e-commerce, digital marketing, mobile apps, ERP, CRM, payment integration, and KayTech Academy. Accra-based, serving Kumasi, Tema, and nationwide.",
   url: "https://www.kaytechafrica.com",
   founded: 2020,
   location: {
@@ -29,57 +30,17 @@ export const siteConfig = {
   },
 } as const;
 
-export const services = [
-  {
-    icon: "Bot",
-    title: "AI Automation",
-    description:
-      "Workflow bots, intelligent assistants, and business process automation that save hours every week.",
-    tags: ["Chatbots", "RPA", "LLM Integrations"],
-  },
-  {
-    icon: "Code2",
-    title: "Web Development",
-    description:
-      "Blazing-fast, conversion-first websites and web apps engineered for African networks and mobile-first users.",
-    tags: ["Modern Web", "E-commerce", "SaaS"],
-  },
-  {
-    icon: "Blocks",
-    title: "Web3 & Blockchain",
-    description:
-      "Smart contracts, tokenized systems, and decentralized apps built with security and real utility in mind.",
-    tags: ["Smart Contracts", "dApps", "Wallets"],
-  },
-  {
-    icon: "Brain",
-    title: "Artificial Intelligence",
-    description:
-      "Custom AI models, predictive analytics, and data pipelines that turn information into competitive advantage.",
-    tags: ["ML Pipelines", "Computer Vision", "NLP"],
-  },
-  {
-    icon: "Cpu",
-    title: "Robotics & IoT",
-    description:
-      "Connected hardware, sensor networks, and automation systems for industry, agriculture, and smart spaces.",
-    tags: ["Embedded", "IoT", "Automation"],
-  },
-  {
-    icon: "LineChart",
-    title: "Digital Marketing & PPC Ads",
-    description:
-      "Performance campaigns, brand strategy, and growth funnels that turn attention into measurable revenue.",
-    tags: ["SEO", "Paid Media", "Analytics"],
-  },
-  {
-    icon: "Blocks",
-    title: "Software As A Services (SAAS)",
-    description:
-      "SaaS product design and development. subscription-ready web apps, dashboards, and scalable cloud platforms.",
-    tags: ["SaaS MVP", "Subscriptions", "Web Apps"],
-  },
-] as const;
+export const services = coreServices.map(({ icon, title, description, tags }) => ({
+  icon,
+  title,
+  description,
+  tags,
+})) as readonly {
+  icon: (typeof coreServices)[number]["icon"];
+  title: string;
+  description: string;
+  tags: readonly string[];
+}[];
 
 export const academyCourses = [
   {
@@ -164,7 +125,7 @@ export const faqs = [
   {
     question: "What does KayTech Africa do?",
     answer:
-      "We build websites, e-commerce stores, SEO, digital marketing, and AI automation for Ghanaian businesses. and run KayTech Academy for practical web and digital skills training.",
+      "We build websites, e-commerce, digital marketing, mobile apps, ERP, CRM, payments, and AI automation for Ghanaian businesses, and run KayTech Academy for practical training.",
   },
   {
     question: "Who do you work with?",

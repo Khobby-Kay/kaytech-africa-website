@@ -8,10 +8,14 @@ import { trackEvent } from "@/lib/analytics";
 type Status = "idle" | "sending" | "sent" | "error";
 
 const services = [
-  "Website design / development",
-  "E-commerce store",
-  "SEO & digital marketing",
-  "AI automation / chatbot",
+  "Web Design & Development",
+  "AI Automation",
+  "E-Commerce",
+  "Digital Marketing",
+  "Mobile Apps",
+  "ERP Systems",
+  "CRM Development",
+  "Payment Integration",
   "Academy / training",
   "Something else",
 ];

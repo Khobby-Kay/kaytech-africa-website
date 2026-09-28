@@ -12,6 +12,7 @@ import { getAllIndustries, getIndustryPath } from "@/lib/industry-pages";
 import { footerNav } from "@/lib/navigation";
 import { createPageMetadata } from "@/lib/page-metadata";
 import { getAllCaseStudies, getCaseStudyPath } from "@/lib/portfolio";
+import { coreServices } from "@/lib/core-services";
 import { getAllServicePages, getServicePath } from "@/lib/service-pages";
 import {
   cityCostPages,
@@ -89,10 +90,18 @@ export default function SiteMapPage() {
         />
         <LinkSection
           title="Services"
-          links={services.map((p) => ({
-            href: getServicePath(p.slug),
-            label: p.heroTitle,
-          }))}
+          links={[
+            ...coreServices.map((s) => ({ href: s.href, label: s.title })),
+            ...services
+              .filter(
+                (p) =>
+                  !coreServices.some((c) => c.serviceSlug === p.slug),
+              )
+              .map((p) => ({
+                href: getServicePath(p.slug),
+                label: p.heroTitle,
+              })),
+          ]}
         />
         <LinkSection
           title="Academy"

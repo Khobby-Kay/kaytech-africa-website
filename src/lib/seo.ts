@@ -1,4 +1,5 @@
 import { getOrganizationLogoSchema } from "@/lib/brand-assets";
+import { coreServices } from "@/lib/core-services";
 import { brandSitelinks, siteUrl } from "@/lib/discoverability";
 import { faqs as coreFaqs, siteConfig } from "@/lib/site";
 import { ghanaSearchKeywords, seoFaqs } from "@/lib/localized-seo";
@@ -137,12 +138,12 @@ export function getOrganizationJsonLd() {
         hasOfferCatalog: {
           "@type": "OfferCatalog",
           name: "Web design & digital services in Ghana",
-          itemListElement: getAllServicePages().map((page) => ({
+          itemListElement: coreServices.map((service) => ({
             "@type": "Offer",
             itemOffered: {
               "@type": "Service",
-              name: page.heroTitle,
-              url: `${siteConfig.url}${getServicePath(page.slug)}`,
+              name: service.title,
+              url: siteUrl(service.href),
               areaServed: "GH",
             },
           })),
