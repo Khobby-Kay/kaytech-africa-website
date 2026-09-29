@@ -18,6 +18,8 @@ import {
   webDevFaqs,
   webDevPageMeta,
 } from "@/lib/web-development-service-content";
+import { siteConfig } from "@/lib/site";
+import { servicePriceFromGhs } from "@/lib/trust-metrics";
 
 type Params = { slug: string };
 
@@ -55,51 +57,48 @@ export default function ServicePage({ params }: { params: Params }) {
   const isWebDev = params.slug === "best-web-development-design-ghana";
   const allPages = getAllServicePages();
 
-  const enhancedMeta = isEcommerce
+  const meta = isEcommerce
     ? { title: ecommercePageMeta.heroTitle, description: ecommercePageMeta.metaDescription, faqs: ecommerceFaqs }
     : isWebDev
       ? { title: webDevPageMeta.heroTitle, description: webDevPageMeta.metaDescription, faqs: webDevFaqs }
-      : null;
+      : { title: page.heroTitle, description: page.metaDescription, faqs: page.faqs ?? [] };
+  const pricing = servicePriceFromGhs[page.slug];
 
-  const serviceJsonLd = enhancedMeta
-    ? {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "Service",
-            name: enhancedMeta.title,
-            description: enhancedMeta.description,
-            provider: {
-              "@type": "Organization",
-              name: "KayTech Africa",
-              url: "https://www.kaytechafrica.com",
-            },
-            areaServed: { "@type": "Country", name: "Ghana" },
-            url: `https://www.kaytechafrica.com${getServicePath(params.slug)}`,
-          },
-          {
-            "@type": "FAQPage",
-            mainEntity: enhancedMeta.faqs.map((faq) => ({
-              "@type": "Question",
-              name: faq.question,
-              acceptedAnswer: { "@type": "Answer", text: faq.answer },
-            })),
-          },
-        ],
-      }
-    : {
-        "@context": "https://schema.org",
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
         "@type": "Service",
-        name: page.heroTitle,
-        description: page.metaDescription,
-        provider: {
-          "@type": "Organization",
-          name: "KayTech Africa",
-          url: "https://www.kaytechafrica.com",
-        },
+        name: meta.title,
+        description: meta.description,
+        provider: { "@id": `${siteConfig.url}/#organization` },
         areaServed: { "@type": "Country", name: "Ghana" },
-        url: `https://www.kaytechafrica.com${getServicePath(page.slug)}`,
-      };
+        url: `${siteConfig.url}${getServicePath(page.slug)}`,
+        ...(pricing
+          ? {
+              offers: {
+                "@type": "Offer",
+                priceCurrency: "GHS",
+                price: pricing.from,
+                description: pricing.label,
+              },
+            }
+          : {}),
+      },
+      ...(meta.faqs.length > 0
+        ? [
+            {
+              "@type": "FAQPage",
+              mainEntity: meta.faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: { "@type": "Answer", text: faq.answer },
+              })),
+            },
+          ]
+        : []),
+    ],
+  };
 
   return (
     <>

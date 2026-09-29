@@ -67,6 +67,8 @@ export const indexPriorityPaths: string[] = [
   "/academy",
   "/academy/web-development-course",
   "/academy/digital-marketing-course",
+  "/academy/advanced-web-development-marketing-course",
+  "/academy/saas-development-course",
   "/academy/online-courses",
   "/academy/graduate-outcomes",
   "/academy/scholarships-payment-plans",

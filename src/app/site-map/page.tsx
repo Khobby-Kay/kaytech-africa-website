@@ -115,6 +115,14 @@ export default function SiteMapPage() {
               href: "/academy/digital-marketing-course",
               label: "Digital Marketing course",
             },
+            {
+              href: "/academy/advanced-web-development-marketing-course",
+              label: "Advanced Web & Marketing course",
+            },
+            {
+              href: "/academy/saas-development-course",
+              label: "SaaS Product Development course",
+            },
             { href: "/academy/online-courses", label: "Online courses" },
             {
               href: "/academy/graduate-outcomes",

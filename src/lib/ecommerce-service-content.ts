@@ -73,27 +73,6 @@ export const ecommerceComprehensive = [
   },
 ] as const;
 
-export const ecommerceTestimonials = [
-  {
-    quote:
-      "Our online store went live with MoMo checkout in weeks. Orders on mobile data jumped immediately. customers finally complete payment without calling us first.",
-    name: "Efua M.",
-    role: "Retail founder · Accra",
-  },
-  {
-    quote:
-      "KayTech built a catalogue our team can update without calling a developer every time. Sales from WhatsApp and the website now run through one system.",
-    name: "Kwesi A.",
-    role: "Wholesale distributor · Kumasi",
-  },
-  {
-    quote:
-      "We needed Paystack, delivery zones, and a site that loads on slow networks. KayTech delivered all three. and our repeat customers noticed the difference.",
-    name: "Naomi L.",
-    role: "Fashion brand · Cape Coast",
-  },
-] as const;
-
 export const ecommerceFaqs = [
   {
     question: "What is an e-commerce solution?",
@@ -113,7 +92,7 @@ export const ecommerceFaqs = [
   {
     question: "How much does an e-commerce site cost in Ghana?",
     answer:
-      "KayTech packages start around GHS 8,000 for WhatsApp catalogue stores and GHS 12,000+ for MoMo/Paystack checkout. Custom catalogues cost more. See /website-cost-ghana for the full 2026 table or request a quote.",
+      "Online stores with MoMo and Paystack checkout start at GHS 8,000 for up to about 50 products, GHS 12,000 for a growth store with order admin, and GHS 18,000 for large catalogues and delivery zones. If you only need a catalogue that sends orders to WhatsApp, that starts at GHS 6,000 (see /whatsapp-ordering-website-ghana). The full table is at /website-cost-ghana.",
   },
   {
     question: "Which mobile wallets do you support?",
@@ -159,25 +138,25 @@ export const ecommerceFaqs = [
 
 export const ecommercePackages = [
   {
-    name: "WhatsApp catalogue",
+    name: "Starter store",
     price: "From GHS 8,000",
-    timeline: "3–5 weeks",
+    timeline: "4–6 weeks",
     includes: [
-      "Mobile product catalogue",
-      "WhatsApp order messages",
-      "Up to ~50 SKUs",
-      "Basic SEO",
+      "Paystack MoMo + cards",
+      "Up to ~50 products",
+      "WhatsApp order button",
+      "Basic product SEO",
     ],
   },
   {
-    name: "MoMo checkout store",
+    name: "Growth store",
     price: "From GHS 12,000",
     timeline: "6–9 weeks",
     featured: true,
     includes: [
-      "Paystack MoMo + cards",
       "MTN · Telecel · AT wallets",
-      "Order admin & alerts",
+      "Order admin & SMS/WhatsApp alerts",
+      "Discount codes & stock levels",
       "Product SEO templates",
     ],
   },
@@ -216,7 +195,7 @@ export const ecommerceDemoLink = {
 
 export const ecommercePageMeta = {
   title:
-    "E-Commerce Development in Ghana. From GHS 8,000 | KayTech Africa",
+    "E-Commerce Development in Ghana from GHS 8,000 | KayTech Africa",
   metaDescription:
     "Online stores from GHS 8,000. MoMo, Telecel Cash, AirtelTigo, Paystack, WhatsApp orders. Packages, demo case study, and FAQs. KayTech Africa, Accra.",
   heroTitle: "Helping you sell more online in Ghana",

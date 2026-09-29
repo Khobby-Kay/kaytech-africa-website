@@ -160,6 +160,12 @@ export function buildLlmsTxtBody(): string {
   lines.push(
     `  - Digital Marketing course: ${siteUrl("/academy/digital-marketing-course")}`,
   );
+  lines.push(
+    `  - Advanced Web Development & Marketing course: ${siteUrl("/academy/advanced-web-development-marketing-course")}`,
+  );
+  lines.push(
+    `  - SaaS Product Development course: ${siteUrl("/academy/saas-development-course")}`,
+  );
   lines.push(`  - Online cohorts: ${siteUrl("/academy/online-courses")}`);
   lines.push(
     `  - Graduate outcomes: ${siteUrl("/academy/graduate-outcomes")}`,

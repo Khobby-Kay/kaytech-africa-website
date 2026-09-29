@@ -37,6 +37,8 @@ const staticRoutes: StaticRoute[] = [
   { path: "/academy", changeFrequency: "monthly", priority: 0.88 },
   { path: "/academy/web-development-course", changeFrequency: "monthly", priority: 0.9 },
   { path: "/academy/digital-marketing-course", changeFrequency: "monthly", priority: 0.87 },
+  { path: "/academy/advanced-web-development-marketing-course", changeFrequency: "monthly", priority: 0.84 },
+  { path: "/academy/saas-development-course", changeFrequency: "monthly", priority: 0.84 },
   { path: "/academy/online-courses", changeFrequency: "monthly", priority: 0.85 },
   { path: "/academy/graduate-outcomes", changeFrequency: "monthly", priority: 0.84 },
   { path: "/academy/scholarships-payment-plans", changeFrequency: "monthly", priority: 0.83 },

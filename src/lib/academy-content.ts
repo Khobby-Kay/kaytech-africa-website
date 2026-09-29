@@ -1,10 +1,8 @@
 import { academyCourseFeesGhs, academyProofLine, studioProofLine } from "@/lib/trust-metrics";
 import { academyGraduateTestimonials } from "@/lib/testimonials";
 
-/** On-site application (primary). Legacy Google Form kept as optional backup. */
 export const academyApplicationForm = {
   href: "/academy#apply",
-  backupUrl: "https://forms.gle/EaJ4nwLX28AkPDkQ8",
   label: "Apply now",
   note: "Only 10 admissions per cohort. selected applicants receive a call from our admissions team.",
 } as const;
@@ -156,7 +154,7 @@ export const academyFeaturedCourses = [
     title: "Advanced Web Development & Digital Marketing",
     excerpt:
       "Take your skills further with advanced website builds, conversion optimization, and growth marketing. job-ready or agency-ready.",
-    href: "#pricing",
+    href: "/academy/advanced-web-development-marketing-course",
     feeLabel: `GHS ${academyCourseFeesGhs["advanced-web-marketing"].from.toLocaleString("en-GH")} · ${academyCourseFeesGhs["advanced-web-marketing"].duration}`,
   },
   {
@@ -164,7 +162,7 @@ export const academyFeaturedCourses = [
     title: "SaaS (Software As A Service)",
     excerpt:
       "Learn to develop scalable cloud-based applications. dashboards, subscriptions, and products that solve real business problems.",
-    href: "#pricing",
+    href: "/academy/saas-development-course",
     feeLabel: `GHS ${academyCourseFeesGhs["saas-development"].from.toLocaleString("en-GH")} · ${academyCourseFeesGhs["saas-development"].duration}`,
   },
 ] as const;

@@ -13,11 +13,13 @@ export const numberedServices = coreServices.map((service, index) => ({
   title: service.title,
   body: service.description,
   href: service.href,
+  offerFrom: service.offerFrom,
 })) as readonly {
   num: string;
   title: string;
   body: string;
   href: string;
+  offerFrom: string;
 }[];
 
 export const whyPartner = [

@@ -32,7 +32,8 @@ export function HomeMainContent() {
                     {service.num}.
                   </span>
                   <div className="min-w-0 flex-1">
-                    <h3 className="font-display text-xl font-semibold text-ink sm:text-2xl">
+                    <p className="text-sm font-bold text-primary">{service.offerFrom}</p>
+                    <h3 className="mt-2 font-display text-xl font-semibold text-ink sm:text-2xl">
                       {service.title}
                     </h3>
                     <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">

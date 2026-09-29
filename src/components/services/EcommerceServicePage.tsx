@@ -13,15 +13,19 @@ import {
   ecommercePackages,
   ecommercePageMeta,
   ecommerceSpotlight,
-  ecommerceTestimonials,
   ecommerceWhatsAppFlow,
   ecommerceWallets,
   ecommerceWhyChoose,
 } from "@/lib/ecommerce-service-content";
+import { getCaseStudyBySlug, getCaseStudyPath } from "@/lib/portfolio";
 import { getAllServicePages, getServicePath } from "@/lib/service-pages";
 import { siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
 import { RevealOnScroll, StaggerReveal } from "@/components/ui/RevealOnScroll";
+
+const ecommerceCaseStudies = ["voltic", "melcom"]
+  .map(getCaseStudyBySlug)
+  .filter((study) => study !== undefined);
 
 export function EcommerceServicePage() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -242,22 +246,33 @@ export function EcommerceServicePage() {
       <section className="border-b border-hairline bg-surface-soft px-5 py-16 lg:px-20 lg:py-24">
         <Container>
           <h2 className="font-display text-2xl tracking-tight text-ink sm:text-3xl">
-            What our e-commerce clients say
+            Stores and order flows we have shipped
           </h2>
-          <div className="mt-10 grid gap-4 lg:grid-cols-3">
-            {ecommerceTestimonials.map((t) => (
-              <blockquote
-                key={t.name}
-                className="rounded-3xl border border-hairline bg-canvas p-6"
+          <div className="mt-10 grid gap-4 lg:grid-cols-2">
+            {ecommerceCaseStudies.map((study) => (
+              <Link
+                key={study.slug}
+                href={getCaseStudyPath(study.slug)}
+                className="group rounded-3xl border border-hairline bg-canvas p-6 transition-shadow hover:shadow-card"
               >
-                <p className="text-sm leading-relaxed text-ink">
-                  &ldquo;{t.quote}&rdquo;
+                <p className="text-sm text-muted">
+                  {study.client} · {study.sector} · {study.timeline}
                 </p>
-                <footer className="mt-4 text-sm">
-                  <p className="font-semibold text-ink">{t.name}</p>
-                  <p className="text-muted">{t.role}</p>
-                </footer>
-              </blockquote>
+                <p className="mt-2 font-display text-lg tracking-tight text-ink">
+                  {study.headline}
+                </p>
+                <ul className="mt-4 space-y-2">
+                  {study.results.slice(0, 3).map((r) => (
+                    <li key={r} className="flex items-start gap-2 text-sm text-ink">
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                      {r}
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-5 text-sm font-semibold text-primary group-hover:underline">
+                  Read the {study.client} case study
+                </p>
+              </Link>
             ))}
           </div>
         </Container>

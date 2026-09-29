@@ -1,10 +1,11 @@
-export const mainNav = [
+export type MainNavItem =
+  | { href: string; label: string; kind?: "link" }
+  | { href: string; label: string; kind: "services" };
+
+export const mainNav: MainNavItem[] = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
-  {
-    href: "/web-design/accra-ghana",
-    label: "Service",
-  },
+  { href: "/services", label: "Services", kind: "services" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact Us" },
@@ -84,7 +85,6 @@ export const footerNav = {
     { href: "/web-design/tamale-ghana", label: "Tamale" },
     { href: "/web-design/sunyani-ghana", label: "Sunyani" },
     { href: "/web-design/areas/east-legon-ghana", label: "East Legon" },
-    { href: "/web-design/areas/osu-accra-ghana", label: "Osu" },
   ],
   industries: [
     { href: "/industry/church-website-design-ghana", label: "Churches" },

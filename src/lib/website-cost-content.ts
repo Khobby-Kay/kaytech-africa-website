@@ -2,7 +2,7 @@ import { siteConfig } from "@/lib/site";
 
 /** 40–60 word SERP quick answer (AGENCY-01) */
 export const websiteCostQuickAnswer =
-  "In Ghana in 2026, most business websites run GHS 800–6,000 for brochure sites, GHS 5,000–15,000+ for e-commerce with MoMo or Paystack, and GHS 15,000+ for custom apps. Timelines are usually 2–12 weeks. KayTech sends a written GHS quote after discovery; the table below shows typical ranges.";
+  "In Ghana in 2026, a landing page or starter site costs GHS 800–3,500, a custom business website GHS 3,500–8,000, an online store with MoMo or Paystack checkout GHS 8,000–25,000+, and a web app from GHS 18,000. Most projects take 2–12 weeks. KayTech sends a written GHS quote after discovery.";
 
 export const websiteCostVsPricing = {
   body:
@@ -36,7 +36,7 @@ export const websiteCostPriceTable = [
   },
   {
     type: "WhatsApp catalogue store",
-    range: "GHS 6,000 – 12,000",
+    range: "GHS 6,000 – 14,000",
     timeline: "3–6 weeks",
     bestFor: "Shops selling via chat + MoMo",
   },
@@ -160,7 +160,7 @@ export const websiteCostFaqs = [
   {
     question: "How much does a website cost in Ghana in 2026?",
     answer:
-      "Most SMEs pay GHS 1,800–6,000 for a professional business site, GHS 8,000–25,000+ for e-commerce with MoMo or Paystack, and GHS 800–1,800 for a simple landing page. Custom apps cost more. KayTech sends an itemised GHS quote after a free discovery call.",
+      "A simple landing page costs GHS 800–1,800, a starter business site GHS 1,800–3,500, and a custom business website GHS 3,500–8,000. Online stores with MoMo or Paystack checkout cost GHS 8,000–25,000+, and web apps start around GHS 18,000. KayTech sends an itemised GHS quote after a free discovery call.",
   },
   {
     question: "What affects website price in Ghana?",
@@ -229,14 +229,14 @@ export const websiteCostFactors = [
 export const websiteCostTiers = [
   {
     name: "Starter presence",
-    range: "GHS 800 – 2,500",
+    range: "GHS 800 – 3,500",
     timeline: "2–4 weeks",
     bestFor: "New businesses, personal brands, simple service pages.",
     includes: ["Mobile-first design", "Core pages", "Contact & WhatsApp", "Basic SEO", "Launch support"],
   },
   {
     name: "Business website",
-    range: "GHS 2,500 – 6,000",
+    range: "GHS 3,500 – 8,000",
     timeline: "4–8 weeks",
     bestFor: "Established companies that need leads and local Google visibility.",
     includes: ["Custom design", "Service/portfolio sections", "Stronger SEO", "Analytics", "Blog option"],
@@ -244,7 +244,7 @@ export const websiteCostTiers = [
   },
   {
     name: "E-commerce store",
-    range: "GHS 5,000 – 15,000+",
+    range: "GHS 8,000 – 25,000+",
     timeline: "6–12 weeks",
     bestFor: "Brands selling products online with MoMo and card payments.",
     includes: ["Product catalogue", "MoMo & Paystack checkout", "Order management", "WhatsApp alerts"],

@@ -198,6 +198,174 @@ export const digitalMarketingCourse: AcademyCourseDefinition = {
   applyLabel: "Digital Marketing 101",
 };
 
+const advancedFee = academyCourseFeesGhs["advanced-web-marketing"];
+const saasFee = academyCourseFeesGhs["saas-development"];
+
+export const advancedWebMarketingCourse: AcademyCourseDefinition = {
+  key: "advanced-web-marketing",
+  slug: "advanced-web-development-marketing-course",
+  path: "/academy/advanced-web-development-marketing-course",
+  title: "Advanced Web Development & Digital Marketing",
+  shortTitle: "Advanced Web & Marketing",
+  metaTitle: `Advanced Web Development & Marketing Course, Ghana | GHS ${advancedFee.from.toLocaleString("en-GH")} | KayTech Academy`,
+  metaDescription: `A ${advancedFee.duration} KayTech Academy track for people who can already build a basic site: Next.js, CMS, MoMo checkout, technical SEO and paid campaigns. GHS ${advancedFee.from.toLocaleString("en-GH")}, Accra or online.`,
+  duration: advancedFee.duration,
+  feeGhs: advancedFee.from,
+  delivery: ["online", "onsite"],
+  level: "Intermediate (after Web Development 101 or equivalent)",
+  quickAnswer: `The Advanced track runs ${advancedFee.duration} for students who can already ship an HTML and CSS site. You build a client-grade Next.js site with a CMS and MoMo checkout, then run its SEO and a small paid campaign. Fee GHS ${advancedFee.from.toLocaleString("en-GH")}, max 10 students.`,
+  overview: [
+    "This is the course for people who finished Web Development 101, or taught themselves, and now want to take paid client work without guessing. It covers the parts of a KayTech project that beginners skip: content models, payments, speed on mobile data, and getting the site found.",
+    "Half the course is build, half is growth. You finish with one production site you can show a client and a written report on how it performed in search and ads.",
+  ],
+  outcomes: [
+    "Build a Next.js site with a headless CMS a client can edit",
+    "Add MoMo and card checkout through Paystack in test mode",
+    "Pass Core Web Vitals on a mid-range Android phone",
+    "Set up Search Console, GA4 events and a Google Business Profile",
+    "Plan and report a small Meta or Google Ads test in GHS",
+    "Write a scoped proposal with milestones and a fixed price",
+  ],
+  syllabus: [
+    {
+      module: "Weeks 1–3 · Production front-end",
+      topics: ["Next.js App Router", "Components and layouts", "Images, fonts and caching", "Accessibility checks"],
+    },
+    {
+      module: "Weeks 4–5 · Content and payments",
+      topics: ["Headless CMS content models", "Forms that reach WhatsApp and email", "Paystack MoMo checkout in test mode", "Order and enquiry notifications"],
+    },
+    {
+      module: "Weeks 6–8 · Search",
+      topics: ["Technical SEO and structured data", "Local SEO for Accra and regional towns", "Search Console and indexing", "Writing pages that answer real queries"],
+    },
+    {
+      module: "Weeks 9–10 · Paid growth",
+      topics: ["Meta and Google Ads structure", "Landing page testing", "Budgeting in GHS", "Tracking leads, not clicks"],
+    },
+    {
+      module: "Weeks 11–12 · Client project",
+      topics: ["Brief, proposal and pricing", "Launch checklist", "Performance report", "Portfolio write-up"],
+    },
+  ],
+  schedule: [
+    { label: "Live sessions", detail: "Twice weekly · 2 hours (evening Accra time)" },
+    { label: "Build lab", detail: "Saturday lab for code review and pairing" },
+    { label: "Online cohort", detail: "Same schedule via Google Meet; recordings within 24 hours" },
+    { label: "Office hours", detail: "WhatsApp group with instructors Mon–Fri" },
+  ],
+  cohorts: [
+    {
+      label: "January 2027 · Online & Accra",
+      start: "12 Jan 2027",
+      applyBy: "30 Dec 2026",
+      status: "waitlist",
+    },
+  ],
+  faqs: [
+    {
+      question: "Can I join without taking Web Development 101?",
+      answer: "Yes, if you can already build a multi-page site with HTML, CSS and some JavaScript. Admissions asks for a link to something you have built.",
+    },
+    {
+      question: "Do I need money for ads during the course?",
+      answer: "No. You can simulate the campaign. If you want to run it live, instructors help you set a small test budget, often GHS 200–500.",
+    },
+    {
+      question: "Can I pay in instalments?",
+      answer: "Yes. Approved applicants can split the fee across 2–3 payments. See /academy/scholarships-payment-plans.",
+    },
+  ],
+  image: contentImages.courseDev,
+  applyLabel: "Advanced Web Development & Digital Marketing",
+};
+
+export const saasDevelopmentCourse: AcademyCourseDefinition = {
+  key: "saas-development",
+  slug: "saas-development-course",
+  path: "/academy/saas-development-course",
+  title: "SaaS Product Development",
+  shortTitle: "SaaS Product Development",
+  metaTitle: `SaaS Development Course in Ghana | GHS ${saasFee.from.toLocaleString("en-GH")} | KayTech Academy`,
+  metaDescription: `Build and launch a subscription web app in ${saasFee.duration}: accounts, database, Paystack recurring billing, dashboards and deployment. KayTech Academy, Accra or online, GHS ${saasFee.from.toLocaleString("en-GH")}.`,
+  duration: saasFee.duration,
+  feeGhs: saasFee.from,
+  delivery: ["online", "onsite"],
+  level: "Intermediate (JavaScript required)",
+  quickAnswer: `The SaaS course runs ${saasFee.duration}. You build one working subscription product with sign-in, a database, Paystack recurring billing and an admin dashboard, then deploy it. Fee GHS ${saasFee.from.toLocaleString("en-GH")}. You need working JavaScript before you start.`,
+  overview: [
+    "Most courses stop at a website. This one covers what a paid product needs: user accounts, data that belongs to each customer, billing that renews every month, and a dashboard the owner can run the business from.",
+    "You pick a small product idea for a Ghanaian market, such as school fee reminders or a salon booking tool, and ship it by week 12. The code is yours to keep building.",
+  ],
+  outcomes: [
+    "Design a database for multi-customer (multi-tenant) data",
+    "Add sign-in, roles and password reset",
+    "Charge monthly subscriptions through Paystack, including MoMo",
+    "Build an admin dashboard with usage and revenue numbers",
+    "Deploy with environment secrets, backups and error logging",
+    "Write a one-page pricing and launch plan for the product",
+  ],
+  syllabus: [
+    {
+      module: "Weeks 1–2 · Product and data",
+      topics: ["Choosing a narrow problem", "Data modelling", "PostgreSQL basics", "Multi-tenant patterns"],
+    },
+    {
+      module: "Weeks 3–5 · Accounts and core features",
+      topics: ["Authentication and roles", "Server actions and APIs", "Validation and error handling", "Email and WhatsApp notifications"],
+    },
+    {
+      module: "Weeks 6–8 · Billing",
+      topics: ["Paystack plans and subscriptions", "MoMo recurring payment limits", "Webhooks and failed payments", "Invoices and receipts"],
+    },
+    {
+      module: "Weeks 9–10 · Dashboards",
+      topics: ["Usage and revenue metrics", "Admin tools", "Exports and reports", "Performance on slow networks"],
+    },
+    {
+      module: "Weeks 11–12 · Launch",
+      topics: ["Deployment and secrets", "Backups and monitoring", "Pricing your plans in GHS", "Demo day"],
+    },
+  ],
+  schedule: [
+    { label: "Live sessions", detail: "Twice weekly · 2 hours (evening Accra time)" },
+    { label: "Build lab", detail: "Saturday lab for code review and pairing" },
+    { label: "Online cohort", detail: "Same schedule via Google Meet; recordings within 24 hours" },
+    { label: "Office hours", detail: "WhatsApp group with instructors Mon–Fri" },
+  ],
+  cohorts: [
+    {
+      label: "January 2027 · Online & Accra",
+      start: "12 Jan 2027",
+      applyBy: "30 Dec 2026",
+      status: "waitlist",
+    },
+  ],
+  faqs: [
+    {
+      question: "What do I need to know before I join?",
+      answer: "Comfortable JavaScript: functions, arrays, objects and fetching data. If you have finished Web Development 101 or the Advanced track, you are ready.",
+    },
+    {
+      question: "Will I own the product I build?",
+      answer: "Yes. The code and the idea are yours to keep building or sell after the course.",
+    },
+    {
+      question: "Can I pay in instalments?",
+      answer: "Yes. Approved applicants can split the fee across 2–3 payments. See /academy/scholarships-payment-plans.",
+    },
+  ],
+  image: contentImages.courseDev,
+  applyLabel: "SaaS Development",
+};
+
+export const academyCourses = [
+  webDevelopmentCourse,
+  digitalMarketingCourse,
+  advancedWebMarketingCourse,
+  saasDevelopmentCourse,
+] as const;
+
 export function buildCourseJsonLd(course: AcademyCourseDefinition) {
   return {
     "@context": "https://schema.org",
@@ -229,9 +397,10 @@ export function buildCourseJsonLd(course: AcademyCourseDefinition) {
 
 export const academyOnlineHub = {
   path: "/academy/online-courses",
-  title: "Online Web & Digital Marketing Courses (Live + Recorded)",
+  title: "Online Web Development & Digital Marketing Courses | KayTech Academy",
+  heroTitle: "Learn live from anywhere in Ghana",
   metaDescription:
-    "Live online cohorts with recordings for students outside Accra. same KayTech Academy curriculum, max 10 seats, Ghana-time evening classes.",
+    "Live online cohorts from KayTech Academy for students outside Accra: web development, digital marketing, advanced and SaaS tracks. Evening classes, recordings, max 10 seats, fees from GHS 2,200.",
   quickAnswer:
     "KayTech Academy online cohorts mirror on-site classes: live twice-weekly sessions, WhatsApp support, recordings within 24 hours, and the same GHS cohort fees. Ideal for Kumasi, Tamale, Takoradi, and diaspora students who want studio-backed training without relocating to Accra.",
   highlights: [
@@ -240,5 +409,52 @@ export const academyOnlineHub = {
     "Portfolio reviews and career coaching included",
     "Apply once. admissions helps you pick online vs on-site",
   ],
-  courses: [webDevelopmentCourse.path, digitalMarketingCourse.path],
-} as const;
+  courses: [
+    webDevelopmentCourse,
+    digitalMarketingCourse,
+    advancedWebMarketingCourse,
+    saasDevelopmentCourse,
+  ],
+  howItWorks: [
+    {
+      title: "Live classes, evening Accra time",
+      body: "Two sessions a week on Google Meet in the evening, Ghana time, so working students can attend. Cameras on for code reviews.",
+    },
+    {
+      title: "Recordings within 24 hours",
+      body: "Miss a class because of work or a power cut and the recording is in the cohort folder the next day, with the slides and starter files.",
+    },
+    {
+      title: "Assignments reviewed by an instructor",
+      body: "Each week you submit a link. An instructor reviews the code or campaign and replies with written notes, not a score.",
+    },
+    {
+      title: "WhatsApp group for blockers",
+      body: "Stuck on a bug at 10pm? Post it in the cohort group. Instructors answer Monday to Friday, and classmates usually get there first.",
+    },
+  ],
+  requirements: [
+    "A laptop (Windows or Mac) that can run VS Code and a browser",
+    "Enough data for two 2-hour video calls a week, roughly 1–2GB per session",
+    "Six to eight hours a week for classes and assignments",
+    "A Gmail account for Google Meet and shared folders",
+  ],
+  faqs: [
+    {
+      question: "Is the online course the same as the on-site course in Accra?",
+      answer: "Yes. Same syllabus, same assignments and the same fee. The only difference is where you sit during the live session.",
+    },
+    {
+      question: "Can I join from outside Ghana?",
+      answer: "Yes. Classes run on Ghana time (GMT), so check the session times work where you are. Fees are in GHS and can be paid by MoMo or card.",
+    },
+    {
+      question: "What happens if my connection drops during class?",
+      answer: "Rejoin when you can and watch the recording for the part you missed. Slides and starter files are shared before each session, so you can keep working offline.",
+    },
+    {
+      question: "Can I switch from online to on-site?",
+      answer: "Yes, if there is a seat in the on-site cohort for the same course. Tell admissions before week three.",
+    },
+  ],
+};

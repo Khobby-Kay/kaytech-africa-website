@@ -50,7 +50,7 @@ export const cityCostPages: CityCostPage[] = [
     priceNotes: [
       {
         heading: "B2B & logistics sites",
-        body: "Catalogue and enquiry forms for warehouses and distributors often sit in the GHS 6,000–12,000 band depending on SKU count.",
+        body: "Catalogue and enquiry forms for warehouses and distributors often sit in the GHS 6,000–14,000 band depending on SKU count.",
       },
       {
         heading: "Greater Accra proximity",

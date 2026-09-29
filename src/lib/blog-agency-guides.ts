@@ -104,7 +104,7 @@ export const freelancerVsAgencyGhana2026: BlogPost = {
     {
       heading: "Cost. what you actually pay",
       paragraphs: [
-        "Freelancers often quote GHS 800–4,000 for brochure sites when content is ready. Agencies typically start higher (GHS 2,500–8,000+ for business sites) because strategy, QA, and multi-role delivery are included. E-commerce with MoMo rarely belongs in the lowest freelancer tier unless they show prior checkout launches.",
+        "Freelancers often quote GHS 800–4,000 for brochure sites when content is ready. Agencies typically start higher (GHS 3,500–8,000 for a custom business site) because strategy, QA, and multi-role delivery are included. E-commerce with MoMo rarely belongs in the lowest freelancer tier unless they show prior checkout launches.",
       ],
     },
     {

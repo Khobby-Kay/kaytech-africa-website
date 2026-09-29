@@ -648,15 +648,7 @@ export function AcademyPageContent() {
         <Container className="max-w-xl lg:max-w-2xl">
           <RevealOnScroll variant="fade-up">
             <p className="mb-6 text-sm text-muted">
-              Ten seats per cohort. Add scholarship or payment-plan notes in your message.{" "}
-              <a
-                href={academyApplicationForm.backupUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-primary hover:underline"
-              >
-                Google Form backup
-              </a>
+              Ten seats per cohort. Add scholarship or payment-plan notes in your message.
             </p>
             <AcademyApplicationForm location="academy_hub" compact />
           </RevealOnScroll>

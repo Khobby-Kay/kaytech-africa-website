@@ -93,6 +93,24 @@ export function ServiceLanding({ page }: { page: ServicePage }) {
         </section>
       ))}
 
+      {page.faqs && page.faqs.length > 0 ? (
+        <section className="border-b border-hairline bg-surface-soft px-5 py-16 lg:px-20 lg:py-24">
+          <Container>
+            <h2 className="font-display text-2xl tracking-tight text-ink sm:text-3xl">
+              Common questions
+            </h2>
+            <dl className="mt-8 max-w-3xl space-y-6">
+              {page.faqs.map((faq) => (
+                <div key={faq.question}>
+                  <dt className="font-semibold text-ink">{faq.question}</dt>
+                  <dd className="mt-2 text-sm leading-relaxed text-muted">{faq.answer}</dd>
+                </div>
+              ))}
+            </dl>
+          </Container>
+        </section>
+      ) : null}
+
       <section className="bg-canvas px-5 py-16 lg:px-20 lg:py-24">
         <Container>
           <RevealOnScroll variant="zoom-in">

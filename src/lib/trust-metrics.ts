@@ -39,6 +39,31 @@ export const servicePriceFromGhs: Record<
     unit: "project",
     label: "MVP build",
   },
+  "mobile-app-development-ghana": {
+    from: 15000,
+    unit: "project",
+    label: "Android or iOS MVP",
+  },
+  "erp-systems-ghana": {
+    from: 25000,
+    unit: "project",
+    label: "modular ERP rollout",
+  },
+  "crm-development-ghana": {
+    from: 12000,
+    unit: "project",
+    label: "custom CRM build",
+  },
+  "ai-automation": {
+    from: 5000,
+    unit: "project",
+    label: "WhatsApp AI assistant",
+  },
+  "payment-integration": {
+    from: 3000,
+    unit: "project",
+    label: "MoMo & Paystack setup",
+  },
 };
 
 export const academyCourseFeesGhs = {

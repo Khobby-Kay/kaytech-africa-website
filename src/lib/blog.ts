@@ -485,7 +485,7 @@ export const blogPosts: BlogPost[] = [
     author: "KayTech Africa",
     date: "2026-01-12",
     dateDisplay: "Jan 12, 2026",
-    readingTime: "8 min read",
+    readingTime: "11 min read",
     excerpt:
       "Choosing a platform in Ghana? Compare WordPress, custom Next.js builds, and Shopify. cost, speed, MoMo payments, and SEO. so you invest in the right foundation.",
     image: blogImages[5],
@@ -517,7 +517,7 @@ export const blogPosts: BlogPost[] = [
         ],
         bullets: [
           "Best for: brands competing on Google, multi-service companies, and bespoke portals",
-          "Typical cost in Ghana: GHS 3,000 – 50,000+ depending on scope",
+          "Typical cost in Ghana: GHS 3,500 – 8,000 for a business site, GHS 8,000 – 25,000+ for a store, GHS 18,000+ for a web app",
           "KayTech advantage: mobile-first Ghana UX, Paystack/MoMo, and SEO baked in from day one",
         ],
       },
@@ -536,24 +536,49 @@ export const blogPosts: BlogPost[] = [
         heading: "WooCommerce on WordPress in Ghana",
         paragraphs: [
           "WooCommerce is the default when you already run WordPress and need a product catalogue with local gateways. Paystack and Flutterwave plugins enable MoMo and cards. but you must budget for hosting, SSL, plugin updates, and speed tuning. Cheap shared hosting often cripples WooCommerce on mobile data.",
+          "A typical Ghana WooCommerce setup looks like this: WordPress on managed hosting, the WooCommerce plugin, the official Paystack plugin for MoMo and cards, a delivery-zone plugin for Accra, Kumasi and nationwide rates, and a WhatsApp order button for buyers who want to ask first. Each extra plugin is one more thing to update and one more script the phone has to load.",
+          "Where WooCommerce stores go wrong is rarely the platform. It is a theme built to look good in a demo, eight marketing plugins nobody uses, and product photos uploaded straight from a camera at 4MB each. Fix those three and most WooCommerce stores become usable on mobile data.",
         ],
         bullets: [
-          "Typical WooCommerce build in Ghana: GHS 4,000 – 12,000+",
-          "Ongoing: hosting, plugin licenses, maintenance retainers",
-          "Strength: familiar admin for non-technical staff",
-          "Risk: plugin conflicts and slow checkout if not optimised",
+          "Typical WooCommerce build quoted in Ghana: GHS 4,000 – 12,000+ (checkout stores built by KayTech start at GHS 8,000)",
+          "Ongoing: hosting (budget GHS 1,200 – 3,600 a year for a store), plugin licences, maintenance",
+          "Strength: familiar admin for non-technical staff, huge plugin choice",
+          "Risk: plugin conflicts after updates, and a slow checkout if nobody tunes it",
+          "Good fit: under about 500 products, one warehouse, staff already comfortable in WordPress",
+        ],
+      },
+      {
+        heading: "Setting up MoMo on WooCommerce",
+        paragraphs: [
+          "The usual route is a Paystack business account. Once Paystack approves your business documents, you install their WooCommerce plugin, paste the test keys, and run test payments before switching to live keys. MoMo then appears at checkout next to cards.",
+        ],
+        bullets: [
+          "Register the Paystack account in the business name that matches your bank account",
+          "Turn on Mobile Money in the Paystack dashboard, then check MTN, Telecel Cash and AirtelTigo all show at checkout",
+          "Put MoMo first in the payment list; most Ghanaian buyers reach for it before a card",
+          "Test on a real phone with a small live payment, then refund it",
+          "Set order emails and a WhatsApp alert so your team sees paid orders within minutes",
+          "Paystack charges a percentage per transaction (around 2% for local payments at the time of writing). Check their current Ghana pricing and build it into your margins",
         ],
       },
       {
         heading: "Speed and mobile data. the Ghana filter",
         paragraphs: [
           "Platform choice matters less than implementation. A bloated WordPress theme loses to a lean custom Next.js site on 3G. Test on real phones, not office Wi‑Fi. Compress images, limit third-party scripts, and measure Largest Contentful Paint before you launch.",
+          "A practical target: the main content of a product page should appear in under 2.5 seconds on a mid-range Android phone, which is Google's own \u201cgood\u201d threshold for Largest Contentful Paint. Run PageSpeed Insights on the mobile tab for your homepage, one category page and one product page, not just the homepage.",
+        ],
+        bullets: [
+          "WordPress and WooCommerce: use a lightweight theme, a caching plugin, and serve images as WebP",
+          "Shopify: speed depends on the theme and how many apps inject scripts. Remove apps you are not using",
+          "Custom: fast by default if built well, but only if images and third-party chat widgets are handled with the same care",
+          "All platforms: every tracking pixel and chat widget costs load time. Keep the ones you actually read reports from",
         ],
       },
       {
         heading: "MoMo support by platform",
         paragraphs: [
           "Custom builds and WooCommerce (via Paystack) offer the most control for MoMo-first UX. Shopify can work with partners but may need workarounds for Ghana-specific flows. Always confirm Telecel Cash and AirtelTigo availability on your merchant account. not only MTN.",
+          "On a custom build, MoMo can go further than a checkout option: payment links sent in WhatsApp, deposits for bookings, and instalment plans for higher-priced items. That flexibility is the main reason Ghanaian stores with unusual payment flows move off templates. See /momo-paystack-integration-ghana for how we set it up.",
         ],
       },
       {

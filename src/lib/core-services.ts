@@ -1,9 +1,18 @@
+import {
+  formatPriceFromGhs,
+  servicePriceFromGhs,
+} from "@/lib/trust-metrics";
+
 /** Canonical KayTech service lineup (site-wide). */
 export type CoreService = {
   id: string;
   title: string;
   description: string;
   href: string;
+  /** Shown in nav and service cards */
+  offerFrom: string;
+  offerDetail?: string;
+  badge?: string;
   icon:
     | "Code2"
     | "Bot"
@@ -28,6 +37,11 @@ export const coreServices: readonly CoreService[] = [
     serviceSlug: "best-web-development-design-ghana",
     icon: "Code2",
     tags: ["Business sites", "Web apps", "SEO-ready"],
+    offerFrom: formatPriceFromGhs(
+      servicePriceFromGhs["best-web-development-design-ghana"].from,
+      servicePriceFromGhs["best-web-development-design-ghana"].unit,
+    ),
+    offerDetail: servicePriceFromGhs["best-web-development-design-ghana"].label,
   },
   {
     id: "ai",
@@ -37,6 +51,12 @@ export const coreServices: readonly CoreService[] = [
     href: "/ai-automation",
     icon: "Bot",
     tags: ["Chatbots", "Workflows", "LLM tools"],
+    offerFrom: formatPriceFromGhs(
+      servicePriceFromGhs["ai-automation"].from,
+      servicePriceFromGhs["ai-automation"].unit,
+    ),
+    offerDetail: servicePriceFromGhs["ai-automation"].label,
+    badge: "Most requested",
   },
   {
     id: "ecommerce",
@@ -47,6 +67,12 @@ export const coreServices: readonly CoreService[] = [
     serviceSlug: "best-ecommerce-development-accra-ghana",
     icon: "ShoppingBag",
     tags: ["Online stores", "MoMo checkout", "Catalogues"],
+    offerFrom: formatPriceFromGhs(
+      servicePriceFromGhs["best-ecommerce-development-accra-ghana"].from,
+      servicePriceFromGhs["best-ecommerce-development-accra-ghana"].unit,
+    ),
+    offerDetail:
+      servicePriceFromGhs["best-ecommerce-development-accra-ghana"].label,
   },
   {
     id: "marketing",
@@ -57,6 +83,12 @@ export const coreServices: readonly CoreService[] = [
     serviceSlug: "best-digital-marketing-accra-ghana",
     icon: "LineChart",
     tags: ["SEO", "PPC", "Content"],
+    offerFrom: formatPriceFromGhs(
+      servicePriceFromGhs["best-digital-marketing-accra-ghana"].from,
+      servicePriceFromGhs["best-digital-marketing-accra-ghana"].unit,
+    ),
+    offerDetail:
+      servicePriceFromGhs["best-digital-marketing-accra-ghana"].label,
   },
   {
     id: "mobile",
@@ -67,6 +99,11 @@ export const coreServices: readonly CoreService[] = [
     serviceSlug: "mobile-app-development-ghana",
     icon: "Smartphone",
     tags: ["Android", "iOS", "APIs"],
+    offerFrom: formatPriceFromGhs(
+      servicePriceFromGhs["mobile-app-development-ghana"].from,
+      servicePriceFromGhs["mobile-app-development-ghana"].unit,
+    ),
+    offerDetail: servicePriceFromGhs["mobile-app-development-ghana"].label,
   },
   {
     id: "erp",
@@ -77,6 +114,11 @@ export const coreServices: readonly CoreService[] = [
     serviceSlug: "erp-systems-ghana",
     icon: "Database",
     tags: ["Inventory", "Finance", "Operations"],
+    offerFrom: formatPriceFromGhs(
+      servicePriceFromGhs["erp-systems-ghana"].from,
+      servicePriceFromGhs["erp-systems-ghana"].unit,
+    ),
+    offerDetail: servicePriceFromGhs["erp-systems-ghana"].label,
   },
   {
     id: "crm",
@@ -87,6 +129,11 @@ export const coreServices: readonly CoreService[] = [
     serviceSlug: "crm-development-ghana",
     icon: "Users",
     tags: ["Leads", "Pipelines", "Support"],
+    offerFrom: formatPriceFromGhs(
+      servicePriceFromGhs["crm-development-ghana"].from,
+      servicePriceFromGhs["crm-development-ghana"].unit,
+    ),
+    offerDetail: servicePriceFromGhs["crm-development-ghana"].label,
   },
   {
     id: "payments",
@@ -96,6 +143,11 @@ export const coreServices: readonly CoreService[] = [
     href: "/momo-paystack-integration-ghana",
     icon: "CreditCard",
     tags: ["MoMo", "Paystack", "Checkout"],
+    offerFrom: formatPriceFromGhs(
+      servicePriceFromGhs["payment-integration"].from,
+      servicePriceFromGhs["payment-integration"].unit,
+    ),
+    offerDetail: servicePriceFromGhs["payment-integration"].label,
   },
 ] as const;
 

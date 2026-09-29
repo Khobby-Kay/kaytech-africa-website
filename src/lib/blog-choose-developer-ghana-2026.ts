@@ -9,7 +9,7 @@ export const chooseDeveloperGhana2026: BlogPost = {
   author: "KayTech Africa",
   date: "2026-01-10",
   dateDisplay: "Jan 10, 2026",
-  readingTime: "14 min read",
+  readingTime: "16 min read",
   excerpt:
     "A practical 2026 guide for Ghanaian business owners. how to compare web developers and designers in Accra and nationwide, what to budget, and which red flags to avoid.",
   image: blogImages[4],
@@ -87,9 +87,42 @@ export const chooseDeveloperGhana2026: BlogPost = {
     {
       heading: "Step 7. Pricing: what websites cost in Ghana in 2026",
       paragraphs: [
-        "Budget depends on depth, not only page count. A focused business site with custom design, mobile optimisation, and basic SEO often starts in the low thousands of cedis. E-commerce, portals, or multi-language builds scale into five figures and above.",
+        "Budget depends on depth, not only page count. In 2026 a landing page runs GHS 800–1,800, a starter business site GHS 1,800–3,500, and a custom business site with SEO GHS 3,500–8,000. Online stores with MoMo or Paystack checkout run GHS 8,000–25,000+, and web apps start around GHS 18,000.",
         "Compare proposals line by line. design, development, content, hosting year one, training, and support. The cheapest quote is expensive if it omits payments, SEO, or revision rounds you assumed were included.",
         "KayTech publishes pricing guidance at /website-cost-ghana and Accra ranges on /web-design/accra-ghana so you can sanity-check quotes before you sign.",
+      ],
+    },
+    {
+      heading: "What a fair quote looks like, line by line",
+      paragraphs: [
+        "A proposal you can compare has named line items, not one total. Here is the shape of a real-world quote for a five-page clinic site in Accra, the same example we use on our cost guide:",
+      ],
+      bullets: [
+        "Custom mobile design, five pages: GHS 2,800",
+        "Booking form and WhatsApp buttons: GHS 600",
+        "On-page SEO, Search Console and launch: GHS 800",
+        "Total GHS 4,200, four weeks, paid 50% at start and 50% at launch",
+        "Listed separately: domain (about GHS 100–350 a year) and hosting (about GHS 500–1,200 a year)",
+      ],
+    },
+    {
+      heading: "How to compare three quotes side by side",
+      paragraphs: [
+        "Put the quotes in one spreadsheet with a row for each item: pages, design revisions, content writing, SEO setup, payments, hosting in year one, training and support period. Mark each cell as included, extra, or missing. The gaps usually explain why one quote is half the price of another.",
+        "Then score each developer from 1 to 5 on the things a spreadsheet cannot show: how fast they replied, whether they asked about your customers, and whether their live sites load well on your phone. A GHS 1,500 difference matters less than a developer who disappears after the deposit.",
+        "If two quotes are close, ask both the same question: \u201cWhat would you cut to hit a lower budget?\u201d A good developer suggests fewer pages or a later phase. A weak one cuts testing or SEO without telling you.",
+      ],
+    },
+    {
+      heading: "Contract terms worth asking for",
+      paragraphs: ["You do not need a lawyer for a small site, but get these in writing, even on WhatsApp or email:"],
+      bullets: [
+        "The domain is registered in your business name, with your email as the owner contact",
+        "You get the hosting and CMS logins at launch, not only on request",
+        "Number of design revision rounds, and the price of extra rounds",
+        "Payment milestones tied to things you can see: design approval, staging link, launch",
+        "A bug-fix window after launch, commonly 30 days, at no cost",
+        "What happens to the code and files if you part ways",
       ],
     },
     {
@@ -157,6 +190,20 @@ export const chooseDeveloperGhana2026: BlogPost = {
       paragraphs: [
         "Accra-based studios often meet in person in Greater Accra. useful for workshops and content shoots. Kumasi, Tema, Takoradi, and other cities are routinely served remotely via WhatsApp and video; what matters is responsiveness and documented delivery, not only office postcode.",
         "If local SEO targets one city, your developer should plan location pages or a single strong hub. not five duplicate neighbourhood pages with only the place name swapped.",
+      ],
+    },
+    {
+      heading: "What to check in the first 30 days after launch",
+      paragraphs: [
+        "Launch is where you find out whether the developer built what you paid for. Use the first month to test it the way customers will, and report problems while the bug-fix window is open.",
+      ],
+      bullets: [
+        "Search your business name on Google. Your site, not an old Facebook page, should appear first within a few weeks",
+        "Open Search Console and confirm the sitemap was accepted and pages are being indexed",
+        "Send a test enquiry through every form and WhatsApp button, and check who receives it",
+        "If you sell online, make a real MoMo payment of a small amount and refund it",
+        "Run the homepage through PageSpeed Insights on mobile. Scores in the red usually mean oversized images",
+        "Log in and change a price or photo yourself to confirm the training worked",
       ],
     },
     {

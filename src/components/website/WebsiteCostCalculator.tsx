@@ -8,25 +8,25 @@ const siteTypes = [
   {
     id: "starter",
     label: "Starter / landing page",
-    range: "GHS 800 – 2,500",
+    range: "GHS 800 – 3,500",
     note: "Quick online presence, 1–5 pages",
   },
   {
     id: "business",
     label: "Business website",
-    range: "GHS 2,500 – 6,000",
+    range: "GHS 3,500 – 8,000",
     note: "Custom design, SEO, lead capture",
   },
   {
     id: "ecommerce",
     label: "E-commerce store",
-    range: "GHS 5,000 – 15,000+",
+    range: "GHS 8,000 – 25,000+",
     note: "MoMo, Paystack, product catalogue",
   },
   {
     id: "enterprise",
     label: "Custom / enterprise",
-    range: "GHS 15,000 – 50,000+",
+    range: "GHS 18,000 – 80,000+",
     note: "Portals, integrations, advanced features",
   },
 ] as const;

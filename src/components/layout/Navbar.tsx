@@ -7,6 +7,10 @@ import { Clock, MapPin, Menu, Phone, X } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { LogoMark } from "@/components/ui/LogoMark";
 import { workingHours } from "@/lib/home-content";
+import {
+  MobileServicesNav,
+  NavbarServicesMenu,
+} from "@/components/layout/NavbarServicesMenu";
 import { mainNav } from "@/lib/navigation";
 import { siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
@@ -63,10 +67,18 @@ export function Navbar() {
 
           <nav className="hidden items-center gap-6 xl:gap-8 lg:flex">
             {mainNav.map((l) => {
-              const isActive =
-                pathname === l.href ||
-                (l.href.startsWith("/services/") &&
-                  pathname.startsWith("/services"));
+              if ("kind" in l && l.kind === "services") {
+                return (
+                  <NavbarServicesMenu
+                    key={l.href}
+                    pathname={pathname}
+                    lightHeaderText={lightHeaderText}
+                    scrolled={scrolled}
+                  />
+                );
+              }
+
+              const isActive = pathname === l.href;
 
               return (
                 <Link
@@ -175,10 +187,17 @@ export function Navbar() {
         <div className="flex-1 overflow-y-auto overscroll-contain px-4 py-4 sm:px-5">
           <nav className="flex flex-col gap-0.5">
             {mainNav.map((l) => {
-              const isActive =
-                pathname === l.href ||
-                (l.href.startsWith("/services/") &&
-                  pathname.startsWith("/services"));
+              if ("kind" in l && l.kind === "services") {
+                return (
+                  <MobileServicesNav
+                    key={l.href}
+                    pathname={pathname}
+                    onNavigate={() => setOpen(false)}
+                  />
+                );
+              }
+
+              const isActive = pathname === l.href;
 
               return (
                 <Link

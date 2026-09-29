@@ -18,15 +18,16 @@ export type ServicePage = {
   intro: string;
   sections: ServiceSection[];
   benefits: string[];
+  faqs?: { question: string; answer: string }[];
   image: { src: string; alt: string };
 };
 
 export const servicePages: ServicePage[] = [
   {
     slug: "best-ecommerce-development-accra-ghana",
-    title: "E-Commerce Development in Ghana. From GHS 8,000 | KayTech Africa",
+    title: "E-Commerce Development in Ghana from GHS 8,000 | KayTech Africa",
     metaDescription:
-      "From GHS 8,000. mobile-first e-commerce in Accra and Ghana with MoMo, Paystack, WhatsApp orders, and SEO product pages.",
+      "Online stores from GHS 8,000: mobile-first e-commerce in Accra and Ghana with MoMo, Paystack, WhatsApp orders, and SEO product pages.",
     keywords: [
       "e-commerce website developer Ghana",
       "online store development Accra",
@@ -47,9 +48,9 @@ export const servicePages: ServicePage[] = [
   },
   {
     slug: "best-web-development-design-ghana",
-    title: `Web Development & Design in Ghana. ${formatPriceFromGhs(servicePriceFromGhs["best-web-development-design-ghana"].from, "project")} | KayTech`,
+    title: `Web Development & Design in Ghana, ${formatPriceFromGhs(servicePriceFromGhs["best-web-development-design-ghana"].from, "project")} | KayTech`,
     metaDescription:
-      `${formatPriceFromGhs(servicePriceFromGhs["best-web-development-design-ghana"].from, "project")}. custom websites nationwide, mobile-first and SEO-ready. ${studioProofLine}.`,
+      `${formatPriceFromGhs(servicePriceFromGhs["best-web-development-design-ghana"].from, "project")}: custom websites across Ghana, mobile-first and SEO-ready. ${studioProofLine}.`,
     keywords: [
       "web development company Ghana",
       "hire web developer Ghana",
@@ -69,9 +70,9 @@ export const servicePages: ServicePage[] = [
   },
   {
     slug: "best-digital-marketing-accra-ghana",
-    title: `Digital Marketing in Ghana. ${formatPriceFromGhs(servicePriceFromGhs["best-digital-marketing-accra-ghana"].from, "month")} | KayTech`,
+    title: `Digital Marketing in Ghana, ${formatPriceFromGhs(servicePriceFromGhs["best-digital-marketing-accra-ghana"].from, "month")} | KayTech`,
     metaDescription:
-      `${formatPriceFromGhs(servicePriceFromGhs["best-digital-marketing-accra-ghana"].from, "month")}. SEO, paid media, content, and growth funnels for Ghanaian businesses.`,
+      `${formatPriceFromGhs(servicePriceFromGhs["best-digital-marketing-accra-ghana"].from, "month")}: SEO, paid media, content, and growth funnels for Ghanaian businesses.`,
     keywords: [
       "digital marketing agency Accra",
       "digital marketing Ghana",
@@ -124,13 +125,41 @@ export const servicePages: ServicePage[] = [
           "Search, Meta, and YouTube behave differently here than in US playbooks. KayTech adjusts creative, language, and landing pages for mobile data, local trust signals, and the follow-up paths Ghanaians actually use after they click.",
         ],
       },
+      {
+        heading: "What the first 90 days look like",
+        paragraphs: [
+          "Month one is audit and setup: Search Console, analytics events, conversion tracking on forms and WhatsApp clicks, and a baseline report. Month two launches campaigns or content sprints with weekly tweaks. Month three compares lead volume and cost per enquiry to the baseline and decides what to scale.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does digital marketing cost in Ghana?",
+        answer:
+          "KayTech retainers start at GHS 2,000 a month for SEO and content, or ads management with a separate ad budget you control. One-off landing pages and audits are scoped separately. See /seo-packages-ghana for SEO tiers.",
+      },
+      {
+        question: "Do you guarantee first page on Google?",
+        answer:
+          "No honest agency guarantees rankings. We improve technical SEO, content, and local signals so you compete for the searches that matter to your business.",
+      },
+      {
+        question: "Can you work with our existing website?",
+        answer:
+          "Yes. We often start with a site KayTech did not build, fixing tracking, page speed, and landing pages before spending on ads.",
+      },
+      {
+        question: "How do you report results?",
+        answer:
+          "Monthly summaries in plain language: enquiries, calls, WhatsApp starts, ad spend, and what we are testing next. Not screenshot dumps of vanity metrics.",
+      },
     ],
   },
   {
     slug: "mobile-app-development-ghana",
-    title: "Mobile App Development in Ghana | KayTech Africa",
+    title: `Mobile App Development in Ghana, ${formatPriceFromGhs(servicePriceFromGhs["mobile-app-development-ghana"].from, "project")} | KayTech`,
     metaDescription:
-      "Android and iOS app development in Accra and Ghana. customer apps, field tools, and APIs linked to your website and MoMo payments.",
+      `Android and iOS apps ${formatPriceFromGhs(servicePriceFromGhs["mobile-app-development-ghana"].from, "project")}: customer apps, field tools, and APIs linked to your website and MoMo payments. KayTech Africa, Accra.`,
     keywords: [
       "mobile app developer Ghana",
       "Android app development Accra",
@@ -170,13 +199,41 @@ export const servicePages: ServicePage[] = [
           "Apps share login, payments, and data with the websites and dashboards we already build for you.",
         ],
       },
+      {
+        heading: "How we scope an app MVP",
+        paragraphs: [
+          "We start with one job the app must do well: place an order, book a slot, or submit a field report. Everything else waits for version two. That keeps the first build inside budget and gets something in the Play Store or App Store in weeks, not a year.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does a mobile app cost in Ghana?",
+        answer:
+          "A focused Android or iOS MVP typically starts around GHS 15,000. Apps with offline sync, admin dashboards, or payment integrations cost more. We send a written quote after discovery.",
+      },
+      {
+        question: "Do you build for both Android and iPhone?",
+        answer:
+          "Yes. We use cross-platform tools when one codebase fits, or native builds when performance or store rules require it.",
+      },
+      {
+        question: "Can the app connect to our website or ERP?",
+        answer:
+          "Yes. We design APIs so the app reads the same products, prices, and customer records as your site or internal tools.",
+      },
+      {
+        question: "Do you help with Play Store and App Store submission?",
+        answer:
+          "Yes. We prepare store listings, screenshots, privacy notes, and handle the first submission. You keep the developer accounts in your business name.",
+      },
     ],
   },
   {
     slug: "erp-systems-ghana",
-    title: "ERP Systems for Ghanaian Businesses | KayTech Africa",
+    title: `ERP Systems in Ghana, ${formatPriceFromGhs(servicePriceFromGhs["erp-systems-ghana"].from, "project")} | KayTech`,
     metaDescription:
-      "Custom ERP development in Ghana: inventory, finance, HR, and operations dashboards scoped to your workflows.",
+      `Custom ERP systems ${formatPriceFromGhs(servicePriceFromGhs["erp-systems-ghana"].from, "project")}: inventory, finance, HR and operations dashboards built around how your business runs. KayTech Africa, Accra.`,
     keywords: [
       "ERP development Ghana",
       "ERP software Accra",
@@ -210,13 +267,41 @@ export const servicePages: ServicePage[] = [
           "Managers approve purchases from their phone. staff update stock from the warehouse. data stays in sync.",
         ],
       },
+      {
+        heading: "Modules we often ship first",
+        paragraphs: ["Most Ghanaian ERP rollouts start with one or two of these, then add the rest:"],
+        bullets: [
+          "Stock in and out with low-stock alerts",
+          "Quotes and invoices in GHS with PDF export",
+          "Purchase approvals by WhatsApp or email",
+          "Basic payroll or commission tracking",
+          "Branch-level dashboards for owners",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does custom ERP cost in Ghana?",
+        answer:
+          "Modular ERP projects typically start around GHS 25,000 for one core module plus admin access. Full multi-branch rollouts are scoped in phases after discovery.",
+      },
+      {
+        question: "Can we keep using Excel during rollout?",
+        answer:
+          "Yes. We migrate one process at a time so teams are not forced to change everything on day one.",
+      },
+      {
+        question: "Is training included?",
+        answer:
+          "Yes. Each phase includes hands-on training for the roles that use that module, plus short video notes your team can replay.",
+      },
     ],
   },
   {
     slug: "crm-development-ghana",
-    title: "CRM Development in Ghana | KayTech Africa",
+    title: `CRM Development in Ghana, ${formatPriceFromGhs(servicePriceFromGhs["crm-development-ghana"].from, "project")} | KayTech`,
     metaDescription:
-      "Custom CRM builds in Accra and Ghana: lead tracking, WhatsApp follow-ups, pipelines, and support tickets for sales teams.",
+      `Custom CRM ${formatPriceFromGhs(servicePriceFromGhs["crm-development-ghana"].from, "project")}: lead tracking, WhatsApp follow-ups, sales pipelines and support tickets for teams in Ghana. KayTech Africa, Accra.`,
     keywords: [
       "CRM development Ghana",
       "custom CRM Accra",
@@ -250,13 +335,41 @@ export const servicePages: ServicePage[] = [
           "Add branches, products, or support queues without migrating to a new tool every year.",
         ],
       },
+      {
+        heading: "What a KayTech CRM includes",
+        paragraphs: ["A typical build covers:"],
+        bullets: [
+          "Lead forms and WhatsApp click tracking into one inbox",
+          "Pipeline stages you name (new, quoted, won, lost)",
+          "Tasks and reminders assigned to sales reps",
+          "Notes and file uploads per deal",
+          "Manager view of team activity and conversion rates",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does a custom CRM cost in Ghana?",
+        answer:
+          "CRM builds start around GHS 12,000 for a single-team pipeline with web leads and WhatsApp logging. Multi-branch or ERP integrations cost more.",
+      },
+      {
+        question: "Can it replace our WhatsApp group?",
+        answer:
+          "It complements the group: reps still chat customers on WhatsApp, but outcomes and follow-up dates live in the CRM so managers see pipeline health.",
+      },
+      {
+        question: "Do you integrate with email and SMS?",
+        answer:
+          "Yes. Outbound email and SMS reminders can be added when your team needs automated follow-up, not only manual chats.",
+      },
     ],
   },
   {
     slug: "best-software-as-a-services-saas-accra-ghana",
-    title: `SaaS Development in Ghana. ${formatPriceFromGhs(servicePriceFromGhs["best-software-as-a-services-saas-accra-ghana"].from, "project")} | KayTech`,
+    title: `SaaS Development in Ghana, ${formatPriceFromGhs(servicePriceFromGhs["best-software-as-a-services-saas-accra-ghana"].from, "project")} | KayTech`,
     metaDescription:
-      `${formatPriceFromGhs(servicePriceFromGhs["best-software-as-a-services-saas-accra-ghana"].from, "project")}. SaaS MVP builds in Accra and Ghana: product strategy, subscriptions, dashboards, and cloud deployment.`,
+      `${formatPriceFromGhs(servicePriceFromGhs["best-software-as-a-services-saas-accra-ghana"].from, "project")}: SaaS MVP builds in Accra and Ghana: product strategy, subscriptions, dashboards, and cloud deployment.`,
     keywords: [
       "SaaS development Ghana",
       "software as a service Accra",
@@ -313,6 +426,23 @@ export const servicePages: ServicePage[] = [
         paragraphs: [
           "SaaS products evolve after real users arrive. KayTech ships in phases. auth and core workflow first, then analytics, notifications, and integrations. so you learn quickly without overbuilding v1.",
         ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does SaaS development cost in Ghana?",
+        answer:
+          "An MVP with auth, one core workflow, admin dashboard, and deployment typically starts around GHS 18,000. Subscription billing and multi-tenant data add scope.",
+      },
+      {
+        question: "How long until we can charge customers?",
+        answer:
+          "Many MVPs reach a private beta in 8–12 weeks. Paystack subscriptions can go live in the same phase if your business documents are ready.",
+      },
+      {
+        question: "Do you help with product strategy?",
+        answer:
+          "Yes. Discovery includes user roles, pricing tiers in GHS, and a phased roadmap before code starts.",
       },
     ],
   },

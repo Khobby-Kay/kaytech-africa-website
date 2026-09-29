@@ -53,15 +53,26 @@ export default function ServicesHubPage() {
             {coreServices.map((service) => (
               <article
                 key={service.id}
-                className="group rounded-3xl border border-hairline bg-surface-soft p-6 transition hover:border-primary/25 hover:shadow-card"
+                className="group relative rounded-3xl border border-hairline bg-surface-soft p-6 transition hover:border-primary/25 hover:shadow-card"
               >
-                <p className="text-xs text-primary">{service.tags.join(" · ")}</p>
-                <h2 className="mt-3 font-display text-xl font-semibold text-ink">
+                {service.badge ? (
+                  <span className="absolute right-4 top-4 rounded-pill bg-accent/15 px-2.5 py-0.5 text-[10px] font-semibold text-accent">
+                    {service.badge}
+                  </span>
+                ) : null}
+                <p className="font-display text-lg font-bold text-primary">
+                  {service.offerFrom}
+                </p>
+                {service.offerDetail ? (
+                  <p className="mt-0.5 text-xs text-muted">{service.offerDetail}</p>
+                ) : null}
+                <h2 className="mt-4 font-display text-xl font-semibold text-ink">
                   {service.title}
                 </h2>
                 <p className="mt-3 text-sm leading-relaxed text-muted">
                   {service.description}
                 </p>
+                <p className="mt-3 text-xs text-primary">{service.tags.join(" · ")}</p>
                 <Link
                   href={service.href}
                   className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
