@@ -35,6 +35,7 @@ const staticRoutes: StaticRoute[] = [
   { path: "/contact", changeFrequency: "monthly", priority: 0.85 },
   { path: "/ai-automation", changeFrequency: "monthly", priority: 0.8 },
   { path: "/academy", changeFrequency: "monthly", priority: 0.88 },
+  { path: "/academy/apply", changeFrequency: "monthly", priority: 0.9 },
   { path: "/academy/web-development-course", changeFrequency: "monthly", priority: 0.9 },
   { path: "/academy/digital-marketing-course", changeFrequency: "monthly", priority: 0.87 },
   { path: "/academy/advanced-web-development-marketing-course", changeFrequency: "monthly", priority: 0.84 },

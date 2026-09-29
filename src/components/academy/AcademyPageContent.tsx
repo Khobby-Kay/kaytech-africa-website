@@ -16,6 +16,7 @@ import { Media } from "@/components/ui/Media";
 import { RevealOnScroll, StaggerReveal } from "@/components/ui/RevealOnScroll";
 import {
   academyApplicationForm,
+  academyApplyHref,
   academyDelivery,
   academyFaqs,
   academyFeaturedCourses,
@@ -51,18 +52,17 @@ function applyHrefProps() {
 function AcademyApplyBanner() {
   return (
     <section
-      id="apply"
-      className="sticky top-[calc(3.75rem+env(safe-area-inset-top,0px))] z-30 border-b border-accent/25 bg-gradient-to-r from-accent/20 via-surface-accent to-accent/20 px-4 py-3 shadow-sm backdrop-blur-xl backdrop-saturate-150 sm:px-5 sm:py-4 lg:top-[4.5rem] lg:px-20"
+      className="hidden border-b border-accent/25 bg-gradient-to-r from-accent/20 via-surface-accent to-accent/20 px-5 py-4 lg:sticky lg:top-[4.5rem] lg:z-30 lg:block lg:px-20 lg:shadow-sm lg:backdrop-blur-xl lg:backdrop-saturate-150"
     >
-      <Container className="flex flex-col items-stretch justify-between gap-3 sm:flex-row sm:items-center">
+      <Container className="flex flex-row items-center justify-between gap-4">
         <div className="min-w-0">
-          <p className="text-xs font-semibold text-accent">
-            Admissions open
+          <p className="text-xs font-semibold text-accent">Admissions open</p>
+          <p className="mt-1 font-display text-lg font-semibold text-ink">
+            Apply to KayTech Academy · 10 seats per cohort
           </p>
-          <p className="mt-1 font-display text-lg font-semibold text-ink sm:text-xl">
-            Apply to KayTech Academy. 10 seats per cohort
+          <p className="mt-1 hidden text-sm text-muted xl:block">
+            {academyApplicationForm.note}
           </p>
-          <p className="mt-1 text-sm text-muted">{academyApplicationForm.note}</p>
         </div>
         <a
           {...applyHrefProps()}
@@ -546,7 +546,9 @@ export function AcademyPageContent() {
                     </Link>
                   ) : null}
                   <a
-                    {...applyHrefProps()}
+                    href={academyApplyHref(
+                      "applyCourse" in plan ? plan.applyCourse : undefined,
+                    )}
                     data-track="academy_apply_click"
                     data-track-location={`pricing_${plan.id}`}
                     className={cn(

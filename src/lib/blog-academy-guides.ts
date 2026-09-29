@@ -60,7 +60,7 @@ export const webDevCourseFeesGhana2026: BlogPost = {
     },
   ],
   conclusion:
-    "Compare duration, class size, and portfolio outcomes, not headline price alone. If Web Development 101 fits your schedule, apply on /academy#apply or read the full syllabus on /academy/web-development-course.",
+    "Compare duration, class size, and portfolio outcomes, not headline price alone. If Web Development 101 fits your schedule, apply on /academy/apply or read the full syllabus on /academy/web-development-course.",
 };
 
 export const codingBootcampsAccra2026: BlogPost = {

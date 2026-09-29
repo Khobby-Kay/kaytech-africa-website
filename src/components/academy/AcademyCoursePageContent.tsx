@@ -18,7 +18,7 @@ export function AcademyCoursePageContent({ course }: Props) {
         title={course.shortTitle}
         description={course.quickAnswer}
         secondaryCta={{ label: "Academy hub", href: "/academy" }}
-        cta={{ label: "Apply", href: "#apply" }}
+        cta={{ label: "Apply", href: "#apply-form" }}
       />
 
       <section className="border-b border-hairline bg-surface-accent px-5 py-6 lg:px-20">
@@ -131,7 +131,7 @@ export function AcademyCoursePageContent({ course }: Props) {
       </section>
 
       <section
-        id="apply"
+        id="apply-form"
         className="border-b border-hairline bg-surface-accent px-5 py-12 lg:px-20 lg:py-16 scroll-mt-28"
       >
         <Container className="grid gap-10 lg:grid-cols-[1fr_1fr]">

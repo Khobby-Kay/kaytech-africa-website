@@ -27,7 +27,7 @@ export default function GraduateOutcomesPage() {
         eyebrow="KayTech Academy"
         title="Student projects & graduate outcomes"
         description={page.intro}
-        cta={{ label: "Apply to Academy", href: "/academy#apply" }}
+        cta={{ label: "Apply to Academy", href: "/academy/apply" }}
         secondaryCta={{ label: "Web Development 101", href: "/academy/web-development-course" }}
       />
 

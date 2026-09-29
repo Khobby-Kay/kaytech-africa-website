@@ -24,7 +24,7 @@ export default function AcademyScholarshipsPage() {
         eyebrow="KayTech Academy"
         title="Scholarships, payment plans & free resources"
         description={c.intro}
-        cta={{ label: "Apply now", href: "/academy#apply" }}
+        cta={{ label: "Apply now", href: "/academy/apply" }}
       />
 
       <section className="border-b border-hairline bg-canvas px-5 py-12 lg:px-20 lg:py-16">

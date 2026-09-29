@@ -65,6 +65,7 @@ export const indexPriorityPaths: string[] = [
   "/services/crm-development-ghana",
   "/portfolio",
   "/academy",
+  "/academy/apply",
   "/academy/web-development-course",
   "/academy/digital-marketing-course",
   "/academy/advanced-web-development-marketing-course",

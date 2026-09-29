@@ -40,7 +40,7 @@ export default function AcademyOnlineCoursesPage() {
         eyebrow="KayTech Academy · Online"
         title={academyOnlineHub.heroTitle}
         description={academyOnlineHub.quickAnswer}
-        cta={{ label: "Apply online", href: "#apply" }}
+        cta={{ label: "Apply online", href: "/academy/apply" }}
         secondaryCta={{ label: "Academy hub", href: "/academy" }}
       />
 
@@ -139,12 +139,18 @@ export default function AcademyOnlineCoursesPage() {
         </Container>
       </section>
 
-      <section id="apply" className="bg-surface-accent px-5 py-12 lg:px-20 lg:py-16 scroll-mt-28">
+      <section id="apply-form" className="bg-surface-accent px-5 py-12 lg:px-20 lg:py-16 scroll-mt-28">
         <Container className="max-w-xl">
           <p className="text-sm text-muted">Pick your course. Admissions confirms online vs on-site on your call.</p>
           <div className="mt-6">
             <AcademyApplicationForm location="academy_online" compact />
           </div>
+          <Link
+            href="/academy/apply"
+            className="mt-4 inline-block text-sm font-semibold text-primary hover:underline"
+          >
+            Open full application page
+          </Link>
         </Container>
       </section>
     </>

@@ -1,10 +1,35 @@
 import { academyCourseFeesGhs, academyProofLine, studioProofLine } from "@/lib/trust-metrics";
 import { academyGraduateTestimonials } from "@/lib/testimonials";
 
+export const academyApplyPath = "/academy/apply" as const;
+
+/** Pre-select course on the application form (use pricing plan titles or applyLabel). */
+export function resolveAcademyApplyCourse(input?: string | null): string {
+  if (!input?.trim()) return academyApplyCourseOptions[0];
+  const decoded = decodeURIComponent(input).trim();
+  const exact = academyApplyCourseOptions.find(
+    (c) => c.toLowerCase() === decoded.toLowerCase(),
+  );
+  if (exact) return exact;
+  const partial = academyApplyCourseOptions.find(
+    (c) =>
+      c.toLowerCase().includes(decoded.toLowerCase()) ||
+      decoded.toLowerCase().includes(c.toLowerCase()),
+  );
+  return partial ?? academyApplyCourseOptions[0];
+}
+
+export function academyApplyHref(course?: string): string {
+  if (!course?.trim()) return academyApplyPath;
+  return `${academyApplyPath}?course=${encodeURIComponent(course.trim())}`;
+}
+
 export const academyApplicationForm = {
-  href: "/academy#apply",
+  href: academyApplyPath,
   label: "Apply now",
   note: "Only 10 admissions per cohort. selected applicants receive a call from our admissions team.",
+  /** Optional backup. set NEXT_PUBLIC_ACADEMY_GOOGLE_FORM_URL in env */
+  googleFormEnvKey: "NEXT_PUBLIC_ACADEMY_GOOGLE_FORM_URL",
 } as const;
 
 export const academyApplyCourseOptions = [
@@ -223,6 +248,7 @@ export const academyPricingPlans = [
     ],
     featured: false,
     courseHref: "/academy/web-development-course",
+    applyCourse: "Web Development 101",
   },
   {
     id: "digital-marketing-101",
@@ -243,6 +269,7 @@ export const academyPricingPlans = [
     ],
     featured: false,
     courseHref: "/academy/digital-marketing-course",
+    applyCourse: "Digital Marketing 101",
   },
   {
     id: "advanced-web-marketing",
@@ -265,7 +292,8 @@ export const academyPricingPlans = [
       "Free access to LMS",
     ],
     featured: true,
-    courseHref: "#apply",
+    courseHref: "/academy/advanced-web-development-marketing-course",
+    applyCourse: "Advanced Web Development & Digital Marketing",
   },
   {
     id: "saas-development",
@@ -288,7 +316,8 @@ export const academyPricingPlans = [
       "Free access to LMS",
     ],
     featured: false,
-    courseHref: "#apply",
+    courseHref: "/academy/saas-development-course",
+    applyCourse: "SaaS Development",
   },
 ] as const;
 
@@ -313,7 +342,7 @@ export const academyFaqs = [
   {
     question: "How do I apply?",
     answer:
-      "Use the on-site application form at /academy#apply (or on each course page). We admit only 10 students per cohort; selected applicants receive a call from admissions. WhatsApp or call 024 840 8154 for questions before applying.",
+      "Complete the application at /academy/apply (or scroll to the form on each course page). We admit only 10 students per cohort; selected applicants receive a call from admissions. WhatsApp or call 024 840 8154 for questions before applying.",
   },
   {
     question: "What are the course fees in GHS?",

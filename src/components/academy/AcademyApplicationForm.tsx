@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CheckCircle2, ClipboardList, MessageCircle } from "lucide-react";
 import { siteConfig } from "@/lib/site";
 import { trackEvent } from "@/lib/analytics";
@@ -29,6 +29,10 @@ export function AcademyApplicationForm({
     message: "",
     company: "",
   });
+
+  useEffect(() => {
+    setForm((prev) => ({ ...prev, course: defaultCourse }));
+  }, [defaultCourse]);
 
   function update(field: keyof typeof form, value: string) {
     setForm((prev) => ({ ...prev, [field]: value }));

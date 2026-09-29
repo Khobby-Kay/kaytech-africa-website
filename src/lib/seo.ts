@@ -12,7 +12,7 @@ export const seoKeywords = [
 ] as const;
 
 export const defaultTitle =
-  "KayTech Africa | Web Design & Development Studio in Accra, Ghana";
+  "KayTech Africa | Best Web Designer in Ghana | Accra";
 
 export const defaultDescription =
   "Websites, online stores, SEO and AI automation for businesses in Accra, Kumasi and across Ghana. Published case studies and pricing in cedis.";

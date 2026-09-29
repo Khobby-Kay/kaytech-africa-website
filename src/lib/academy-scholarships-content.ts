@@ -13,7 +13,7 @@ export const academyScholarshipsContent = {
       "Typically 1–2 seats per cohort across Web Development 101 and Digital Marketing 101. not full free rides unless a partner sponsor funds a seat.",
       "Awarded before cohort start based on application essay, follow-up call, and demonstrated need + commitment (not exam scores).",
       "Scholarship recipients still complete the same projects and attendance expectations as full-fee students.",
-      "Mention “scholarship interest” in your on-site application at /academy#apply.",
+      "Mention “scholarship interest” in your application at /academy/apply.",
     ],
     note: "KayTech does not guarantee a scholarship for every applicant. If a cohort is full, we may offer the next intake or a payment plan instead.",
   },
