@@ -30,18 +30,60 @@ export function AiAssistant() {
     }
   }, [messages, open]);
 
-  function send(text: string) {
+  const [thinking, setThinking] = useState(false);
+
+  async function send(text: string) {
     const trimmed = text.trim();
-    if (!trimmed) return;
+    if (!trimmed || thinking) return;
 
     const userMsg: Message = { id: idRef.current++, from: "user", text: trimmed };
-    const reply = getAssistantReply(trimmed);
-    const botMsg: Message = { id: idRef.current++, from: "bot", text: reply.text };
-
-    setMessages((prev) => [...prev, userMsg, botMsg]);
-    setShowEscalate(reply.escalate);
+    setMessages((prev) => [...prev, userMsg]);
     setInput("");
+    setThinking(true);
     trackEvent("assistant_message", { label: trimmed.slice(0, 80) });
+
+    const history = messages
+      .filter((m) => m.id !== 0)
+      .slice(-8)
+      .map((m) => ({
+        role: m.from === "user" ? ("user" as const) : ("assistant" as const),
+        content: m.text,
+      }));
+
+    let replyText: string;
+    let escalate: boolean;
+
+    try {
+      const res = await fetch("/api/teedra", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: trimmed, history }),
+      });
+      const data = (await res.json()) as {
+        ok?: boolean;
+        text?: string;
+        escalate?: boolean;
+      };
+      if (data.ok && data.text) {
+        replyText = data.text;
+        escalate = Boolean(data.escalate);
+      } else {
+        const local = getAssistantReply(trimmed);
+        replyText = local.text;
+        escalate = local.escalate;
+      }
+    } catch {
+      const local = getAssistantReply(trimmed);
+      replyText = local.text;
+      escalate = local.escalate;
+    }
+
+    setMessages((prev) => [
+      ...prev,
+      { id: idRef.current++, from: "bot", text: replyText },
+    ]);
+    setShowEscalate(escalate);
+    setThinking(false);
   }
 
   function toggle() {
@@ -167,8 +209,9 @@ export function AiAssistant() {
             />
             <button
               type="submit"
+              disabled={thinking}
               aria-label="Send message to Teedra"
-              className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-primary text-on-primary transition hover:bg-primary-deep"
+              className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-primary text-on-primary transition hover:bg-primary-deep disabled:opacity-60"
             >
               <Send className="h-4 w-4" />
             </button>
