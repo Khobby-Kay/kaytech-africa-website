@@ -23,7 +23,7 @@ export async function chatWithGroq(
     return { ok: false, error: "not_configured" };
   }
 
-  const model = process.env.GROQ_MODEL?.trim() || "llama-3.3-70b-versatile";
+  const model = process.env.GROQ_MODEL?.trim() || "openai/gpt-oss-120b";
 
   try {
     const res = await fetch(GROQ_URL, {
@@ -47,9 +47,12 @@ export async function chatWithGroq(
     }
 
     const data = (await res.json()) as {
-      choices?: { message?: { content?: string } }[];
+      choices?: { message?: { content?: string; reasoning?: string } }[];
     };
-    const text = data.choices?.[0]?.message?.content?.trim();
+    const message = data.choices?.[0]?.message;
+    const text =
+      message?.content?.trim() ||
+      message?.reasoning?.trim().split("\n").pop()?.trim();
     if (!text) return { ok: false, error: "empty_response" };
     return { ok: true, text };
   } catch (error) {

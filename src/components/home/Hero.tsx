@@ -55,7 +55,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[62vh] w-full overflow-hidden sm:min-h-[75vh] lg:min-h-screen"
+      className="relative min-h-[82vh] w-full overflow-hidden sm:min-h-[75vh] lg:min-h-screen"
     >
       <HeroBackground active={active} />
 
